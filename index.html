@@ -1,0 +1,115 @@
+<html>
+  <head>
+	<title>D-Portal Logs</title>
+	<style>
+		
+		  body	{margin:30px;}
+		  div	{width:400px; height:200px; display:inline-block; vertical-align:top; padding:20px;}
+		  h1	{font-family:monospace;}
+		  
+	</style>
+	<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+ </head>
+  <body>
+	<script>
+		
+var addchart=function(data,opts){
+ 
+	var div=$('<div> <canvas></canvas> </div>')
+	$("body").append(div)
+	var ctx=div.children(":first")[0].getContext("2d");
+
+	var dl=[]
+	var dv=[]
+	var idx=0
+	for(var n in data){
+		dl[idx]=(new Date(Number(n)*8.64e7)).toLocaleDateString()
+		dv[idx]=data[n]
+		idx++
+	}
+	
+var config = {
+	type: 'line',
+	data: {
+		labels: dl,
+		datasets: [{
+			label: opts.name || "Filled",
+			backgroundColor: opts.color || "#f44",
+			borderColor: opts.color || "#f44",
+			data: dv,
+			fill: true,
+		}]
+	},
+	options: {
+		responsive: true,
+		title:{
+			display:opts.title && true || false,
+			text:opts.title || 'Chart.js Line Chart',
+			fontSize:14
+		},
+		tooltips: {
+			mode: 'index',
+			intersect: false,
+		},
+		hover: {
+			mode: 'nearest',
+			intersect: true
+		},
+		scales: {
+			xAxes: [{
+				display: true,
+				scaleLabel: {
+					display: true,
+					labelString: 'Day'
+				}
+			}],
+			yAxes: [{
+				display: true,
+				scaleLabel: {
+					display: true,
+					labelString: 'Amount'
+				}
+			}]
+		}
+	}
+};
+
+   return new Chart(ctx, config);
+};
+
+$.getJSON("stats.json", function(json) {
+
+var div=$('<h1> DATABASE </h1>')
+$("body").append(div)
+
+for(var n in json.count)
+{
+	window["chartjs_"+n]=
+        addchart(json.count[n],
+            {title:"Total "+n+" table entries recorded in the database",name:n,color:"#000"});
+}
+
+
+for(var n in json.distinct)
+{
+	var div=$('<h1> TABLE '+n+' </h1>')
+	$("body").append(div)
+
+   for(var t in json.distinct[n])
+	{
+		window["chartjs_"+n+"_"+t]=
+            addchart(json.distinct[n][t],
+                {title:"Distinct "+t+" values recorded in "+n+" ",name:n+"."+t,color:"#444"});
+	}
+
+}
+
+});
+
+	</script>
+  </body>
+</html>
