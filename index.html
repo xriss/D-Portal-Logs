@@ -3,9 +3,24 @@
 	<title>D-Portal Logs</title>
 	<style>
 		
-		  body	{margin:30px;}
-		  div	{width:400px; height:200px; display:inline-block; vertical-align:top; padding:20px;}
-		  h1	{font-family:monospace;}
+		  body	{padding:30px; margin:0 auto; color:#111; word-break:break-word; position:relative;}
+		  div	{width:400px; height:200px; margin:0 auto; display:inline-block; vertical-align:top; padding:20px;}
+		  h1	{font-family:monospace; text-transform:uppercase; font-size:1.5em;}
+		  
+		  a.git_link		{display:block; position:absolute; top:0; right:0; padding:10px 20px; background-color:#444; color:#fff; text-decoration:none; font-family:sans-serif; font-size:14px;}
+		  a.git_link:hover	{background-color:#555;}
+		  
+		  .wrap	{display:inline-block; vertical-align:top; width:20%; height:initial; margin-bottom:20px;}
+		  .wrap div:first-of-type span	{border-top:1px solid #ccc;}
+		  .wrap div:last-child span		{border-bottom:1px solid #ccc;}
+		  
+		  .chart_wrap	{display:block; width:initial; height:initial; margin-top:20px;}
+
+		  .stat	{display:table; table-layout:fixed; width:100%; height:initial; text-transform:capitalize; font-family:sans-serif; font-size:16px; border:0px solid #ccc; border-bottom:0; border-right:0; padding:0;}
+
+		  .stat span				{display:table-cell; padding:10px 20px; border-right:1px solid #ccc;}
+		  .stat span:first-of-type	{width:40%; border-left:1px solid #ccc;}
+		  .stat:nth-of-type(even)	{background-color:#f7f7f7;}
 		  
 	</style>
 	<script
@@ -83,7 +98,56 @@ var config = {
 
 $.getJSON("stats.json", function(json) {
 
-var div=$('<h1> DATABASE </h1>')
+
+// Snapshots
+
+var div=$('<div class="wrap"><h1> SNAPSHOT </h1></div>')
+$("body").append(div)
+
+for(var n in json.count)
+{
+	var h=0;	// h = highest
+	
+	for(var q in json.count[n])
+	{
+		if (q > h)
+		{
+			h = q;
+		}
+	}
+	
+	var number = Number(json.count[n][h]);	
+	var div2=$('<div class="stat"><span>'+(number.toLocaleString())+'</span><span>'+n+'</span></div>')
+	div.append(div2)
+}
+
+for(var n in json.distinct)
+{
+	var div=$('<div class="wrap"><h1> '+n+' </h1></div>')
+	$("body").append(div)
+	
+	for(var t in json.distinct[n])
+	{
+		var h=0;	// h = highest
+		
+		for(var q in json.distinct[n][t])
+		{
+			if (q > h)
+			{
+				h = q;
+			}
+		}
+		
+		var number = Number(json.distinct[n][t][h]);	
+		var div2=$('<div class="stat"><span>'+(number.toLocaleString())+'</span><span>'+t+'</span></div>')
+		div.append(div2)
+	}
+}
+
+
+// Charts
+
+var div=$('<div class="chart_wrap"><h1> DATABASE </h1></div>')
 $("body").append(div)
 
 for(var n in json.count)
@@ -96,7 +160,7 @@ for(var n in json.count)
 
 for(var n in json.distinct)
 {
-	var div=$('<h1> TABLE '+n+' </h1>')
+	var div=$('<div class="chart_wrap"><h1> '+n+' TABLE </h1></div>')
 	$("body").append(div)
 
    for(var t in json.distinct[n])
@@ -111,5 +175,6 @@ for(var n in json.distinct)
 });
 
 	</script>
+	<a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Source code for D-Portal-Logs is on Github</a>
   </body>
 </html>
