@@ -9,8 +9,13 @@
 		  p		{padding:10px 0;}
 		  pre	{display:inline; margin:0; white-space:initial;}
 		  
-		  a.git_link		{display:block; position:absolute; top:0; right:0; padding:10px 20px; background-color:#444; color:#fff; text-decoration:none; font-family:sans-serif; font-size:14px;}
-		  a.git_link:hover	{background-color:#555;}
+		  .nav	{width:100%; position:absolute; top:0; left:0; background-color:#444; height:initial; min-height:40px;}
+		  
+		  a.git_link,
+		  a.about_link		{display:block; height:40px; position:absolute; top:0; padding:10px 20px; background-color:#444; color:#fff; text-decoration:none; font-family:sans-serif; font-size:14px;}
+		  a.about_link		{left:0;}
+		  a.git_link		{right:0;}
+		  a.git_link:hover, a.about_link:hover	{background-color:#555; cursor:pointer;}
 		  
 		  .wrap	{display:inline-block; vertical-align:top; width:20%; height:initial; margin-bottom:20px;}
 		  .wrap div:first-of-type span	{border-top:1px solid #ccc;}
@@ -24,14 +29,14 @@
 		  .stat span:first-of-type	{width:40%; border-left:1px solid #ccc; text-align:right;}
 		  .stat:nth-of-type(even)	{background-color:#eee;}
 		  
-		  .overview			{width:500px; height:initial; min-height:100%; font-family:sans-serif; border:1px solid #ccc; padding:20px 40px; line-height:24px;}
+		  .overview			{display:none; margin-top:30px; width:500px; height:initial; min-height:100%; font-family:sans-serif; border:1px solid #ccc; padding:20px 40px; line-height:24px;}
 		  .overview span	{display:block;}
 		  
 		  table {width:100%; padding:20px 0 10px 0;}
 		  td	{padding:5px 0;}
 		  td:first-of-type		{font-weight:bold; font-size:14px; min-width:150px;}
 		  tr:nth-of-type(even)	{background-color:#eee;}
-	<!--	  td:nth-of-type(2)	{font-family:monospace;}	-->
+		  td:nth-of-type(2)	{font-family:monospace;}
 		  
 	</style>
 	<script
@@ -186,14 +191,16 @@ for(var n in json.distinct)
 });
 
 	</script>
-	<a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Source code for D-Portal-Logs is on Github</a>
+	<div class="nav">
+		<a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Source code for D-Portal-Logs is on Github</a><a onclick="$('.overview').toggle();" class="about_link">Overview</a>
+	</div>
 	<div class="overview">
 		<h1>OVERVIEW</h1>
-		<span>Listed on this page are statistics and graphs of the D-Portal database. Current statistics are daily logs of nightly imports. The graphs show these statistics over time, hover over the points for more information.</span>
+		<span>Listed on this page are statistics and graphs of the D-Portal database. Current statistics are daily logs of nightly imports. The graphs show these statistics over time; hover over the points for more information.</span>
 		<h1>LEGEND</h1>
 		<span>Any linked definitions below are to the IATI Registry.</span>
 		<h1>DATABASE</h1>
-		<span>These are tables found in the database. Numbers are total entries found in the tables.</span>		
+		<span>These are tables found in the database. Numbers are total entries found in these tables.</span>		
 		<table>
 			<tr>
 				<td>Act</td><td>Activities table</td>
