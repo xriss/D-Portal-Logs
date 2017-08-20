@@ -9,6 +9,7 @@
 		  p		{padding:10px 0;}
 		  pre	{display:inline; margin:0; white-space:initial;}
 		  
+		  /*	Navigation bar and links	*/
 		  .nav	{width:100%; position:absolute; top:0; left:0; background-color:#444; height:initial; min-height:40px;}
 		  
 		  a.git_link,
@@ -17,26 +18,38 @@
 		  a.git_link		{right:0;}
 		  a.git_link:hover, a.about_link:hover	{background-color:#555; cursor:pointer;}
 		  
+		  
+		  /*	Stats and Chart Wrappers	*/
 		  .wrap	{display:inline-block; vertical-align:top; width:20%; height:initial; margin-bottom:20px;}
 		  .wrap div:first-of-type span	{border-top:1px solid #ccc;}
 		  .wrap div:last-child span		{border-bottom:1px solid #ccc;}
 		  
 		  .chart_wrap	{display:block; width:initial; height:initial; margin-top:20px;}
 
+		   /*	Stats styles	*/
 		  .stat	{display:table; table-layout:fixed; width:100%; height:initial; text-transform:capitalize; font-family:sans-serif; font-size:16px; border:0px solid #ccc; border-bottom:0; border-right:0; padding:0;}
 
 		  .stat span				{display:table-cell; padding:10px 20px; border-right:1px solid #ccc;}
 		  .stat span:first-of-type	{width:40%; border-left:1px solid #ccc; text-align:right;}
 		  .stat:nth-of-type(even)	{background-color:#eee;}
 		  
+		  /*	Overview styles	*/
 		  .overview			{display:none; margin-top:30px; width:500px; height:initial; min-height:100%; font-family:sans-serif; border:1px solid #ccc; padding:20px 40px; line-height:24px;}
 		  .overview span	{display:block;}
 		  
+		  /*	Legend styles	*/
 		  table {width:100%; padding:20px 0 10px 0;}
 		  td	{padding:5px 0;}
 		  td:first-of-type		{font-weight:bold; font-size:14px; min-width:150px;}
 		  tr:nth-of-type(even)	{background-color:#eee;}
 		  td:nth-of-type(2)	{font-family:monospace;}
+		  
+		  
+		  /*	Mobile-Last		*/
+			@media screen and (max-width: 1024px) {
+				body	{margin:0 auto;}
+				div, .wrap	{display:block; width:100%; height:initial;}
+			}
 		  
 	</style>
 	<script
