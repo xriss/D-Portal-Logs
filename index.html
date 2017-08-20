@@ -47,8 +47,13 @@
 		  
 		  /*	Mobile-Last		*/
 			@media screen and (max-width: 1024px) {
-				body	{margin:0 auto;}
-				div, .wrap	{display:block; width:100%; height:initial;}
+				body	{margin:0 auto; width:100%; padding-top:80px; font-size:30px;}
+				.wrap, .overview	{display:block; width:100%; height:initial;}
+				.nav, a.git_link, a.about_link	{height:65px;}
+				td:first-of-type	{min-width:300px;}
+				.nav, a.git_link, a.about_link, td:first-of-type	{font-size:30px; line-height:42px;}
+				.overview span, td:nth-of-type(2)	{font-size:24px; line-height:42px;}
+				h1, .stat span	{font-size:42px; line-height:64px;}
 			}
 		  
 	</style>
