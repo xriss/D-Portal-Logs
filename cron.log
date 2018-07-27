@@ -107,6 +107,8 @@ Fetching publisher info for aiddata
 secondary US-501c3-522318905
 Fetching publisher info for adg
 Fetching publisher info for nl-kvk-41207989
+Fetching publisher info for aidspan
+unpublished US-EIN-32-0060251
 Fetching publisher info for aid_works
 unpublished GB-COH-08950939
 secondary GB-COH-08950939
@@ -308,9 +310,9 @@ Fetching publisher info for creating-better-futures
 unpublished GB-CHC-1148929
 Fetching publisher info for creative
 unpublished US-EIN-521154258
+Fetching publisher info for creausa-org
 Fetching publisher info for creausa
 unpublished US-EIN-31-1812979-CMI-00001
-Fetching publisher info for creausa-org
 Fetching publisher info for crc
 unpublished AF-CBR-40322
 Fetching publisher info for crb-ai_admin
@@ -800,6 +802,8 @@ Fetching publisher info for chadet
 unpublished CHADET
 Fetching publisher info for odi
 Fetching publisher info for oxfamus
+Fetching publisher info for oau
+unpublished AU-ACNC-18055208636
 Fetching publisher info for oxfamgb
 Fetching publisher info for ibis_denmark
 Fetching publisher info for oxfamindia
@@ -2118,8 +2122,8 @@ YOU WILL NEED TO MANUALLY ADD IT TO THE LIST IN dstore/js/exs.js
   'Currency units per SDR for October 2018': '???',
   'Currency units per SDR for November 2018': '???',
   'Currency units per SDR for December 2018': '???' }
-[master 2071610a] auto json fetch in nightly cron
- 6 files changed, 663 insertions(+), 278 deletions(-)
+[master 4d90363b] auto json fetch in nightly cron
+ 6 files changed, 3081 insertions(+), 2076 deletions(-)
 Already up-to-date.
 Branch master set up to track remote branch master from origin.
 
@@ -2247,57 +2251,57 @@ browserify
 00:06:43 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
 00:06:43 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
 00:06:43 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
-00:06:43 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
-00:06:43 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
-00:06:43 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
-00:06:43 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
-00:06:43 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:43 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:43 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:43 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:43 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:43 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:43 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:43 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:43 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:43 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:43 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:06:43 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:06:43 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:06:43 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:06:43 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:06:43 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:06:43 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:06:43 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:06:43 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:06:43 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:06:43 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:06:43 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:06:43 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:06:43 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:06:43 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:06:43 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:06:43 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:06:43 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:06:43 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:06:43 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:06:43 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:06:43 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:06:43 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:06:43 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:06:43 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:06:43 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:06:43 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
-00:06:43 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
-00:06:43 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:06:43 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
-00:06:43 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:06:43 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:06:43 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:06:43 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:06:43 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:06:43 COPY news/author/ -> cmn/news/author/
-00:06:43 COPY news/author/ -> fra/news/author/
+00:06:44 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
+00:06:44 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
+00:06:44 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
+00:06:44 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
+00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:06:44 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:06:44 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:06:44 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:06:44 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:06:44 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:06:44 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:06:44 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:06:44 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:06:44 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:06:44 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:06:44 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:06:44 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:06:44 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:06:44 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:06:44 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:06:44 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:06:44 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
+00:06:44 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
+00:06:44 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:06:44 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
+00:06:44 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:06:44 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:06:44 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:06:44 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:06:44 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:06:44 COPY news/author/ -> cmn/news/author/
+00:06:44 COPY news/author/ -> fra/news/author/
 00:06:44 COPY news/author/ -> hin/news/author/
 00:06:44 COPY news/author/ -> jpn/news/author/
 00:06:44 COPY news/author/ -> spa/news/author/
@@ -2808,43 +2812,43 @@ browserify
 00:06:44 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
 00:06:44 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
 00:06:44 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:06:44 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:06:44 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:06:44 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:06:44 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:06:44 COPY news/2014-05-28-Current-plans/index.html -> cmn/news/2014-05-28-Current-plans/index.html
-00:06:44 COPY news/2014-05-28-Current-plans/index.html -> fra/news/2014-05-28-Current-plans/index.html
-00:06:44 COPY news/2014-05-28-Current-plans/index.html -> hin/news/2014-05-28-Current-plans/index.html
-00:06:44 COPY news/2014-05-28-Current-plans/index.html -> jpn/news/2014-05-28-Current-plans/index.html
-00:06:44 COPY news/2014-05-28-Current-plans/index.html -> spa/news/2014-05-28-Current-plans/index.html
-00:06:44 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> cmn/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:06:44 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> fra/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:06:44 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> hin/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:06:44 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> jpn/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:06:44 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> spa/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:06:44 COPY news/index.html -> cmn/news/index.html
-00:06:44 COPY news/index.html -> fra/news/index.html
-00:06:44 COPY news/index.html -> hin/news/index.html
-00:06:44 COPY news/index.html -> jpn/news/index.html
-00:06:44 COPY news/index.html -> spa/news/index.html
-00:06:44 COPY news/page2.html -> cmn/news/page2.html
-00:06:44 COPY news/page2.html -> fra/news/page2.html
+00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:06:45 COPY news/2014-05-28-Current-plans/index.html -> cmn/news/2014-05-28-Current-plans/index.html
+00:06:45 COPY news/2014-05-28-Current-plans/index.html -> fra/news/2014-05-28-Current-plans/index.html
+00:06:45 COPY news/2014-05-28-Current-plans/index.html -> hin/news/2014-05-28-Current-plans/index.html
+00:06:45 COPY news/2014-05-28-Current-plans/index.html -> jpn/news/2014-05-28-Current-plans/index.html
+00:06:45 COPY news/2014-05-28-Current-plans/index.html -> spa/news/2014-05-28-Current-plans/index.html
+00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> cmn/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> fra/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> hin/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> jpn/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> spa/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:06:45 COPY news/index.html -> cmn/news/index.html
+00:06:45 COPY news/index.html -> fra/news/index.html
+00:06:45 COPY news/index.html -> hin/news/index.html
+00:06:45 COPY news/index.html -> jpn/news/index.html
+00:06:45 COPY news/index.html -> spa/news/index.html
+00:06:45 COPY news/page2.html -> cmn/news/page2.html
+00:06:45 COPY news/page2.html -> fra/news/page2.html
 00:06:45 COPY news/page2.html -> hin/news/page2.html
 00:06:45 COPY news/page2.html -> jpn/news/page2.html
 00:06:45 COPY news/page2.html -> spa/news/page2.html
@@ -2877,62 +2881,62 @@ browserify
 00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
 00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
 00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
-00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:06:45 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:06:45 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:06:45 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:06:45 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:06:45 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:06:45 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:06:45 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:06:45 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:06:45 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:06:45 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:06:45 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:06:45 COPY / -> cmn/
-00:06:45 COPY / -> fra/
-00:06:45 COPY / -> hin/
-00:06:45 COPY / -> jpn/
-00:06:45 COPY / -> spa/
-00:06:45 COPY news/ -> cmn/news/
-00:06:45 COPY news/ -> fra/news/
-00:06:45 COPY news/ -> hin/news/
-00:06:45 COPY news/ -> jpn/news/
-00:06:45 COPY news/ -> spa/news/
-00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
-00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
-00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
-00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
-00:06:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
-00:06:45 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
-00:06:45 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
-00:06:45 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
-00:06:45 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
-00:06:45 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
-00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:45 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:45 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:06:45 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:06:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:06:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:06:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:06:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:06:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:06:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:06:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:06:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:06:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:06:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:06:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:06:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:06:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:06:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:06:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:06:46 COPY / -> cmn/
+00:06:46 COPY / -> fra/
+00:06:46 COPY / -> hin/
+00:06:46 COPY / -> jpn/
+00:06:46 COPY / -> spa/
+00:06:46 COPY news/ -> cmn/news/
+00:06:46 COPY news/ -> fra/news/
+00:06:46 COPY news/ -> hin/news/
+00:06:46 COPY news/ -> jpn/news/
+00:06:46 COPY news/ -> spa/news/
+00:06:46 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
+00:06:46 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
+00:06:46 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
+00:06:46 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
+00:06:46 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
+00:06:46 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
+00:06:46 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
+00:06:46 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
+00:06:46 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
+00:06:46 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
+00:06:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:06:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:06:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/
 00:06:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/
 00:06:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/
 00:06:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
@@ -2985,14 +2989,14 @@ browserify
 00:06:46 COPY feedback.html -> spa/feedback.html
 Restarting /home/ctrack/D-Portal/dportal/js/serv.js
 [32minfo[39m:    Forever restarted process(es):
-[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m   [37mid[39m [35mlogfile[39m                                                       [33muptime[39m       
-[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     11783    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m1:0:0:19.139[39m 
-[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    11789    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m1:0:0:19.102[39m 
+[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m [37mid[39m [35mlogfile[39m                                                       [33muptime[39m      
+[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     944    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m1:0:0:0.485[39m 
+[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    945    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m1:0:0:0.481[39m 
 Status /home/ctrack/D-Portal/dportal/js/serv.js
 [32minfo[39m:    Forever processes running
-[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m [37mid[39m [35mlogfile[39m                                                       [33muptime[39m      
-[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     944    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:0:0:0.177[39m 
-[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    945    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:0:0:0.173[39m 
+[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m   [37mid[39m [35mlogfile[39m                                                       [33muptime[39m      
+[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     18157    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:0:0:0.176[39m 
+[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    18163    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:0:0:0.170[39m 
 
 Searching logs for download ERRORS
 
@@ -3005,164 +3009,52 @@ dstore/cache/caid_ireland-org.xml.curl.last.log:curl: (22) The requested URL ret
 dstore/cache/cdc-201217.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/ecorysnl-203031306.xml.curl.last.log:curl: (22) The requested URL returned error: 404 NOT FOUND
 dstore/cache/fco-britishcouncilbc.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
-dstore/cache/finland_mfa-000.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-001.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-002.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-003.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-004.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-005.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-006.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-007.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-189.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-289.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-298.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-389.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-489.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-498.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-57.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-589.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-619.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-679.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-689.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-789.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-798.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-889.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-88.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-89.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-998.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-af.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ag.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-al.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-am.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ao.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ar.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-az.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ba.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-bb.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-bd.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-bf.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-bi.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-bj.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-bo.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-br.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-bt.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-bw.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-by.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-bz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-cd.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-cf.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-cg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ci.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-cl.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-cm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-cn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-co.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-cr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-cu.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-cv.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-dm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-do.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-dz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ec.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-eg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-er.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-et.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-fj.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ga.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ge.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-gh.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-gm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-gn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-gt.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-gw.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-gy.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-hn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-hr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ht.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-id.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-in.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-iq.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ir.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-jm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-jo.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ke.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-kg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-kh.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-kn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-kp.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-kz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-la.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-lb.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-lc.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-lk.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-lr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ls.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ma.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-md.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-me.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mk.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ml.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mu.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mv.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mw.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mx.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-my.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-mz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-na.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ne.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ng.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ni.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-np.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-om.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-pa.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-pe.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-pg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ph.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-pk.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ps.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-py.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-rs.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-rw.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-sb.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-sd.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-sl.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-sn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-so.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-sr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-sv.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-sy.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-sz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-td.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-tg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-th.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-tj.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-tl.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-tm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-tn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-tr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-tt.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-tz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ua.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ug.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-uy.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-uz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-vc.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ve.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-vn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-ye.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-za.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-zm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
-dstore/cache/finland_mfa-zw.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/fomin-ve.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/gl-3.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/ics-41188664.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/ics-org_2014.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/inbar-1-int.xml.curl.last.log:curl: (22) The requested URL returned error: 500 Internal Server Error
+dstore/cache/irishaid-activity2013.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/irishaid-activity2014.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/irishaid-budgetfile2014.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/irishaid-budgetfile2016.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/magariro-gec.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/malariaconsortium-b8.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/malariaconsortium-j7.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/malariaconsortium-m9.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/malariaconsortium-r4.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/odakorea-act18.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act19.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act20.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act21.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act22.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act23.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act24.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act25.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act26.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act27.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act28.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act29.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act30.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act31.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act32.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act33.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act34.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act35.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act36.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act37.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act38.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act39.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act40.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act41.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act42.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act43.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act44.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act45.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act46.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act47.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act48.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/odakorea-act49.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/oxfamgb-orgfile.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/sida-agreements.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/sida-ck.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
@@ -3174,9 +3066,7 @@ dstore/cache/theglobalfund-qmi.xml.curl.last.log:curl: (22) The requested URL re
 dstore/cache/theglobalfund-qmn.xml.curl.last.log:curl: (22) The requested URL returned error: 500 Internal Server Error
 dstore/cache/theglobalfund-qmr.xml.curl.last.log:curl: (22) The requested URL returned error: 500 Internal Server Error
 dstore/cache/uncdf-org.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
-dstore/cache/unfpa-pe_rt.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-998.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
-dstore/cache/unops-af.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-ag.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-al.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-am.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
@@ -3233,6 +3123,7 @@ dstore/cache/unops-gt.xml.curl.last.log:curl: (22) The requested URL returned er
 dstore/cache/unops-gw.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-gy.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-hn.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-hr.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-ht.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-hu.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-id.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
@@ -3255,6 +3146,7 @@ dstore/cache/unops-kr.xml.curl.last.log:curl: (22) The requested URL returned er
 dstore/cache/unops-kz.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-la.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-lb.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-lc.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-lk.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-lr.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-ls.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
@@ -3292,10 +3184,10 @@ dstore/cache/unops-ph.xml.curl.last.log:curl: (22) The requested URL returned er
 dstore/cache/unops-pk.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-ps.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-pw.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
-dstore/cache/unops-py.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-ro.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-rs.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-ru.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-rw.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-sa.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-sb.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-sc.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
@@ -3401,8 +3293,6 @@ dstore/cache/theglobalfund-qmr.xml.import.last.log: XML ERROR not well-formed (i
 dstore/cache/theglobalfund-qmr.xml.import.last.log: XML ERROR not well-formed (invalid token) : theglobalfund-qmr
 dstore/cache/uncdf-org.xml.import.last.log: XML ERROR syntax error : undefined
 dstore/cache/uncdf-org.xml.import.last.log: XML ERROR syntax error : uncdf-org
-dstore/cache/unfpa-pe_rt.xml.import.last.log: XML ERROR syntax error : undefined
-dstore/cache/unfpa-pe_rt.xml.import.last.log: XML ERROR syntax error : unfpa-pe_rt
 dstore/cache/unops-af.xml.import.last.log: XML ERROR junk after document element : undefined
 dstore/cache/unops-af.xml.import.last.log: XML ERROR junk after document element : unops-af
 dstore/cache/unops-bd.xml.import.last.log: XML ERROR junk after document element : undefined
@@ -3441,6 +3331,8 @@ dstore/cache/unops-multi.xml.import.last.log: XML ERROR junk after document elem
 dstore/cache/unops-multi.xml.import.last.log: XML ERROR junk after document element : unops-multi
 dstore/cache/unops-org.xml.import.last.log: XML ERROR not well-formed (invalid token) : undefined
 dstore/cache/unops-org.xml.import.last.log: XML ERROR not well-formed (invalid token) : unops-org
+dstore/cache/unops-py.xml.import.last.log: XML ERROR junk after document element : undefined
+dstore/cache/unops-py.xml.import.last.log: XML ERROR junk after document element : unops-py
 dstore/cache/unops-rw.xml.import.last.log: XML ERROR junk after document element : undefined
 dstore/cache/unops-rw.xml.import.last.log: XML ERROR junk after document element : unops-rw
 dstore/cache/unops-sa.xml.import.last.log: XML ERROR junk after document element : undefined
