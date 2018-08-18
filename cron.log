@@ -1,25 +1,12 @@
 
 Get new json data
 
-Updating 005fffa5..8bb913fc
+Updating 9c5616ff..84d1f3a1
 Fast-forward
- dstore/csv/crs_countries.csv  | 187 ++++++++++++++++++
- dstore/csv/crs_funders.csv    |  80 ++++++++
- dstore/csv/exchange.csv       |  26 +++
- dstore/csv/iati_funders.csv   | 448 ++++++++++++++++++++++++++++++++++++++++++
- dstore/csv/imf_currencies.csv |  58 ++++++
- dstore/csv/local_currency.csv | 182 +++++++++++++++++
- dstore/csv/sector_codes.csv   |  15 ++
- dstore/csv/sector_groups.csv  |  37 ++++
- 8 files changed, 1033 insertions(+)
- create mode 100644 dstore/csv/crs_countries.csv
- create mode 100644 dstore/csv/crs_funders.csv
- create mode 100644 dstore/csv/exchange.csv
- create mode 100644 dstore/csv/iati_funders.csv
- create mode 100644 dstore/csv/imf_currencies.csv
- create mode 100644 dstore/csv/local_currency.csv
- create mode 100644 dstore/csv/sector_codes.csv
- create mode 100644 dstore/csv/sector_groups.csv
+ dstore/json/usd_year.json  | 102 ++++++++++++++++++++++-----------------------
+ dstore/json/xdr_month.json |  50 ++++++++++++++++++++++
+ dstore/json/xdr_year.json  |  98 +++++++++++++++++++++----------------------
+ 3 files changed, 150 insertions(+), 100 deletions(-)
 Fetching IATI old_transaction_type
 Fetching IATI sector
 Fetching IATI new_transaction_type
@@ -34,6 +21,11 @@ Fetching IATI policy_code
 Fetching IATI policy_sig
 Fetching IATI budget_type
 Fetching IATI budget_status
+Parsing csv/iati_funders.csv
+Parsing csv/imf_currencies.csv
+Parsing csv/local_currency.csv
+Parsing csv/crs_funders.csv
+Parsing csv/crs_countries.csv
 Parsing csv/crs_2015.csv
 /home/ctrack/D-Portal/dstore/js/../csv/crs_2015.csv
 Writing json/crs_2015.json
@@ -59,6 +51,1236 @@ Writing json/download.txt
 Writing json/iati_codes.json for the first time
 ************************ This next bit takes a loooooong time to get every publisher id from iati...
 ************************ It's OK to CTRL+C and skip this last bit if you don't care.
+Fetching publisher info for ipao-test
+unpublished self
+Fetching publisher info for onepercentclub
+unpublished NL-KVK-3427895
+Fetching publisher info for aasaman
+secondary NP-SWC-27693
+Fetching publisher info for arcfge
+Fetching publisher info for abaseen
+Fetching publisher info for ablechildafrica
+Fetching publisher info for abt
+Fetching publisher info for abtbritain
+unpublished GB-COH-10633588
+Fetching publisher info for abyrint
+unpublished NO-BRC-912673197
+Fetching publisher info for ares
+unpublished BE-BCE_KBO-0546740696
+Fetching publisher info for ahead
+Fetching publisher info for atmf
+unpublished NL-KVK-34185938
+Fetching publisher info for atsf
+Fetching publisher info for _admin
+Fetching publisher info for acodev
+Fetching publisher info for across
+Fetching publisher info for act4africa
+Fetching publisher info for act_alliance
+unpublished CH-FDJP-66006990023
+Fetching publisher info for acted
+Fetching publisher info for acfspain
+Fetching publisher info for acf
+Fetching publisher info for aahusa
+unpublished US-EIN-13-3327220
+Fetching publisher info for aai
+Fetching publisher info for aauk
+Fetching publisher info for acumen
+Fetching publisher info for asi
+Fetching publisher info for af
+Fetching publisher info for addinternational
+Fetching publisher info for aias
+Fetching publisher info for adra-dk
+unpublished DK-CVR-20074035
+Fetching publisher info for adra
+Fetching publisher info for adrauk
+Fetching publisher info for ads-nyanza
+Fetching publisher info for adrasom
+Fetching publisher info for aecom
+Fetching publisher info for aeras
+Fetching publisher info for afewinternational
+Fetching publisher info for afghanaid
+Fetching publisher info for acaa
+Fetching publisher info for appro-af
+Fetching publisher info for aet
+Fetching publisher info for africalia
+Fetching publisher info for acet
+Fetching publisher info for achest
+Fetching publisher info for afdb
+Fetching publisher info for ai_1064413
+Fetching publisher info for aphrc
+Fetching publisher info for awdf
+unpublished GH-DSW-2046
+Fetching publisher info for afrikids
+Fetching publisher info for akf_afghanistan
+Fetching publisher info for akfuk73
+Fetching publisher info for afd
+Fetching publisher info for agencia_do_zambeze
+Fetching publisher info for acord
+Fetching publisher info for agriprofocus
+Fetching publisher info for agri
+unpublished CA_AB-ABT-20343579
+Fetching publisher info for agriterra
+Fetching publisher info for aak
+unpublished GB-COH-04644326
+Fetching publisher info for aics
+Fetching publisher info for aiddata
+secondary US-501c3-522318905
+Fetching publisher info for adg
+Fetching publisher info for nl-kvk-41207989
+Fetching publisher info for aidspan
+Fetching publisher info for aid_works
+unpublished GB-COH-08950939
+secondary GB-COH-08950939
+Fetching publisher info for adpp
+Fetching publisher info for aktis
+Fetching publisher info for akvo
+Fetching publisher info for alcis
+Fetching publisher info for alfalit
+secondary MZ-MOJ-203D
+Fetching publisher info for alliance_of_religions_and_conservation
+Fetching publisher info for allwecan
+Fetching publisher info for aqphs
+Fetching publisher info for acsc
+unpublished TZ-TRA-104-353-177
+Fetching publisher info for afsc
+unpublished US-EIN-23-1352010
+Fetching publisher info for amnesty
+Fetching publisher info for aiuk
+Fetching publisher info for amrefnl
+Fetching publisher info for amrefhq
+Fetching publisher info for amrefeth
+Fetching publisher info for amrefkenya
+Fetching publisher info for amreftz
+Fetching publisher info for amrefug
+Fetching publisher info for amrefmw
+Fetching publisher info for amrefha
+Fetching publisher info for amurt_kenya
+Fetching publisher info for anda
+secondary MZ-MOJ-F30G1No89
+Fetching publisher info for asil
+Fetching publisher info for appro-eu
+Fetching publisher info for apt
+Fetching publisher info for aqua4all
+Fetching publisher info for afemena
+Fetching publisher info for aru
+unpublished TZ-TRA-101-012-727
+Fetching publisher info for ark
+Fetching publisher info for armpolsup
+unpublished GB-COH-10435055
+Fetching publisher info for art19
+Fetching publisher info for asdb
+Fetching publisher info for actec
+Fetching publisher info for apc
+Fetching publisher info for arfh
+Fetching publisher info for awid
+Fetching publisher info for gb-chc-314137
+unpublished GB-CHC-314137
+Fetching publisher info for apefe
+Fetching publisher info for atosuk
+Fetching publisher info for adsb
+Fetching publisher info for auctus
+unpublished IN-MCA-U74140MH2010PTC206135
+Fetching publisher info for ausgov
+Fetching publisher info for ada
+Fetching publisher info for a-t
+Fetching publisher info for ava_admin
+unpublished GB-COH-06133927
+Fetching publisher info for asf
+Fetching publisher info for avsifoundation
+unpublished IT-CF-81017180407
+Fetching publisher info for avsi_uganda
+Fetching publisher info for avt-l
+unpublished LB-MOI-853
+Fetching publisher info for awepa
+Fetching publisher info for base_22
+Fetching publisher info for bnps
+Fetching publisher info for basicneeds
+Fetching publisher info for bcm-cf
+Fetching publisher info for bbcmediaaction
+Fetching publisher info for bdo
+unpublished GB-COH-OC305127
+Fetching publisher info for beehive
+unpublished US-EIN-311796801
+secondary US-EIN-311796801
+Fetching publisher info for bauk
+Fetching publisher info for beesfordevelopment
+Fetching publisher info for enabel
+Fetching publisher info for be-dgd
+Fetching publisher info for bac
+Fetching publisher info for berytech
+unpublished LB-MOI-26_AD
+Fetching publisher info for bismsi
+Fetching publisher info for bmgf
+Fetching publisher info for bio
+unpublished BE-BCE_KBO_0476286331
+Fetching publisher info for bioclimate
+Fetching publisher info for blueventures
+Fetching publisher info for bmb-mm
+unpublished bmb-mm
+Fetching publisher info for bond
+Fetching publisher info for bos_plus_tropen
+Fetching publisher info for bothends
+Fetching publisher info for brac_admin2
+Fetching publisher info for bracintl
+Fetching publisher info for bracuk
+unpublished GB-CHC-1115482
+Fetching publisher info for bu
+unpublished XI-GRID-grid.52681.38
+Fetching publisher info for bwh
+Fetching publisher info for britishcouncil
+unpublished GB-CHC-209131
+Fetching publisher info for baag
+Fetching publisher info for gb-chc-220949
+Fetching publisher info for bd
+Fetching publisher info for brulocalis
+Fetching publisher info for bsr_admin
+Fetching publisher info for bucksfarm
+Fetching publisher info for buildafrica
+Fetching publisher info for bvs-nepal
+Fetching publisher info for c40cities
+Fetching publisher info for cabi
+Fetching publisher info for camfed
+Fetching publisher info for finance_canada
+Fetching publisher info for gac-amc
+Fetching publisher info for idrccrdi
+Fetching publisher info for canoncollinstrust
+Fetching publisher info for cardnoem
+Fetching publisher info for ciafg
+unpublished AF-MOE-22
+Fetching publisher info for ciz
+Fetching publisher info for ciuk
+Fetching publisher info for carenederland
+Fetching publisher info for cww
+Fetching publisher info for csom1
+unpublished KE-NCB-218/051/9384/74
+Fetching publisher info for caribank
+Fetching publisher info for caritas_denmark
+Fetching publisher info for caritasfin
+Fetching publisher info for cibe
+Fetching publisher info for caritas_serbia
+Fetching publisher info for cafod
+Fetching publisher info for crs_vyf
+Fetching publisher info for cda
+Fetching publisher info for cdc
+Fetching publisher info for cecily
+Fetching publisher info for civic_admin
+Fetching publisher info for cifor
+unpublished XI-GRID-grid.450561.3
+Fetching publisher info for cilc
+unpublished NL-KVK-41166983
+Fetching publisher info for crehpa
+Fetching publisher info for ccdnigeria
+Fetching publisher info for cepr
+Fetching publisher info for ciks
+Fetching publisher info for csa-kenya
+Fetching publisher info for cncd
+Fetching publisher info for ct-admin
+Fetching publisher info for cdeb-kvhb_admin
+Fetching publisher info for umati
+Fetching publisher info for cprojects
+Fetching publisher info for chemonics
+Fetching publisher info for csu
+unpublished UG-NGB-5914-7209
+Fetching publisher info for childfund
+Fetching publisher info for childhopeuk
+Fetching publisher info for cic
+Fetching publisher info for ctc
+Fetching publisher info for fochi
+unpublished Fochi
+Fetching publisher info for cfyas
+Fetching publisher info for caid
+Fetching publisher info for caid_ireland
+Fetching publisher info for cbmuk
+unpublished GB-COH-1058162
+Fetching publisher info for ced
+Fetching publisher info for cifal
+Fetching publisher info for cini_jhk
+Fetching publisher info for civicus
+unpublished ZA-NPO-029-864
+Fetching publisher info for clasp
+Fetching publisher info for ccc
+Fetching publisher info for cif
+Fetching publisher info for cpi
+Fetching publisher info for chai
+Fetching publisher info for nl-kvk-54436222-27541
+Fetching publisher info for cocnl_publisher
+Fetching publisher info for coda
+Fetching publisher info for coffey
+Fetching publisher info for colalife
+Fetching publisher info for csa
+Fetching publisher info for cican
+unpublished CA-CRA_ACR-133165225
+Fetching publisher info for cadtm
+Fetching publisher info for cjp
+Fetching publisher info for clap
+unpublished IN-MHA-104860004
+Fetching publisher info for communityalbums
+unpublished GB-CHC-1140485
+Fetching publisher info for concern_worldwide
+Fetching publisher info for concernuk
+Fetching publisher info for cr
+Fetching publisher info for concordis
+Fetching publisher info for cdi
+Fetching publisher info for congodorpen
+Fetching publisher info for csc
+unpublished GB-CHC-1046579
+Fetching publisher info for cost_uk
+Fetching publisher info for cec
+Fetching publisher info for cord
+Fetching publisher info for cordaid
+Fetching publisher info for cowater
+unpublished reporting-org
+Fetching publisher info for cowi
+Fetching publisher info for crane
+Fetching publisher info for creating-better-futures
+unpublished GB-CHC-1148929
+Fetching publisher info for creative
+unpublished US-EIN-521154258
+Fetching publisher info for creausa-org
+Fetching publisher info for creausa
+unpublished US-EIN-31-1812979-CMI-00001
+Fetching publisher info for crc
+unpublished AF-CBR-40322
+Fetching publisher info for crb-ai_admin
+Fetching publisher info for cal
+Fetching publisher info for cuammtrustees
+Fetching publisher info for cyan
+Fetching publisher info for dai-e
+Fetching publisher info for healthpartners-international
+Fetching publisher info for damien-foundation
+Fetching publisher info for dance4life
+Fetching publisher info for dca
+Fetching publisher info for drc
+Fetching publisher info for danmission
+unpublished DK-CVR-25191501
+Fetching publisher info for dcapitalpartners
+unpublished GB-COH-07627789
+Fetching publisher info for dki1151219
+unpublished GB-CHC-1151219
+Fetching publisher info for decp
+Fetching publisher info for dciecpatnl
+Fetching publisher info for dba
+Fetching publisher info for delivery_associates
+Fetching publisher info for danida
+Fetching publisher info for dthfxx12
+Fetching publisher info for dapp
+Fetching publisher info for dipr
+Fetching publisher info for dorp-org
+Fetching publisher info for diltuk
+Fetching publisher info for damuk
+unpublished GB-CHC-1053786
+Fetching publisher info for diakonia802017-3517
+Fetching publisher info for dc
+Fetching publisher info for ddp
+Fetching publisher info for draf
+Fetching publisher info for drf
+Fetching publisher info for dec-uk
+Fetching publisher info for dla
+Fetching publisher info for djapo
+Fetching publisher info for dkt
+unpublished PK-SEC-0080655
+Fetching publisher info for pca-gire
+Fetching publisher info for dochas
+Fetching publisher info for dotw
+unpublished GB-CC-1067406
+Fetching publisher info for dotw_uk
+Fetching publisher info for dai
+Fetching publisher info for dynamo_international
+Fetching publisher info for ecdpm
+Fetching publisher info for ec
+Fetching publisher info for ecoconsult
+unpublished JO-CCD-7206
+Fetching publisher info for eco-fuelafrica
+unpublished eco-fuelafrica
+Fetching publisher info for esrf
+Fetching publisher info for ecorysnl
+Fetching publisher info for ecuk
+Fetching publisher info for edt_kenya
+Fetching publisher info for epag
+unpublished KE-NCB-21805194174605
+Fetching publisher info for eiuk
+Fetching publisher info for emms
+Fetching publisher info for e4i
+unpublished GB-CHC-1119168
+Fetching publisher info for energy_saving_trust
+Fetching publisher info for etmkdw
+Fetching publisher info for engenderhealth_eth
+Fetching publisher info for engenderhealth
+unpublished US-EIN-131623838
+Fetching publisher info for ewb_canada
+Fetching publisher info for eif
+Fetching publisher info for ef_
+Fetching publisher info for eps-swat
+unpublished PK-PCP-2005/0014
+Fetching publisher info for equileap
+Fetching publisher info for ey
+unpublished GB-COH-OC300001
+Fetching publisher info for eti
+Fetching publisher info for ethiopiaiduk
+Fetching publisher info for ehpea
+Fetching publisher info for ebrd
+Fetching publisher info for ec-devco
+Fetching publisher info for ec-echo
+Fetching publisher info for ec-near
+Fetching publisher info for ec-fpi
+Fetching publisher info for eip
+Fetching publisher info for eib
+Fetching publisher info for ejc
+Fetching publisher info for egc
+unpublished GB-COH-05335525
+Fetching publisher info for evc
+Fetching publisher info for excellent
+Fetching publisher info for eel
+Fetching publisher info for eow
+unpublished NL-KVK-30228969
+Fetching publisher info for fairfood
+Fetching publisher info for fairtrade_be
+Fetching publisher info for fairtrade_international
+Fetching publisher info for fwf
+Fetching publisher info for fact
+Fetching publisher info for flepuganda
+Fetching publisher info for fa
+Fetching publisher info for fri
+unpublished farmradio
+Fetching publisher info for ffi_publisher
+Fetching publisher info for fida
+Fetching publisher info for ftm-291333
+Fetching publisher info for fhi360
+unpublished US-EIN-237413005
+Fetching publisher info for fiabel
+Fetching publisher info for fian-belgium
+Fetching publisher info for fyf
+Fetching publisher info for finland_mfa
+Fetching publisher info for fmo
+Fetching publisher info for coopi
+unpublished 4935cb6e-e2e9-43f3-afb1-b1a4a59115bc
+Fetching publisher info for fcam
+Fetching publisher info for fos
+Fetching publisher info for fao
+Fetching publisher info for fh
+Fetching publisher info for fm
+Fetching publisher info for fucid
+Fetching publisher info for france
+Fetching publisher info for frankwater
+Fetching publisher info for freeagirl
+Fetching publisher info for ff
+Fetching publisher info for free_press_unlimited
+Fetching publisher info for fdh
+unpublished BE-BCE_KBO-0461977940
+Fetching publisher info for kipkelion
+Fetching publisher info for friendsofpwyf
+secondary US-EIN-47-4128047
+Fetching publisher info for foe_ewni
+Fetching publisher info for foe-ghana
+Fetching publisher info for foei
+Fetching publisher info for fundacion-acceso
+Fetching publisher info for fms
+unpublished AR-CENOC-16969-A
+Fetching publisher info for orientame
+Fetching publisher info for fipag
+Fetching publisher info for g3w-m3m_admin
+Fetching publisher info for gavi
+Fetching publisher info for mgcubed
+Fetching publisher info for gl
+Fetching publisher info for dcaf
+Fetching publisher info for geomoun
+Fetching publisher info for geopolicity
+unpublished AE-DMCC-JLT-65609
+Fetching publisher info for bmz
+Fetching publisher info for gecfundmanagerpwc
+Fetching publisher info for girlsnotbrides
+Fetching publisher info for giro555
+Fetching publisher info for givedirectly
+Fetching publisher info for gan
+secondary NP-SWC-13712
+Fetching publisher info for tb-a
+Fetching publisher info for gcap
+unpublished gcap-act2
+Fetching publisher info for globalgiving
+Fetching publisher info for gggi
+unpublished XM-DAC-47136
+Fetching publisher info for gif
+Fetching publisher info for globalintegrity
+unpublished US-EIN-260126537
+Fetching publisher info for gnpplus
+Fetching publisher info for nswp
+Fetching publisher info for gpe
+Fetching publisher info for goal
+Fetching publisher info for gogla
+Fetching publisher info for gdtp
+unpublished XM-DAC-40006
+Fetching publisher info for gppac
+Fetching publisher info for gtc
+unpublished GB-COH-05462228
+Fetching publisher info for growmovement_admin
+Fetching publisher info for grt
+unpublished IT-MAE-1988-128-004187-2d
+Fetching publisher info for guttmacher
+Fetching publisher info for hfhgb
+unpublished GB-CHC-1043641
+Fetching publisher info for hagar_uk
+Fetching publisher info for 49374507
+Fetching publisher info for hha
+Fetching publisher info for hifed
+unpublished FR-PDR-W691075333
+Fetching publisher info for hib
+Fetching publisher info for hiuk
+Fetching publisher info for handinhand
+Fetching publisher info for aicfo
+Fetching publisher info for healthnet
+Fetching publisher info for hpa
+Fetching publisher info for hp_12
+Fetching publisher info for healthyent
+unpublished Healthy
+Fetching publisher info for hefoundation
+Fetching publisher info for hsa
+Fetching publisher info for heifernederland
+Fetching publisher info for helpage_international
+Fetching publisher info for ageintl
+Fetching publisher info for hsi
+Fetching publisher info for hiil_mfa
+Fetching publisher info for hwa-zm
+Fetching publisher info for stichting_hivos
+Fetching publisher info for hi
+Fetching publisher info for hhc
+Fetching publisher info for horizons
+Fetching publisher info for hauk
+Fetching publisher info for htspe
+Fetching publisher info for hrf
+Fetching publisher info for hrs
+unpublished TR-MOI-27-019-030
+Fetching publisher info for icauk
+Fetching publisher info for icco-cooperation
+Fetching publisher info for icf
+Fetching publisher info for ke-ngc-3372
+Fetching publisher info for ics
+Fetching publisher info for ideo_org
+Fetching publisher info for idh
+Fetching publisher info for ifoam
+Fetching publisher info for ihedelft
+Fetching publisher info for idp
+Fetching publisher info for imcw_admin
+Fetching publisher info for ihs
+unpublished ZA-CIP-198300908806
+Fetching publisher info for indtrust
+Fetching publisher info for ifsi_isvi
+Fetching publisher info for iiwe
+Fetching publisher info for ids
+Fetching publisher info for itm
+Fetching publisher info for integrity_action
+Fetching publisher info for integrity
+Fetching publisher info for interaction
+Fetching publisher info for ia_nam
+secondary US-EIN-13-3287064NAM
+Fetching publisher info for iww_publish
+Fetching publisher info for iadb
+Fetching publisher info for interburns
+Fetching publisher info for icn
+Fetching publisher info for iyp
+Fetching publisher info for international-alert
+Fetching publisher info for iam_admin
+unpublished AF-MOE-1
+Fetching publisher info for ibfd
+Fetching publisher info for icdi
+Fetching publisher info for bmub_iki
+Fetching publisher info for idlo
+Fetching publisher info for ida
+unpublished CH-FDJP-66029860165
+Fetching publisher info for ifac
+Fetching publisher info for ifrcrcs
+unpublished XM-DAC-21018
+Fetching publisher info for ifdc_acma
+Fetching publisher info for ifcwbg
+Fetching publisher info for ifad
+Fetching publisher info for igc
+unpublished GB-COH-70527
+Fetching publisher info for ihaa
+Fetching publisher info for idea
+Fetching publisher info for 3ie
+Fetching publisher info for iied
+unpublished GB-COH-02188452
+Fetching publisher info for ilo
+Fetching publisher info for ilpi
+unpublished NO-BRC-997914694
+Fetching publisher info for imc_uk
+Fetching publisher info for imf
+Fetching publisher info for inbar
+Fetching publisher info for inasp
+unpublished GB-CHC-1106349
+Fetching publisher info for inpud_admin
+Fetching publisher info for inso
+Fetching publisher info for iom
+Fetching publisher info for ippf
+Fetching publisher info for ipa
+Fetching publisher info for internationalrefugeetrust
+unpublished GB-CHC-802450
+Fetching publisher info for irc_uk
+Fetching publisher info for unais
+Fetching publisher info for itpc
+Fetching publisher info for theunion
+unpublished FR-INSEE-78467060600036
+Fetching publisher info for iucn
+Fetching publisher info for iwda
+Fetching publisher info for ieu
+Fetching publisher info for intersos_main
+unpublished IT-CF-97091470589
+Fetching publisher info for intrahealth
+Fetching publisher info for iodparc
+Fetching publisher info for ip-india
+secondary GB-CHC-1114944
+Fetching publisher info for ipas
+Fetching publisher info for ipeglobal
+Fetching publisher info for iraq_foundation
+unpublished US-EIN-521750875
+Fetching publisher info for irc
+Fetching publisher info for irishaid
+Fetching publisher info for suhanajjar
+Fetching publisher info for irise_int
+Fetching publisher info for irw
+Fetching publisher info for iplussolutions
+Fetching publisher info for itad
+Fetching publisher info for iteco
+Fetching publisher info for iucn_nl
+Fetching publisher info for jica
+Fetching publisher info for jeevika_trust
+Fetching publisher info for gi-jhu
+Fetching publisher info for jocc_uk
+Fetching publisher info for jass
+Fetching publisher info for kad
+unpublished NL-KVK-08215619-201210000
+Fetching publisher info for kmss
+unpublished MM-MHA-1/Local/0047
+Fetching publisher info for karuna
+Fetching publisher info for krcs
+unpublished KE-CAP-256
+Fetching publisher info for kepa
+Fetching publisher info for kesho_kenya
+Fetching publisher info for kmet
+unpublished KE-KRA-P051119468K
+Fetching publisher info for kiyo
+Fetching publisher info for 111111_publisher
+Fetching publisher info for kpmgea
+Fetching publisher info for kpmgllp
+Fetching publisher info for kwaafrica
+Fetching publisher info for lhcf
+Fetching publisher info for landell-mills
+Fetching publisher info for lead_international
+Fetching publisher info for learningforlife
+Fetching publisher info for leg_it
+Fetching publisher info for mondefemmes
+Fetching publisher info for lcd_admin
+Fetching publisher info for lepra
+Fetching publisher info for libertic-520640889
+Fetching publisher info for lvd
+unpublished EG-MOSS-7802
+Fetching publisher info for lftw-be
+Fetching publisher info for lftwnl
+Fetching publisher info for lcdi_admin
+Fetching publisher info for lcds
+Fetching publisher info for lithuania_mfa
+Fetching publisher info for livelyminds
+Fetching publisher info for lstm
+Fetching publisher info for livingearth12
+Fetching publisher info for ldsps
+Fetching publisher info for ldri
+unpublished KE-RCO-CPR-2014-170608
+Fetching publisher info for lc
+Fetching publisher info for lsee
+unpublished GB-COH-02657442
+Fetching publisher info for lts
+unpublished GB-COH-SC100833
+Fetching publisher info for lwr
+unpublished US-EIN-132574963
+Fetching publisher info for mie-1134415
+Fetching publisher info for mag
+Fetching publisher info for magariro
+secondary MZ-MOJ-F2G1No4
+Fetching publisher info for mainline
+Fetching publisher info for malariaconsortium
+Fetching publisher info for mamac
+Fetching publisher info for mamta_himc
+Fetching publisher info for manniondaniels
+Fetching publisher info for manxtimes
+unpublished IM-CR-017899B
+secondary IM-CR-017899B
+Fetching publisher info for mapaction
+Fetching publisher info for msi
+Fetching publisher info for mmt
+unpublished GB-CHC-1153007
+Fetching publisher info for marysmeals
+Fetching publisher info for mastercard-foundation
+unpublished CA-CRA_ACR-817387277RR0001
+Fetching publisher info for max-foundation
+Fetching publisher info for mstamp
+Fetching publisher info for mazarsllp
+unpublished GB-COH-OC308299
+Fetching publisher info for mck
+Fetching publisher info for mdf
+unpublished NL-KVK-09073461
+Fetching publisher info for medair
+Fetching publisher info for medecins
+Fetching publisher info for msv
+Fetching publisher info for map
+Fetching publisher info for mrc-sierra-leone
+Fetching publisher info for mcnv
+unpublished NL-KVK-41198048
+Fetching publisher info for memisa
+Fetching publisher info for mrf
+Fetching publisher info for mm1
+Fetching publisher info for mce
+Fetching publisher info for mic-uk
+Fetching publisher info for mia_india
+Fetching publisher info for mlf
+Fetching publisher info for mmha
+Fetching publisher info for mifumi_uk
+Fetching publisher info for foenl
+Fetching publisher info for millenniumchallenge
+Fetching publisher info for mefbenin
+Fetching publisher info for slovakaid
+Fetching publisher info for yem_mopic
+unpublished Yem_MoPIC
+Fetching publisher info for mondiaalfnv
+Fetching publisher info for montrose
+unpublished MLLP
+Fetching publisher info for m2m_sa
+Fetching publisher info for motivation
+Fetching publisher info for mml
+Fetching publisher info for mied
+unpublished PK-PCP-R2/2018/203
+Fetching publisher info for mmh
+Fetching publisher info for fomin
+Fetching publisher info for mmr_admin2
+Fetching publisher info for muslimaid
+Fetching publisher info for mvo_nederland
+Fetching publisher info for m_u
+Fetching publisher info for nathan
+Fetching publisher info for nrgi
+Fetching publisher info for nri
+Fetching publisher info for ncdo
+unpublished NL-KVK-41215665
+Fetching publisher info for nef_usa
+Fetching publisher info for nkg
+Fetching publisher info for ncea
+Fetching publisher info for rvo
+Fetching publisher info for nimd
+unpublished NL-KVK-810625921
+Fetching publisher info for nimd-hq
+Fetching publisher info for nlr
+unpublished NL-KVK-41199723
+Fetching publisher info for minbuza_nl
+Fetching publisher info for nlrc
+Fetching publisher info for network4africa
+Fetching publisher info for needs
+Fetching publisher info for nidos
+Fetching publisher info for nctindia
+unpublished IN-MHA-010260407
+Fetching publisher info for mfat
+Fetching publisher info for ngo-federatie
+Fetching publisher info for nfn
+Fetching publisher info for niras
+unpublished DK-CVR-37295728
+Fetching publisher info for nirasfi
+unpublished FI-PRO-0891018-0
+Fetching publisher info for nic_sweden
+unpublished SE-BLV-556175-6197
+secondary SE-BLV-556175-6197
+Fetching publisher info for norad
+Fetching publisher info for nis_foundation
+unpublished NO-BRC-897554372
+Fetching publisher info for norsaac
+unpublished GH-DSW-4834
+Fetching publisher info for nrt-kenya
+unpublished KE-KRA-P051311853T
+Fetching publisher info for kn
+unpublished NO-BRC-951434353
+Fetching publisher info for npa
+Fetching publisher info for nrc
+Fetching publisher info for npm
+Fetching publisher info for nuffic20171017
+Fetching publisher info for unocha-cbpf
+Fetching publisher info for ospl_2016
+Fetching publisher info for odi_sales_ltd
+Fetching publisher info for o-m-i
+Fetching publisher info for omidyarnetwork
+Fetching publisher info for oneacrefund
+Fetching publisher info for onetoonecf
+Fetching publisher info for alcrer-1
+Fetching publisher info for ongvdrpefanb
+unpublished visiondrp.org
+Fetching publisher info for openforchange
+unpublished NL-KVK-59007648
+Fetching publisher info for openmindedly
+secondary IM-CR-024714B
+Fetching publisher info for obul
+unpublished UG-RSB-80010000426766/41453
+Fetching publisher info for opportunity-international-uk
+Fetching publisher info for options
+Fetching publisher info for orbis_africa
+Fetching publisher info for orbis_uk
+Fetching publisher info for orbis_ethiopia
+Fetching publisher info for orbis_international
+Fetching publisher info for chadet
+unpublished CHADET
+Fetching publisher info for odi
+Fetching publisher info for oxfamus
+Fetching publisher info for oau
+unpublished AU-ACNC-18055208636
+Fetching publisher info for oxfamgb
+Fetching publisher info for ibis_denmark
+Fetching publisher info for oxfamindia
+Fetching publisher info for oxfamintermon
+Fetching publisher info for omdm
+Fetching publisher info for onl
+Fetching publisher info for oxsol
+Fetching publisher info for oww
+Fetching publisher info for opml
+Fetching publisher info for pact
+Fetching publisher info for ppaf-2018
+unpublished PK-PCP-2015/366
+Fetching publisher info for palladium
+Fetching publisher info for pcst
+Fetching publisher info for ipao
+Fetching publisher info for partos_nl
+Fetching publisher info for pgi_kenya
+unpublished KE-NCB-OP.218/051/2008/0223/5390
+Fetching publisher info for _path_
+unpublished US-EIN-91-1157127
+Fetching publisher info for pax
+Fetching publisher info for peas
+Fetching publisher info for pegasys-ame
+unpublished MU-CR-C136127
+Fetching publisher info for pri
+Fetching publisher info for pennyappeal
+unpublished GB-CHC-1128341
+Fetching publisher info for peopleinaid
+Fetching publisher info for pin
+Fetching publisher info for phase-nepal
+Fetching publisher info for phase_worldwide
+Fetching publisher info for pib
+Fetching publisher info for planinternationalfinland
+Fetching publisher info for plan_uk
+Fetching publisher info for plan_usa
+Fetching publisher info for plan_ireland
+Fetching publisher info for plannlno
+Fetching publisher info for pont
+Fetching publisher info for pontis
+Fetching publisher info for pmc
+unpublished US-EIN-03-0358029
+Fetching publisher info for psi
+Fetching publisher info for pstc_1102
+Fetching publisher info for power
+Fetching publisher info for practica
+Fetching publisher info for pa
+Fetching publisher info for pragya
+Fetching publisher info for pwcplindia
+Fetching publisher info for pcf
+unpublished NL-KVK-41159889
+Fetching publisher info for pidg
+Fetching publisher info for progressio
+Fetching publisher info for phe
+Fetching publisher info for pmo-us
+Fetching publisher info for prefa_1
+Fetching publisher info for protos
+Fetching publisher info for psieurope
+Fetching publisher info for pwyf
+Fetching publisher info for pulsarint
+unpublished GB-COH-8802432
+Fetching publisher info for pumnl
+Fetching publisher info for pumpaid
+Fetching publisher info for pwc
+Fetching publisher info for qrf
+unpublished JO-MSD-2013011100066
+Fetching publisher info for quinoa
+Fetching publisher info for rfpap
+Fetching publisher info for rc
+Fetching publisher info for rc2africa
+unpublished TZ-TRA-110-664-087
+Fetching publisher info for rfuk
+Fetching publisher info for rainfoundation
+Fetching publisher info for raleigh_int
+Fetching publisher info for rcn
+Fetching publisher info for climate_centre
+Fetching publisher info for ri_kenya
+Fetching publisher info for ri-uk
+Fetching publisher info for odakorea
+Fetching publisher info for rti
+unpublished US-EIN-560686338
+Fetching publisher info for rem
+Fetching publisher info for restless
+Fetching publisher info for retrak
+Fetching publisher info for rtp
+Fetching publisher info for rikolto
+Fetching publisher info for rikolto_belgium
+Fetching publisher info for rnw_org
+unpublished NL-KVK-32022621
+Fetching publisher info for rkiv
+Fetching publisher info for rojiroti
+Fetching publisher info for uasd
+Fetching publisher info for rc4d
+Fetching publisher info for roughton
+Fetching publisher info for rcgp-international
+Fetching publisher info for rcog_resilience_in_obstetric_skills
+Fetching publisher info for rnli_international
+unpublished GB-CHC-209603
+Fetching publisher info for knvb
+Fetching publisher info for rspb_
+Fetching publisher info for kit
+Fetching publisher info for ruaf
+Fetching publisher info for rutgers
+Fetching publisher info for saanaconsulting
+unpublished GB-COH-05666387
+Fetching publisher info for sinar
+Fetching publisher info for safehandsformothers
+unpublished GB-CHC-1097928
+Fetching publisher info for saferworld
+Fetching publisher info for tsa
+unpublished GB-COH-02538134
+Fetching publisher info for spuk
+Fetching publisher info for savsign-org
+Fetching publisher info for bhimrao
+unpublished SAVE LIFE ON EARTH FOUNDATION (GLOBAL UNIVERSAL INTERNATIONAL) NGO NPO VSO
+Fetching publisher info for sci
+Fetching publisher info for scnl
+Fetching publisher info for scuk
+Fetching publisher info for scibelgium
+Fetching publisher info for sciaf
+Fetching publisher info for sfcg
+Fetching publisher info for sccf
+Fetching publisher info for self-help-africa
+Fetching publisher info for sendacow
+Fetching publisher info for sacethiopia
+Fetching publisher info for sacu
+Fetching publisher info for sense_international
+Fetching publisher info for si_kenya
+unpublished KE-NCB-OP.218/051/2004/0380/3458
+Fetching publisher info for shc
+Fetching publisher info for momentum_publishing
+unpublished MX-RFC-OIGA700930UP6
+Fetching publisher info for shelterbox
+Fetching publisher info for shtrii_shakti
+Fetching publisher info for ss-org
+Fetching publisher info for signal
+Fetching publisher info for test123456
+unpublished GB-12345678
+Fetching publisher info for simavi
+Fetching publisher info for simprints
+Fetching publisher info for siren
+Fetching publisher info for six-point-horizon
+unpublished GB-COH-11102554
+Fetching publisher info for sktwelfare
+unpublished GB-CHC-1153735
+Fetching publisher info for snv
+Fetching publisher info for sddirect
+Fetching publisher info for sfd-yemen
+Fetching publisher info for socialimpact
+unpublished US-EIN-54-1795186
+Fetching publisher info for simlab
+Fetching publisher info for swb_1
+Fetching publisher info for soneb-benin
+Fetching publisher info for solidagro_admin
+Fetching publisher info for solidaridad
+Fetching publisher info for solidaridad-europe
+Fetching publisher info for solidaridad-ssea
+Fetching publisher info for solidaridad-waf
+Fetching publisher info for solsoc
+Fetching publisher info for sjg
+Fetching publisher info for soscvkenya
+Fetching publisher info for sosnl
+Fetching publisher info for sosfaim
+Fetching publisher info for svdbskb_admin
+Fetching publisher info for sossaheluk
+Fetching publisher info for soundseekers
+Fetching publisher info for sacbc
+Fetching publisher info for maec
+Fetching publisher info for spark
+Fetching publisher info for sdn
+unpublished GB-CHC-1148143
+Fetching publisher info for starsfoundation
+Fetching publisher info for aanl
+Fetching publisher info for aflatoun
+Fetching publisher info for aidenvironment
+Fetching publisher info for deltares
+unpublished NL-KvK-41146461
+Fetching publisher info for enviu
+unpublished NL-KVK-24357922
+Fetching publisher info for dggf_financing_local_smes
+Fetching publisher info for hai
+Fetching publisher info for humana_houben
+Fetching publisher info for skn
+Fetching publisher info for maydayrescue
+Fetching publisher info for clingendael
+Fetching publisher info for somo
+Fetching publisher info for redeenkind
+Fetching publisher info for tos-nl
+Fetching publisher info for st_vluchteling
+Fetching publisher info for acwfs_vu
+unpublished NL-KVK-53815211
+Fetching publisher info for w-d
+Fetching publisher info for stockholmuniversity
+unpublished SE-ON-202100-3062
+Fetching publisher info for street_child
+Fetching publisher info for si
+Fetching publisher info for stromme_ug
+Fetching publisher info for sg
+Fetching publisher info for stad
+Fetching publisher info for surf
+Fetching publisher info for sida
+Fetching publisher info for swisstph
+Fetching publisher info for sdc_ch
+Fetching publisher info for simone_sympany
+Fetching publisher info for tabadlab
+unpublished PK-SEC-0116236
+Fetching publisher info for tcrf-tz
+unpublished TZ-TRA-119-705-363
+Fetching publisher info for targettb
+Fetching publisher info for tbalert
+Fetching publisher info for tamtf
+Fetching publisher info for tearfund
+Fetching publisher info for tear
+Fetching publisher info for tfb_admin1
+Fetching publisher info for tns
+Fetching publisher info for tdh_nl
+Fetching publisher info for test1111
+unpublished test-111111
+Fetching publisher info for atnf
+Fetching publisher info for taf
+Fetching publisher info for tfacmalawi
+Fetching publisher info for tfac
+Fetching publisher info for carter-center
+Fetching publisher info for cavwoc
+Fetching publisher info for tccec
+Fetching publisher info for commonwealthsecretariat
+Fetching publisher info for cbi-nigeria
+Fetching publisher info for foundation_center
+secondary US-EIN-131837418
+Fetching publisher info for thefreedomfund
+Fetching publisher info for gain
+Fetching publisher info for gdi
+unpublished US-EIN-14-1945286
+Fetching publisher info for msmgf
+unpublished US-EIN-471065461
+Fetching publisher info for theglobalfund
+Fetching publisher info for halo
+Fetching publisher info for thp_org
+Fetching publisher info for theict
+Fetching publisher info for irc_inc
+Fetching publisher info for ldp
+unpublished GB-COH-4067646
+Fetching publisher info for tlmew
+Fetching publisher info for the_mentor_initiative
+unpublished GB-COH-05126149
+Fetching publisher info for ancb_benin
+secondary BJ-IFU-6201408024805
+Fetching publisher info for ofid
+Fetching publisher info for open_university
+Fetching publisher info for populationcouncil
+unpublished US-EIN-13-1687001
+Fetching publisher info for the_power_of_nutrition
+Fetching publisher info for paf_2018
+Fetching publisher info for pedn
+unpublished UG-RSB-80010002677530/64545
+Fetching publisher info for qedgroupllc
+unpublished US-EIN-52-2116018
+Fetching publisher info for qedjt
+Fetching publisher info for sct
+Fetching publisher info for said-uk
+Fetching publisher info for unhcr
+unpublished XM-DAC-41121
+Fetching publisher info for uom
+Fetching publisher info for hewlett-foundation
+Fetching publisher info for worldbank
+Fetching publisher info for tfsr
+unpublished GB-CHC-280437
+Fetching publisher info for toybox
+unpublished GB-COH-03963000
+Fetching publisher info for tmea
+Fetching publisher info for traidcraft
+Fetching publisher info for tni
+Fetching publisher info for tib
+Fetching publisher info for ti_kenya
+Fetching publisher info for transparency-international
+Fetching publisher info for ti-uk
+unpublished GB-CHC-1112842
+Fetching publisher info for treea
+Fetching publisher info for trianglen
+Fetching publisher info for trias
+Fetching publisher info for triggerise
+Fetching publisher info for trimpact
+unpublished NL-KVK-64218422
+secondary NL-KVK-64218422
+Fetching publisher info for tripleline_crownagents
+Fetching publisher info for trocaire
+unpublished IE-CHY-20009601
+Fetching publisher info for troc
+Fetching publisher info for tbi
+Fetching publisher info for tropicalhealth
+unpublished GB-CHC-1113101
+Fetching publisher info for tao-03473165
+Fetching publisher info for twaweza
+Fetching publisher info for twin-iati
+Fetching publisher info for uhai-eashri
+Fetching publisher info for beis
+Fetching publisher info for dfe
+unpublished GB-GOV-14
+Fetching publisher info for defra_transparency
+Fetching publisher info for dfid
+Fetching publisher info for dwp
+Fetching publisher info for deccadmin
+Fetching publisher info for dhsc
+Fetching publisher info for fco
+Fetching publisher info for hooda
+Fetching publisher info for mrc
+Fetching publisher info for ukmod
+Fetching publisher info for scottish_government
+Fetching publisher info for wfa
+Fetching publisher info for ulbcoop
+Fetching publisher info for unhabitat
+Fetching publisher info for ub
+Fetching publisher info for unicefnl
+Fetching publisher info for uvcw
+Fetching publisher info for uawc
+Fetching publisher info for utd
+Fetching publisher info for udpk
+Fetching publisher info for umcor
+unpublished US-EIN-13-5562279
+Fetching publisher info for umn
+Fetching publisher info for uncdf
+Fetching publisher info for cerf
+Fetching publisher info for unicef
+Fetching publisher info for undp
+Fetching publisher info for unesco
+Fetching publisher info for un-environment
+Fetching publisher info for unf
+Fetching publisher info for unido
+unpublished XM-DAC-41123
+Fetching publisher info for unaids
+Fetching publisher info for ocha_fts
+secondary XM-OCHA-FTS
+Fetching publisher info for unops
+Fetching publisher info for unocha
+Fetching publisher info for unocha-sdc
+Fetching publisher info for unfpa
+Fetching publisher info for wfp
+Fetching publisher info for cu
+Fetching publisher info for unitedstates
+Fetching publisher info for usaid
+Fetching publisher info for united_work
+Fetching publisher info for ucos
+Fetching publisher info for ucl
+Fetching publisher info for uva_org
+Fetching publisher info for universityofbirmingham
+Fetching publisher info for leedsuni
+Fetching publisher info for uos
+unpublished GB-COH-RC000672
+Fetching publisher info for unpf
+Fetching publisher info for unw
+Fetching publisher info for uq
+Fetching publisher info for uaf-africa
+Fetching publisher info for uaf
+Fetching publisher info for uafla
+Fetching publisher info for urda
+unpublished NL-KVK-65444655
+Fetching publisher info for utz
+Fetching publisher info for uwezo_youth_empowerment
+Fetching publisher info for varkeyfoundation
+Fetching publisher info for vei_nl
+Fetching publisher info for vsfbelgium
+Fetching publisher info for via-db
+Fetching publisher info for v_a
+unpublished GB-CHC-1091198
+Fetching publisher info for vao
+Fetching publisher info for vfan
+Fetching publisher info for viva
+Fetching publisher info for vlir-uos
+unpublished BE-BCE_KBO-0418766123
+Fetching publisher info for vngi
+Fetching publisher info for vhai-org
+Fetching publisher info for vso
+Fetching publisher info for vrutti
+unpublished vrutti
+Fetching publisher info for vvob
+Fetching publisher info for vvsg
+Fetching publisher info for foncaba
+Fetching publisher info for wageningen_ur
+Fetching publisher info for wcc
+Fetching publisher info for warchildholland
+Fetching publisher info for wcuk
+Fetching publisher info for waronwant
+Fetching publisher info for wowni
+Fetching publisher info for war_trauma
+unpublished NL-KVK-41216891
+Fetching publisher info for wai
+Fetching publisher info for waste
+Fetching publisher info for wateraid
+Fetching publisher info for w4p
+Fetching publisher info for win
+unpublished DE-CR-VR32914
+Fetching publisher info for waternet-sadc
+unpublished BW-TIN-T087389
+Fetching publisher info for wsup
+Fetching publisher info for water-witness-international
+Fetching publisher info for waterworks
+Fetching publisher info for welbodipartnership
+Fetching publisher info for wellfound
+Fetching publisher info for wemos
+Fetching publisher info for wsm
+Fetching publisher info for wi
+Fetching publisher info for wlc
+unpublished NP-CRO-95453/069/070
+Fetching publisher info for wtk
+Fetching publisher info for wws
+Fetching publisher info for wnf
+Fetching publisher info for woda_0486
+unpublished ET-CSA-0486
+Fetching publisher info for womankindworld
+Fetching publisher info for wcf
+Fetching publisher info for wo-men
+Fetching publisher info for wep
+Fetching publisher info for wfwiuk
+Fetching publisher info for wpp
+Fetching publisher info for wag-1983
+Fetching publisher info for wedo
+Fetching publisher info for wgnrr_iati
+Fetching publisher info for w_r_c
+Fetching publisher info for women_win
+unpublished NL-KVK-34267612
+Fetching publisher info for icraf_
+Fetching publisher info for wacc-uk
+Fetching publisher info for wccuk
+Fetching publisher info for worldeconomicforum
+Fetching publisher info for weforum_geneva
+Fetching publisher info for wfm-igp
+Fetching publisher info for who
+Fetching publisher info for wmf
+Fetching publisher info for wri
+Fetching publisher info for wusc
+Fetching publisher info for wvi
+Fetching publisher info for wvnld
+Fetching publisher info for wvsyria
+Fetching publisher info for wvuk
+Fetching publisher info for wvz-gec
+secondary ZW-PVO-26/79
+Fetching publisher info for worldwaternet
+Fetching publisher info for wwf-be
+Fetching publisher info for wwfpakistan
+Fetching publisher info for whpca
+unpublished GB-COH-06735120
+Fetching publisher info for wywca
+unpublished wywca
+Fetching publisher info for wwf-uk
+Fetching publisher info for wygi
+Fetching publisher info for ycare
+Fetching publisher info for libymca
+Fetching publisher info for yipl
+Fetching publisher info for ybi
+Fetching publisher info for yoneco1997
+Fetching publisher info for ywcabd
+Fetching publisher info for zet
+Fetching publisher info for zimmzimm
+Fetching publisher info for zing
+Fetching publisher info for zoa
+Writing json/iati_codes.json for the last time
+Writing json/publishers.json
 1995 1
 1995 2
 1995 3
@@ -928,8 +2150,8 @@ YOU WILL NEED TO MANUALLY ADD IT TO THE LIST IN dstore/js/exs.js
   'Currency units per SDR for October 2018': '???',
   'Currency units per SDR for November 2018': '???',
   'Currency units per SDR for December 2018': '???' }
-[master 43d2fbab] auto json fetch in nightly cron
- 5 files changed, 2234 insertions(+), 3855 deletions(-)
+[master 432c3c53] auto json fetch in nightly cron
+ 7 files changed, 304 insertions(+), 118 deletions(-)
 Already up-to-date.
 Branch master set up to track remote branch master from origin.
 
@@ -988,821 +2210,821 @@ Reading text/view_test.html
 Writing json/chunks.json
 Writing json/tongues.js
 browserify
-00:01:45 DIR  /
-00:01:45 DIR  /cmn
-00:01:45 DIR  /ctrack
-00:01:45 DIR  /ctrack/art
-00:01:45 DIR  /ctrack/art/back
-00:01:45 DIR  /ctrack/art/flag
-00:01:45 DIR  /ctrack/art/generator
-00:01:45 DIR  /ctrack/art/high
-00:01:45 DIR  /ctrack/art/original
-00:01:45 DIR  /ctrack/art/rgba
-00:01:45 DIR  /ctrack/jslib
-00:01:45 DIR  /ctrack/jslib/markercluster
-00:01:45 DIR  /fra
-00:01:45 DIR  /hin
-00:01:45 DIR  /jpn
-00:01:45 DIR  /jslib
-00:01:45 DIR  /news
-00:01:45 DIR  /news/2014-05-08-Development-Tracker-Architecture
-00:01:45 DIR  /news/2014-05-28-Current-plans
-00:01:45 DIR  /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
-00:01:45 DIR  /news/2014-11-30-Interactive-IATI-data-d-portal-generator
-00:01:45 DIR  /news/2015-11-05-Adding-country-budgets-to-d-portal
-00:01:45 DIR  /news/2016-03-02-Results-data-now-showing-in-d-portal
-00:01:45 DIR  /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
-00:01:45 DIR  /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
-00:01:45 DIR  /news/2017-09-06-New-d-portal-search-features-to-improve-data-use
-00:01:45 DIR  /news/2018-03-20-Server-upgrade-and-other-updates
-00:01:45 DIR  /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download
-00:01:45 DIR  /news/author
-00:01:45 DIR  /spa
-00:01:45 BLOGPOST news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:01:45 BLOGPOST news/2018-03-20-Server-upgrade-and-other-updates/index.html
-00:01:45 BLOGPOST news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-00:01:45 BLOGPOST news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-00:01:45 BLOGPOST news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:01:45 BLOGPOST news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:01:45 BLOGPOST news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:01:45 BLOGPOST news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:01:45 BLOGPOST news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:01:45 BLOGPOST news/2014-05-28-Current-plans/index.html
-00:01:45 BLOGPOST news/2014-05-08-Development-Tracker-Architecture/index.html
-00:01:45 BLOG news/index.html
-00:01:45 BLOG news/page2.html
-00:01:45 BLOG news/page3.html
-00:01:45 REDIRECT news/posts.html -> /news/index.html
-00:01:45 REDIRECT news/2014-05-08-Development-Tracker-Architecture.html -> /news/2014-05-08-Development-Tracker-Architecture
-00:01:45 REDIRECT news/2014-05-28-Current-plans.html -> /news/2014-05-28-Current-plans
-00:01:45 REDIRECT news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
-00:01:45 REDIRECT news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> /news/2014-11-30-Interactive-IATI-data-d-portal-generator
-00:01:45 REDIRECT news/2015-11-05-Adding-country-budgets-to-d-portal.html -> /news/2015-11-05-Adding-country-budgets-to-d-portal
-00:01:45 REDIRECT news/2016-03-02-Results-data-now-showing-in-d-portal.html -> /news/2016-03-02-Results-data-now-showing-in-d-portal
-00:01:45 REDIRECT news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
-00:01:45 REDIRECT news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
-00:01:45 COPY / -> cmn/
-00:01:45 COPY / -> fra/
-00:01:45 COPY / -> hin/
-00:01:45 COPY / -> jpn/
-00:01:45 COPY / -> spa/
-00:01:45 COPY news/ -> cmn/news/
-00:01:45 COPY news/ -> fra/news/
-00:01:45 COPY news/ -> hin/news/
-00:01:45 COPY news/ -> jpn/news/
-00:01:45 COPY news/ -> spa/news/
-00:01:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
-00:01:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
-00:01:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
-00:01:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
-00:01:45 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
-00:01:46 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
-00:01:46 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
-00:01:46 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
-00:01:46 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
-00:01:46 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
-00:01:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:46 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:46 COPY news/author/ -> cmn/news/author/
-00:01:46 COPY news/author/ -> fra/news/author/
-00:01:46 COPY news/author/ -> hin/news/author/
-00:01:46 COPY news/author/ -> jpn/news/author/
-00:01:46 COPY news/author/ -> spa/news/author/
-00:01:46 FILE /about.^.html
-00:01:46 COPY about.html -> cmn/about.html
-00:01:46 COPY about.html -> fra/about.html
-00:01:46 COPY about.html -> hin/about.html
-00:01:46 COPY about.html -> jpn/about.html
-00:01:46 COPY about.html -> spa/about.html
-00:01:46 FILE /ctrack/art/Octocat.png
-00:01:46 FILE /ctrack/art/README.md
-00:01:46 FILE /ctrack/art/UNDG_logo.png
-00:01:46 FILE /ctrack/art/activities.xsl
-00:01:46 FILE /ctrack/art/alert_icon.png
-00:01:46 FILE /ctrack/art/back/af.jpg
-00:01:46 FILE /ctrack/art/back/ag.jpg
-00:01:46 FILE /ctrack/art/back/ai.jpg
-00:01:46 FILE /ctrack/art/back/al.jpg
-00:01:46 FILE /ctrack/art/back/am.jpg
-00:01:46 FILE /ctrack/art/back/ao.jpg
-00:01:46 FILE /ctrack/art/back/ar.jpg
-00:01:46 FILE /ctrack/art/back/az.jpg
-00:01:46 FILE /ctrack/art/back/ba.jpg
-00:01:46 FILE /ctrack/art/back/bd.jpg
-00:01:46 FILE /ctrack/art/back/bf.jpg
-00:01:46 FILE /ctrack/art/back/bi.jpg
-00:01:46 FILE /ctrack/art/back/bj.jpg
-00:01:46 FILE /ctrack/art/back/bo.jpg
-00:01:46 FILE /ctrack/art/back/br.jpg
-00:01:46 FILE /ctrack/art/back/bt.jpg
-00:01:46 FILE /ctrack/art/back/bw.jpg
-00:01:46 FILE /ctrack/art/back/by.jpg
-00:01:46 FILE /ctrack/art/back/bz.jpg
-00:01:46 FILE /ctrack/art/back/cd.jpg
-00:01:46 FILE /ctrack/art/back/cf.jpg
-00:01:46 FILE /ctrack/art/back/cg.jpg
-00:01:46 FILE /ctrack/art/back/ci.jpg
-00:01:46 FILE /ctrack/art/back/ck.jpg
-00:01:46 FILE /ctrack/art/back/cl.jpg
-00:01:46 FILE /ctrack/art/back/cm.jpg
-00:01:46 FILE /ctrack/art/back/cn.jpg
-00:01:46 FILE /ctrack/art/back/co.jpg
-00:01:46 FILE /ctrack/art/back/cr.jpg
-00:01:46 FILE /ctrack/art/back/cu.jpg
-00:01:46 FILE /ctrack/art/back/cv.jpg
-00:01:46 FILE /ctrack/art/back/dj.jpg
-00:01:46 FILE /ctrack/art/back/dm.jpg
-00:01:46 FILE /ctrack/art/back/do.jpg
-00:01:46 FILE /ctrack/art/back/dz.jpg
-00:01:46 FILE /ctrack/art/back/ec.jpg
-00:01:46 FILE /ctrack/art/back/eg.jpg
-00:01:46 FILE /ctrack/art/back/er.jpg
-00:01:46 FILE /ctrack/art/back/et.jpg
-00:01:46 FILE /ctrack/art/back/fj.jpg
-00:01:46 FILE /ctrack/art/back/fm.jpg
-00:01:46 FILE /ctrack/art/back/ga.jpg
-00:01:46 FILE /ctrack/art/back/gd.jpg
-00:01:46 FILE /ctrack/art/back/ge.jpg
-00:01:46 FILE /ctrack/art/back/gh.jpg
-00:01:46 FILE /ctrack/art/back/gm.jpg
-00:01:46 FILE /ctrack/art/back/gn.jpg
-00:01:46 FILE /ctrack/art/back/gq.jpg
-00:01:46 FILE /ctrack/art/back/gt.jpg
-00:01:46 FILE /ctrack/art/back/gw.jpg
-00:01:46 FILE /ctrack/art/back/gy.jpg
-00:01:46 FILE /ctrack/art/back/hn.jpg
-00:01:46 FILE /ctrack/art/back/ht.jpg
-00:01:46 FILE /ctrack/art/back/id.jpg
-00:01:46 FILE /ctrack/art/back/in.jpg
-00:01:46 FILE /ctrack/art/back/iq.jpg
-00:01:46 FILE /ctrack/art/back/ir.jpg
-00:01:46 FILE /ctrack/art/back/jm.jpg
-00:01:46 FILE /ctrack/art/back/jo.jpg
-00:01:46 FILE /ctrack/art/back/ke.jpg
-00:01:46 FILE /ctrack/art/back/kg.jpg
-00:01:46 FILE /ctrack/art/back/kh.jpg
-00:01:46 FILE /ctrack/art/back/ki.jpg
-00:01:46 FILE /ctrack/art/back/km.jpg
-00:01:46 FILE /ctrack/art/back/kn.jpg
-00:01:46 FILE /ctrack/art/back/kp.jpg
-00:01:46 FILE /ctrack/art/back/kz.jpg
-00:01:46 FILE /ctrack/art/back/la.jpg
-00:01:46 FILE /ctrack/art/back/lb.jpg
-00:01:46 FILE /ctrack/art/back/lc.jpg
-00:01:46 FILE /ctrack/art/back/lk.jpg
-00:01:46 FILE /ctrack/art/back/lr.jpg
-00:01:46 FILE /ctrack/art/back/ls.jpg
-00:01:46 FILE /ctrack/art/back/ly.jpg
-00:01:46 FILE /ctrack/art/back/ma.jpg
-00:01:46 FILE /ctrack/art/back/md.jpg
-00:01:46 FILE /ctrack/art/back/me.jpg
-00:01:46 FILE /ctrack/art/back/mg.jpg
-00:01:46 FILE /ctrack/art/back/mh.jpg
-00:01:46 FILE /ctrack/art/back/mk.jpg
-00:01:46 FILE /ctrack/art/back/ml.jpg
-00:01:46 FILE /ctrack/art/back/mm.jpg
-00:01:46 FILE /ctrack/art/back/mn.jpg
-00:01:46 FILE /ctrack/art/back/mr.jpg
-00:01:46 FILE /ctrack/art/back/ms.jpg
-00:01:46 FILE /ctrack/art/back/mu.jpg
-00:01:46 FILE /ctrack/art/back/mv.jpg
-00:01:46 FILE /ctrack/art/back/mw.jpg
-00:01:46 FILE /ctrack/art/back/mx.jpg
-00:01:46 FILE /ctrack/art/back/my.jpg
-00:01:46 FILE /ctrack/art/back/mz.jpg
-00:01:46 FILE /ctrack/art/back/na.jpg
-00:01:46 FILE /ctrack/art/back/ne.jpg
-00:01:46 FILE /ctrack/art/back/ng.jpg
-00:01:46 FILE /ctrack/art/back/ni.jpg
-00:01:46 FILE /ctrack/art/back/np.jpg
-00:01:46 FILE /ctrack/art/back/nr.jpg
-00:01:46 FILE /ctrack/art/back/nu.jpg
-00:01:46 FILE /ctrack/art/back/pa.jpg
-00:01:46 FILE /ctrack/art/back/pe.jpg
-00:01:46 FILE /ctrack/art/back/pg.jpg
-00:01:46 FILE /ctrack/art/back/ph.jpg
-00:01:46 FILE /ctrack/art/back/pk.jpg
-00:01:46 FILE /ctrack/art/back/ps.jpg
-00:01:46 FILE /ctrack/art/back/pw.jpg
-00:01:46 FILE /ctrack/art/back/py.jpg
-00:01:46 FILE /ctrack/art/back/rs.jpg
-00:01:46 FILE /ctrack/art/back/rw.jpg
-00:01:46 FILE /ctrack/art/back/sb.jpg
-00:01:46 FILE /ctrack/art/back/sc.jpg
-00:01:46 FILE /ctrack/art/back/sd.jpg
-00:01:46 FILE /ctrack/art/back/sh.jpg
-00:01:46 FILE /ctrack/art/back/sl.jpg
-00:01:46 FILE /ctrack/art/back/sn.jpg
-00:01:46 FILE /ctrack/art/back/so.jpg
-00:01:46 FILE /ctrack/art/back/sr.jpg
-00:01:46 FILE /ctrack/art/back/ss.jpg
-00:01:46 FILE /ctrack/art/back/st.jpg
-00:01:46 FILE /ctrack/art/back/sv.jpg
-00:01:46 FILE /ctrack/art/back/sy.jpg
-00:01:46 FILE /ctrack/art/back/sz.jpg
-00:01:46 FILE /ctrack/art/back/td.jpg
-00:01:46 FILE /ctrack/art/back/tg.jpg
-00:01:46 FILE /ctrack/art/back/th.jpg
-00:01:46 FILE /ctrack/art/back/tk.jpg
-00:01:46 FILE /ctrack/art/back/tl.jpg
-00:01:46 FILE /ctrack/art/back/tm.jpg
-00:01:46 FILE /ctrack/art/back/tn.jpg
-00:01:46 FILE /ctrack/art/back/to.jpg
-00:01:46 FILE /ctrack/art/back/tr.jpg
-00:01:46 FILE /ctrack/art/back/tv.jpg
-00:01:46 FILE /ctrack/art/back/tz.jpg
-00:01:46 FILE /ctrack/art/back/ua.jpg
-00:01:46 FILE /ctrack/art/back/ug.jpg
-00:01:46 FILE /ctrack/art/back/uy.jpg
-00:01:46 FILE /ctrack/art/back/uz.jpg
-00:01:46 FILE /ctrack/art/back/vc.jpg
-00:01:46 FILE /ctrack/art/back/ve.jpg
-00:01:46 FILE /ctrack/art/back/vn.jpg
-00:01:46 FILE /ctrack/art/back/vu.jpg
-00:01:46 FILE /ctrack/art/back/wf.jpg
-00:01:46 FILE /ctrack/art/back/ws.jpg
-00:01:46 FILE /ctrack/art/back/xk.jpg
-00:01:46 FILE /ctrack/art/back/ye.jpg
-00:01:46 FILE /ctrack/art/back/za.jpg
-00:01:46 FILE /ctrack/art/back/zm.jpg
-00:01:46 FILE /ctrack/art/back/zw.jpg
-00:01:46 FILE /ctrack/art/backgroundimage.jpg
-00:01:46 FILE /ctrack/art/chosen-sprite.png
-00:01:46 FILE /ctrack/art/chosen-sprite@2x.png
-00:01:46 FILE /ctrack/art/chosen.css
-00:01:46 FILE /ctrack/art/chosen.min.css
-00:01:46 FILE /ctrack/art/dash.png
-00:01:46 FILE /ctrack/art/dash_logo.png
-00:01:46 FILE /ctrack/art/discover.jpg
-00:01:46 FILE /ctrack/art/dlogs.png
-00:01:46 FILE /ctrack/art/dp_git_logo.460.png
-00:01:46 FILE /ctrack/art/dp_logo.400.png
-00:01:46 FILE /ctrack/art/dp_logo.index.png
-00:01:46 FILE /ctrack/art/dslogo.400.png
-00:01:46 FILE /ctrack/art/faq.png
-00:01:46 FILE /ctrack/art/flag/af.png
-00:01:46 FILE /ctrack/art/flag/ag.png
-00:01:46 FILE /ctrack/art/flag/ai.png
-00:01:46 FILE /ctrack/art/flag/al.png
-00:01:46 FILE /ctrack/art/flag/am.png
-00:01:46 FILE /ctrack/art/flag/ao.png
-00:01:46 FILE /ctrack/art/flag/ar.png
-00:01:46 FILE /ctrack/art/flag/az.png
-00:01:46 FILE /ctrack/art/flag/ba.png
-00:01:46 FILE /ctrack/art/flag/bd.png
-00:01:46 FILE /ctrack/art/flag/bf.png
-00:01:46 FILE /ctrack/art/flag/bi.png
-00:01:46 FILE /ctrack/art/flag/bj.png
-00:01:46 FILE /ctrack/art/flag/bo.png
-00:01:46 FILE /ctrack/art/flag/br.png
-00:01:46 FILE /ctrack/art/flag/bt.png
-00:01:46 FILE /ctrack/art/flag/bw.png
-00:01:46 FILE /ctrack/art/flag/by.png
-00:01:46 FILE /ctrack/art/flag/bz.png
-00:01:46 FILE /ctrack/art/flag/cd.png
-00:01:46 FILE /ctrack/art/flag/cf.png
-00:01:46 FILE /ctrack/art/flag/cg.png
-00:01:46 FILE /ctrack/art/flag/ci.png
-00:01:46 FILE /ctrack/art/flag/ck.png
-00:01:46 FILE /ctrack/art/flag/cl.png
-00:01:46 FILE /ctrack/art/flag/cm.png
-00:01:46 FILE /ctrack/art/flag/cn.png
-00:01:46 FILE /ctrack/art/flag/co.png
-00:01:46 FILE /ctrack/art/flag/cr.png
-00:01:46 FILE /ctrack/art/flag/cu.png
-00:01:46 FILE /ctrack/art/flag/cv.png
-00:01:46 FILE /ctrack/art/flag/dj.png
-00:01:46 FILE /ctrack/art/flag/dm.png
-00:01:46 FILE /ctrack/art/flag/do.png
-00:01:46 FILE /ctrack/art/flag/dz.png
-00:01:46 FILE /ctrack/art/flag/ec.png
-00:01:46 FILE /ctrack/art/flag/eg.png
-00:01:46 FILE /ctrack/art/flag/empty_flag.png
-00:01:46 FILE /ctrack/art/flag/er.png
-00:01:46 FILE /ctrack/art/flag/et.png
-00:01:46 FILE /ctrack/art/flag/fj.png
-00:01:46 FILE /ctrack/art/flag/fm.png
-00:01:46 FILE /ctrack/art/flag/ga.png
-00:01:46 FILE /ctrack/art/flag/gd.png
-00:01:46 FILE /ctrack/art/flag/ge.png
-00:01:46 FILE /ctrack/art/flag/gh.png
-00:01:46 FILE /ctrack/art/flag/gm.png
-00:01:46 FILE /ctrack/art/flag/gn.png
-00:01:46 FILE /ctrack/art/flag/gq.png
-00:01:46 FILE /ctrack/art/flag/gt.png
-00:01:46 FILE /ctrack/art/flag/gw.png
-00:01:46 FILE /ctrack/art/flag/gy.png
-00:01:46 FILE /ctrack/art/flag/hn.png
-00:01:46 FILE /ctrack/art/flag/ht.png
-00:01:46 FILE /ctrack/art/flag/id.png
-00:01:46 FILE /ctrack/art/flag/in.png
-00:01:46 FILE /ctrack/art/flag/iq.png
-00:01:46 FILE /ctrack/art/flag/ir.png
-00:01:46 FILE /ctrack/art/flag/jm.png
-00:01:46 FILE /ctrack/art/flag/jo.png
-00:01:46 FILE /ctrack/art/flag/ke.png
-00:01:46 FILE /ctrack/art/flag/kg.png
-00:01:46 FILE /ctrack/art/flag/kh.png
-00:01:46 FILE /ctrack/art/flag/ki.png
-00:01:46 FILE /ctrack/art/flag/km.png
-00:01:46 FILE /ctrack/art/flag/kn.png
-00:01:46 FILE /ctrack/art/flag/kp.png
-00:01:46 FILE /ctrack/art/flag/kz.png
-00:01:46 FILE /ctrack/art/flag/la.png
-00:01:46 FILE /ctrack/art/flag/lb.png
-00:01:46 FILE /ctrack/art/flag/lc.png
-00:01:46 FILE /ctrack/art/flag/lk.png
-00:01:46 FILE /ctrack/art/flag/lr.png
-00:01:46 FILE /ctrack/art/flag/ls.png
-00:01:46 FILE /ctrack/art/flag/ly.png
-00:01:46 FILE /ctrack/art/flag/ma.png
-00:01:46 FILE /ctrack/art/flag/md.png
-00:01:46 FILE /ctrack/art/flag/me.png
-00:01:46 FILE /ctrack/art/flag/mg.png
-00:01:46 FILE /ctrack/art/flag/mh.png
-00:01:46 FILE /ctrack/art/flag/mk.png
-00:01:46 FILE /ctrack/art/flag/ml.png
-00:01:46 FILE /ctrack/art/flag/mm.png
-00:01:46 FILE /ctrack/art/flag/mn.png
-00:01:46 FILE /ctrack/art/flag/mr.png
-00:01:46 FILE /ctrack/art/flag/ms.png
-00:01:46 FILE /ctrack/art/flag/mu.png
-00:01:46 FILE /ctrack/art/flag/mv.png
-00:01:46 FILE /ctrack/art/flag/mw.png
-00:01:46 FILE /ctrack/art/flag/mx.png
-00:01:46 FILE /ctrack/art/flag/my.png
-00:01:46 FILE /ctrack/art/flag/mz.png
-00:01:46 FILE /ctrack/art/flag/na.png
-00:01:46 FILE /ctrack/art/flag/ne.png
-00:01:46 FILE /ctrack/art/flag/ng.png
-00:01:46 FILE /ctrack/art/flag/ni.png
-00:01:46 FILE /ctrack/art/flag/np.png
-00:01:46 FILE /ctrack/art/flag/nr.png
-00:01:46 FILE /ctrack/art/flag/nu.png
-00:01:46 FILE /ctrack/art/flag/pa.png
-00:01:46 FILE /ctrack/art/flag/pe.png
-00:01:46 FILE /ctrack/art/flag/pg.png
-00:01:46 FILE /ctrack/art/flag/ph.png
-00:01:46 FILE /ctrack/art/flag/pk.png
-00:01:46 FILE /ctrack/art/flag/ps.png
-00:01:46 FILE /ctrack/art/flag/pw.png
-00:01:46 FILE /ctrack/art/flag/py.png
-00:01:46 FILE /ctrack/art/flag/rs.png
-00:01:46 FILE /ctrack/art/flag/rw.png
-00:01:46 FILE /ctrack/art/flag/sb.png
-00:01:46 FILE /ctrack/art/flag/sc.png
-00:01:46 FILE /ctrack/art/flag/sd.png
-00:01:46 FILE /ctrack/art/flag/sh.png
-00:01:46 FILE /ctrack/art/flag/sl.png
-00:01:46 FILE /ctrack/art/flag/sn.png
-00:01:46 FILE /ctrack/art/flag/so.png
-00:01:46 FILE /ctrack/art/flag/sr.png
-00:01:46 FILE /ctrack/art/flag/ss.png
-00:01:46 FILE /ctrack/art/flag/st.png
-00:01:46 FILE /ctrack/art/flag/sv.png
-00:01:46 FILE /ctrack/art/flag/sy.png
-00:01:46 FILE /ctrack/art/flag/sz.png
-00:01:46 FILE /ctrack/art/flag/td.png
-00:01:46 FILE /ctrack/art/flag/tg.png
-00:01:46 FILE /ctrack/art/flag/th.png
-00:01:46 FILE /ctrack/art/flag/tj.png
-00:01:46 FILE /ctrack/art/flag/tk.png
-00:01:46 FILE /ctrack/art/flag/tl.png
-00:01:46 FILE /ctrack/art/flag/tm.png
-00:01:46 FILE /ctrack/art/flag/tn.png
-00:01:46 FILE /ctrack/art/flag/to.png
-00:01:46 FILE /ctrack/art/flag/tr.png
-00:01:46 FILE /ctrack/art/flag/tv.png
-00:01:46 FILE /ctrack/art/flag/tz.png
-00:01:46 FILE /ctrack/art/flag/ua.png
-00:01:46 FILE /ctrack/art/flag/ug.png
-00:01:46 FILE /ctrack/art/flag/uy.png
-00:01:46 FILE /ctrack/art/flag/uz.png
-00:01:46 FILE /ctrack/art/flag/vc.png
-00:01:46 FILE /ctrack/art/flag/ve.png
-00:01:46 FILE /ctrack/art/flag/vn.png
-00:01:46 FILE /ctrack/art/flag/vu.png
-00:01:46 FILE /ctrack/art/flag/wf.png
-00:01:46 FILE /ctrack/art/flag/ws.png
-00:01:46 FILE /ctrack/art/flag/xk.png
-00:01:46 FILE /ctrack/art/flag/ye.png
-00:01:46 FILE /ctrack/art/flag/za.png
-00:01:46 FILE /ctrack/art/flag/zm.png
-00:01:46 FILE /ctrack/art/flag/zw.png
-00:01:46 FILE /ctrack/art/generator/activities.png
-00:01:46 FILE /ctrack/art/generator/countriesall.png
-00:01:46 FILE /ctrack/art/generator/crsdonortop.png
-00:01:46 FILE /ctrack/art/generator/crssectortop.png
-00:01:46 FILE /ctrack/art/generator/map.png
-00:01:46 FILE /ctrack/art/generator/overview.png
-00:01:46 FILE /ctrack/art/generator/savi.png
-00:01:46 FILE /ctrack/art/generator.png
-00:01:46 FILE /ctrack/art/high/active_icon.png
-00:01:46 FILE /ctrack/art/high/active_icon_big.png
-00:01:46 FILE /ctrack/art/high/activities.css
-00:01:46 FILE /ctrack/art/high/activity_icon.png
-00:01:46 FILE /ctrack/art/high/alert_icon.png
-00:01:46 FILE /ctrack/art/high/alert_icon_top.png
-00:01:46 FILE /ctrack/art/high/ctrack.css
-00:01:46 FILE /ctrack/art/high/dp_logo.60.png
-00:01:46 FILE /ctrack/art/high/ended_icon.png
-00:01:46 FILE /ctrack/art/high/ended_icon_big.png
-00:01:46 FILE /ctrack/art/high/info_icon.png
-00:01:46 FILE /ctrack/art/high/missing_icon_big.png
-00:01:46 FILE /ctrack/art/high/money_title_icon.png
-00:01:46 FILE /ctrack/art/high/planned_icon_big.png
-00:01:46 FILE /ctrack/art/high/publisher_icon.png
-00:01:46 FILE /ctrack/art/high/publishers_icon_big.png
-00:01:46 FILE /ctrack/art/high/search_category.png
-00:01:46 FILE /ctrack/art/high/search_country.png
-00:01:46 FILE /ctrack/art/high/search_funder.png
-00:01:46 FILE /ctrack/art/high/search_icon.png
-00:01:46 FILE /ctrack/art/high/search_policy.png
-00:01:46 FILE /ctrack/art/high/search_publisher.png
-00:01:46 FILE /ctrack/art/high/search_sector.png
-00:01:46 FILE /ctrack/art/high/search_status.png
-00:01:46 FILE /ctrack/art/high/search_year.png
-00:01:46 FILE /ctrack/art/high/settings.png
-00:01:46 FILE /ctrack/art/high/sort_icon.png
-00:01:46 FILE /ctrack/art/high/total_icon_big.png
-00:01:46 FILE /ctrack/art/iati_logo.269.png
-00:01:46 FILE /ctrack/art/iati_logo.png
-00:01:46 FILE /ctrack/art/index.css
-00:01:46 FILE /ctrack/art/label_category.png
-00:01:46 FILE /ctrack/art/label_country.png
-00:01:46 FILE /ctrack/art/label_funder.png
-00:01:46 FILE /ctrack/art/label_publisher.png
-00:01:46 FILE /ctrack/art/label_sector.png
-00:01:46 FILE /ctrack/art/label_year.png
-00:01:46 FILE /ctrack/art/mexico_background_image.jpg
-00:01:46 FILE /ctrack/art/news.jpg
-00:01:46 FILE /ctrack/art/original/active_icon.png
-00:01:46 FILE /ctrack/art/original/active_icon_big.png
-00:01:46 FILE /ctrack/art/original/activities.css
-00:01:46 FILE /ctrack/art/original/activity_icon.png
-00:01:46 FILE /ctrack/art/original/alert_icon.png
-00:01:46 FILE /ctrack/art/original/alert_icon_top.png
-00:01:46 FILE /ctrack/art/original/ctrack.css
-00:01:46 FILE /ctrack/art/original/dp_logo.60.png
-00:01:46 FILE /ctrack/art/original/dp_tile.400.png
-00:01:46 FILE /ctrack/art/original/ended_icon.png
-00:01:46 FILE /ctrack/art/original/ended_icon_big.png
-00:01:46 FILE /ctrack/art/original/info_icon.png
-00:01:46 FILE /ctrack/art/original/missing_icon_big.png
-00:01:46 FILE /ctrack/art/original/money_title_icon.png
-00:01:46 FILE /ctrack/art/original/planned_icon_big.png
-00:01:46 FILE /ctrack/art/original/publisher_icon.png
-00:01:46 FILE /ctrack/art/original/publishers_icon_big.png
-00:01:46 FILE /ctrack/art/original/search_category.png
-00:01:46 FILE /ctrack/art/original/search_country.png
-00:01:46 FILE /ctrack/art/original/search_funder.png
-00:01:46 FILE /ctrack/art/original/search_icon.png
-00:01:46 FILE /ctrack/art/original/search_policy.png
-00:01:46 FILE /ctrack/art/original/search_publisher.png
-00:01:46 FILE /ctrack/art/original/search_sector.png
-00:01:46 FILE /ctrack/art/original/search_status.png
-00:01:46 FILE /ctrack/art/original/search_year.png
-00:01:46 FILE /ctrack/art/original/settings.png
-00:01:46 FILE /ctrack/art/original/sort_icon.png
-00:01:46 FILE /ctrack/art/original/total_icon_big.png
-00:01:46 FILE /ctrack/art/qlogo.400.png
-00:01:46 FILE /ctrack/art/rgba/grey.css
-00:01:46 FILE /ctrack/art/rgba/inspire.css
-00:01:46 FILE /ctrack/art/rgba/mustard.css
-00:01:46 FILE /ctrack/art/rgba/orange_teal.css
-00:01:46 FILE /ctrack/art/rgba/original.css
-00:01:46 FILE /ctrack/art/savilogo.400.png
-00:01:46 FILE /ctrack/art/select2.min.css
-00:01:46 FILE /ctrack/art/settings.png
-00:01:46 FILE /ctrack/art/typeahead.css
-00:01:46 FILE /ctrack/jslib/chosen.jquery.min.js
-00:01:46 FILE /ctrack/jslib/ctrack.js
-00:01:46 FILE /ctrack/jslib/ctrack.js.map
-00:01:46 FILE /ctrack/jslib/ctrack_head.js
-00:01:46 FILE /ctrack/jslib/ctrack_loader.js
-00:01:46 FILE /ctrack/jslib/excanvas.js
-00:01:46 FILE /ctrack/jslib/head.js
-00:01:46 FILE /ctrack/jslib/head.min.js
-00:01:46 FILE /ctrack/jslib/jquery-ui.js
-00:01:46 FILE /ctrack/jslib/jquery.js
-00:01:46 FILE /ctrack/jslib/markercluster/conv30.png
-00:01:46 FILE /ctrack/jslib/markercluster/conv40.png
-00:01:46 FILE /ctrack/jslib/markercluster/conv50.png
-00:01:46 FILE /ctrack/jslib/markercluster/heart30.png
-00:01:46 FILE /ctrack/jslib/markercluster/heart40.png
-00:01:46 FILE /ctrack/jslib/markercluster/heart50.png
-00:01:46 FILE /ctrack/jslib/markercluster/m1.png
-00:01:46 FILE /ctrack/jslib/markercluster/m2.png
-00:01:46 FILE /ctrack/jslib/markercluster/m3.png
-00:01:46 FILE /ctrack/jslib/markercluster/m4.png
-00:01:46 FILE /ctrack/jslib/markercluster/m5.png
-00:01:46 FILE /ctrack/jslib/markercluster/people35.png
-00:01:46 FILE /ctrack/jslib/markercluster/people45.png
-00:01:46 FILE /ctrack/jslib/markercluster/people55.png
-00:01:46 FILE /ctrack/jslib/markercluster/pin.png
-00:01:46 FILE /ctrack/jslib/markerclusterer.js
-00:01:46 FILE /ctrack/jslib/pace.min.js
-00:01:46 FILE /ctrack/jslib/select2.min.js
-00:01:46 FILE /ctrack/jslib/typeahead.jquery.min.js
-00:01:46 FILE /ctrack.^.html
-00:01:46 FILE /faq.^.html
-00:01:46 COPY faq.html -> cmn/faq.html
-00:01:46 COPY faq.html -> fra/faq.html
-00:01:46 COPY faq.html -> hin/faq.html
-00:01:46 COPY faq.html -> jpn/faq.html
-00:01:46 COPY faq.html -> spa/faq.html
-00:01:46 FILE /favicon.ico
-00:01:46 FILE /feedback.^.html
-00:01:46 COPY feedback.html -> cmn/feedback.html
-00:01:46 COPY feedback.html -> fra/feedback.html
-00:01:46 COPY feedback.html -> hin/feedback.html
-00:01:46 COPY feedback.html -> jpn/feedback.html
-00:01:46 COPY feedback.html -> spa/feedback.html
-00:01:46 FILE /jslib/jquery.js
-00:01:46 FILE /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/GAVI-screen.jpg
-00:01:46 FILE /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/Gen-front-page.jpg
-00:01:46 FILE /news/2014-11-30-Interactive-IATI-data-d-portal-generator/gen-screen-DIPR-sectors-search.jpg
-00:01:46 FILE /news/2016-03-02-Results-data-now-showing-in-d-portal/resultsdatadportal.png
-00:01:46 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/cordaid_result.png
-00:01:46 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/cordaid_result_1.png
-00:01:46 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/cordaid_result_2col.png
-00:01:46 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/result.png
-00:01:46 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/resultsdatadportal.png
-00:01:46 FILE /news/2017-09-06-New-d-portal-search-features-to-improve-data-use/activity_id.png
-00:01:46 FILE /news/2017-09-06-New-d-portal-search-features-to-improve-data-use/activity_status.png
-00:01:46 FILE /news/2017-09-06-New-d-portal-search-features-to-improve-data-use/multiple_options.png
-00:01:46 FILE /news/2017-09-06-New-d-portal-search-features-to-improve-data-use/search_result.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs1.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs2.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs3.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs4.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs5.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs6.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs7.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs8.png
-00:01:46 FILE /news/2018-03-20-Server-upgrade-and-other-updates/results.png
-00:01:46 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/jan18_activities.png
-00:01:46 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link.png
-00:01:46 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link0.png
-00:01:46 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link1.png
-00:01:46 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/million.png
-00:01:46 FILE /news/author/icon_Kriss.jpg
-00:01:46 FILE /news/author/icon_Matt Bartlett.jpg
-00:01:46 FILE /news/author/icon_Shi.jpg
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:01:46 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> fra/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> hin/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-00:01:46 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> spa/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-00:01:46 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-00:01:46 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:01:46 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:01:46 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:01:46 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:01:46 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:01:47 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:01:47 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:01:47 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:01:47 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:01:47 COPY news/2014-05-28-Current-plans/index.html -> cmn/news/2014-05-28-Current-plans/index.html
-00:01:47 COPY news/2014-05-28-Current-plans/index.html -> fra/news/2014-05-28-Current-plans/index.html
-00:01:47 COPY news/2014-05-28-Current-plans/index.html -> hin/news/2014-05-28-Current-plans/index.html
-00:01:47 COPY news/2014-05-28-Current-plans/index.html -> jpn/news/2014-05-28-Current-plans/index.html
-00:01:47 COPY news/2014-05-28-Current-plans/index.html -> spa/news/2014-05-28-Current-plans/index.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> cmn/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> fra/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> hin/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> jpn/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> spa/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:01:47 COPY news/index.html -> cmn/news/index.html
-00:01:47 COPY news/index.html -> fra/news/index.html
-00:01:47 COPY news/index.html -> hin/news/index.html
-00:01:47 COPY news/index.html -> jpn/news/index.html
-00:01:47 COPY news/index.html -> spa/news/index.html
-00:01:47 COPY news/page2.html -> cmn/news/page2.html
-00:01:47 COPY news/page2.html -> fra/news/page2.html
-00:01:47 COPY news/page2.html -> hin/news/page2.html
-00:01:47 COPY news/page2.html -> jpn/news/page2.html
-00:01:47 COPY news/page2.html -> spa/news/page2.html
-00:01:47 COPY news/page3.html -> cmn/news/page3.html
-00:01:47 COPY news/page3.html -> fra/news/page3.html
-00:01:47 COPY news/page3.html -> hin/news/page3.html
-00:01:47 COPY news/page3.html -> jpn/news/page3.html
-00:01:47 COPY news/page3.html -> spa/news/page3.html
-00:01:47 COPY news/posts.html -> cmn/news/posts.html
-00:01:47 COPY news/posts.html -> fra/news/posts.html
-00:01:47 COPY news/posts.html -> hin/news/posts.html
-00:01:47 COPY news/posts.html -> jpn/news/posts.html
-00:01:47 COPY news/posts.html -> spa/news/posts.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture.html -> cmn/news/2014-05-08-Development-Tracker-Architecture.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture.html -> fra/news/2014-05-08-Development-Tracker-Architecture.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture.html -> hin/news/2014-05-08-Development-Tracker-Architecture.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture.html -> jpn/news/2014-05-08-Development-Tracker-Architecture.html
-00:01:47 COPY news/2014-05-08-Development-Tracker-Architecture.html -> spa/news/2014-05-08-Development-Tracker-Architecture.html
-00:01:47 COPY news/2014-05-28-Current-plans.html -> cmn/news/2014-05-28-Current-plans.html
-00:01:47 COPY news/2014-05-28-Current-plans.html -> fra/news/2014-05-28-Current-plans.html
-00:01:47 COPY news/2014-05-28-Current-plans.html -> hin/news/2014-05-28-Current-plans.html
-00:01:47 COPY news/2014-05-28-Current-plans.html -> jpn/news/2014-05-28-Current-plans.html
-00:01:47 COPY news/2014-05-28-Current-plans.html -> spa/news/2014-05-28-Current-plans.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-00:01:47 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-00:01:47 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
-00:01:47 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
-00:01:47 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
-00:01:47 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
-00:01:47 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
-00:01:47 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:01:47 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:01:47 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:01:47 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:01:47 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:01:47 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:01:48 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:01:48 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:01:48 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:01:48 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
-00:01:48 COPY / -> cmn/
-00:01:48 COPY / -> fra/
-00:01:48 COPY / -> hin/
-00:01:48 COPY / -> jpn/
-00:01:48 COPY / -> spa/
-00:01:48 COPY news/ -> cmn/news/
-00:01:48 COPY news/ -> fra/news/
-00:01:48 COPY news/ -> hin/news/
-00:01:48 COPY news/ -> jpn/news/
-00:01:48 COPY news/ -> spa/news/
-00:01:48 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
-00:01:48 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
-00:01:48 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
-00:01:48 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
-00:01:48 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
-00:01:48 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
-00:01:48 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
-00:01:48 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
-00:01:48 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
-00:01:48 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
-00:01:48 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:48 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:48 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:48 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:48 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:01:48 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:48 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:48 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:48 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:48 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:01:48 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:48 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:48 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:48 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:48 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/
-00:01:48 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:48 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:48 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:48 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:48 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:48 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:48 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:01:48 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:48 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:48 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:48 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:48 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:01:48 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:48 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:48 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:48 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:48 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
-00:01:48 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:48 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:48 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:48 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:48 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:01:48 COPY news/author/ -> cmn/news/author/
-00:01:48 COPY news/author/ -> fra/news/author/
-00:01:48 COPY news/author/ -> hin/news/author/
-00:01:48 COPY news/author/ -> jpn/news/author/
-00:01:48 COPY news/author/ -> spa/news/author/
-00:01:48 COPY about.html -> cmn/about.html
-00:01:48 COPY about.html -> fra/about.html
-00:01:48 COPY about.html -> hin/about.html
-00:01:48 COPY about.html -> jpn/about.html
-00:01:48 COPY about.html -> spa/about.html
-00:01:48 COPY faq.html -> cmn/faq.html
-00:01:48 COPY faq.html -> fra/faq.html
-00:01:48 COPY faq.html -> hin/faq.html
-00:01:48 COPY faq.html -> jpn/faq.html
-00:01:48 COPY faq.html -> spa/faq.html
-00:01:48 COPY feedback.html -> cmn/feedback.html
-00:01:48 COPY feedback.html -> fra/feedback.html
-00:01:48 COPY feedback.html -> hin/feedback.html
-00:01:48 COPY feedback.html -> jpn/feedback.html
-00:01:48 COPY feedback.html -> spa/feedback.html
+00:04:37 DIR  /
+00:04:37 DIR  /cmn
+00:04:37 DIR  /ctrack
+00:04:37 DIR  /ctrack/art
+00:04:37 DIR  /ctrack/art/back
+00:04:37 DIR  /ctrack/art/flag
+00:04:37 DIR  /ctrack/art/generator
+00:04:37 DIR  /ctrack/art/high
+00:04:37 DIR  /ctrack/art/original
+00:04:37 DIR  /ctrack/art/rgba
+00:04:37 DIR  /ctrack/jslib
+00:04:37 DIR  /ctrack/jslib/markercluster
+00:04:37 DIR  /fra
+00:04:37 DIR  /hin
+00:04:37 DIR  /jpn
+00:04:38 DIR  /jslib
+00:04:38 DIR  /news
+00:04:38 DIR  /news/2014-05-08-Development-Tracker-Architecture
+00:04:38 DIR  /news/2014-05-28-Current-plans
+00:04:38 DIR  /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
+00:04:38 DIR  /news/2014-11-30-Interactive-IATI-data-d-portal-generator
+00:04:38 DIR  /news/2015-11-05-Adding-country-budgets-to-d-portal
+00:04:38 DIR  /news/2016-03-02-Results-data-now-showing-in-d-portal
+00:04:38 DIR  /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
+00:04:38 DIR  /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
+00:04:38 DIR  /news/2017-09-06-New-d-portal-search-features-to-improve-data-use
+00:04:38 DIR  /news/2018-03-20-Server-upgrade-and-other-updates
+00:04:38 DIR  /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download
+00:04:38 DIR  /news/author
+00:04:38 DIR  /spa
+00:04:38 BLOGPOST news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:38 BLOGPOST news/2018-03-20-Server-upgrade-and-other-updates/index.html
+00:04:38 BLOGPOST news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+00:04:38 BLOGPOST news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+00:04:38 BLOGPOST news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
+00:04:38 BLOGPOST news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:04:38 BLOGPOST news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:04:38 BLOGPOST news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:04:38 BLOGPOST news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:04:38 BLOGPOST news/2014-05-28-Current-plans/index.html
+00:04:38 BLOGPOST news/2014-05-08-Development-Tracker-Architecture/index.html
+00:04:38 BLOG news/index.html
+00:04:38 BLOG news/page2.html
+00:04:38 BLOG news/page3.html
+00:04:38 REDIRECT news/posts.html -> /news/index.html
+00:04:38 REDIRECT news/2014-05-08-Development-Tracker-Architecture.html -> /news/2014-05-08-Development-Tracker-Architecture
+00:04:38 REDIRECT news/2014-05-28-Current-plans.html -> /news/2014-05-28-Current-plans
+00:04:38 REDIRECT news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
+00:04:38 REDIRECT news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> /news/2014-11-30-Interactive-IATI-data-d-portal-generator
+00:04:38 REDIRECT news/2015-11-05-Adding-country-budgets-to-d-portal.html -> /news/2015-11-05-Adding-country-budgets-to-d-portal
+00:04:38 REDIRECT news/2016-03-02-Results-data-now-showing-in-d-portal.html -> /news/2016-03-02-Results-data-now-showing-in-d-portal
+00:04:38 REDIRECT news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
+00:04:38 REDIRECT news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
+00:04:38 COPY / -> cmn/
+00:04:38 COPY / -> fra/
+00:04:38 COPY / -> hin/
+00:04:38 COPY / -> jpn/
+00:04:38 COPY / -> spa/
+00:04:38 COPY news/ -> cmn/news/
+00:04:38 COPY news/ -> fra/news/
+00:04:38 COPY news/ -> hin/news/
+00:04:38 COPY news/ -> jpn/news/
+00:04:38 COPY news/ -> spa/news/
+00:04:38 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
+00:04:38 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
+00:04:38 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
+00:04:38 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
+00:04:38 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
+00:04:38 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
+00:04:38 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
+00:04:38 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
+00:04:38 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
+00:04:38 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
+00:04:38 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:38 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:38 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:38 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:38 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:38 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:38 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:38 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:38 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:38 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:38 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:38 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:38 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:38 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:38 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:38 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:38 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:38 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:38 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:38 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:38 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:38 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:38 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:38 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:38 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:38 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:38 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:38 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:38 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:38 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:38 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:38 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:38 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:38 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:38 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:38 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:38 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:38 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:38 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:38 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:38 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:38 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:38 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:38 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:38 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:38 COPY news/author/ -> cmn/news/author/
+00:04:38 COPY news/author/ -> fra/news/author/
+00:04:38 COPY news/author/ -> hin/news/author/
+00:04:38 COPY news/author/ -> jpn/news/author/
+00:04:38 COPY news/author/ -> spa/news/author/
+00:04:38 FILE /about.^.html
+00:04:38 COPY about.html -> cmn/about.html
+00:04:38 COPY about.html -> fra/about.html
+00:04:38 COPY about.html -> hin/about.html
+00:04:38 COPY about.html -> jpn/about.html
+00:04:38 COPY about.html -> spa/about.html
+00:04:38 FILE /ctrack/art/Octocat.png
+00:04:38 FILE /ctrack/art/README.md
+00:04:38 FILE /ctrack/art/UNDG_logo.png
+00:04:38 FILE /ctrack/art/activities.xsl
+00:04:38 FILE /ctrack/art/alert_icon.png
+00:04:38 FILE /ctrack/art/back/af.jpg
+00:04:38 FILE /ctrack/art/back/ag.jpg
+00:04:38 FILE /ctrack/art/back/ai.jpg
+00:04:38 FILE /ctrack/art/back/al.jpg
+00:04:38 FILE /ctrack/art/back/am.jpg
+00:04:38 FILE /ctrack/art/back/ao.jpg
+00:04:38 FILE /ctrack/art/back/ar.jpg
+00:04:38 FILE /ctrack/art/back/az.jpg
+00:04:38 FILE /ctrack/art/back/ba.jpg
+00:04:38 FILE /ctrack/art/back/bd.jpg
+00:04:38 FILE /ctrack/art/back/bf.jpg
+00:04:38 FILE /ctrack/art/back/bi.jpg
+00:04:38 FILE /ctrack/art/back/bj.jpg
+00:04:38 FILE /ctrack/art/back/bo.jpg
+00:04:38 FILE /ctrack/art/back/br.jpg
+00:04:38 FILE /ctrack/art/back/bt.jpg
+00:04:38 FILE /ctrack/art/back/bw.jpg
+00:04:38 FILE /ctrack/art/back/by.jpg
+00:04:38 FILE /ctrack/art/back/bz.jpg
+00:04:38 FILE /ctrack/art/back/cd.jpg
+00:04:38 FILE /ctrack/art/back/cf.jpg
+00:04:38 FILE /ctrack/art/back/cg.jpg
+00:04:38 FILE /ctrack/art/back/ci.jpg
+00:04:38 FILE /ctrack/art/back/ck.jpg
+00:04:38 FILE /ctrack/art/back/cl.jpg
+00:04:38 FILE /ctrack/art/back/cm.jpg
+00:04:38 FILE /ctrack/art/back/cn.jpg
+00:04:38 FILE /ctrack/art/back/co.jpg
+00:04:38 FILE /ctrack/art/back/cr.jpg
+00:04:38 FILE /ctrack/art/back/cu.jpg
+00:04:38 FILE /ctrack/art/back/cv.jpg
+00:04:38 FILE /ctrack/art/back/dj.jpg
+00:04:38 FILE /ctrack/art/back/dm.jpg
+00:04:38 FILE /ctrack/art/back/do.jpg
+00:04:38 FILE /ctrack/art/back/dz.jpg
+00:04:38 FILE /ctrack/art/back/ec.jpg
+00:04:38 FILE /ctrack/art/back/eg.jpg
+00:04:38 FILE /ctrack/art/back/er.jpg
+00:04:38 FILE /ctrack/art/back/et.jpg
+00:04:38 FILE /ctrack/art/back/fj.jpg
+00:04:38 FILE /ctrack/art/back/fm.jpg
+00:04:38 FILE /ctrack/art/back/ga.jpg
+00:04:38 FILE /ctrack/art/back/gd.jpg
+00:04:38 FILE /ctrack/art/back/ge.jpg
+00:04:38 FILE /ctrack/art/back/gh.jpg
+00:04:38 FILE /ctrack/art/back/gm.jpg
+00:04:38 FILE /ctrack/art/back/gn.jpg
+00:04:38 FILE /ctrack/art/back/gq.jpg
+00:04:38 FILE /ctrack/art/back/gt.jpg
+00:04:38 FILE /ctrack/art/back/gw.jpg
+00:04:38 FILE /ctrack/art/back/gy.jpg
+00:04:38 FILE /ctrack/art/back/hn.jpg
+00:04:38 FILE /ctrack/art/back/ht.jpg
+00:04:38 FILE /ctrack/art/back/id.jpg
+00:04:38 FILE /ctrack/art/back/in.jpg
+00:04:38 FILE /ctrack/art/back/iq.jpg
+00:04:38 FILE /ctrack/art/back/ir.jpg
+00:04:38 FILE /ctrack/art/back/jm.jpg
+00:04:38 FILE /ctrack/art/back/jo.jpg
+00:04:38 FILE /ctrack/art/back/ke.jpg
+00:04:38 FILE /ctrack/art/back/kg.jpg
+00:04:38 FILE /ctrack/art/back/kh.jpg
+00:04:38 FILE /ctrack/art/back/ki.jpg
+00:04:38 FILE /ctrack/art/back/km.jpg
+00:04:38 FILE /ctrack/art/back/kn.jpg
+00:04:38 FILE /ctrack/art/back/kp.jpg
+00:04:38 FILE /ctrack/art/back/kz.jpg
+00:04:38 FILE /ctrack/art/back/la.jpg
+00:04:38 FILE /ctrack/art/back/lb.jpg
+00:04:38 FILE /ctrack/art/back/lc.jpg
+00:04:38 FILE /ctrack/art/back/lk.jpg
+00:04:38 FILE /ctrack/art/back/lr.jpg
+00:04:38 FILE /ctrack/art/back/ls.jpg
+00:04:38 FILE /ctrack/art/back/ly.jpg
+00:04:38 FILE /ctrack/art/back/ma.jpg
+00:04:38 FILE /ctrack/art/back/md.jpg
+00:04:38 FILE /ctrack/art/back/me.jpg
+00:04:38 FILE /ctrack/art/back/mg.jpg
+00:04:38 FILE /ctrack/art/back/mh.jpg
+00:04:38 FILE /ctrack/art/back/mk.jpg
+00:04:38 FILE /ctrack/art/back/ml.jpg
+00:04:38 FILE /ctrack/art/back/mm.jpg
+00:04:38 FILE /ctrack/art/back/mn.jpg
+00:04:38 FILE /ctrack/art/back/mr.jpg
+00:04:38 FILE /ctrack/art/back/ms.jpg
+00:04:38 FILE /ctrack/art/back/mu.jpg
+00:04:38 FILE /ctrack/art/back/mv.jpg
+00:04:38 FILE /ctrack/art/back/mw.jpg
+00:04:38 FILE /ctrack/art/back/mx.jpg
+00:04:38 FILE /ctrack/art/back/my.jpg
+00:04:38 FILE /ctrack/art/back/mz.jpg
+00:04:38 FILE /ctrack/art/back/na.jpg
+00:04:38 FILE /ctrack/art/back/ne.jpg
+00:04:38 FILE /ctrack/art/back/ng.jpg
+00:04:38 FILE /ctrack/art/back/ni.jpg
+00:04:38 FILE /ctrack/art/back/np.jpg
+00:04:38 FILE /ctrack/art/back/nr.jpg
+00:04:38 FILE /ctrack/art/back/nu.jpg
+00:04:38 FILE /ctrack/art/back/pa.jpg
+00:04:38 FILE /ctrack/art/back/pe.jpg
+00:04:38 FILE /ctrack/art/back/pg.jpg
+00:04:38 FILE /ctrack/art/back/ph.jpg
+00:04:38 FILE /ctrack/art/back/pk.jpg
+00:04:38 FILE /ctrack/art/back/ps.jpg
+00:04:38 FILE /ctrack/art/back/pw.jpg
+00:04:38 FILE /ctrack/art/back/py.jpg
+00:04:38 FILE /ctrack/art/back/rs.jpg
+00:04:38 FILE /ctrack/art/back/rw.jpg
+00:04:38 FILE /ctrack/art/back/sb.jpg
+00:04:38 FILE /ctrack/art/back/sc.jpg
+00:04:38 FILE /ctrack/art/back/sd.jpg
+00:04:38 FILE /ctrack/art/back/sh.jpg
+00:04:38 FILE /ctrack/art/back/sl.jpg
+00:04:38 FILE /ctrack/art/back/sn.jpg
+00:04:38 FILE /ctrack/art/back/so.jpg
+00:04:38 FILE /ctrack/art/back/sr.jpg
+00:04:38 FILE /ctrack/art/back/ss.jpg
+00:04:38 FILE /ctrack/art/back/st.jpg
+00:04:38 FILE /ctrack/art/back/sv.jpg
+00:04:39 FILE /ctrack/art/back/sy.jpg
+00:04:39 FILE /ctrack/art/back/sz.jpg
+00:04:39 FILE /ctrack/art/back/td.jpg
+00:04:39 FILE /ctrack/art/back/tg.jpg
+00:04:39 FILE /ctrack/art/back/th.jpg
+00:04:39 FILE /ctrack/art/back/tk.jpg
+00:04:39 FILE /ctrack/art/back/tl.jpg
+00:04:39 FILE /ctrack/art/back/tm.jpg
+00:04:39 FILE /ctrack/art/back/tn.jpg
+00:04:39 FILE /ctrack/art/back/to.jpg
+00:04:39 FILE /ctrack/art/back/tr.jpg
+00:04:39 FILE /ctrack/art/back/tv.jpg
+00:04:39 FILE /ctrack/art/back/tz.jpg
+00:04:39 FILE /ctrack/art/back/ua.jpg
+00:04:39 FILE /ctrack/art/back/ug.jpg
+00:04:39 FILE /ctrack/art/back/uy.jpg
+00:04:39 FILE /ctrack/art/back/uz.jpg
+00:04:39 FILE /ctrack/art/back/vc.jpg
+00:04:39 FILE /ctrack/art/back/ve.jpg
+00:04:39 FILE /ctrack/art/back/vn.jpg
+00:04:39 FILE /ctrack/art/back/vu.jpg
+00:04:39 FILE /ctrack/art/back/wf.jpg
+00:04:39 FILE /ctrack/art/back/ws.jpg
+00:04:39 FILE /ctrack/art/back/xk.jpg
+00:04:39 FILE /ctrack/art/back/ye.jpg
+00:04:39 FILE /ctrack/art/back/za.jpg
+00:04:39 FILE /ctrack/art/back/zm.jpg
+00:04:39 FILE /ctrack/art/back/zw.jpg
+00:04:39 FILE /ctrack/art/backgroundimage.jpg
+00:04:39 FILE /ctrack/art/chosen-sprite.png
+00:04:39 FILE /ctrack/art/chosen-sprite@2x.png
+00:04:39 FILE /ctrack/art/chosen.css
+00:04:39 FILE /ctrack/art/chosen.min.css
+00:04:39 FILE /ctrack/art/dash.png
+00:04:39 FILE /ctrack/art/dash_logo.png
+00:04:39 FILE /ctrack/art/discover.jpg
+00:04:39 FILE /ctrack/art/dlogs.png
+00:04:39 FILE /ctrack/art/dp_git_logo.460.png
+00:04:39 FILE /ctrack/art/dp_logo.400.png
+00:04:39 FILE /ctrack/art/dp_logo.index.png
+00:04:39 FILE /ctrack/art/dslogo.400.png
+00:04:39 FILE /ctrack/art/faq.png
+00:04:39 FILE /ctrack/art/flag/af.png
+00:04:39 FILE /ctrack/art/flag/ag.png
+00:04:39 FILE /ctrack/art/flag/ai.png
+00:04:39 FILE /ctrack/art/flag/al.png
+00:04:39 FILE /ctrack/art/flag/am.png
+00:04:39 FILE /ctrack/art/flag/ao.png
+00:04:39 FILE /ctrack/art/flag/ar.png
+00:04:39 FILE /ctrack/art/flag/az.png
+00:04:39 FILE /ctrack/art/flag/ba.png
+00:04:39 FILE /ctrack/art/flag/bd.png
+00:04:39 FILE /ctrack/art/flag/bf.png
+00:04:39 FILE /ctrack/art/flag/bi.png
+00:04:39 FILE /ctrack/art/flag/bj.png
+00:04:39 FILE /ctrack/art/flag/bo.png
+00:04:39 FILE /ctrack/art/flag/br.png
+00:04:39 FILE /ctrack/art/flag/bt.png
+00:04:39 FILE /ctrack/art/flag/bw.png
+00:04:39 FILE /ctrack/art/flag/by.png
+00:04:39 FILE /ctrack/art/flag/bz.png
+00:04:39 FILE /ctrack/art/flag/cd.png
+00:04:39 FILE /ctrack/art/flag/cf.png
+00:04:39 FILE /ctrack/art/flag/cg.png
+00:04:39 FILE /ctrack/art/flag/ci.png
+00:04:39 FILE /ctrack/art/flag/ck.png
+00:04:39 FILE /ctrack/art/flag/cl.png
+00:04:39 FILE /ctrack/art/flag/cm.png
+00:04:39 FILE /ctrack/art/flag/cn.png
+00:04:39 FILE /ctrack/art/flag/co.png
+00:04:39 FILE /ctrack/art/flag/cr.png
+00:04:39 FILE /ctrack/art/flag/cu.png
+00:04:39 FILE /ctrack/art/flag/cv.png
+00:04:39 FILE /ctrack/art/flag/dj.png
+00:04:39 FILE /ctrack/art/flag/dm.png
+00:04:39 FILE /ctrack/art/flag/do.png
+00:04:39 FILE /ctrack/art/flag/dz.png
+00:04:39 FILE /ctrack/art/flag/ec.png
+00:04:39 FILE /ctrack/art/flag/eg.png
+00:04:39 FILE /ctrack/art/flag/empty_flag.png
+00:04:39 FILE /ctrack/art/flag/er.png
+00:04:39 FILE /ctrack/art/flag/et.png
+00:04:39 FILE /ctrack/art/flag/fj.png
+00:04:39 FILE /ctrack/art/flag/fm.png
+00:04:39 FILE /ctrack/art/flag/ga.png
+00:04:39 FILE /ctrack/art/flag/gd.png
+00:04:39 FILE /ctrack/art/flag/ge.png
+00:04:39 FILE /ctrack/art/flag/gh.png
+00:04:39 FILE /ctrack/art/flag/gm.png
+00:04:39 FILE /ctrack/art/flag/gn.png
+00:04:39 FILE /ctrack/art/flag/gq.png
+00:04:39 FILE /ctrack/art/flag/gt.png
+00:04:39 FILE /ctrack/art/flag/gw.png
+00:04:39 FILE /ctrack/art/flag/gy.png
+00:04:39 FILE /ctrack/art/flag/hn.png
+00:04:39 FILE /ctrack/art/flag/ht.png
+00:04:39 FILE /ctrack/art/flag/id.png
+00:04:39 FILE /ctrack/art/flag/in.png
+00:04:39 FILE /ctrack/art/flag/iq.png
+00:04:39 FILE /ctrack/art/flag/ir.png
+00:04:39 FILE /ctrack/art/flag/jm.png
+00:04:39 FILE /ctrack/art/flag/jo.png
+00:04:39 FILE /ctrack/art/flag/ke.png
+00:04:39 FILE /ctrack/art/flag/kg.png
+00:04:39 FILE /ctrack/art/flag/kh.png
+00:04:39 FILE /ctrack/art/flag/ki.png
+00:04:39 FILE /ctrack/art/flag/km.png
+00:04:39 FILE /ctrack/art/flag/kn.png
+00:04:39 FILE /ctrack/art/flag/kp.png
+00:04:39 FILE /ctrack/art/flag/kz.png
+00:04:39 FILE /ctrack/art/flag/la.png
+00:04:39 FILE /ctrack/art/flag/lb.png
+00:04:39 FILE /ctrack/art/flag/lc.png
+00:04:39 FILE /ctrack/art/flag/lk.png
+00:04:39 FILE /ctrack/art/flag/lr.png
+00:04:39 FILE /ctrack/art/flag/ls.png
+00:04:39 FILE /ctrack/art/flag/ly.png
+00:04:39 FILE /ctrack/art/flag/ma.png
+00:04:39 FILE /ctrack/art/flag/md.png
+00:04:39 FILE /ctrack/art/flag/me.png
+00:04:39 FILE /ctrack/art/flag/mg.png
+00:04:39 FILE /ctrack/art/flag/mh.png
+00:04:39 FILE /ctrack/art/flag/mk.png
+00:04:39 FILE /ctrack/art/flag/ml.png
+00:04:39 FILE /ctrack/art/flag/mm.png
+00:04:39 FILE /ctrack/art/flag/mn.png
+00:04:39 FILE /ctrack/art/flag/mr.png
+00:04:39 FILE /ctrack/art/flag/ms.png
+00:04:39 FILE /ctrack/art/flag/mu.png
+00:04:39 FILE /ctrack/art/flag/mv.png
+00:04:39 FILE /ctrack/art/flag/mw.png
+00:04:39 FILE /ctrack/art/flag/mx.png
+00:04:39 FILE /ctrack/art/flag/my.png
+00:04:39 FILE /ctrack/art/flag/mz.png
+00:04:39 FILE /ctrack/art/flag/na.png
+00:04:39 FILE /ctrack/art/flag/ne.png
+00:04:39 FILE /ctrack/art/flag/ng.png
+00:04:39 FILE /ctrack/art/flag/ni.png
+00:04:39 FILE /ctrack/art/flag/np.png
+00:04:39 FILE /ctrack/art/flag/nr.png
+00:04:39 FILE /ctrack/art/flag/nu.png
+00:04:39 FILE /ctrack/art/flag/pa.png
+00:04:39 FILE /ctrack/art/flag/pe.png
+00:04:39 FILE /ctrack/art/flag/pg.png
+00:04:39 FILE /ctrack/art/flag/ph.png
+00:04:39 FILE /ctrack/art/flag/pk.png
+00:04:39 FILE /ctrack/art/flag/ps.png
+00:04:39 FILE /ctrack/art/flag/pw.png
+00:04:39 FILE /ctrack/art/flag/py.png
+00:04:39 FILE /ctrack/art/flag/rs.png
+00:04:39 FILE /ctrack/art/flag/rw.png
+00:04:39 FILE /ctrack/art/flag/sb.png
+00:04:39 FILE /ctrack/art/flag/sc.png
+00:04:39 FILE /ctrack/art/flag/sd.png
+00:04:39 FILE /ctrack/art/flag/sh.png
+00:04:39 FILE /ctrack/art/flag/sl.png
+00:04:39 FILE /ctrack/art/flag/sn.png
+00:04:39 FILE /ctrack/art/flag/so.png
+00:04:39 FILE /ctrack/art/flag/sr.png
+00:04:39 FILE /ctrack/art/flag/ss.png
+00:04:39 FILE /ctrack/art/flag/st.png
+00:04:39 FILE /ctrack/art/flag/sv.png
+00:04:39 FILE /ctrack/art/flag/sy.png
+00:04:39 FILE /ctrack/art/flag/sz.png
+00:04:39 FILE /ctrack/art/flag/td.png
+00:04:39 FILE /ctrack/art/flag/tg.png
+00:04:39 FILE /ctrack/art/flag/th.png
+00:04:39 FILE /ctrack/art/flag/tj.png
+00:04:39 FILE /ctrack/art/flag/tk.png
+00:04:39 FILE /ctrack/art/flag/tl.png
+00:04:39 FILE /ctrack/art/flag/tm.png
+00:04:39 FILE /ctrack/art/flag/tn.png
+00:04:39 FILE /ctrack/art/flag/to.png
+00:04:39 FILE /ctrack/art/flag/tr.png
+00:04:39 FILE /ctrack/art/flag/tv.png
+00:04:39 FILE /ctrack/art/flag/tz.png
+00:04:39 FILE /ctrack/art/flag/ua.png
+00:04:39 FILE /ctrack/art/flag/ug.png
+00:04:39 FILE /ctrack/art/flag/uy.png
+00:04:39 FILE /ctrack/art/flag/uz.png
+00:04:39 FILE /ctrack/art/flag/vc.png
+00:04:39 FILE /ctrack/art/flag/ve.png
+00:04:39 FILE /ctrack/art/flag/vn.png
+00:04:39 FILE /ctrack/art/flag/vu.png
+00:04:39 FILE /ctrack/art/flag/wf.png
+00:04:39 FILE /ctrack/art/flag/ws.png
+00:04:39 FILE /ctrack/art/flag/xk.png
+00:04:39 FILE /ctrack/art/flag/ye.png
+00:04:39 FILE /ctrack/art/flag/za.png
+00:04:39 FILE /ctrack/art/flag/zm.png
+00:04:39 FILE /ctrack/art/flag/zw.png
+00:04:39 FILE /ctrack/art/generator/activities.png
+00:04:39 FILE /ctrack/art/generator/countriesall.png
+00:04:39 FILE /ctrack/art/generator/crsdonortop.png
+00:04:39 FILE /ctrack/art/generator/crssectortop.png
+00:04:39 FILE /ctrack/art/generator/map.png
+00:04:39 FILE /ctrack/art/generator/overview.png
+00:04:39 FILE /ctrack/art/generator/savi.png
+00:04:39 FILE /ctrack/art/generator.png
+00:04:39 FILE /ctrack/art/high/active_icon.png
+00:04:39 FILE /ctrack/art/high/active_icon_big.png
+00:04:39 FILE /ctrack/art/high/activities.css
+00:04:39 FILE /ctrack/art/high/activity_icon.png
+00:04:39 FILE /ctrack/art/high/alert_icon.png
+00:04:39 FILE /ctrack/art/high/alert_icon_top.png
+00:04:39 FILE /ctrack/art/high/ctrack.css
+00:04:39 FILE /ctrack/art/high/dp_logo.60.png
+00:04:39 FILE /ctrack/art/high/ended_icon.png
+00:04:39 FILE /ctrack/art/high/ended_icon_big.png
+00:04:39 FILE /ctrack/art/high/info_icon.png
+00:04:39 FILE /ctrack/art/high/missing_icon_big.png
+00:04:39 FILE /ctrack/art/high/money_title_icon.png
+00:04:39 FILE /ctrack/art/high/planned_icon_big.png
+00:04:39 FILE /ctrack/art/high/publisher_icon.png
+00:04:39 FILE /ctrack/art/high/publishers_icon_big.png
+00:04:39 FILE /ctrack/art/high/search_category.png
+00:04:39 FILE /ctrack/art/high/search_country.png
+00:04:39 FILE /ctrack/art/high/search_funder.png
+00:04:39 FILE /ctrack/art/high/search_icon.png
+00:04:39 FILE /ctrack/art/high/search_policy.png
+00:04:39 FILE /ctrack/art/high/search_publisher.png
+00:04:39 FILE /ctrack/art/high/search_sector.png
+00:04:39 FILE /ctrack/art/high/search_status.png
+00:04:39 FILE /ctrack/art/high/search_year.png
+00:04:39 FILE /ctrack/art/high/settings.png
+00:04:39 FILE /ctrack/art/high/sort_icon.png
+00:04:39 FILE /ctrack/art/high/total_icon_big.png
+00:04:39 FILE /ctrack/art/iati_logo.269.png
+00:04:39 FILE /ctrack/art/iati_logo.png
+00:04:39 FILE /ctrack/art/index.css
+00:04:39 FILE /ctrack/art/label_category.png
+00:04:39 FILE /ctrack/art/label_country.png
+00:04:39 FILE /ctrack/art/label_funder.png
+00:04:39 FILE /ctrack/art/label_publisher.png
+00:04:39 FILE /ctrack/art/label_sector.png
+00:04:39 FILE /ctrack/art/label_year.png
+00:04:39 FILE /ctrack/art/mexico_background_image.jpg
+00:04:39 FILE /ctrack/art/news.jpg
+00:04:39 FILE /ctrack/art/original/active_icon.png
+00:04:39 FILE /ctrack/art/original/active_icon_big.png
+00:04:39 FILE /ctrack/art/original/activities.css
+00:04:39 FILE /ctrack/art/original/activity_icon.png
+00:04:39 FILE /ctrack/art/original/alert_icon.png
+00:04:39 FILE /ctrack/art/original/alert_icon_top.png
+00:04:39 FILE /ctrack/art/original/ctrack.css
+00:04:39 FILE /ctrack/art/original/dp_logo.60.png
+00:04:39 FILE /ctrack/art/original/dp_tile.400.png
+00:04:39 FILE /ctrack/art/original/ended_icon.png
+00:04:39 FILE /ctrack/art/original/ended_icon_big.png
+00:04:39 FILE /ctrack/art/original/info_icon.png
+00:04:39 FILE /ctrack/art/original/missing_icon_big.png
+00:04:39 FILE /ctrack/art/original/money_title_icon.png
+00:04:39 FILE /ctrack/art/original/planned_icon_big.png
+00:04:39 FILE /ctrack/art/original/publisher_icon.png
+00:04:39 FILE /ctrack/art/original/publishers_icon_big.png
+00:04:39 FILE /ctrack/art/original/search_category.png
+00:04:39 FILE /ctrack/art/original/search_country.png
+00:04:39 FILE /ctrack/art/original/search_funder.png
+00:04:39 FILE /ctrack/art/original/search_icon.png
+00:04:39 FILE /ctrack/art/original/search_policy.png
+00:04:39 FILE /ctrack/art/original/search_publisher.png
+00:04:39 FILE /ctrack/art/original/search_sector.png
+00:04:39 FILE /ctrack/art/original/search_status.png
+00:04:39 FILE /ctrack/art/original/search_year.png
+00:04:39 FILE /ctrack/art/original/settings.png
+00:04:39 FILE /ctrack/art/original/sort_icon.png
+00:04:39 FILE /ctrack/art/original/total_icon_big.png
+00:04:39 FILE /ctrack/art/qlogo.400.png
+00:04:39 FILE /ctrack/art/rgba/grey.css
+00:04:39 FILE /ctrack/art/rgba/inspire.css
+00:04:39 FILE /ctrack/art/rgba/mustard.css
+00:04:39 FILE /ctrack/art/rgba/orange_teal.css
+00:04:39 FILE /ctrack/art/rgba/original.css
+00:04:39 FILE /ctrack/art/savilogo.400.png
+00:04:39 FILE /ctrack/art/select2.min.css
+00:04:39 FILE /ctrack/art/settings.png
+00:04:39 FILE /ctrack/art/typeahead.css
+00:04:39 FILE /ctrack/jslib/chosen.jquery.min.js
+00:04:39 FILE /ctrack/jslib/ctrack.js
+00:04:39 FILE /ctrack/jslib/ctrack.js.map
+00:04:39 FILE /ctrack/jslib/ctrack_head.js
+00:04:39 FILE /ctrack/jslib/ctrack_loader.js
+00:04:39 FILE /ctrack/jslib/excanvas.js
+00:04:39 FILE /ctrack/jslib/head.js
+00:04:39 FILE /ctrack/jslib/head.min.js
+00:04:39 FILE /ctrack/jslib/jquery-ui.js
+00:04:39 FILE /ctrack/jslib/jquery.js
+00:04:39 FILE /ctrack/jslib/markercluster/conv30.png
+00:04:39 FILE /ctrack/jslib/markercluster/conv40.png
+00:04:39 FILE /ctrack/jslib/markercluster/conv50.png
+00:04:39 FILE /ctrack/jslib/markercluster/heart30.png
+00:04:39 FILE /ctrack/jslib/markercluster/heart40.png
+00:04:39 FILE /ctrack/jslib/markercluster/heart50.png
+00:04:39 FILE /ctrack/jslib/markercluster/m1.png
+00:04:39 FILE /ctrack/jslib/markercluster/m2.png
+00:04:39 FILE /ctrack/jslib/markercluster/m3.png
+00:04:39 FILE /ctrack/jslib/markercluster/m4.png
+00:04:39 FILE /ctrack/jslib/markercluster/m5.png
+00:04:39 FILE /ctrack/jslib/markercluster/people35.png
+00:04:39 FILE /ctrack/jslib/markercluster/people45.png
+00:04:39 FILE /ctrack/jslib/markercluster/people55.png
+00:04:39 FILE /ctrack/jslib/markercluster/pin.png
+00:04:39 FILE /ctrack/jslib/markerclusterer.js
+00:04:39 FILE /ctrack/jslib/pace.min.js
+00:04:39 FILE /ctrack/jslib/select2.min.js
+00:04:39 FILE /ctrack/jslib/typeahead.jquery.min.js
+00:04:39 FILE /ctrack.^.html
+00:04:39 FILE /faq.^.html
+00:04:39 COPY faq.html -> cmn/faq.html
+00:04:39 COPY faq.html -> fra/faq.html
+00:04:39 COPY faq.html -> hin/faq.html
+00:04:39 COPY faq.html -> jpn/faq.html
+00:04:39 COPY faq.html -> spa/faq.html
+00:04:39 FILE /favicon.ico
+00:04:39 FILE /feedback.^.html
+00:04:39 COPY feedback.html -> cmn/feedback.html
+00:04:39 COPY feedback.html -> fra/feedback.html
+00:04:39 COPY feedback.html -> hin/feedback.html
+00:04:39 COPY feedback.html -> jpn/feedback.html
+00:04:39 COPY feedback.html -> spa/feedback.html
+00:04:39 FILE /jslib/jquery.js
+00:04:39 FILE /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/GAVI-screen.jpg
+00:04:39 FILE /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/Gen-front-page.jpg
+00:04:39 FILE /news/2014-11-30-Interactive-IATI-data-d-portal-generator/gen-screen-DIPR-sectors-search.jpg
+00:04:39 FILE /news/2016-03-02-Results-data-now-showing-in-d-portal/resultsdatadportal.png
+00:04:39 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/cordaid_result.png
+00:04:39 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/cordaid_result_1.png
+00:04:39 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/cordaid_result_2col.png
+00:04:39 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/result.png
+00:04:39 FILE /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/resultsdatadportal.png
+00:04:39 FILE /news/2017-09-06-New-d-portal-search-features-to-improve-data-use/activity_id.png
+00:04:39 FILE /news/2017-09-06-New-d-portal-search-features-to-improve-data-use/activity_status.png
+00:04:39 FILE /news/2017-09-06-New-d-portal-search-features-to-improve-data-use/multiple_options.png
+00:04:39 FILE /news/2017-09-06-New-d-portal-search-features-to-improve-data-use/search_result.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs1.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs2.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs3.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs4.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs5.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs6.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs7.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs8.png
+00:04:39 FILE /news/2018-03-20-Server-upgrade-and-other-updates/results.png
+00:04:39 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/jan18_activities.png
+00:04:39 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link.png
+00:04:39 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link0.png
+00:04:39 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link1.png
+00:04:39 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/million.png
+00:04:39 FILE /news/author/icon_Kriss.jpg
+00:04:39 FILE /news/author/icon_Matt Bartlett.jpg
+00:04:39 FILE /news/author/icon_Shi.jpg
+00:04:39 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:39 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:39 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:39 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:39 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:39 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+00:04:39 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> fra/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+00:04:39 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> hin/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+00:04:39 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+00:04:39 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> spa/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+00:04:39 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+00:04:39 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+00:04:39 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+00:04:39 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+00:04:39 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+00:04:39 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+00:04:39 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+00:04:39 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+00:04:39 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+00:04:39 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+00:04:39 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
+00:04:39 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
+00:04:39 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
+00:04:39 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
+00:04:39 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
+00:04:39 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:04:39 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:04:39 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:04:39 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:04:39 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/index.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:04:39 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:04:39 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:04:39 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:04:39 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:04:39 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/index.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:04:39 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:04:39 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:04:39 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:04:39 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:04:39 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:04:39 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:04:39 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:04:39 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:04:39 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:04:39 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:04:39 COPY news/2014-05-28-Current-plans/index.html -> cmn/news/2014-05-28-Current-plans/index.html
+00:04:39 COPY news/2014-05-28-Current-plans/index.html -> fra/news/2014-05-28-Current-plans/index.html
+00:04:39 COPY news/2014-05-28-Current-plans/index.html -> hin/news/2014-05-28-Current-plans/index.html
+00:04:39 COPY news/2014-05-28-Current-plans/index.html -> jpn/news/2014-05-28-Current-plans/index.html
+00:04:39 COPY news/2014-05-28-Current-plans/index.html -> spa/news/2014-05-28-Current-plans/index.html
+00:04:39 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> cmn/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:04:39 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> fra/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:04:39 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> hin/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:04:39 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> jpn/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:04:39 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> spa/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:04:39 COPY news/index.html -> cmn/news/index.html
+00:04:39 COPY news/index.html -> fra/news/index.html
+00:04:39 COPY news/index.html -> hin/news/index.html
+00:04:39 COPY news/index.html -> jpn/news/index.html
+00:04:39 COPY news/index.html -> spa/news/index.html
+00:04:39 COPY news/page2.html -> cmn/news/page2.html
+00:04:39 COPY news/page2.html -> fra/news/page2.html
+00:04:39 COPY news/page2.html -> hin/news/page2.html
+00:04:39 COPY news/page2.html -> jpn/news/page2.html
+00:04:39 COPY news/page2.html -> spa/news/page2.html
+00:04:40 COPY news/page3.html -> cmn/news/page3.html
+00:04:40 COPY news/page3.html -> fra/news/page3.html
+00:04:40 COPY news/page3.html -> hin/news/page3.html
+00:04:40 COPY news/page3.html -> jpn/news/page3.html
+00:04:40 COPY news/page3.html -> spa/news/page3.html
+00:04:40 COPY news/posts.html -> cmn/news/posts.html
+00:04:40 COPY news/posts.html -> fra/news/posts.html
+00:04:40 COPY news/posts.html -> hin/news/posts.html
+00:04:40 COPY news/posts.html -> jpn/news/posts.html
+00:04:40 COPY news/posts.html -> spa/news/posts.html
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture.html -> cmn/news/2014-05-08-Development-Tracker-Architecture.html
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture.html -> fra/news/2014-05-08-Development-Tracker-Architecture.html
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture.html -> hin/news/2014-05-08-Development-Tracker-Architecture.html
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture.html -> jpn/news/2014-05-08-Development-Tracker-Architecture.html
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture.html -> spa/news/2014-05-08-Development-Tracker-Architecture.html
+00:04:40 COPY news/2014-05-28-Current-plans.html -> cmn/news/2014-05-28-Current-plans.html
+00:04:40 COPY news/2014-05-28-Current-plans.html -> fra/news/2014-05-28-Current-plans.html
+00:04:40 COPY news/2014-05-28-Current-plans.html -> hin/news/2014-05-28-Current-plans.html
+00:04:40 COPY news/2014-05-28-Current-plans.html -> jpn/news/2014-05-28-Current-plans.html
+00:04:40 COPY news/2014-05-28-Current-plans.html -> spa/news/2014-05-28-Current-plans.html
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html
+00:04:40 COPY / -> cmn/
+00:04:40 COPY / -> fra/
+00:04:40 COPY / -> hin/
+00:04:40 COPY / -> jpn/
+00:04:40 COPY / -> spa/
+00:04:40 COPY news/ -> cmn/news/
+00:04:40 COPY news/ -> fra/news/
+00:04:40 COPY news/ -> hin/news/
+00:04:40 COPY news/ -> jpn/news/
+00:04:40 COPY news/ -> spa/news/
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
+00:04:40 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
+00:04:40 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
+00:04:40 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
+00:04:40 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
+00:04:40 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
+00:04:40 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:40 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:40 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:40 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:40 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:40 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:04:40 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:41 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:41 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:41 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:41 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:04:41 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:41 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:41 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:41 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:41 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
+00:04:41 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:41 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:41 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:41 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:41 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:41 COPY news/author/ -> cmn/news/author/
+00:04:41 COPY news/author/ -> fra/news/author/
+00:04:41 COPY news/author/ -> hin/news/author/
+00:04:41 COPY news/author/ -> jpn/news/author/
+00:04:41 COPY news/author/ -> spa/news/author/
+00:04:41 COPY about.html -> cmn/about.html
+00:04:41 COPY about.html -> fra/about.html
+00:04:41 COPY about.html -> hin/about.html
+00:04:41 COPY about.html -> jpn/about.html
+00:04:41 COPY about.html -> spa/about.html
+00:04:41 COPY faq.html -> cmn/faq.html
+00:04:41 COPY faq.html -> fra/faq.html
+00:04:41 COPY faq.html -> hin/faq.html
+00:04:41 COPY faq.html -> jpn/faq.html
+00:04:41 COPY faq.html -> spa/faq.html
+00:04:41 COPY feedback.html -> cmn/feedback.html
+00:04:41 COPY feedback.html -> fra/feedback.html
+00:04:41 COPY feedback.html -> hin/feedback.html
+00:04:41 COPY feedback.html -> jpn/feedback.html
+00:04:41 COPY feedback.html -> spa/feedback.html
 Restarting /home/ctrack/D-Portal/dportal/js/serv.js
 [32minfo[39m:    Forever restarted process(es):
 [90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m  [37mid[39m [35mlogfile[39m                                                       [33muptime[39m        
-[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     9934    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:5:51:29.968[39m 
-[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    9933    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:5:51:29.969[39m 
+[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     6460    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:5:44:21.500[39m 
+[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    6466    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:5:44:21.491[39m 
 Status /home/ctrack/D-Portal/dportal/js/serv.js
 [32minfo[39m:    Forever processes running
-[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m   [37mid[39m [35mlogfile[39m                                                       [33muptime[39m      
-[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     15343    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:0:0:0.181[39m 
-[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    15342    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:0:0:0.181[39m 
+[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m  [37mid[39m [35mlogfile[39m                                                       [33muptime[39m      
+[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     8127    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:0:0:0.173[39m 
+[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    8126    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:0:0:0.176[39m 
 
 Searching logs for download ERRORS
 
@@ -1869,66 +3091,177 @@ dstore/cache/theglobalfund-qmn.xml.curl.last.log:curl: (22) The requested URL re
 dstore/cache/theglobalfund-qmr.xml.curl.last.log:curl: (22) The requested URL returned error: 500 Internal Server Error
 dstore/cache/uncdf-org.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-998.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-af.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-ag.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-al.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-am.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-ao.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ar.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-at.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-bb.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-bd.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-be.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-bf.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-bg.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-bi.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-bj.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-bo.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-br.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-bs.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-bt.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-bw.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-by.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-bz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-cd.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-cf.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-cg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-ci.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-ck.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-cl.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-cm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-cn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-co.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-cr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-cu.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-cv.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-cw.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-cy.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-dj.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-dm.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-do.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-dz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ec.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-eg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-eh.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-er.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-es.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-et.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-fj.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-fm.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-ga.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-gd.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-ge.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-gh.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-gm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-gn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-gt.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-gw.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-gy.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-hn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-hr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ht.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-hu.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-id.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-ie.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-il.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-in.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-iq.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ir.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-it.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-jm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-jo.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-jp.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ke.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-kg.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-kh.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-ki.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-km.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-kn.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-kr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-kz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-la.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-lb.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-lc.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-lk.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-lr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-ls.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-ly.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ma.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-md.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-me.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-mg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-mh.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-mk.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ml.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-mm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-mn.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-mr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-multi.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-mu.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-mv.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-mw.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-mx.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-my.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-mz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-na.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-nc.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ne.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ng.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-ni.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-nl.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-np.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-nr.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-org.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-pa.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-pe.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-pg.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-ph.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-pk.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ps.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-pw.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-py.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ro.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-rs.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-ru.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-rw.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-sa.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-sb.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-sc.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-sd.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-se.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-sk.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-sl.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-sn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-so.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-sr.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-ss.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-st.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-sv.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-sy.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-td.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-tg.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-th.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-tj.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-tl.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-tn.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-to.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-tr.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-tt.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-tv.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-tz.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ua.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ug.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-uy.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-uz.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-vc.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-ve.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-vn.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-vu.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/unops-ws.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-xk.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
+dstore/cache/unops-ye.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-za.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
+dstore/cache/unops-zm.xml.curl.last.log:curl: (22) The requested URL returned error: 403 Forbidden
 dstore/cache/unops-zw.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/who-brb-2018-19.xml.curl.last.log:curl: (22) The requested URL returned error: 500 Internal Server Error
 dstore/cache/who-msr-2016-17.xml.curl.last.log:curl: (22) The requested URL returned error: 500 Internal Server Error
+dstore/cache/ocha_fts-afghanistan_2013.xml.curl.last.log:curl: (52) Empty reply from server
+dstore/cache/ocha_fts-car_2014.xml.curl.last.log:curl: (52) Empty reply from server
+dstore/cache/ocha_fts-haiti_2014.xml.curl.last.log:curl: (52) Empty reply from server
+dstore/cache/ocha_fts-opt_2013.xml.curl.last.log:curl: (52) Empty reply from server
+dstore/cache/ocha_fts-southsudan_2012.xml.curl.last.log:curl: (52) Empty reply from server
+dstore/cache/ocha_fts-sudan_2012.xml.curl.last.log:curl: (52) Empty reply from server
+dstore/cache/ocha_fts-yemen_2015.xml.curl.last.log:curl: (52) Empty reply from server
 
 Searching logs for import ERRORS
 
@@ -1988,10 +3321,7 @@ dstore/cache/ics-org_2014.xml.import.last.log: XML ERROR syntax error : undefine
 dstore/cache/ics-org_2014.xml.import.last.log: XML ERROR syntax error : ics-org_2014
 dstore/cache/magariro-gec.xml.import.last.log: XML ERROR not well-formed (invalid token) : undefined
 dstore/cache/magariro-gec.xml.import.last.log: XML ERROR not well-formed (invalid token) : magariro-gec
-dstore/cache/nrt-kenya-nrt-org-01.xml.import.last.log: XML ERROR not well-formed (invalid token) : undefined
-dstore/cache/nrt-kenya-nrt-org-01.xml.import.last.log: XML ERROR not well-formed (invalid token) : nrt-kenya-nrt-org-01
-dstore/cache/nrt-kenya-nrt-org-02.xml.import.last.log: XML ERROR not well-formed (invalid token) : undefined
-dstore/cache/nrt-kenya-nrt-org-02.xml.import.last.log: XML ERROR not well-formed (invalid token) : nrt-kenya-nrt-org-02
+dstore/cache/ocha_fts-sudan_2014.xml.import.last.log: XML ERROR mismatched tag : ocha_fts-sudan_2014
 dstore/cache/opml-2015dec.xml.import.last.log: XML ERROR syntax error : undefined
 dstore/cache/opml-2015dec.xml.import.last.log: XML ERROR syntax error : opml-2015dec
 dstore/cache/sida-agreements.xml.import.last.log: XML ERROR syntax error : undefined
