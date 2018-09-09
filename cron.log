@@ -2192,8 +2192,10 @@ YOU WILL NEED TO MANUALLY ADD IT TO THE LIST IN dstore/js/exs.js
   'Currency units per SDR for October 2018': '???',
   'Currency units per SDR for November 2018': '???',
   'Currency units per SDR for December 2018': '???' }
-[master 50ea432e] auto json fetch in nightly cron
- 7 files changed, 1815 insertions(+), 2254 deletions(-)
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
 Already up-to-date.
 Branch master set up to track remote branch master from origin.
 
@@ -2295,11 +2297,11 @@ browserify
 00:04:53 BLOGPOST news/2014-05-08-Development-Tracker-Architecture/index.html
 00:04:53 BLOG news/index.html
 00:04:53 BLOG news/page2.html
-00:04:53 BLOG news/page3.html
-00:04:53 REDIRECT news/posts.html -> /news/index.html
-00:04:53 REDIRECT news/2014-05-08-Development-Tracker-Architecture.html -> /news/2014-05-08-Development-Tracker-Architecture
-00:04:53 REDIRECT news/2014-05-28-Current-plans.html -> /news/2014-05-28-Current-plans
-00:04:53 REDIRECT news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
+00:04:54 BLOG news/page3.html
+00:04:54 REDIRECT news/posts.html -> /news/index.html
+00:04:54 REDIRECT news/2014-05-08-Development-Tracker-Architecture.html -> /news/2014-05-08-Development-Tracker-Architecture
+00:04:54 REDIRECT news/2014-05-28-Current-plans.html -> /news/2014-05-28-Current-plans
+00:04:54 REDIRECT news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
 00:04:54 REDIRECT news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> /news/2014-11-30-Interactive-IATI-data-d-portal-generator
 00:04:54 REDIRECT news/2015-11-05-Adding-country-budgets-to-d-portal.html -> /news/2015-11-05-Adding-country-budgets-to-d-portal
 00:04:54 REDIRECT news/2016-03-02-Results-data-now-showing-in-d-portal.html -> /news/2016-03-02-Results-data-now-showing-in-d-portal
@@ -2842,25 +2844,25 @@ browserify
 00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs.png
 00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs1.png
 00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs2.png
-00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs3.png
-00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs4.png
-00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs5.png
-00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs6.png
-00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs7.png
-00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs8.png
-00:04:54 FILE /news/2018-03-20-Server-upgrade-and-other-updates/results.png
-00:04:54 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/jan18_activities.png
-00:04:54 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link.png
-00:04:54 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link0.png
-00:04:54 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link1.png
-00:04:54 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/million.png
-00:04:54 FILE /news/author/icon_Kriss.jpg
-00:04:54 FILE /news/author/icon_Matt Bartlett.jpg
-00:04:54 FILE /news/author/icon_Shi.jpg
-00:04:54 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:04:54 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:04:54 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:04:54 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:55 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs3.png
+00:04:55 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs4.png
+00:04:55 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs5.png
+00:04:55 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs6.png
+00:04:55 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs7.png
+00:04:55 FILE /news/2018-03-20-Server-upgrade-and-other-updates/database_logs8.png
+00:04:55 FILE /news/2018-03-20-Server-upgrade-and-other-updates/results.png
+00:04:55 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/jan18_activities.png
+00:04:55 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link.png
+00:04:55 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link0.png
+00:04:55 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/map_link1.png
+00:04:55 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/million.png
+00:04:55 FILE /news/author/icon_Kriss.jpg
+00:04:55 FILE /news/author/icon_Matt Bartlett.jpg
+00:04:55 FILE /news/author/icon_Shi.jpg
+00:04:55 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:55 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:55 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:04:55 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
 00:04:55 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
 00:04:55 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/index.html
 00:04:55 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> fra/news/2018-03-20-Server-upgrade-and-other-updates/index.html
@@ -2927,12 +2929,12 @@ browserify
 00:04:55 COPY news/page3.html -> hin/news/page3.html
 00:04:55 COPY news/page3.html -> jpn/news/page3.html
 00:04:55 COPY news/page3.html -> spa/news/page3.html
-00:04:55 COPY news/posts.html -> cmn/news/posts.html
-00:04:55 COPY news/posts.html -> fra/news/posts.html
-00:04:55 COPY news/posts.html -> hin/news/posts.html
-00:04:55 COPY news/posts.html -> jpn/news/posts.html
-00:04:55 COPY news/posts.html -> spa/news/posts.html
-00:04:55 COPY news/2014-05-08-Development-Tracker-Architecture.html -> cmn/news/2014-05-08-Development-Tracker-Architecture.html
+00:04:56 COPY news/posts.html -> cmn/news/posts.html
+00:04:56 COPY news/posts.html -> fra/news/posts.html
+00:04:56 COPY news/posts.html -> hin/news/posts.html
+00:04:56 COPY news/posts.html -> jpn/news/posts.html
+00:04:56 COPY news/posts.html -> spa/news/posts.html
+00:04:56 COPY news/2014-05-08-Development-Tracker-Architecture.html -> cmn/news/2014-05-08-Development-Tracker-Architecture.html
 00:04:56 COPY news/2014-05-08-Development-Tracker-Architecture.html -> fra/news/2014-05-08-Development-Tracker-Architecture.html
 00:04:56 COPY news/2014-05-08-Development-Tracker-Architecture.html -> hin/news/2014-05-08-Development-Tracker-Architecture.html
 00:04:56 COPY news/2014-05-08-Development-Tracker-Architecture.html -> jpn/news/2014-05-08-Development-Tracker-Architecture.html
@@ -3034,14 +3036,14 @@ browserify
 00:04:56 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
 00:04:56 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
 00:04:56 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:04:56 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:04:56 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:04:56 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:04:56 COPY news/author/ -> cmn/news/author/
-00:04:56 COPY news/author/ -> fra/news/author/
-00:04:56 COPY news/author/ -> hin/news/author/
-00:04:56 COPY news/author/ -> jpn/news/author/
-00:04:56 COPY news/author/ -> spa/news/author/
+00:04:57 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:57 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:57 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:04:57 COPY news/author/ -> cmn/news/author/
+00:04:57 COPY news/author/ -> fra/news/author/
+00:04:57 COPY news/author/ -> hin/news/author/
+00:04:57 COPY news/author/ -> jpn/news/author/
+00:04:57 COPY news/author/ -> spa/news/author/
 00:04:57 COPY about.html -> cmn/about.html
 00:04:57 COPY about.html -> fra/about.html
 00:04:57 COPY about.html -> hin/about.html
@@ -3060,13 +3062,13 @@ browserify
 Restarting /home/ctrack/D-Portal/dportal/js/serv.js
 [32minfo[39m:    Forever restarted process(es):
 [90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m   [37mid[39m [35mlogfile[39m                                                       [33muptime[39m      
-[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     26463    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m1:0:0:1.691[39m 
-[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    26462    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m1:0:0:1.695[39m 
+[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     23152    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m1:0:0:0.98[39m  
+[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    23146    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m1:0:0:0.101[39m 
 Status /home/ctrack/D-Portal/dportal/js/serv.js
 [32minfo[39m:    Forever processes running
 [90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m   [37mid[39m [35mlogfile[39m                                                       [33muptime[39m      
-[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     23152    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:0:0:0.192[39m 
-[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    23146    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:0:0:0.194[39m 
+[90mdata[39m:    [0] ukDz [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 751     18093    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:0:0:0.166[39m 
+[90mdata[39m:    [1] Fb8K [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 2052    18087    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:0:0:0.173[39m 
 
 Searching logs for download ERRORS
 
