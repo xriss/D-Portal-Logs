@@ -1,0 +1,113 @@
+<html>
+  <head>
+	<title>D-Portal Xpath stats</title>
+	<style>
+	</style>
+	<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	<script>
+		var stats
+		$.getJSON("stats.json", function(json) {
+			stats=json
+			$(insert_page)
+		})
+
+var insert_page=function()
+{
+	let chartidx=0
+
+//	console.log( Object.keys(stats.xpath).length + " xpaths stats found " )
+
+	for(let path of Object.keys(stats.xpath).sort() )
+	{
+		let pdat=stats.xpath[path]
+
+//		console.log(path)
+		
+		let it=$("<div/>")
+		$("body").append(it)
+		
+		it.append("<h1>"+path+"</h1>")
+		
+		let tab=$(`<table style="width:100%"/>`)
+		it.append(tab)
+		
+		let thead=$("<tr/>")
+		tab.append(thead)
+		
+		thead.append("<th>Rank</ht>")
+		thead.append("<th>Count</ht>")
+		thead.append("<th>Value</ht>")
+		thead.append("<th>Example Publisher</ht>")
+		thead.append("<th>Example Activity</ht>")
+		
+		for(let idx=0;idx<pdat.top.length;idx++)
+		{
+			let v=pdat.top[idx]
+			let trow=$("<tr/>")
+			tab.append(trow)
+
+			trow.append("<td>"+(idx+1)+"</hd>")
+			trow.append("<td>"+v.count+"</hd>")
+			trow.append("<td>"+v.value+"</hd>")
+
+			let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
+			trow.append(`<td><a href="${url}">${url}</a></hd>`)
+
+			url="http://d-portal.org/ctrack.html#view=act&aid="+v.aid
+			trow.append(`<td><a href="${url}">${url}</a></hd>`)
+		}
+   
+   		let cnames=["count","activities","publishers","distinct"]
+
+		for(let cname of cnames)
+		{
+
+			chartidx++
+
+			let data=[]
+			
+			for(let n of Object.keys(pdat[cname]).sort() )
+			{
+				let v=pdat[cname][n]
+				data.push( {x: new Date(parseInt(n)), y: v} )
+			}
+
+			let cdiv=$(`<div style="width:50%;height:360px;display:inline-block;" />`)
+			it.append(cdiv)
+			cdiv.append(`<h2>${cname}<h2>`)
+			cdiv.append(`<div id="chart${chartidx}" style="height:320px" />`)
+
+			let confs={
+				axisX: {
+				type: Chartist.FixedScaleAxis,
+				divisor: 5,
+				labelInterpolationFnc: function(value) {
+					return moment(value).format('YYYY MMM D');
+					}
+				}
+			}
+			let datas={
+			  series: [
+				{
+					data:data
+				}
+			  ]
+			}
+
+			let chart=new Chartist.Line( "#chart"+chartidx, datas , confs );
+
+		}
+	}
+}
+
+	</script>
+ </head>
+  <body>
+  </body>
+</html>
