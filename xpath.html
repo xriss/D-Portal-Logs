@@ -36,7 +36,7 @@ var insert_page=function()
 		
 		let pathlink="http://reference.iatistandard.org/203/activity-standard"+(path.split("@")[0])
 		
-		it.append(`<h1><a id="${path}" href="${pathlink}">${path}</a></h1>`)
+		it.append(`<h1><a target="_blank" id="${path}" href="${pathlink}">${path}</a></h1>`)
 		
 		let tab=$(`<table style="width:100%"/>`)
 		it.append(tab)
@@ -61,10 +61,10 @@ var insert_page=function()
 			trow.append("<td>"+v.value+"</hd>")
 
 			let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
-			trow.append(`<td><a href="${url}">${v.pid}</a></hd>`)
+			trow.append(`<td><a target="_blank" href="${url}">${v.pid}</a></hd>`)
 
 			url="http://d-portal.org/ctrack.html#view=act&aid="+v.aid
-			trow.append(`<td><a href="${url}">${v.aid}</a></hd>`)
+			trow.append(`<td><a target="_blank" href="${url}">${v.aid}</a></hd>`)
 		}
    
    		let cnames=["count","activities","publishers","distinct"]
@@ -148,7 +148,7 @@ var insert_page=function()
 		let trow=$("<tr/>")
 		tab.append(trow)
 
-		trow.append(`<td><a href="#${t.path}">${t.path}</a></hd>`)
+		trow.append(`<td><a target="_blank" href="#${t.path}">${t.path}</a></hd>`)
 		trow.append(`<td>${t.pct}%</hd>`)
 	}
 
