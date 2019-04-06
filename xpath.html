@@ -143,8 +143,9 @@ var insert_page=function()
 	}
 	a.sort( function(a,b){ if(a.pct==b.pct) { return a.path<b.path } else { return a.pct<b.pct } } )
 	
-	for(let t of a)
+	for(let i=0;i<a.length;i++)
 	{
+		let t=a[i]
 		let trow=$("<tr/>")
 		tab.append(trow)
 
