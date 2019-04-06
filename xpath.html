@@ -59,10 +59,10 @@ var insert_page=function()
 			trow.append("<td>"+v.value+"</hd>")
 
 			let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
-			trow.append(`<td><a href="${url}">${url}</a></hd>`)
+			trow.append(`<td><a href="${url}">${v.pid}</a></hd>`)
 
 			url="http://d-portal.org/ctrack.html#view=act&aid="+v.aid
-			trow.append(`<td><a href="${url}">${url}</a></hd>`)
+			trow.append(`<td><a href="${url}">${v.aid}</a></hd>`)
 		}
    
    		let cnames=["count","activities","publishers","distinct"]
