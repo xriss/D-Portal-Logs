@@ -20,6 +20,8 @@
 var insert_page=function()
 {
 	let chartidx=0
+	
+	let latest=0
 
 //	console.log( Object.keys(stats.xpath).length + " xpaths stats found " )
 
@@ -34,7 +36,7 @@ var insert_page=function()
 		
 		let pathlink="http://reference.iatistandard.org/203/activity-standard"+(path.split("@")[0])
 		
-		it.append(`<h1><a href="${pathlink}">${path}</a></h1>`)
+		it.append(`<h1><a id="${path}" href="${pathlink}">${path}</a></h1>`)
 		
 		let tab=$(`<table style="width:100%"/>`)
 		it.append(tab)
@@ -77,7 +79,9 @@ var insert_page=function()
 			for(let n of Object.keys(pdat[cname]).sort() )
 			{
 				let v=pdat[cname][n]
-				data.push( {x: new Date(parseInt(n)), y: v} )
+				let d=parseInt(n)
+				if(d>latest){latest=d} // remember latest date we have seen
+				data.push( {x: new Date(d), y: v} )
 			}
 
 			let cdiv=$(`<div style="width:50%;height:360px;display:inline-block;" />`)
@@ -106,6 +110,48 @@ var insert_page=function()
 
 		}
 	}
+
+
+	let it=$("<div/>")
+	$("body").append(it)
+
+	it.append(`<h1>Percentage of activities that include data for each valid xpath</h1>`)
+
+	let tab=$(`<table style="width:100%"/>`)
+	it.append(tab)
+	
+	let thead=$("<tr/>")
+	tab.append(thead)
+	
+	thead.append("<th>Xpath</ht>")
+	thead.append("<th>Popularity</ht>")
+	
+	
+	
+	let atotal=0
+	let a=[]
+	for(let path of Object.keys(stats.xpath).sort() )
+	{
+		let p=stats.xpath[path]
+		let count=parseInt(p.activities[latest])
+		if(atotal<count){atotal=count} // highest
+		a.push({path:path,count:count})
+	}
+	for(let v of a) // convert to 00.00 pct
+	{
+		v.pct=Math.ceil(10000*(v.count/atotal))/100
+	}
+	a.sort( (a,b)=>{ if(a.pct==b.pct) { return a.path<b.path } else { return a.pct<b.pct } } )
+	
+	for(let t of a)
+	{
+		let trow=$("<tr/>")
+		tab.append(trow)
+
+		trow.append(`<td><a href="#${t.path}">${t.path}</a></hd>`)
+		trow.append(`<td>${t.pct}%</hd>`)
+	}
+
 }
 
 	</script>
