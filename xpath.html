@@ -32,7 +32,9 @@ var insert_page=function()
 		let it=$("<div/>")
 		$("body").append(it)
 		
-		it.append("<h1>"+path+"</h1>")
+		let pathlink="http://reference.iatistandard.org/203/activity-standard"+(path.split("@")[0])
+		
+		it.append(`<h1><a href="${pathlink}">${path}</a></h1>`)
 		
 		let tab=$(`<table style="width:100%"/>`)
 		it.append(tab)
