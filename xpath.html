@@ -141,7 +141,7 @@ var insert_page=function()
 	{
 		v.pct=Math.ceil(10000*(v.count/atotal))/100
 	}
-	a.sort( (a,b)=>{ if(a.pct==b.pct) { return a.path<b.path } else { return a.pct<b.pct } } )
+	a.sort( function(a,b){ if(a.pct==b.pct) { return a.path<b.path } else { return a.pct<b.pct } } )
 	
 	for(let t of a)
 	{
