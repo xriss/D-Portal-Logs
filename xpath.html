@@ -143,9 +143,8 @@ var insert_page=function()
 	}
 	a.sort( function(a,b){ return a.count<b.count ? 1 : -1 } )
 	
-	for(let i=0;i<a.length;i++)
+	for(let t of a)
 	{
-		let t=a[i]
 		let trow=$("<tr/>")
 		tab.append(trow)
 
