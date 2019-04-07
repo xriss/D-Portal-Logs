@@ -81,7 +81,7 @@ var insert_page=function()
 				let v=pdat[cname][n]
 				let d=parseInt(n)
 				if(d>latest){latest=d} // remember latest date we have seen
-				data.push( {x: new Date(d), y: v} )
+				data.push( {x: new Date(d*8.64e+7), y: v} )
 			}
 
 			let cdiv=$(`<div style="width:50%;height:360px;display:inline-block;" />`)
