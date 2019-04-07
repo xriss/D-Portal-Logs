@@ -2,6 +2,37 @@
   <head>
 	<title>D-Portal Xpath stats</title>
 	<style>
+		body	{margin:3em; font-family:sans-serif; color:#111;}
+		table	{border-spacing:0; table-layout:fixed;}
+		th		{text-align:left; padding:0 20px 10px 20px; border-bottom:1px solid #ccc; color:#666; font-size:12px; text-transform:uppercase;}
+		th.rank	{width:5%;}
+		th.count{width:10%;}
+		th.val	{width:35%;}
+		th.pub	{width:25%;}
+		th.act	{width:25%; word-break:break-all;}
+		th.xpath{width:85%;}
+		th.pop	{width:15%;}
+		td		{padding:10px 20px; border-bottom:1px solid #ccc; vertical-align:top;}
+		td:nth-of-type(2) {font-family:monospace; font-size:16px;}
+		td:last-of-type {word-break:break-all;}
+		
+		a			{color:#6188e2; text-decoration:none;}
+		a:link		{color:#6188e2;}
+		a:visited	{color:#6188e2;}
+		a:hover		{color:#004dff;}
+		a:active	{color:#6188e2;}
+		
+		.wrap	{padding-bottom:3em; margin-bottom:3em;}
+		.graphs	{display:inline-block; vertical-align:top; box-sizing:border-box; width:50%; height:420px;}
+		.graphs:nth-of-type(odd)	{padding:2em 1.5em 0 0;}
+		.graphs:nth-of-type(even)	{padding:2em 0 0 1.5em;}
+		.graphs:nth-of-type(3), .graphs:nth-of-type(4)	{padding-top:0;}
+		.graphs h2	{color:#666; font-size:14px; text-transform:uppercase;}
+		
+		a.element		{display:block; font-size:24px; margin-bottom:20px; color:#6188e2; text-decoration:none; font-weight:bold; font-family:monospace; padding-bottom:10px;}
+		a.element:hover	{color:#004dff;}
+		
+		.percent span	{display:block; font-size:24px; color:#666; padding-bottom:1em;}
 	</style>
 	<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -31,12 +62,12 @@ var insert_page=function()
 
 //		console.log(path)
 		
-		let it=$("<div/>")
+		let it=$("<div class='wrap'/>")
 		$("body").append(it)
 		
 		let pathlink="http://reference.iatistandard.org/203/activity-standard"+(path.split("@")[0])
 		
-		it.append(`<h1><a target="_blank" id="${path}" href="${pathlink}">${path}</a></h1>`)
+		it.append(`<a class="element" target="_blank" id="${path}" href="${pathlink}">${path}</a>`)
 		
 		let tab=$(`<table style="width:100%"/>`)
 		it.append(tab)
@@ -44,11 +75,11 @@ var insert_page=function()
 		let thead=$("<tr/>")
 		tab.append(thead)
 		
-		thead.append("<th>Rank</ht>")
-		thead.append("<th>Count</ht>")
-		thead.append("<th>Value</ht>")
-		thead.append("<th>Example Publisher</ht>")
-		thead.append("<th>Example Activity</ht>")
+		thead.append("<th class='rank'>Rank</th>")
+		thead.append("<th class='count'>Count</th>")
+		thead.append("<th class='val'>Value</th>")
+		thead.append("<th class='pub'>Example Publisher</th>")
+		thead.append("<th class='act'>Example Activity</th>")
 		
 		for(let idx=0;idx<pdat.top.length;idx++)
 		{
@@ -56,15 +87,15 @@ var insert_page=function()
 			let trow=$("<tr/>")
 			tab.append(trow)
 
-			trow.append("<td>"+(idx+1)+"</hd>")
-			trow.append("<td>"+v.count+"</hd>")
-			trow.append("<td>"+v.value+"</hd>")
+			trow.append("<td>"+(idx+1)+"</td>")
+			trow.append("<td>"+v.count+"</td>")
+			trow.append("<td>"+v.value+"</td>")
 
 			let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
-			trow.append(`<td><a target="_blank" href="${url}">${v.pid}</a></hd>`)
+			trow.append(`<td><a target="_blank" href="${url}">${v.pid}</a></td>`)
 
 			url="http://d-portal.org/ctrack.html#view=act&aid="+v.aid
-			trow.append(`<td><a target="_blank" href="${url}">${v.aid}</a></hd>`)
+			trow.append(`<td><a target="_blank" href="${url}">${v.aid}</a></td>`)
 		}
    
    		let cnames=["count","activities","publishers","distinct"]
@@ -84,9 +115,9 @@ var insert_page=function()
 				data.push( {x: new Date(d*8.64e+7), y: v} )
 			}
 
-			let cdiv=$(`<div style="width:50%;height:360px;display:inline-block;" />`)
+			let cdiv=$(`<div class="graphs"/>`)
 			it.append(cdiv)
-			cdiv.append(`<h2>${cname}<h2>`)
+			cdiv.append(`<h2>${cname}</h2>`)
 			cdiv.append(`<div id="chart${chartidx}" style="height:320px" />`)
 
 			let confs={
@@ -112,10 +143,10 @@ var insert_page=function()
 	}
 
 
-	let it=$("<div/>")
+	let it=$("<div class='percent'/>")
 	$("body").append(it)
 
-	it.append(`<h1>Percentage of activities that include data for each valid xpath</h1>`)
+	it.append(`<span>Percentage of activities that include data for each valid xpath</span>`)
 
 	let tab=$(`<table style="width:100%"/>`)
 	it.append(tab)
@@ -123,8 +154,8 @@ var insert_page=function()
 	let thead=$("<tr/>")
 	tab.append(thead)
 	
-	thead.append("<th>Xpath</ht>")
-	thead.append("<th>Popularity</ht>")
+	thead.append("<th class='xpath'>Xpath</th>")
+	thead.append("<th class='pop'>Popularity</th>")
 	
 	
 	
@@ -148,8 +179,8 @@ var insert_page=function()
 		let trow=$("<tr/>")
 		tab.append(trow)
 
-		trow.append(`<td><a href="#${t.path}">${t.path}</a></hd>`)
-		trow.append(`<td>${t.pct}%</hd>`)
+		trow.append(`<td><a href="#${t.path}">${t.path}</a></td>`)
+		trow.append(`<td>${t.pct}%</td>`)
 	}
 
 }
