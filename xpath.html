@@ -8,14 +8,15 @@
 		th		{text-align:left; padding:0 20px 10px 20px; border-bottom:1px solid #ccc; color:#666; font-size:12px; text-transform:uppercase;}
 		th.rank	{width:5%;}
 		th.count{width:10%;}
-		th.val	{width:35%;}
+		th.val	{width:35%; overflow-wrap:break-word;}
 		th.pub	{width:25%;}
-		th.act	{width:25%; word-break:break-all;}
+		th.act	{width:25%; overflow-wrap:break-word;}
 		th.xpath{width:85%;}
 		th.pop	{width:15%;}
 		td		{padding:10px 20px; border-bottom:1px solid #ccc; vertical-align:top;}
-		td:nth-of-type(2) {font-family:monospace; font-size:16px;}
-		td:last-of-type {word-break:break-all;}
+		td:first-of-type	{color:#666;}
+		td:nth-of-type(2)	{font-family:monospace; font-size:16px;}
+		td:last-of-type		{word-break:break-all;}
 		
 		a			{color:#6188e2; text-decoration:none;}
 		a:link		{color:#6188e2;}
@@ -30,7 +31,7 @@
 		.graphs:nth-of-type(3), .graphs:nth-of-type(4)	{padding-top:0;}
 		.graphs h2	{color:#666; font-size:14px; text-transform:uppercase;}
 		
-		a.element		{display:block; font-size:24px; margin-bottom:20px; color:#6188e2; text-decoration:none; font-weight:bold; font-family:monospace; padding-bottom:10px;}
+		a.element		{display:block; font-size:24px; margin-bottom:20px; color:#6188e2; text-decoration:none; font-weight:bold; font-family:monospace; padding-bottom:1em;}
 		a.element:hover	{color:#004dff;}
 		
 		.percent		{width:960px; margin:auto; margin-bottom:3em;}
