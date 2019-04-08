@@ -126,17 +126,19 @@ var insert_page=function()
 
 			let data=[]
 			
+			let clast
 			for(let n of Object.keys(pdat[cname]).sort() )
 			{
 				let v=pdat[cname][n]
 				let d=parseInt(n)
 				if(d>latest){latest=d} // remember latest date we have seen
 				data.push( {x: new Date(d*8.64e+7), y: v} )
+				clast=v
 			}
 
 			let cdiv=$(`<div class="graphs"/>`)
 			it.append(cdiv)
-			cdiv.append(`<h2>${cname}</h2>`)
+			cdiv.append(`<h2>${cname} = ${clast}</h2>`)
 			cdiv.append(`<div id="chart${chartidx}" style="height:320px" />`)
 
 			let confs={
