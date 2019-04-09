@@ -38,15 +38,19 @@
 		.percent span	{display:block; font-size:24px; color:#666; padding-bottom:1em;}
 		
 		/*	Navigation bar and links	*/
-		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#444; height:initial; min-height:40px;}
-		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#444; height:initial; min-height:40px;}
+		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#ddd; height:initial; min-height:40px;}
+		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#ddd; height:initial; min-height:40px;}
+		.left_nav,
+		.right_nav			{display:inline-block; width:50%; vertical-align:top;}
+		.right_nav			{text-align:right;}
+		a.home_link,
 		a.log_link,
 		a.git_link,
-		a.about_link		{display:block; height:40px; position:absolute; top:0; padding:10px 20px; background-color:#444; color:#fff; text-decoration:none; font-family:sans-serif; font-size:14px;}
-		a.about_link		{left:0;}
-		a.git_link			{right:0;}
-		a.log_link			{right:150px;}
-		a.log_link:hover, a.git_link:hover, a.about_link:hover	{background-color:#555; cursor:pointer;}
+		a.about_link		{display:inline-block; padding:12px 20px 8px 20px; border-bottom:3px solid #ddd; color:#444; text-decoration:none; font-family:sans-serif; font-size:14px;}
+		a.home_link:hover,
+		a.log_link:hover,
+		a.git_link:hover,
+		a.about_link:hover	{border-bottom:3px solid #6188e2; cursor:pointer;}
 		
 		/*	Back to top link	*/
 		a.top		{display:block; width:100%; padding:20px 0; text-align:center; font-size:16px; color:#444; text-decoration:none; position:absolute; bottom:-100px; left:0;}
@@ -210,9 +214,15 @@ var insert_page=function()
 	</script>
  </head>
   <body>
-	<div class="nav_wrap" id="top"><div class="nav">
-		<a class="log_link" href="./logs.html">Logs</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Stats on Github</a><a class="about_link" href="#percentage">Percentage of elements used</a>
-	</div></div>
+	<div class="nav_wrap" id="top">
+		<div class="nav">
+			<div class="left_nav">
+				<a class="about_link" href="#percentage">Percentage of elements used</a>
+			</div><div class="right_nav">
+				<a class="log_link" href="./logs.html">Logs</a><a class="home_link" href="./index.html">Home</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Stats on Github</a>
+			</div>
+		</div>
+	</div>
 	<a href="#top" class="top">BACK TOP</a>
   </body>
 </html>

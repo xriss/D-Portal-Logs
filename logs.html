@@ -11,15 +11,19 @@
 		b		{font-weight:bold;}
 
 		/*	Navigation bar and links	*/
-		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; height:initial; min-height:40px;}
-		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#444; height:initial; min-height:40px;}
+		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#ddd; height:initial; min-height:40px; padding:0;}
+		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#ddd; height:initial; min-height:40px; padding:0;}
+		.left_nav,
+		.right_nav			{display:inline-block; width:50%; vertical-align:top; padding:0;}
+		.right_nav			{text-align:right;}
+		a.home_link,
 		a.stat_link,
 		a.git_link,
-		a.about_link{display:block; height:40px; position:absolute; top:0; padding:10px 20px; background-color:#444; color:#fff; text-decoration:none; font-family:sans-serif; font-size:14px;}
-		a.about_link	{left:0;}
-		a.git_link		{right:0;}
-		a.stat_link		{right:150px;}
-		a.stat_link:hover, a.git_link:hover, a.about_link:hover	{background-color:#555; cursor:pointer;}
+		a.about_link		{display:inline-block; padding:12px 20px 8px 20px; border-bottom:3px solid #ddd; color:#444; text-decoration:none; font-family:sans-serif; font-size:14px;}
+		a.home_link:hover,
+		a.stat_link:hover,
+		a.git_link:hover,
+		a.about_link:hover	{border-bottom:3px solid #6188e2; cursor:pointer;}
 
 
 		/*	Stats and Chart Wrappers	*/
@@ -225,9 +229,15 @@ for(var n in json.distinct)
 });
 
 	</script>
-	<div class="nav_wrap" id="top"><div class="nav">
-		<a class="stat_link" href="./xpath.html">Xpath Stats</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Logs on Github</a><a onclick="$('.pop_wrapper').toggle();" class="about_link"><b>&#9730; What is this?</b></a>
-	</div></div>
+	<div class="nav_wrap" id="top">
+		<div class="nav">
+			<div class="left_nav">
+				<a onclick="$('.pop_wrapper').toggle();" class="about_link"><b>&#9730; What is this?</b></a>
+			</div><div class="right_nav">
+				<a class="stat_link" href="./xpath.html">Xpath Stats</a><a class="home_link" href="./index.html">Home</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Stats on Github</a>
+			</div>
+		</div>
+	</div>
 	<div class="pop_wrapper">
 		<div class="pop_wrap">
 			<div class="pop_close_wrap">

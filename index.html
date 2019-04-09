@@ -7,10 +7,13 @@
 		.wrap	{margin:0 auto; width:960px;}
 		.wrap a	{width:49%; margin:0 auto; display:inline-block; vertical-align:top;}
 		
+		.psa_wrap	{display:block; margin-top:3em; width:100%;}
+		span.psa	{display:inline-block; vertical-align:top; width:50%}		
+		
 		a.log_link,
 		a.stat_link	{text-decoration:none; font-size:32px; color:#444;}
 		a.stat_link	{width:51%; padding-left:1em; border-left:2px solid #ccc;}
-		a.git_link	{display:block; margin-top:3em; margin-left:-2em; width:100%; text-decoration:none; text-align:right; color:#666;}
+		a.git_link	{display:inline-block; margin-left:-2em; width:50%; text-decoration:none; text-align:right; color:#666;}
 		a.git_link:hover,
 		a:hover span	{color:#6188e2;}
 		
@@ -51,7 +54,9 @@
 			<span class="text">Statistics &amp; graphs of IATI elements in the database.</span>
 			<span class="img"></span>
 		</a>
-		<a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Source on Github</a>
+		<div class="psa_wrap">
+			<span class="psa">Please be aware that these pages take awhile to load.</span><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Source on Github</a>
+		</div>
 	</div>
   </body>
 </html>
