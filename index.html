@@ -3,64 +3,28 @@
 	<title>D-Portal Logs</title>
 	<style>
 		*		{box-sizing:border-box;}
-		body	{padding:30px; margin:0 auto; color:#111; word-break:break-word; position:relative; font-family:sans-serif;}
-		div		{width:48%; margin:0 auto; display:inline-block; vertical-align:top; padding:20px;}
+		body	{margin:5em 0 auto; font-family:sans-serif; color:#111; position:relative; overflow-wrap:break-word;}
+		.wrap	{margin:0 auto; width:960px;}
+		.wrap a	{width:49%; margin:0 auto; display:inline-block; vertical-align:top;}
+		
+		a.log_link,
+		a.stat_link	{text-decoration:none; font-size:32px; color:#444;}
+		a.stat_link	{width:51%; padding-left:1em; border-left:2px solid #ccc;}
+		a.git_link	{display:block; margin-top:3em; margin-left:-2em; width:100%; text-decoration:none; text-align:right; color:#666;}
+		a.git_link:hover,
+		a:hover span	{color:#6188e2;}
+		
+		span		{display:block;}
+		span.text	{font-size:16px; color:#666; padding:10px 0 20px 0;}
+		a.log_link	span.img {background:url('./data/screenshot_logs.png')no-repeat; background-size:cover; width:90%; height:400px;}
+		a.stat_link	span.img {background:url('./data/screenshot_xpath.png')no-repeat; background-size:cover; width:90%; height:400px;}
+		
 		h1		{color:#666; text-transform:uppercase; font-size:14px;}
 		p		{padding:10px 0;}
 		pre		{display:inline; margin:0; white-space:initial;}
 		b		{font-weight:bold;}
 
-		/*	Navigation bar and links	*/
-		.nav	{width:100%; position:absolute; top:0; left:0; background-color:#444; height:initial; min-height:40px;}
-
-		a.stat_link,
-		a.git_link,
-		a.about_link{display:block; height:40px; position:absolute; top:0; padding:10px 20px; background-color:#444; color:#fff; text-decoration:none; font-family:sans-serif; font-size:14px;}
-		a.about_link	{left:0;}
-		a.git_link		{right:0;}
-		a.stat_link		{right:150px;}
-		a.stat_link:hover, a.git_link:hover, a.about_link:hover	{background-color:#555; cursor:pointer;}
-
-
-		/*	Stats and Chart Wrappers	*/
-		.wrap	{display:inline-block; vertical-align:top; width:20%; height:initial; margin-bottom:20px;}
-		.wrap div:first-of-type span	{border-top:1px solid #ccc; font-family:monospace;}
-		.wrap div:last-child span		{border-bottom:1px solid #ccc;}
-
-		.chart_wrap	{display:block; width:initial; height:initial; margin-top:20px;}
-
-		/*	Stats styles	*/
-		.stat	{display:table; table-layout:fixed; width:100%; height:initial; text-transform:capitalize; font-family:sans-serif; font-size:14px; border:0px solid #ccc; border-bottom:0; border-right:0; padding:0;}
-
-		.stat span					{display:table-cell; padding:10px 20px; border-right:1px solid #ccc;}
-		.stat span:first-of-type	{width:60%; border-left:1px solid #ccc; text-align:right;}
-		.stat:nth-of-type(even)		{background-color:#eee;}
-
-		/*	Overview styles	*/
-		.overview			{display:block; width:100%; height:initial; line-height:28px; font-size:20px;}
-		.overview span		{display:block; padding-bottom:10px;}
-		.overview h1		{font-size:1.2em; margin-bottom:5px;}
-
-		/*	Legend styles	*/
-		.overview table			{font-size:16px;}
-		table					{width:100%; padding:20px 0 10px 0;}
-		td						{padding:10px;}
-		td:first-of-type		{font-weight:bold; font-size:18px; width:200px; min-width:200px; max-width:200px;}
-		tr:nth-of-type(even)	{background-color:#eee;}
-		td:nth-of-type(2)		{font-family:monospace;}
-
-		/*	Popup	*/
-		.pop_wrapper	{display:none; transition:opacity 0.2s;}
-		.pop_wrapper	{width:initial; padding:50px 150px; background-color:rgba(206,206,206,0.7); overflow:hidden; position:absolute; top:0; left:0; bottom:0; right:0; z-index:999;}
-		.pop_wrap		{width:initial; padding-bottom:60px; width:100%; background-color:#FFF; box-sizing:border-box; border:1px solid #ccc; box-shadow:1px 1px 20px rgba(111,111,111,0.5); overflow:auto; padding:0;}
-		.pop_text		{width:initial; display:block; padding:40px 60px 20px 60px;}
-		.pop_close_wrap	{width:initial; padding:0; position:relative; width:100%;}
-		a.pop_close		{position:absolute; display:block; top:15px; right:15px; font-size:30px; line-height:35px; text-align:center; color:#999;}
-		a.pop_close:hover{color:#666; cursor:pointer;}
-
-		/*	Back to top link	*/
-		a.top		{display:block; width:100%; padding:20px 0; text-align:center; font-size:16px; color:#444; text-decoration:none; position:absolute; bottom:-60px; left:0;}
-		a.top:hover	{background-color:#ddd;}
+		
 		  
 		  
 		/*	Mobile-Last		*/
@@ -75,251 +39,19 @@
 		}
 		  
 	</style>
-	<script
-		src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous"></script>
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
  </head>
   <body>
-	<script>
-		
-var addchart=function(data,opts){
- 
-	var div=$('<div> <canvas></canvas> </div>')
-	$("body").append(div)
-	var ctx=div.children(":first")[0].getContext("2d");
-
-	var dl=[]
-	var dv=[]
-	var idx=0
-	for(var n in data){
-		dl[idx]=(new Date(Number(n)*8.64e7)).toLocaleDateString()
-		dv[idx]=data[n]
-		idx++
-	}
-	
-var config = {
-	type: 'line',
-	data: {
-		labels: dl,
-		datasets: [{
-			label: opts.name || "Filled",
-			backgroundColor: opts.color || "#f44",
-			borderColor: opts.color || "#f44",
-			data: dv,
-			fill: true,
-		}]
-	},
-	options: {
-		responsive: true,
-		title:{
-			display:opts.title && true || false,
-			text:opts.title || 'Chart.js Line Chart',
-			fontSize:14
-		},
-		tooltips: {
-			mode: 'index',
-			intersect: false,
-		},
-		hover: {
-			mode: 'nearest',
-			intersect: true
-		},
-		scales: {
-			xAxes: [{
-				display: true,
-				scaleLabel: {
-					display: true,
-					labelString: 'Day'
-				}
-			}],
-			yAxes: [{
-				display: true,
-				scaleLabel: {
-					display: true,
-					labelString: 'Amount'
-				}
-			}]
-		}
-	}
-};
-
-   return new Chart(ctx, config);
-};
-
-$.getJSON("stats.json", function(json) {
-
-
-// Snapshots
-
-var div=$('<div class="wrap"><h1> DATABASE </h1></div>')
-$("body").append(div)
-
-for(var n in json.count)
-{
-	var h=0;	// h = highest
-	
-	for(var q in json.count[n])
-	{
-		if (q > h)
-		{
-			h = q;
-		}
-	}
-	
-	var number = Number(json.count[n][h]);	
-	var div2=$('<div class="stat"><span>'+n+'</span><span>'+(number.toLocaleString())+'</span></div>')
-	div.append(div2)
-}
-
-for(var n in json.distinct)
-{
-	var div=$('<div class="wrap"><h1> '+n+' </h1></div>')
-	$("body").append(div)
-	
-	for(var t in json.distinct[n])
-	{
-		var h=0;	// h = highest
-		
-		for(var q in json.distinct[n][t])
-		{
-			if (q > h)
-			{
-				h = q;
-			}
-		}
-		
-		var number = Number(json.distinct[n][t][h]);	
-		var div2=$('<div class="stat"><span>'+t+'</span><span>'+(number.toLocaleString())+'</span></div>')
-		div.append(div2)
-	}
-}
-
-
-// Charts
-
-var div=$('<div class="chart_wrap"><h1> DATABASE </h1></div>')
-$("body").append(div)
-
-for(var n in json.count)
-{
-	window["chartjs_"+n]=
-        addchart(json.count[n],
-            {title:"Total "+n+" table entries recorded in the database",name:n,color:"#000"});
-}
-
-
-for(var n in json.distinct)
-{
-	var div=$('<div class="chart_wrap"><h1> '+n+' TABLE </h1></div>')
-	$("body").append(div)
-
-   for(var t in json.distinct[n])
-	{
-		window["chartjs_"+n+"_"+t]=
-            addchart(json.distinct[n][t],
-                {title:"Distinct "+t+" values recorded in "+n+" ",name:n+"."+t,color:"#444"});
-	}
-
-}
-
-});
-
-	</script>
-	<div class="nav" id="top">
-		<a class="stat_link" href="./xpath.html">Xpath Stats</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Logs on Github</a><a onclick="$('.pop_wrapper').toggle();" class="about_link"><b>&#9730; What is this?</b></a>
+	<div class="wrap">
+		<a class="log_link" href="./logs.html">
+			<span class="title">Logs</span>
+			<span class="text">Statistics &amp; graphs of the D-Portal database.</span>
+			<span class="img"></span>
+		</a><a class="stat_link" href="./xpath.html">
+			<span class="title">Xpath Stats</span>
+			<span class="text">Statistics &amp; graphs of IATI elements in the database.</span>
+			<span class="img"></span>
+		</a>
+		<a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Source on Github</a>
 	</div>
-	<div class="pop_wrapper">
-		<div class="pop_wrap">
-			<div class="pop_close_wrap">
-				<a class="pop_close" onclick="$('.pop_wrapper').fadeToggle('fast');">close</a>
-			</div>
-			<div class="pop_text">
-				<div class="overview">
-					<h1>OVERVIEW</h1>
-					<span>Statistics &amp; graphs of the <a href="http://d-portal.org" target="_blank">D-Portal</a> database. Figures in the corresponding tables are daily logs of nightly imports. The graphs show these figures over time; hover over the points for more information.</span>
-					<h1>LEGEND</h1>
-					<span>Any linked definitions below are to the IATI Registry.</span>
-					<h1>DATABASE</h1>
-					<span>These are tables found in the database. Numbers are total entries found in these tables.</span>		
-					<table>
-						<tr>
-							<td>Act</td><td>Activities table</td>
-						</tr>
-						<tr>
-							<td>Budget</td><td>Budgets table</td>
-						</tr>
-						<tr>
-							<td>Country</td><td>Countries table</td>
-						</tr>
-						<tr>
-							<td>Element</td><td>XML elements</td>
-						</tr>
-						<tr>
-							<td>Location</td><td>Locations table</td>
-						</tr>
-						<tr>
-							<td>Related</td><td>Related activities table</td>
-						</tr>
-						<tr>
-							<td>Sector</td><td>Sectors table</td>
-						</tr>
-						<tr>
-							<td>Slug</td><td>IATI Registry slug (metadata)</td>
-						</tr>
-						<tr>
-							<td>Trans</td><td>Transactions table</td>
-						</tr>
-					</table>		
-					<h1>TABLES</h1>
-					<span>Number of <b>distinct</b> (unique) values in the column; ie. repeated values are not counted.</span>	
-					<table>
-						<tr>
-							<td>Aid</td><td><a href="http://iatistandard.org/202/activity-standard/iati-activities/iati-activity/iati-identifier/">iati-identifier</a></td>
-						</tr>
-						<tr>
-							<td>Flags</td><td>Internal flags</td>
-						</tr>
-						<tr>
-							<td>Spend_*</td><td>USD currency is the default</td>
-						</tr>
-						<tr>
-							<td>Day_length</td><td>( Day_end - Day_start ) &#8815; than a year</td>
-						</tr>
-						<tr>
-							<td>Status_code</td><td><a href="http://iatistandard.org/202/activity-standard/iati-activities/iati-activity/activity-status/">activity-status</a></td>
-						</tr>
-						<tr>
-							<td>Country</td><td><a href="http://iatistandard.org/202/activity-standard/iati-activities/iati-activity/recipient-country/">recipient-country</a></td>
-						</tr>
-						<tr>
-							<td>*_percent</td><td>Percentage of activities should always add up to 100% even when reported otherwise</td>
-						</tr>
-						<tr>
-							<td>Element_*</td><td>IATI element hierarchies</td>
-						</tr>
-						<tr>
-							<td>Element_volume</td><td>Total number of elements</td>
-						</tr>
-						<tr>
-							<td>Location</td><td><a href="http://iatistandard.org/202/activity-standard/iati-activities/iati-activity/location/">location</a></td>
-						</tr>
-						<tr>
-							<td>Related_aid</td><td><a href="http://iatistandard.org/202/activity-standard/iati-activities/iati-activity/related-activity/">related-activity</a></td>
-						</tr>
-						<tr>
-							<td>Sector_code</td><td><a href="http://iatistandard.org/202/codelists/Sector/">DAC 5 Digit Sector</a></td>
-						</tr>
-						<tr>
-							<td>Sector_group</td><td><a href="http://iatistandard.org/202/codelists/SectorCategory/">DAC 3 Digit Sector</a></td>
-						</tr>
-						
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-	<a href="#top" class="top">BACK TOP</a>
   </body>
 </html>

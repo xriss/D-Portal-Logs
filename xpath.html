@@ -38,7 +38,8 @@
 		.percent span	{display:block; font-size:24px; color:#666; padding-bottom:1em;}
 		
 		/*	Navigation bar and links	*/
-		.nav				{width:100%; position:absolute; top:-5em; left:0; background-color:#444; height:initial; min-height:40px;}
+		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#444; height:initial; min-height:40px;}
+		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#444; height:initial; min-height:40px;}
 		a.log_link,
 		a.git_link,
 		a.about_link		{display:block; height:40px; position:absolute; top:0; padding:10px 20px; background-color:#444; color:#fff; text-decoration:none; font-family:sans-serif; font-size:14px;}
@@ -205,9 +206,9 @@ var insert_page=function()
 	</script>
  </head>
   <body>
-	<div class="nav" id="top">
-		<a class="log_link" href="./index.html">Logs</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Stats on Github</a><a class="about_link" href="#percentage">Percentage of elements used</a>
-	</div>
+	<div class="nav_wrap" id="top"><div class="nav">
+		<a class="log_link" href="./logs.html">Logs</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Stats on Github</a><a class="about_link" href="#percentage">Percentage of elements used</a>
+	</div></div>
 	<a href="#top" class="top">BACK TOP</a>
   </body>
 </html>
