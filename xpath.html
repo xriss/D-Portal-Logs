@@ -189,14 +189,14 @@ var insert_page=function()
 
 	
 	let idx=0
-	for( let group of ["/iati-organisations","/iati-activities"] )
+	for( let group of ["/iati-organisations/iati-organisation","/iati-activities/iati-activity"] )
 	{
 		idx++
 		
 		let it=$(`<div id='percentage${idx}' class='percent'/>`)
 		$("body").append(it)
 
-		it.append(`<span>Percentage of ${group} that include at least one data for each valid xpath</span>`)
+		it.append(`<span>Percentage of ${group} that include  data for each valid xpath</span>`)
 
 		let tab=$(`<table style="width:100%"/>`)
 		it.append(tab)
