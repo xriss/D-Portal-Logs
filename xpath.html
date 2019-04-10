@@ -90,6 +90,10 @@ var insert_page=function()
 		$("body").append(it)
 		
 		let pathlink="http://reference.iatistandard.org/203/activity-standard"+(path.split("@")[0])
+		if(path.startsWith("/iati-organisations")) // org files
+		{
+			pathlink="http://reference.iatistandard.org/203/organisation-standard"+(path.split("@")[0])
+		}
 		
 		it.append(`<a class="element" target="_blank" id="${path}" href="${pathlink}">${path}</a>`)
 		
@@ -115,11 +119,25 @@ var insert_page=function()
 			trow.append("<td>"+v.count+"</td>")
 			trow.append("<td>"+v.value+"</td>")
 
-			let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
-			trow.append(`<td><a target="_blank" href="${url}">${v.pid}</a></td>`)
+			if(v.pid)
+			{
+				let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
+				trow.append(`<td><a target="_blank" href="${url}">${v.pid}</a></td>`)
+			}
+			else
+			{
+				trow.append(`<td></td>`)
+			}
 
-			url="http://d-portal.org/ctrack.html#view=act&aid="+v.aid
-			trow.append(`<td><a target="_blank" href="${url}">${v.aid}</a></td>`)
+			if(v.aid)
+			{
+				url="http://d-portal.org/ctrack.html#view=act&aid="+v.aid
+				trow.append(`<td><a target="_blank" href="${url}">${v.aid}</a></td>`)
+			}
+			else
+			{
+				trow.append(`<td></td>`)
+			}
 		}
    
    		let cnames=["count","activities","publishers","distinct"]
@@ -169,44 +187,58 @@ var insert_page=function()
 	}
 
 
-	let it=$("<div id='percentage' class='percent'/>")
-	$("body").append(it)
-
-	it.append(`<span>Percentage of activities that include data for each valid xpath</span>`)
-
-	let tab=$(`<table style="width:100%"/>`)
-	it.append(tab)
 	
-	let thead=$("<tr/>")
-	tab.append(thead)
-	
-	thead.append("<th class='xpath'>Xpath</th>")
-	thead.append("<th class='pop'>Popularity</th>")
-	
-	
-	
-	let atotal=0
-	let a=[]
-	for(let path of Object.keys(stats.xpath).sort() )
+	let idx=0
+	for( let group of ["/iati-organisations","/iati-activities"] )
 	{
-		let p=stats.xpath[path]
-		let count=parseInt(p.activities[latest])
-		if(atotal<count){atotal=count} // highest
-		a.push({path:path,count:count})
-	}
-	for(let v of a) // convert to 00.00 pct
-	{
-		v.pct=Math.ceil(10000*(v.count/atotal))/100
-	}
-	a.sort( function(a,b){ return a.count<b.count ? 1 : -1 } )
-	
-	for(let t of a)
-	{
-		let trow=$("<tr/>")
-		tab.append(trow)
+		idx++
+		
+		let it=$(`<div id='percentage${idx}' class='percent'/>`)
+		$("body").append(it)
 
-		trow.append(`<td><a href="#${t.path}">${t.path}</a></td>`)
-		trow.append(`<td>${t.pct}%</td>`)
+		it.append(`<span>Percentage of ${group} that include at least one data for each valid xpath</span>`)
+
+		let tab=$(`<table style="width:100%"/>`)
+		it.append(tab)
+		
+		let thead=$("<tr/>")
+		tab.append(thead)
+		
+		thead.append("<th class='xpath'>Xpath</th>")
+		thead.append("<th class='pop'>Popularity</th>")
+
+
+		let atotal=0
+		let a=[]
+		for(let path of Object.keys(stats.xpath).sort() )
+		{
+			if(path.startsWith(group))
+			{
+				let p=stats.xpath[path]
+				let count=parseInt(p.activities[latest])
+				if(path.startsWith("/iati-organisations")) // org files
+				{
+					count=parseInt(p.publishers[latest])
+				}
+				if(atotal<count){atotal=count} // highest
+				a.push({path:path,count:count})
+			}
+		}
+		for(let v of a) // convert to 00.00 pct
+		{
+			v.pct=Math.ceil(10000*(v.count/atotal))/100
+		}
+		a.sort( function(a,b){ return a.pct<b.pct ? 1 : -1 } )
+		
+		for(let t of a)
+		{
+			let trow=$("<tr/>")
+			tab.append(trow)
+
+			trow.append(`<td><a href="#${t.path}">${t.path}</a></td>`)
+			trow.append(`<td>${t.pct}%</td>`)
+		}
+		
 	}
 
 }
