@@ -68,6 +68,21 @@
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 	<script>
 
+// goto hash
+var goto_hash=function()
+{
+	if( window.location.hash=="" || window.location.hash=="#" ) // default
+	{
+		window.location.hash="#/iati-activities/iati-activity/iati-identifier"
+	}
+	
+	let s=window.location.hash
+	
+	document.getElementById( s.substring(1) ).scrollIntoView(true)
+//	window.scrollBy(0,-50)
+}
+
+
 // parrams
 var queryed = {};
 if (location.search) location.search.substr(1).split("&").forEach(function(item) {
@@ -90,14 +105,20 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 				let it=$(`<div class='pid_title'><h1>${queryed.pid} : ${queryed.pname}</h1></>`)
 				$("body").append(it)
 
-				$(insert_page)
+				$(()=>{
+					insert_page()
+					goto_hash()
+				})
 			})
 		}
 		else
 		{
 			$.getJSON("stats.json", function(json) {
 				stats=json
-				$(insert_page)
+				$(()=>{
+					insert_page()
+					goto_hash()
+				})
 			})
 		}
 
@@ -125,100 +146,118 @@ var insert_page=function()
 		}
 		
 		it.append(`<a class="element" target="_blank" id="${path}" href="${pathlink}">${path}</a>`)
-		
-		let tab=$(`<table style="width:100%"/>`)
-		it.append(tab)
-		
-		let thead=$("<tr/>")
-		tab.append(thead)
-		
-		thead.append("<th class='rank'>Rank</th>")
-		thead.append("<th class='count'>Count</th>")
-		thead.append("<th class='val'>Value</th>")
-		if(!queryed.pid)
+
+// check some data exists
+		let max_count=0
+		if(pdat.count)
 		{
-			thead.append("<th class='pub'>Example Publisher</th>")
+			for(let n in pdat.count )
+			{
+				let count=pdat.count[n]
+				if(count>max_count){max_count=count}
+			}
 		}
-		thead.append("<th class='act'>Example Activity</th>")
-		
-		for(let idx=0;idx<pdat.top.length;idx++)
+		if( max_count == 0 )
 		{
-			let v=pdat.top[idx]
-			let trow=$("<tr/>")
-			tab.append(trow)
+			it.append(`<div>No data published.</div>`)
+		}
+		else
+		{
 
-			trow.append("<td>"+(idx+1)+"</td>")
-			trow.append("<td>"+v.count+"</td>")
-			trow.append("<td>"+v.value+"</td>")
-
+			let tab=$(`<table style="width:100%"/>`)
+			it.append(tab)
+			
+			let thead=$("<tr/>")
+			tab.append(thead)
+			
+			thead.append("<th class='rank'>Rank</th>")
+			thead.append("<th class='count'>Count</th>")
+			thead.append("<th class='val'>Value</th>")
 			if(!queryed.pid)
 			{
-				if(v.pid)
+				thead.append("<th class='pub'>Example Publisher</th>")
+			}
+			thead.append("<th class='act'>Example Activity</th>")
+			
+			for(let idx=0;idx<pdat.top.length;idx++)
+			{
+				let v=pdat.top[idx]
+				let trow=$("<tr/>")
+				tab.append(trow)
+
+				trow.append("<td>"+(idx+1)+"</td>")
+				trow.append("<td>"+v.count+"</td>")
+				trow.append("<td>"+v.value+"</td>")
+
+				if(!queryed.pid)
 				{
-					let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
-					trow.append(`<td><a target="_blank" href="${url}">${v.pid}</a></td>`)
+					if(v.pid)
+					{
+						let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
+						trow.append(`<td><a target="_blank" href="${url}">${v.pid}</a></td>`)
+					}
+					else
+					{
+						trow.append(`<td></td>`)
+					}
+				}
+
+				if(v.aid)
+				{
+					url="http://d-portal.org/ctrack.html#view=act&aid="+v.aid
+					trow.append(`<td><a target="_blank" href="${url}">${v.aid}</a></td>`)
 				}
 				else
 				{
 					trow.append(`<td></td>`)
 				}
 			}
+	   
+			let cnames=["count","activities","publishers","distinct"]
 
-			if(v.aid)
+			for(let cname of cnames)
 			{
-				url="http://d-portal.org/ctrack.html#view=act&aid="+v.aid
-				trow.append(`<td><a target="_blank" href="${url}">${v.aid}</a></td>`)
-			}
-			else
-			{
-				trow.append(`<td></td>`)
-			}
-		}
-   
-   		let cnames=["count","activities","publishers","distinct"]
+				if(!pdat[cname]) { continue } // publishers have one less graph
 
-		for(let cname of cnames)
-		{
-			if(!pdat[cname]) { continue } // publishers have one less graph
+				chartidx++
 
-			chartidx++
+				let data=[]
+				
+				let clast
+				for(let n of Object.keys(pdat[cname]).sort() )
+				{
+					let v=pdat[cname][n]
+					let d=parseInt(n)
+					if(d>latest){latest=d} // remember latest date we have seen
+					data.push( {x: new Date(d*8.64e+7), y: v} )
+					clast=v
+				}
 
-			let data=[]
-			
-			let clast
-			for(let n of Object.keys(pdat[cname]).sort() )
-			{
-				let v=pdat[cname][n]
-				let d=parseInt(n)
-				if(d>latest){latest=d} // remember latest date we have seen
-				data.push( {x: new Date(d*8.64e+7), y: v} )
-				clast=v
-			}
+				let cdiv=$(`<div class="graphs"/>`)
+				it.append(cdiv)
+				cdiv.append(`<h2>${cname} = ${clast}</h2>`)
+				cdiv.append(`<div id="chart${chartidx}" style="height:320px" />`)
 
-			let cdiv=$(`<div class="graphs"/>`)
-			it.append(cdiv)
-			cdiv.append(`<h2>${cname} = ${clast}</h2>`)
-			cdiv.append(`<div id="chart${chartidx}" style="height:320px" />`)
-
-			let confs={
-				axisX: {
-				type: Chartist.FixedScaleAxis,
-				divisor: 5,
-				labelInterpolationFnc: function(value) {
-					return moment(value).format('YYYY MMM D');
+				let confs={
+					axisX: {
+					type: Chartist.FixedScaleAxis,
+					divisor: 5,
+					labelInterpolationFnc: function(value) {
+						return moment(value).format('YYYY MMM D');
+						}
 					}
 				}
-			}
-			let datas={
-			  series: [
-				{
-					data:data
+				let datas={
+				  series: [
+					{
+						data:data
+					}
+				  ]
 				}
-			  ]
+
+				let chart=new Chartist.Line( "#chart"+chartidx, datas , confs );
+
 			}
-
-			let chart=new Chartist.Line( "#chart"+chartidx, datas , confs );
-
 		}
 	}
 
