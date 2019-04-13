@@ -270,7 +270,8 @@ var insert_page=function()
 
 				let cdiv=$(`<div class="graphs"/>`)
 				it.append(cdiv)
-				cdiv.append(`<h2>${cname} = ${clast}</h2>`)
+				let cval=(clast/1).toLocaleString("en", { useGrouping: true })
+				cdiv.append(`<h2>${cname} = ${cval}</h2>`)
 				cdiv.append(`<div id="chart${chartidx}" style="height:320px;position:relative;" />`)
 
 				let confs={
@@ -285,7 +286,8 @@ var insert_page=function()
 						Chartist.plugins.tooltip({
 							transformTooltipTextFnc:(it)=>{
 								let aa=it.split(",")
-								return moment(aa[0]/1).format('YYYY MMM D')+" : "+aa[1];
+								return moment(aa[0]/1).format('YYYY MMM D')+" : "+
+								(aa[1]/1).toLocaleString("en", { useGrouping: true })
 							}
 						})
 					],
