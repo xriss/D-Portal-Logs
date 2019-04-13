@@ -57,6 +57,7 @@
 		a.top:hover	{background-color:#eee;}
 		
 		.ct-chart-line	{ overflow:visible; }
+		.pid_title { text-align:center; }
 	</style>
 	<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -66,11 +67,39 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 	<script>
+
+// parrams
+var queryed = {};
+if (location.search) location.search.substr(1).split("&").forEach(function(item) {
+	var s = item.split("=")
+	var k = s[0]
+	var v = s[1] && decodeURIComponent(s[1]);
+	queryed[k]=v
+})
+
 		var stats
-		$.getJSON("stats.json", function(json) {
-			stats=json
-			$(insert_page)
-		})
+		
+		if(queryed.pid)
+		{
+			$.getJSON("pids/"+queryed.pid+".json", function(json) {
+				stats=json
+				
+				//convert pid to name from data
+				queryed.pname = stats.xpath["/iati-activities/iati-activity/reporting-org/narrative"].top[0].value
+				
+				let it=$(`<div class='pid_title'><h1>${queryed.pid} : ${queryed.pname}</h1></>`)
+				$("body").append(it)
+
+				$(insert_page)
+			})
+		}
+		else
+		{
+			$.getJSON("stats.json", function(json) {
+				stats=json
+				$(insert_page)
+			})
+		}
 
 var insert_page=function()
 {
@@ -106,7 +135,10 @@ var insert_page=function()
 		thead.append("<th class='rank'>Rank</th>")
 		thead.append("<th class='count'>Count</th>")
 		thead.append("<th class='val'>Value</th>")
-		thead.append("<th class='pub'>Example Publisher</th>")
+		if(!queryed.pid)
+		{
+			thead.append("<th class='pub'>Example Publisher</th>")
+		}
 		thead.append("<th class='act'>Example Activity</th>")
 		
 		for(let idx=0;idx<pdat.top.length;idx++)
@@ -119,14 +151,17 @@ var insert_page=function()
 			trow.append("<td>"+v.count+"</td>")
 			trow.append("<td>"+v.value+"</td>")
 
-			if(v.pid)
+			if(!queryed.pid)
 			{
-				let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
-				trow.append(`<td><a target="_blank" href="${url}">${v.pid}</a></td>`)
-			}
-			else
-			{
-				trow.append(`<td></td>`)
+				if(v.pid)
+				{
+					let url="http://d-portal.org/ctrack.html?publisher="+v.pid+"#view=main"
+					trow.append(`<td><a target="_blank" href="${url}">${v.pid}</a></td>`)
+				}
+				else
+				{
+					trow.append(`<td></td>`)
+				}
 			}
 
 			if(v.aid)
@@ -144,6 +179,7 @@ var insert_page=function()
 
 		for(let cname of cnames)
 		{
+			if(!pdat[cname]) { continue } // publishers have one less graph
 
 			chartidx++
 

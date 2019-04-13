@@ -42,6 +42,42 @@
 		}
 		  
 	</style>
+	<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+	<script>
+		var pids={}
+		$.getJSON("pids.json", function(json) {
+			pids=json.pids
+			
+			
+			let tab=$(`<table style="width:100%"/>`)
+			$("body").append(tab)
+			
+			let thead=$("<tr/>")
+			tab.append(thead)
+			
+			thead.append("<th>Activity Count</th>")
+			thead.append("<th>Publisher ID</th>")
+			thead.append("<th>Publisher Name</th>")
+
+			let aa=[]
+			for(let pid in pids) { pids[pid].pid=pid ; aa.push(pids[pid]) }
+			aa.sort(function(a,b){return b.count-a.count})
+			
+			for(let it of aa)
+			{
+				let trow=$("<tr/>")
+				tab.append(trow)
+
+				trow.append(`<td>${it.count}</td>`)
+				trow.append(`<td><a href="xpath.html?pid=${it.pid}">${it.pid}</a></td>`)
+				trow.append(`<td>${it.name}</td>`)
+			}
+			
+		})
+	</script>
  </head>
   <body>
 	<div class="wrap">
