@@ -58,6 +58,40 @@
 		
 		.ct-chart-line	{ overflow:visible; }
 		.pid_title { text-align:center; }
+
+.chartist-tooltip {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  min-width: 5em;
+  padding: .5em;
+  background: #F4C63D;
+  color: #453D3F;
+  font-family: Oxygen,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear; }
+  .chartist-tooltip:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top-color: #F4C63D; }
+  .chartist-tooltip.tooltip-show {
+    opacity: 1; }
+
+.ct-area, .ct-line {
+  pointer-events: none; }
+
 	</style>
 	<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -65,7 +99,8 @@
 		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https:////cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.min.js"></script>
 	<script>
 
 // goto hash
@@ -236,7 +271,7 @@ var insert_page=function()
 				let cdiv=$(`<div class="graphs"/>`)
 				it.append(cdiv)
 				cdiv.append(`<h2>${cname} = ${clast}</h2>`)
-				cdiv.append(`<div id="chart${chartidx}" style="height:320px" />`)
+				cdiv.append(`<div id="chart${chartidx}" style="height:320px;position:relative;" />`)
 
 				let confs={
 					axisX: {
@@ -245,8 +280,16 @@ var insert_page=function()
 					labelInterpolationFnc: function(value) {
 						return moment(value).format('YYYY MMM D');
 						}
-					}
-				}
+					},
+					plugins: [
+						Chartist.plugins.tooltip({
+							transformTooltipTextFnc:(it)=>{
+								let aa=it.split(",")
+								return moment(aa[0]/1).format('YYYY MMM D')+" : "+aa[1];
+							}
+						})
+					],
+  				}
 				let datas={
 				  series: [
 					{
