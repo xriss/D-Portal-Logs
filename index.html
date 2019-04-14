@@ -75,8 +75,8 @@
 			let thead=$("<tr/>")
 			tab.append(thead)
 			
-			thead.append("<th>Activity Count</th>")
 			thead.append("<th>History</th>")
+			thead.append("<th>Activity Count</th>")
 			thead.append("<th>Publisher ID</th>")
 			thead.append("<th>Publisher Name</th>")
 
@@ -93,8 +93,8 @@
 				let trow=$("<tr/>")
 				tab.append(trow)
 
-				trow.append(`<td>${it.count}</td>`)
 				trow.append(`<td id='${sparkname}' class="spark"></td>`)
+				trow.append(`<td>${it.count}</td>`)
 				trow.append(`<td><a href="xpath.html?pid=${it.pid}">${it.pid}</a></td>`)
 				trow.append(`<td>${it.name}</td>`)
 				
