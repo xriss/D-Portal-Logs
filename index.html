@@ -40,12 +40,29 @@
 			.overview span, td:nth-of-type(2)	{font-size:24px; line-height:42px;}
 			h1, .stat span	{font-size:42px; line-height:64px;}
 		}
+		
+.ct-chart svg  {
+  margin:1px; 
+  vertical-align:text-bottom;
+}
+.ct-series-a .ct-line,
+.ct-series-a .ct-bar {
+  stroke: red; 
+  stroke-width: 1px;
+}
+.ct-chart-pie .ct-label {
+  display:none;
+}
+
+.spark { display:inline-block; }
 		  
 	</style>
 	<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https:////cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 	<script>
 		var pids={}
 		$.getJSON("pids.json", function(json) {
@@ -59,6 +76,7 @@
 			tab.append(thead)
 			
 			thead.append("<th>Activity Count</th>")
+			thead.append("<th>History</th>")
 			thead.append("<th>Publisher ID</th>")
 			thead.append("<th>Publisher Name</th>")
 
@@ -66,14 +84,50 @@
 			for(let pid in pids) { pids[pid].pid=pid ; aa.push(pids[pid]) }
 			aa.sort(function(a,b){return b.count-a.count})
 			
+			let sparkidx=0
 			for(let it of aa)
 			{
+				sparkidx++
+				let sparkname=`spark_${sparkidx}`
+
 				let trow=$("<tr/>")
 				tab.append(trow)
 
 				trow.append(`<td>${it.count}</td>`)
+				trow.append(`<td id='${sparkname}' class="spark"></td>`)
 				trow.append(`<td><a href="xpath.html?pid=${it.pid}">${it.pid}</a></td>`)
 				trow.append(`<td>${it.name}</td>`)
+				
+				$.getJSON(`pids/${it.pid}.json`,(dat,status)=>{
+					
+					dat=dat.xpath["/iati-activities/iati-activity/iati-identifier"].count
+					
+					let max=0;
+					let values=[]
+					for( let k of Object.keys(dat).sort() )
+					{
+						let v=dat[k]/1
+						if(v>max){max=v}
+						values.push( v )
+					}
+
+					var sparkOptions = {
+						high:max,
+						low:0,
+						height:'32px',
+						width:'256px',
+						showPoint: false,
+						fullWidth:true,
+						chartPadding: {top: 0,right: 0,bottom: 0,left: 0},
+						axisX: {showGrid: false, showLabel: false, offset: 0},
+						axisY: {showGrid: false, showLabel: false, offset: 0}
+					}
+
+					new Chartist.Line(`#${sparkname}`, {series:[values]}, sparkOptions);
+
+				})
+
+				
 			}
 			
 		})
