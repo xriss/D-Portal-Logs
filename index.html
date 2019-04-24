@@ -120,7 +120,7 @@
 						fullWidth:true,
 						chartPadding: {top: 0,right: 0,bottom: 0,left: 0},
 						axisX: {showGrid: false, showLabel: false, offset: 0},
-						axisY: {showGrid: false, showLabel: false, offset: 0}
+						axisY: {showGrid: false, showLabel: false, offset: 0, type: Chartist.FixedScaleAxis }
 					}
 
 					new Chartist.Line(`#${sparkname}`, {series:[values]}, sparkOptions);
