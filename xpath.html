@@ -24,7 +24,7 @@
 		a:hover		{color:#004dff;}
 		a:active	{color:#6188e2;}
 		
-		.wrap	{width:960px; margin:auto; padding-bottom:3em;}
+		.wrap, .pid_title_wrap	{width:960px; margin:auto; padding-bottom:3em;}
 		.graphs	{display:inline-block; vertical-align:top; box-sizing:border-box; width:50%; height:420px;}
 		.graphs:nth-of-type(odd)	{padding:2em 1.5em 0 0;}
 		.graphs:nth-of-type(even)	{padding:2em 0 0 1.5em;}
@@ -39,9 +39,9 @@
 		
 		/*	Navigation bar and links	*/
 		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#ddd; height:initial; min-height:40px;}
-		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#ddd; height:initial; min-height:40px;}
+		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#ddd; height:initial; min-height:40px; z-index:666;}
 		.left_nav,
-		.right_nav			{display:inline-block; width:50%; vertical-align:top;}
+		.right_nav			{display:inline-block; width:50%; height:40px; vertical-align:top;}
 		.right_nav			{text-align:right;}
 		a.home_link,
 		a.log_link,
@@ -51,13 +51,13 @@
 		a.log_link:hover,
 		a.git_link:hover,
 		a.about_link:hover	{border-bottom:3px solid #6188e2; cursor:pointer;}
+		a.git_link 			{text-transform:uppercase; font-size:11px; line-height:16px;}
 		
 		/*	Back to top link	*/
 		a.top		{display:block; width:100%; padding:20px 0; text-align:center; font-size:16px; color:#444; text-decoration:none; position:absolute; bottom:-100px; left:0;}
 		a.top:hover	{background-color:#eee;}
 		
 		.ct-chart-line	{ overflow:visible; }
-		.pid_title { text-align:center; }
 
 .chartist-tooltip {
   position: absolute;
@@ -138,7 +138,7 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 				queryed.pname = stats.xpath["/iati-activities/iati-activity/reporting-org/narrative"].top[0].value
 				
 				let it=$(`<div class='pid_title'><h1>${queryed.pid} : ${queryed.pname}</h1></>`)
-				$("body").append(it)
+				$(".pid_title_wrap").append(it)
 
 				$(()=>{
 					insert_page()
@@ -369,12 +369,13 @@ var insert_page=function()
 	<div class="nav_wrap" id="top">
 		<div class="nav">
 			<div class="left_nav">
-				<a class="about_link" href="#percentage1">Percentage of elements used</a>
+				<a class="home_link" href="./index.html">Home</a><a class="about_link" href="#percentage1">Percentage of elements used</a>
 			</div><div class="right_nav">
-				<a class="log_link" href="./logs.html">Logs</a><a class="home_link" href="./index.html">Home</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Stats on Github</a>
+				<a class="log_link" href="./logs.html">Logs</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Github</a>
 			</div>
 		</div>
 	</div>
+	<div class="pid_title_wrap">
 	<a href="#top" class="top">BACK TOP</a>
   </body>
 </html>

@@ -12,9 +12,9 @@
 
 		/*	Navigation bar and links	*/
 		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#ddd; height:initial; min-height:40px; padding:0;}
-		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#ddd; height:initial; min-height:40px; padding:0;}
+		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#ddd; height:initial; min-height:40px; padding:0; z-index:666;}
 		.left_nav,
-		.right_nav			{display:inline-block; width:50%; vertical-align:top; padding:0;}
+		.right_nav			{display:inline-block; width:50%; height:40px; vertical-align:top; padding:0;}
 		.right_nav			{text-align:right;}
 		a.home_link,
 		a.stat_link,
@@ -24,6 +24,7 @@
 		a.stat_link:hover,
 		a.git_link:hover,
 		a.about_link:hover	{border-bottom:3px solid #6188e2; cursor:pointer;}
+		a.git_link 			{text-transform:uppercase; font-size:11px; line-height:16px;}
 
 
 		/*	Stats and Chart Wrappers	*/
@@ -232,9 +233,9 @@ for(var n in json.distinct)
 	<div class="nav_wrap" id="top">
 		<div class="nav">
 			<div class="left_nav">
-				<a onclick="$('.pop_wrapper').toggle();" class="about_link"><b>&#9730; What is this?</b></a>
+				<a class="home_link" href="./index.html">Home</a><a onclick="$('.pop_wrapper').toggle();" class="about_link"><b>&#9730; What is this?</b></a>
 			</div><div class="right_nav">
-				<a class="stat_link" href="./xpath.html">Xpath Stats</a><a class="home_link" href="./index.html">Home</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Stats on Github</a>
+				<a class="stat_link" href="./xpath.html">Xpath Stats</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Github</a>
 			</div>
 		</div>
 	</div>

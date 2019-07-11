@@ -7,28 +7,56 @@
 		.wrap	{margin:0 auto; width:960px;}
 		.wrap a	{width:49%; margin:0 auto; display:inline-block; vertical-align:top;}
 		
-		.psa_wrap	{display:block; margin-top:3em; width:100%;}
-		span.psa	{display:inline-block; vertical-align:top; width:50%}		
-		
-		a.log_link,
-		a.stat_link	{text-decoration:none; font-size:32px; color:#444;}
-		a.stat_link	{width:51%; padding-left:1em; border-left:2px solid #ccc;}
-		a.git_link	{display:inline-block; margin-left:-2em; width:50%; text-decoration:none; text-align:right; color:#666;}
-		a.git_link:hover,
-		a:hover span	{color:#6188e2;}
-		
-		span		{display:block;}
-		span.text	{font-size:16px; color:#666; padding:10px 0 20px 0;}
-		a.log_link	span.img {background:url('./data/screenshot_logs.png')no-repeat; background-size:cover; width:90%; height:400px;}
-		a.stat_link	span.img {background:url('./data/screenshot_xpath.png')no-repeat; background-size:cover; width:90%; height:400px;}
-		
 		h1		{color:#666; text-transform:uppercase; font-size:14px;}
 		p		{padding:10px 0;}
 		pre		{display:inline; margin:0; white-space:initial;}
 		b		{font-weight:bold;}
 
+		a.log_butt,
+		a.stat_butt	{text-decoration:none; font-size:32px; color:#444;}
+		a.stat_butt	{width:51%; padding-left:1em; border-left:2px solid #ccc;}
+		a:hover span{color:#6188e2;}
 		
-		  
+		span		{display:block;}
+		span.text	{font-size:16px; color:#666; padding:10px 0 20px 0;}
+		a.log_butt	span.img {background:url('./data/screenshot_logs.png')no-repeat; background-size:cover; width:90%; height:400px;}
+		a.stat_butt	span.img {background:url('./data/screenshot_xpath.png')no-repeat; background-size:cover; width:90%; height:400px;}
+		
+		/*	Navigation bar and links	*/
+		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#ddd; height:initial; min-height:40px;}
+		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#ddd; height:initial; min-height:40px; z-index:666;}
+		.left_nav,
+		.right_nav			{display:inline-block; width:50%; height:40px; vertical-align:top;}
+		.right_nav			{text-align:right;}
+		.right_nav span		{display:inline; font-size:12px; font-weight:bold; padding-right:20px;}
+		a.home_link,
+		a.log_link,
+		a.stat_link,
+		a.git_link,
+		a.about_link		{display:inline-block; padding:12px 20px 8px 20px; border-bottom:3px solid #ddd; color:#444; text-decoration:none; font-family:sans-serif; font-size:14px;}
+		a.home_link:hover,
+		a.log_link:hover,
+		a.stat_link:hover,
+		a.git_link:hover,
+		a.about_link:hover	{border-bottom:3px solid #6188e2; cursor:pointer;}
+		a.git_link 			{text-transform:uppercase; font-size:11px; line-height:16px;}
+		
+		/*	Back to top link	*/
+		a.top		{display:block; width:100%; padding:20px 0; text-align:center; font-size:16px; color:#444; text-decoration:none; position:absolute; bottom:-100px; left:0;}
+		a.top:hover	{background-color:#eee;}
+		
+		/*	Sparkline table		*/
+		table.spark_table			{width:100%; border-spacing:0; table-layout:fixed; margin:0 auto; text-align:left; margin-top:50px; padding-bottom:5em;}
+		table.spark_table th		{text-align:left; padding:0 20px 10px 20px; border-bottom:1px solid #ccc; color:#666; font-size:12px; text-transform:uppercase;}
+		table.spark_table th:first-of-type	{width:300px;}
+		table.spark_table th:nth-of-type(2)	{width:160px;}
+		table.spark_table td		{padding:10px 20px; border-bottom:1px solid #ccc; vertical-align:top;}
+		
+		table.spark_table a			{color:#6188e2; text-decoration:none; display:initial;}
+		table.spark_table a:link	{color:#6188e2;}
+		table.spark_table a:visited	{color:#6188e2;}
+		table.spark_table a:hover	{color:#004dff;}
+		table.spark_table a:active	{color:#6188e2;}		  
 		  
 		/*	Mobile-Last		*/
 		@media screen and (max-width: 1024px) {
@@ -41,20 +69,12 @@
 			h1, .stat span	{font-size:42px; line-height:64px;}
 		}
 		
-.ct-chart svg  {
-  margin:1px; 
-  vertical-align:text-bottom;
-}
-.ct-series-a .ct-line,
-.ct-series-a .ct-bar {
-  stroke: red; 
-  stroke-width: 1px;
-}
-.ct-chart-pie .ct-label {
-  display:none;
-}
-
-.spark { display:inline-block; }
+		/*	Chartist.js		*/
+		.ct-chart svg  			{margin:1px; vertical-align:text-bottom;}
+		.ct-series-a .ct-line,
+		.ct-series-a .ct-bar 	{stroke:red; stroke-width:1px; fill:transparent;}
+		.ct-chart-pie .ct-label {display:none;}
+		
 		  
 	</style>
 	<script
@@ -69,8 +89,8 @@
 			pids=json.pids
 			
 			
-			let tab=$(`<table style="width:100%"/>`)
-			$("body").append(tab)
+			let tab=$(`<table class="spark_table"/>`)
+			$(".wrap").append(tab)
 			
 			let thead=$("<tr/>")
 			tab.append(thead)
@@ -134,19 +154,26 @@
 	</script>
  </head>
   <body>
+	<div class="nav_wrap" id="top">
+		<div class="nav">
+			<div class="left_nav">
+				<a class="home_link" href="./index.html">Home</a>
+			</div><div class="right_nav">
+				<span>Please be aware that these pages take awhile to load.</span><a class="log_link" href="./logs.html">Logs</a><a class="stat_link" href="./xpath.html">Xpath Stats</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Github</a>
+			</div>
+		</div>
+	</div>
 	<div class="wrap">
-		<a class="log_link" href="./logs.html">
+		<a class="log_butt" href="./logs.html">
 			<span class="title">Logs</span>
 			<span class="text">Statistics &amp; graphs of the D-Portal database.</span>
 			<span class="img"></span>
-		</a><a class="stat_link" href="./xpath.html">
+		</a><a class="stat_butt" href="./xpath.html">
 			<span class="title">Xpath Stats</span>
 			<span class="text">Statistics &amp; graphs of IATI elements in the database.</span>
 			<span class="img"></span>
 		</a>
-		<div class="psa_wrap">
-			<span class="psa">Please be aware that these pages take awhile to load.</span><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Source on Github</a>
-		</div>
 	</div>
+	<a href="#top" class="top">BACK TOP</a>
   </body>
 </html>
