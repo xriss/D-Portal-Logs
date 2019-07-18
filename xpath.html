@@ -24,14 +24,15 @@
 		a:hover		{color:#004dff;}
 		a:active	{color:#6188e2;}
 		
-		.wrap, .pid_title_wrap	{width:960px; margin:auto; padding-bottom:3em;}
+		.wrap, .pid_title_wrap	{position:relative; width:960px; margin:auto; padding-bottom:3em;}
 		.graphs	{display:inline-block; vertical-align:top; box-sizing:border-box; width:50%; height:420px;}
 		.graphs:nth-of-type(odd)	{padding:2em 1.5em 0 0;}
 		.graphs:nth-of-type(even)	{padding:2em 0 0 1.5em;}
 		.graphs:nth-of-type(3), .graphs:nth-of-type(4)	{padding-top:0;}
 		.graphs h2	{color:#666; font-size:14px; text-transform:uppercase;}
 		
-		a.element		{display:block; font-size:24px; margin-bottom:20px; color:#6188e2; text-decoration:none; font-weight:bold; font-family:monospace; padding-bottom:1em;}
+		a.element		{display:block; font-size:24px; margin-bottom:20px; color:#6188e2; text-decoration:none; font-weight:bold; font-family:monospace; padding-bottom:1em; position:sticky; top:40px; z-index:1; background-color:#fff; padding:20px 20px 35px 40px; margin-left:-20px;}
+		a.element::before {content:"( Link to IATI Standard )"; font-weight:normal; font-size:9px; display:block; padding-bottom:5px; text-align:right; text-transform:uppercase; padding-right:10px; font-family:sans-serif;}
 		a.element:hover	{color:#004dff;}
 		
 		.percent		{width:960px; margin:auto; margin-bottom:3em;}
