@@ -5125,3 +5125,513 @@ dstore/cache/zoa_uk-1.xml.import.last.log:TypeError: Cannot read property '0' of
 Updating stats
 
 Already up to date.
+TABLE xson
+389943 == SELECT COUNT(*) AS num FROM xson ; 
+8703 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM xson) AS temp;
+752 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT pid FROM xson) AS temp;
+58 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT root FROM xson) AS temp;
+110006 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT xson FROM xson) AS temp;
+TABLE hash
+1602184 == SELECT COUNT(*) AS num FROM hash ; 
+1602184 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM hash) AS temp;
+500 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT hash_day FROM hash) AS temp;
+1602184 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT hash_jml FROM hash) AS temp;
+TABLE act
+8778 == SELECT COUNT(*) AS num FROM act ; 
+8778 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM act) AS temp;
+4 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT reporting FROM act) AS temp;
+6 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT reporting_ref FROM act) AS temp;
+5 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT funder_ref FROM act) AS temp;
+994 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT title FROM act) AS temp;
+7 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT slug FROM act) AS temp;
+4 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT status_code FROM act) AS temp;
+219 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT day_start FROM act) AS temp;
+165 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT day_end FROM act) AS temp;
+345 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT day_length FROM act) AS temp;
+4793 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT description FROM act) AS temp;
+2470 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT commitment FROM act) AS temp;
+977 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT spend FROM act) AS temp;
+3180 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT commitment_eur FROM act) AS temp;
+977 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT spend_eur FROM act) AS temp;
+3180 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT commitment_gbp FROM act) AS temp;
+977 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT spend_gbp FROM act) AS temp;
+3180 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT commitment_cad FROM act) AS temp;
+977 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT spend_cad FROM act) AS temp;
+2 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT flags FROM act) AS temp;
+TABLE related
+65476 == SELECT COUNT(*) AS num FROM related ; 
+50202 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM related) AS temp;
+40886 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT related_aid FROM related) AS temp;
+4 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT related_type FROM related) AS temp;
+TABLE trans
+26679 == SELECT COUNT(*) AS num FROM trans ; 
+8773 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM trans) AS temp;
+1296 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_ref FROM trans) AS temp;
+76 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_description FROM trans) AS temp;
+18 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_day FROM trans) AS temp;
+4 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_currency FROM trans) AS temp;
+3467 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_value FROM trans) AS temp;
+3644 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_usd FROM trans) AS temp;
+4507 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_eur FROM trans) AS temp;
+4507 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_gbp FROM trans) AS temp;
+4507 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_cad FROM trans) AS temp;
+3 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_code FROM trans) AS temp;
+2 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_flow_code FROM trans) AS temp;
+3 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_finance_code FROM trans) AS temp;
+4 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_aid_code FROM trans) AS temp;
+1 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_flags FROM trans) AS temp;
+164 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_country FROM trans) AS temp;
+134 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_sector FROM trans) AS temp;
+40 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_sector_group FROM trans) AS temp;
+13 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT trans_id FROM trans) AS temp;
+TABLE budget
+17157 == SELECT COUNT(*) AS num FROM budget ; 
+482 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM budget) AS temp;
+5 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget FROM budget) AS temp;
+2 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_priority FROM budget) AS temp;
+2 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_type FROM budget) AS temp;
+151 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_day_start FROM budget) AS temp;
+155 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_day_end FROM budget) AS temp;
+117 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_day_length FROM budget) AS temp;
+22 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_currency FROM budget) AS temp;
+11790 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_value FROM budget) AS temp;
+12272 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_usd FROM budget) AS temp;
+13203 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_eur FROM budget) AS temp;
+13244 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_gbp FROM budget) AS temp;
+13258 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_cad FROM budget) AS temp;
+158 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_org FROM budget) AS temp;
+261 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_country FROM budget) AS temp;
+35 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_sector FROM budget) AS temp;
+21 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_sector_group FROM budget) AS temp;
+5 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT budget_id FROM budget) AS temp;
+TABLE country
+5658 == SELECT COUNT(*) AS num FROM country ; 
+5134 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM country) AS temp;
+163 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT country_code FROM country) AS temp;
+12 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT country_percent FROM country) AS temp;
+TABLE sector
+24539 == SELECT COUNT(*) AS num FROM sector ; 
+8783 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM sector) AS temp;
+40 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT sector_group FROM sector) AS temp;
+129 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT sector_code FROM sector) AS temp;
+10 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT sector_percent FROM sector) AS temp;
+TABLE location
+0 == SELECT COUNT(*) AS num FROM location ; 
+0 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM location) AS temp;
+0 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT location_code FROM location) AS temp;
+0 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT location_gazetteer_ref FROM location) AS temp;
+0 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT location_gazetteer FROM location) AS temp;
+0 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT location_name FROM location) AS temp;
+0 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT location_longitude FROM location) AS temp;
+0 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT location_latitude FROM location) AS temp;
+0 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT location_precision FROM location) AS temp;
+0 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT location_percent FROM location) AS temp;
+TABLE slug
+340910 == SELECT COUNT(*) AS num FROM slug ; 
+9446 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM slug) AS temp;
+2240 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT slug FROM slug) AS temp;
+TABLE policy
+107443 == SELECT COUNT(*) AS num FROM policy ; 
+27855 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT aid FROM policy) AS temp;
+46 == SELECT COUNT(*) AS num FROM (SELECT DISTINCT policy_code FROM policy) AS temp;
+/iati-activities/iati-activity/activity-date/narrative : 0 : 0 : 0 : 0 T 0.018
+/iati-activities/iati-activity/activity-date/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/activity-date@iso-date : 18836 : 8701 : 3 : 345 T 0.088
+/iati-activities/iati-activity/activity-date@type : 19966 : 8701 : 3 : 4 T 0.074
+/iati-activities/iati-activity/activity-scope@code : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/activity-status@code : 8701 : 8701 : 3 : 2 T 0.098
+/iati-activities/iati-activity/budget/period-end@iso-date : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/budget/period-start@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/budget/value : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/budget/value@currency : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/budget/value@value-date : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/budget@status : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/budget@type : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/capital-spend@percentage : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/collaboration-type@code : 1282 : 1282 : 2 : 3 T 0.057
+/iati-activities/iati-activity/conditions/condition/narrative : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/conditions/condition/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/conditions/condition@type : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/conditions@attached : 1282 : 1282 : 2 : 1 T 0.055
+/iati-activities/iati-activity/contact-info/department/narrative : 1282 : 1282 : 2 : 1 T 0.006
+/iati-activities/iati-activity/contact-info/department/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/contact-info/email : 1282 : 1282 : 2 : 1 T 0.006
+/iati-activities/iati-activity/contact-info/job-title/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/contact-info/job-title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/contact-info/mailing-address/narrative : 1282 : 1282 : 2 : 1 T 0.006
+/iati-activities/iati-activity/contact-info/mailing-address/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/contact-info/organisation/narrative : 1282 : 1282 : 2 : 1 T 0.006
+/iati-activities/iati-activity/contact-info/organisation/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/contact-info/person-name/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/contact-info/person-name/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/contact-info/telephone : 1282 : 1282 : 2 : 1 T 0.006
+/iati-activities/iati-activity/contact-info/website : 1282 : 1282 : 2 : 1 T 0.006
+/iati-activities/iati-activity/contact-info@type : 1282 : 1282 : 2 : 1 T 0.005
+/iati-activities/iati-activity/country-budget-items/budget-item/description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/country-budget-items/budget-item/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/country-budget-items/budget-item@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/country-budget-items/budget-item@percentage : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/country-budget-items@vocabulary : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/channel-code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-status/interest-arrears : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-status/interest-received : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-status/principal-arrears : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-status/principal-outstanding : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-status@currency : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-status@value-date : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/crs-add/loan-status@year : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-terms/commitment-date@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-terms/repayment-final-date@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-terms/repayment-first-date@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-terms/repayment-plan@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-terms/repayment-type@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-terms@rate-1 : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/loan-terms@rate-2 : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/other-flags@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/crs-add/other-flags@significance : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/default-aid-type@code : 1282 : 1282 : 2 : 11 T 0.007
+/iati-activities/iati-activity/default-aid-type@vocabulary : 1282 : 1282 : 2 : 1 T 0.006
+/iati-activities/iati-activity/default-finance-type@code : 8701 : 8701 : 3 : 1 T 0.095
+/iati-activities/iati-activity/default-flow-type@code : 8701 : 8701 : 3 : 2 T 0.092
+/iati-activities/iati-activity/default-tied-status@code : 8701 : 8701 : 3 : 2 T 0.093
+/iati-activities/iati-activity/description/narrative : 7477 : 7477 : 3 : 4777 T 0.052
+/iati-activities/iati-activity/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.014
+/iati-activities/iati-activity/description@type : 8702 : 8702 : 3 : 1 T 0.057
+/iati-activities/iati-activity/document-link/category@code : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/document-link/description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/document-link/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/document-link/document-date@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/document-link/language@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/document-link/title/narrative : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/document-link/title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/document-link@format : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/document-link@url : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/fss/forecast : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/fss/forecast@currency : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/fss/forecast@value-date : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/fss/forecast@year : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/fss@extraction-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/fss@phaseout-year : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/fss@priority : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/humanitarian-scope/narrative : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/humanitarian-scope/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/humanitarian-scope@code : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/humanitarian-scope@type : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/humanitarian-scope@vocabulary : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/humanitarian-scope@vocabulary-uri : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/iati-identifier : 8702 : 8702 : 3 : 8702 T 0.146
+/iati-activities/iati-activity/legacy-data@iati-equivalent : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/legacy-data@name : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/legacy-data@value : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/location/activity-description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/location/activity-description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/location/administrative@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/location/administrative@level : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/location/administrative@vocabulary : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/location/description/narrative : 2781 : 1903 : 1 : 800 T 0.013
+/iati-activities/iati-activity/location/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/location/exactness@code : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/location/feature-designation@code : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/location/location-class@code : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/location/location-id@code : 2781 : 1903 : 1 : 807 T 0.012
+/iati-activities/iati-activity/location/location-id@vocabulary : 2781 : 1903 : 1 : 1 T 0.01
+/iati-activities/iati-activity/location/location-reach@code : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/location/name/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/location/name/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/location/point/pos : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/location/point@srsName : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/location@ref : 2089 : 1903 : 1 : 807 T 0.009
+/iati-activities/iati-activity/other-identifier/owner-org/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/other-identifier/owner-org/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/other-identifier/owner-org@ref : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/other-identifier@ref : 1282 : 1282 : 2 : 1282 T 0.007
+/iati-activities/iati-activity/other-identifier@type : 1282 : 1282 : 2 : 1 T 0.006
+/iati-activities/iati-activity/participating-org/narrative : 17402 : 8701 : 3 : 3840 T 0.075
+/iati-activities/iati-activity/participating-org/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.019
+/iati-activities/iati-activity/participating-org@activity-id : 0 : 0 : 0 : 0 T 0.021
+/iati-activities/iati-activity/participating-org@crs-channel-code : 0 : 0 : 0 : 0 T 0.018
+/iati-activities/iati-activity/participating-org@ref : 17402 : 8701 : 3 : 3923 T 0.072
+/iati-activities/iati-activity/participating-org@role : 17402 : 8701 : 3 : 2 T 0.065
+/iati-activities/iati-activity/participating-org@type : 2564 : 1282 : 2 : 11 T 0.025
+/iati-activities/iati-activity/planned-disbursement/period-end@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/period-start@iso-date : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/planned-disbursement/provider-org/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/provider-org/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/provider-org@provider-activity-id : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/provider-org@ref : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/provider-org@type : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/planned-disbursement/receiver-org/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/receiver-org/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/receiver-org@receiver-activity-id : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/receiver-org@ref : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/planned-disbursement/receiver-org@type : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/planned-disbursement/value : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/value@currency : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement/value@value-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/planned-disbursement@type : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/policy-marker/narrative : 6410 : 1282 : 2 : 5 T 0.023
+/iati-activities/iati-activity/policy-marker/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.006
+/iati-activities/iati-activity/policy-marker@code : 6410 : 1282 : 2 : 5 T 0.017
+/iati-activities/iati-activity/policy-marker@significance : 6410 : 1282 : 2 : 3 T 0.016
+/iati-activities/iati-activity/policy-marker@vocabulary : 0 : 0 : 0 : 0 T 0.005
+/iati-activities/iati-activity/policy-marker@vocabulary-uri : 0 : 0 : 0 : 0 T 0.005
+/iati-activities/iati-activity/recipient-country/narrative : 7907 : 5071 : 3 : 200 T 0.033
+/iati-activities/iati-activity/recipient-country/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.011
+/iati-activities/iati-activity/recipient-country@code : 5595 : 5071 : 3 : 161 T 0.028
+/iati-activities/iati-activity/recipient-country@percentage : 4686 : 4162 : 1 : 2 T 0.024
+/iati-activities/iati-activity/recipient-region/narrative : 4483 : 3197 : 2 : 40 T 0.017
+/iati-activities/iati-activity/recipient-region/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.005
+/iati-activities/iati-activity/recipient-region@code : 3549 : 3197 : 2 : 40 T 0.015
+/iati-activities/iati-activity/recipient-region@percentage : 3176 : 2824 : 1 : 8 T 0.014
+/iati-activities/iati-activity/recipient-region@vocabulary : 3549 : 3197 : 2 : 2 T 0.015
+/iati-activities/iati-activity/recipient-region@vocabulary-uri : 3176 : 2824 : 1 : 1 T 0.013
+/iati-activities/iati-activity/related-activity@ref : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/related-activity@type : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/reporting-org/narrative : 8702 : 8702 : 3 : 2 T 0.058
+/iati-activities/iati-activity/reporting-org/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.013
+/iati-activities/iati-activity/reporting-org@ref : 8702 : 8702 : 3 : 3 T 0.106
+/iati-activities/iati-activity/reporting-org@secondary-reporter : 7420 : 7420 : 1 : 1 T 0.087
+/iati-activities/iati-activity/reporting-org@type : 8702 : 8702 : 3 : 2 T 0.105
+/iati-activities/iati-activity/result/description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/result/document-link/category@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/document-link/description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/document-link/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/document-link/document-date@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/document-link/language@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/document-link/title/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/document-link/title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/document-link@format : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/document-link@url : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/comment/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/comment/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/dimension@name : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/dimension@value : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/document-link/category@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/document-link/description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/document-link/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/document-link/document-date@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/document-link/language@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/document-link/title/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/document-link/title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/document-link@format : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/document-link@url : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline/location@ref : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline@value : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/baseline@year : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/document-link/category@code : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/result/indicator/document-link/description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/document-link/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/document-link/document-date@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/document-link/language@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/document-link/title/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/document-link/title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/document-link@format : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/document-link@url : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/comment/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/comment/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/dimension@name : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/dimension@value : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/document-link/category@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/document-link/description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/document-link/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/document-link/document-date@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/document-link/language@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/document-link/title/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/document-link/title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/document-link@format : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/document-link@url : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual/location@ref : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/actual@value : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/period-end@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/period-start@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/comment/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/comment/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/dimension@name : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/dimension@value : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/document-link/category@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/document-link/description/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/document-link/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/document-link/document-date@iso-date : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/document-link/language@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/document-link/title/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/document-link/title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/document-link@format : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target/document-link@url : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/result/indicator/period/target/location@ref : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/period/target@value : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/reference@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/reference@indicator-uri : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/reference@vocabulary : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/title/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator/title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/result/indicator@aggregation-status : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator@ascending : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/indicator@measure : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/reference@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/reference@vocabulary : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/reference@vocabulary-uri : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/title/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result/title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result@aggregation-status : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/result@type : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/sector/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/sector/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/sector@code : 24447 : 8701 : 3 : 147 T 0.084
+/iati-activities/iati-activity/sector@percentage : 0 : 0 : 0 : 0 T 0.022
+/iati-activities/iati-activity/sector@vocabulary : 24457 : 8701 : 3 : 2 T 0.074
+/iati-activities/iati-activity/sector@vocabulary-uri : 0 : 0 : 0 : 0 T 0.021
+/iati-activities/iati-activity/tag/narrative : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/tag/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/tag@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/tag@vocabulary : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/tag@vocabulary-uri : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/title/narrative : 1503 : 1503 : 3 : 918 T 0.018
+/iati-activities/iati-activity/title/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.012
+/iati-activities/iati-activity/transaction/aid-type@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/aid-type@vocabulary : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/description/narrative : 1563 : 1282 : 2 : 2 T 0.006
+/iati-activities/iati-activity/transaction/description/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.003
+/iati-activities/iati-activity/transaction/disbursement-channel@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/finance-type@code : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/transaction/flow-type@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/provider-org/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/provider-org/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/provider-org@provider-activity-id : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/provider-org@ref : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/provider-org@type : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/receiver-org/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/receiver-org/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/transaction/receiver-org@receiver-activity-id : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/receiver-org@ref : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/receiver-org@type : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/recipient-country/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/recipient-country/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/recipient-country@code : 0 : 0 : 0 : 0 T 0.015
+/iati-activities/iati-activity/transaction/recipient-region/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/recipient-region/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/recipient-region@code : 432 : 373 : 1 : 13 T 0.014
+/iati-activities/iati-activity/transaction/recipient-region@vocabulary : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/transaction/recipient-region@vocabulary-uri : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/transaction/sector/narrative : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/sector/narrative@xml:lang : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/sector@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/sector@vocabulary : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/sector@vocabulary-uri : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity/transaction/tied-status@code : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction/transaction-date@iso-date : 8982 : 8701 : 3 : 9 T 0.048
+/iati-activities/iati-activity/transaction/transaction-type@code : 8982 : 8701 : 3 : 2 T 0.045
+/iati-activities/iati-activity/transaction/value : 8967 : 8686 : 3 : 3104 T 0.049
+/iati-activities/iati-activity/transaction/value@currency : 8982 : 8701 : 3 : 2 T 0.045
+/iati-activities/iati-activity/transaction/value@value-date : 8982 : 8701 : 3 : 9 T 0.046
+/iati-activities/iati-activity/transaction@humanitarian : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity/transaction@ref : 1563 : 1282 : 2 : 1282 T 0.018
+/iati-activities/iati-activity@budget-not-provided : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity@default-currency : 8702 : 8702 : 3 : 2 T 0.106
+/iati-activities/iati-activity@hierarchy : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity@humanitarian : 0 : 0 : 0 : 0 T 0.001
+/iati-activities/iati-activity@last-updated-datetime : 8702 : 8702 : 3 : 7421 T 0.123
+/iati-activities/iati-activity@linked-data-uri : 0 : 0 : 0 : 0 T 0.002
+/iati-activities/iati-activity@xml:lang : 1282 : 1282 : 2 : 1 T 0.054
+/iati-organisations/iati-organisation/document-link/category@code : 19743 : 0 : 302 : 43 T 0.039
+/iati-organisations/iati-organisation/document-link/description/narrative : 74 : 0 : 26 : 69 T 0.002
+/iati-organisations/iati-organisation/document-link/description/narrative@xml:lang : 69 : 0 : 23 : 1 T 0.001
+/iati-organisations/iati-organisation/document-link/document-date@iso-date : 1462 : 0 : 167 : 406 T 0.017
+/iati-organisations/iati-organisation/document-link/language@code : 16779 : 0 : 199 : 18 T 0.028
+/iati-organisations/iati-organisation/document-link/recipient-country/narrative : 1418 : 0 : 36 : 270 T 0.005
+/iati-organisations/iati-organisation/document-link/recipient-country/narrative@xml:lang : 733 : 0 : 32 : 4 T 0.003
+/iati-organisations/iati-organisation/document-link/recipient-country@code : 14608 : 0 : 85 : 242 T 0.022
+/iati-organisations/iati-organisation/document-link/title/narrative : 17938 : 0 : 276 : 6130 T 0.052
+/iati-organisations/iati-organisation/document-link/title/narrative@xml:lang : 2771 : 0 : 172 : 13 T 0.017
+/iati-organisations/iati-organisation/document-link@format : 18240 : 0 : 305 : 37 T 0.032
+/iati-organisations/iati-organisation/document-link@url : 18261 : 0 : 312 : 6614 T 0.098
+/iati-organisations/iati-organisation/name/narrative : 894 : 0 : 636 : 666 T 0.004
+/iati-organisations/iati-organisation/name/narrative@xml:lang : 329 : 0 : 304 : 12 T 0.002
+/iati-organisations/iati-organisation/organisation-identifier : 639 : 0 : 639 : 631 T 0.037
+/iati-organisations/iati-organisation/recipient-country-budget/budget-line/narrative : 38613 : 0 : 25 : 189 T 0.076
+/iati-organisations/iati-organisation/recipient-country-budget/budget-line/narrative@xml:lang : 44 : 0 : 9 : 2 T 0.031
+/iati-organisations/iati-organisation/recipient-country-budget/budget-line/value : 38356 : 0 : 24 : 8983 T 0.081
+/iati-organisations/iati-organisation/recipient-country-budget/budget-line/value@currency : 38277 : 0 : 15 : 6 T 0.057
+/iati-organisations/iati-organisation/recipient-country-budget/budget-line/value@value-date : 38356 : 0 : 24 : 43 T 0.058
+/iati-organisations/iati-organisation/recipient-country-budget/budget-line@ref : 38343 : 0 : 19 : 157 T 0.061
+/iati-organisations/iati-organisation/recipient-country-budget/period-end@iso-date : 12008 : 0 : 101 : 120 T 0.075
+/iati-organisations/iati-organisation/recipient-country-budget/period-start@iso-date : 12008 : 0 : 101 : 110 T 0.08
+/iati-organisations/iati-organisation/recipient-country-budget/recipient-country/narrative : 5960 : 0 : 38 : 508 T 0.014
+/iati-organisations/iati-organisation/recipient-country-budget/recipient-country/narrative@xml:lang : 1290 : 0 : 21 : 3 T 0.008
+/iati-organisations/iati-organisation/recipient-country-budget/recipient-country@code : 12008 : 0 : 101 : 257 T 0.075
+/iati-organisations/iati-organisation/recipient-country-budget/value : 12008 : 0 : 101 : 9324 T 0.082
+/iati-organisations/iati-organisation/recipient-country-budget/value@currency : 11220 : 0 : 67 : 13 T 0.07
+/iati-organisations/iati-organisation/recipient-country-budget/value@value-date : 12008 : 0 : 101 : 168 T 0.077
+/iati-organisations/iati-organisation/recipient-country-budget@status : 6403 : 0 : 17 : 2 T 0.071
+/iati-organisations/iati-organisation/recipient-org-budget/budget-line/narrative : 292 : 0 : 21 : 204 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/budget-line/narrative@xml:lang : 34 : 0 : 9 : 2 T 0.001
+/iati-organisations/iati-organisation/recipient-org-budget/budget-line/value : 293 : 0 : 22 : 267 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/budget-line/value@currency : 77 : 0 : 13 : 5 T 0.001
+/iati-organisations/iati-organisation/recipient-org-budget/budget-line/value@value-date : 293 : 0 : 22 : 40 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/budget-line@ref : 270 : 0 : 14 : 149 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/period-end@iso-date : 540 : 0 : 66 : 44 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/period-start@iso-date : 540 : 0 : 66 : 48 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/recipient-org/narrative : 529 : 0 : 47 : 281 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/recipient-org/narrative@xml:lang : 187 : 0 : 28 : 3 T 0.001
+/iati-organisations/iati-organisation/recipient-org-budget/recipient-org@ref : 355 : 0 : 57 : 169 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/value : 540 : 0 : 66 : 401 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/value@currency : 161 : 0 : 38 : 8 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget/value@value-date : 540 : 0 : 66 : 82 T 0.002
+/iati-organisations/iati-organisation/recipient-org-budget@status : 170 : 0 : 32 : 2 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/budget-line/narrative : 280 : 0 : 9 : 33 T 0.002
+/iati-organisations/iati-organisation/recipient-region-budget/budget-line/narrative@xml:lang : 224 : 0 : 4 : 1 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/budget-line/value : 280 : 0 : 9 : 131 T 0.002
+/iati-organisations/iati-organisation/recipient-region-budget/budget-line/value@currency : 162 : 0 : 7 : 3 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/budget-line/value@value-date : 280 : 0 : 9 : 20 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/budget-line@ref : 259 : 0 : 7 : 21 T 0.002
+/iati-organisations/iati-organisation/recipient-region-budget/period-end@iso-date : 269 : 0 : 26 : 28 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/period-start@iso-date : 269 : 0 : 26 : 28 T 0.002
+/iati-organisations/iati-organisation/recipient-region-budget/recipient-region/narrative : 78 : 0 : 9 : 35 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/recipient-region/narrative@xml:lang : 1 : 0 : 1 : 1 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/recipient-region@code : 269 : 0 : 26 : 44 T 0.002
+/iati-organisations/iati-organisation/recipient-region-budget/recipient-region@vocabulary : 116 : 0 : 16 : 2 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/recipient-region@vocabulary-uri : 16 : 0 : 2 : 2 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/value : 269 : 0 : 26 : 226 T 0.001
+/iati-organisations/iati-organisation/recipient-region-budget/value@currency : 248 : 0 : 21 : 7 T 0.003
+/iati-organisations/iati-organisation/recipient-region-budget/value@value-date : 269 : 0 : 26 : 37 T 0.002
+/iati-organisations/iati-organisation/recipient-region-budget@status : 213 : 0 : 22 : 2 T 0.002
+/iati-organisations/iati-organisation/reporting-org/narrative : 882 : 0 : 638 : 659 T 0.004
+/iati-organisations/iati-organisation/reporting-org/narrative@xml:lang : 511 : 0 : 489 : 10 T 0.002
+/iati-organisations/iati-organisation/reporting-org@ref : 748 : 0 : 748 : 748 T 0.038
+/iati-organisations/iati-organisation/reporting-org@secondary-reporter : 339 : 0 : 122 : 3 T 0.021
+/iati-organisations/iati-organisation/reporting-org@type : 965 : 0 : 748 : 15 T 0.037
+/iati-organisations/iati-organisation/total-budget/budget-line/narrative : 2652 : 0 : 121 : 787 T 0.007
+/iati-organisations/iati-organisation/total-budget/budget-line/narrative@xml:lang : 1729 : 0 : 63 : 5 T 0.003
+/iati-organisations/iati-organisation/total-budget/budget-line/value : 1933 : 0 : 124 : 1361 T 0.004
+/iati-organisations/iati-organisation/total-budget/budget-line/value@currency : 1677 : 0 : 88 : 11 T 0.003
+/iati-organisations/iati-organisation/total-budget/budget-line/value@value-date : 1933 : 0 : 124 : 138 T 0.004
+/iati-organisations/iati-organisation/total-budget/budget-line@ref : 1319 : 0 : 87 : 496 T 0.003
+/iati-organisations/iati-organisation/total-budget/period-end@iso-date : 1008 : 0 : 378 : 102 T 0.005
+/iati-organisations/iati-organisation/total-budget/period-start@iso-date : 1008 : 0 : 378 : 102 T 0.005
+/iati-organisations/iati-organisation/total-budget/value : 1008 : 0 : 378 : 959 T 0.005
+/iati-organisations/iati-organisation/total-budget/value@currency : 741 : 0 : 292 : 19 T 0.004
+/iati-organisations/iati-organisation/total-budget/value@value-date : 1005 : 0 : 377 : 268 T 0.004
+/iati-organisations/iati-organisation/total-budget@status : 739 : 0 : 285 : 3 T 0.004
+/iati-organisations/iati-organisation/total-expenditure/expense-line/narrative : 3146 : 0 : 40 : 655 T 0.007
+/iati-organisations/iati-organisation/total-expenditure/expense-line/narrative@xml:lang : 1712 : 0 : 17 : 4 T 0.003
+/iati-organisations/iati-organisation/total-expenditure/expense-line/value : 2369 : 0 : 40 : 2245 T 0.005
+/iati-organisations/iati-organisation/total-expenditure/expense-line/value@currency : 2325 : 0 : 32 : 8 T 0.003
+/iati-organisations/iati-organisation/total-expenditure/expense-line/value@value-date : 2369 : 0 : 40 : 54 T 0.003
+/iati-organisations/iati-organisation/total-expenditure/expense-line@ref : 2273 : 0 : 27 : 438 T 0.004
+/iati-organisations/iati-organisation/total-expenditure/period-end@iso-date : 383 : 0 : 153 : 56 T 0.004
+/iati-organisations/iati-organisation/total-expenditure/period-start@iso-date : 383 : 0 : 153 : 56 T 0.004
+/iati-organisations/iati-organisation/total-expenditure/value : 383 : 0 : 153 : 380 T 0.003
+/iati-organisations/iati-organisation/total-expenditure/value@currency : 315 : 0 : 127 : 12 T 0.004
+/iati-organisations/iati-organisation/total-expenditure/value@value-date : 383 : 0 : 153 : 100 T 0.004
+/iati-organisations/iati-organisation@default-currency : 963 : 0 : 746 : 30 T 0.037
+/iati-organisations/iati-organisation@last-updated-datetime : 959 : 0 : 742 : 741 T 0.038
+/iati-organisations/iati-organisation@xml:lang : 957 : 0 : 740 : 11 T 0.036
+50% : ../dportal/production/D-Portal-Logs/pids/CH-4.json : 1281 : Swiss Agency for Development and Cooperation (SDC)
+100% : ../dportal/production/D-Portal-Logs/pids/US-EIN-131837418.json : 7420 : Foundation Center
+[master a5781c7] .
+ 5 files changed, 8506 insertions(+), 18657 deletions(-)
+ rewrite pids.json (98%)
+Already up to date.
