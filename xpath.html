@@ -149,7 +149,7 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 				queryed.pname = "Unknown"
 				try{
 				queryed.pname = stats.xpath["/iati-activities/iati-activity/reporting-org/narrative"].top[0].value
-				}catch(){}
+				}catch(e){}
 				
 				let it=$(`<div class='pid_title'><h1>${queryed.pid} : ${queryed.pname}</h1></>`)
 				$(".pid_title_wrap").append(it)
