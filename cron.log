@@ -1128,7 +1128,6 @@ Fetching publisher info for idil
 unpublished UG-NGO-3646
 Fetching publisher info for inhive
 Fetching publisher info for icm_mx
-unpublished MX-RFC-ICM160118IZ1
 Fetching publisher info for insecurityinsight
 unpublished CH-FDJP-CHE148315483
 Fetching publisher info for instiglio
@@ -2238,8 +2237,8 @@ Fetching publisher info for zoa
 Fetching publisher info for zsl
 Writing json/iati_codes.json for the last time
 Writing json/publishers.json
-[master baf4f9dd] auto json fetch in nightly cron
- 3 files changed, 685 insertions(+), 142 deletions(-)
+[master 9debc5d1] auto json fetch in nightly cron
+ 4 files changed, 212 insertions(+), 18 deletions(-)
 Already up to date.
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
@@ -2249,86 +2248,86 @@ browserify
 browserify
 00:08:31 DIR  /
 00:08:31 DIR  /cmn
-00:08:32 DIR  /ctrack
-00:08:32 DIR  /ctrack/art
-00:08:32 DIR  /ctrack/art/back
-00:08:32 DIR  /ctrack/art/flag
-00:08:32 DIR  /ctrack/art/generator
-00:08:32 DIR  /ctrack/art/high
-00:08:32 DIR  /ctrack/art/original
-00:08:32 DIR  /ctrack/art/rgba
-00:08:32 DIR  /ctrack/jslib
-00:08:32 DIR  /ctrack/jslib/markercluster
-00:08:32 DIR  /fra
-00:08:32 DIR  /hin
-00:08:32 DIR  /jpn
-00:08:32 DIR  /jslib
-00:08:32 DIR  /news
-00:08:32 DIR  /news/2014-05-08-Development-Tracker-Architecture
-00:08:32 DIR  /news/2014-05-28-Current-plans
-00:08:32 DIR  /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
-00:08:32 DIR  /news/2014-11-30-Interactive-IATI-data-d-portal-generator
-00:08:32 DIR  /news/2015-11-05-Adding-country-budgets-to-d-portal
-00:08:32 DIR  /news/2016-03-02-Results-data-now-showing-in-d-portal
-00:08:32 DIR  /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
-00:08:32 DIR  /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
-00:08:32 DIR  /news/2017-09-06-New-d-portal-search-features-to-improve-data-use
-00:08:32 DIR  /news/2018-03-20-Server-upgrade-and-other-updates
-00:08:32 DIR  /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download
-00:08:32 DIR  /news/2019-01-14-New-year-new-features-and-additions
-00:08:32 DIR  /news/author
-00:08:32 DIR  /spa
-00:08:32 BLOGPOST news/2019-01-14-New-year-new-features-and-additions/index.html
-00:08:32 BLOGPOST news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:08:32 BLOGPOST news/2018-03-20-Server-upgrade-and-other-updates/index.html
-00:08:32 BLOGPOST news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-00:08:32 BLOGPOST news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-00:08:32 BLOGPOST news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:08:32 BLOGPOST news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:08:32 BLOGPOST news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:08:32 BLOGPOST news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:08:32 BLOGPOST news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:08:32 BLOGPOST news/2014-05-28-Current-plans/index.html
-00:08:32 BLOGPOST news/2014-05-08-Development-Tracker-Architecture/index.html
-00:08:32 BLOG news/index.html
-00:08:32 BLOG news/page2.html
-00:08:32 BLOG news/page3.html
-00:08:32 BLOGFEED news/feed.json
-00:08:32 REDIRECT news/posts.html -> ../news/index.html
-00:08:32 REDIRECT news/2014-05-08-Development-Tracker-Architecture.html -> ../news/2014-05-08-Development-Tracker-Architecture
-00:08:32 REDIRECT news/2014-05-28-Current-plans.html -> ../news/2014-05-28-Current-plans
-00:08:32 REDIRECT news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> ../news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
-00:08:32 REDIRECT news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> ../news/2014-11-30-Interactive-IATI-data-d-portal-generator
-00:08:32 REDIRECT news/2015-11-05-Adding-country-budgets-to-d-portal.html -> ../news/2015-11-05-Adding-country-budgets-to-d-portal
-00:08:32 REDIRECT news/2016-03-02-Results-data-now-showing-in-d-portal.html -> ../news/2016-03-02-Results-data-now-showing-in-d-portal
-00:08:32 REDIRECT news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> ../news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
-00:08:32 REDIRECT news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> ../news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
-00:08:32 COPY / -> cmn/
-00:08:32 COPY / -> fra/
-00:08:32 COPY / -> hin/
-00:08:32 COPY / -> jpn/
-00:08:32 COPY / -> spa/
-00:08:32 COPY news/ -> cmn/news/
-00:08:32 COPY news/ -> fra/news/
-00:08:32 COPY news/ -> hin/news/
-00:08:32 COPY news/ -> jpn/news/
-00:08:32 COPY news/ -> spa/news/
-00:08:32 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
-00:08:32 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
-00:08:32 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
-00:08:32 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
-00:08:32 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
-00:08:32 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
-00:08:32 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
-00:08:32 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
-00:08:32 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
-00:08:32 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
-00:08:32 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:08:32 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:08:32 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:08:32 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:08:32 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:08:32 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:08:31 DIR  /ctrack
+00:08:31 DIR  /ctrack/art
+00:08:31 DIR  /ctrack/art/back
+00:08:31 DIR  /ctrack/art/flag
+00:08:31 DIR  /ctrack/art/generator
+00:08:31 DIR  /ctrack/art/high
+00:08:31 DIR  /ctrack/art/original
+00:08:31 DIR  /ctrack/art/rgba
+00:08:31 DIR  /ctrack/jslib
+00:08:31 DIR  /ctrack/jslib/markercluster
+00:08:31 DIR  /fra
+00:08:31 DIR  /hin
+00:08:31 DIR  /jpn
+00:08:31 DIR  /jslib
+00:08:31 DIR  /news
+00:08:31 DIR  /news/2014-05-08-Development-Tracker-Architecture
+00:08:31 DIR  /news/2014-05-28-Current-plans
+00:08:31 DIR  /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
+00:08:31 DIR  /news/2014-11-30-Interactive-IATI-data-d-portal-generator
+00:08:31 DIR  /news/2015-11-05-Adding-country-budgets-to-d-portal
+00:08:31 DIR  /news/2016-03-02-Results-data-now-showing-in-d-portal
+00:08:31 DIR  /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
+00:08:31 DIR  /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
+00:08:31 DIR  /news/2017-09-06-New-d-portal-search-features-to-improve-data-use
+00:08:31 DIR  /news/2018-03-20-Server-upgrade-and-other-updates
+00:08:31 DIR  /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download
+00:08:31 DIR  /news/2019-01-14-New-year-new-features-and-additions
+00:08:31 DIR  /news/author
+00:08:31 DIR  /spa
+00:08:31 BLOGPOST news/2019-01-14-New-year-new-features-and-additions/index.html
+00:08:31 BLOGPOST news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:08:31 BLOGPOST news/2018-03-20-Server-upgrade-and-other-updates/index.html
+00:08:31 BLOGPOST news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+00:08:31 BLOGPOST news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+00:08:31 BLOGPOST news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
+00:08:31 BLOGPOST news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:08:31 BLOGPOST news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:08:31 BLOGPOST news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:08:31 BLOGPOST news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:08:31 BLOGPOST news/2014-05-28-Current-plans/index.html
+00:08:31 BLOGPOST news/2014-05-08-Development-Tracker-Architecture/index.html
+00:08:31 BLOG news/index.html
+00:08:31 BLOG news/page2.html
+00:08:31 BLOG news/page3.html
+00:08:31 BLOGFEED news/feed.json
+00:08:31 REDIRECT news/posts.html -> ../news/index.html
+00:08:31 REDIRECT news/2014-05-08-Development-Tracker-Architecture.html -> ../news/2014-05-08-Development-Tracker-Architecture
+00:08:31 REDIRECT news/2014-05-28-Current-plans.html -> ../news/2014-05-28-Current-plans
+00:08:31 REDIRECT news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> ../news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
+00:08:31 REDIRECT news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> ../news/2014-11-30-Interactive-IATI-data-d-portal-generator
+00:08:31 REDIRECT news/2015-11-05-Adding-country-budgets-to-d-portal.html -> ../news/2015-11-05-Adding-country-budgets-to-d-portal
+00:08:31 REDIRECT news/2016-03-02-Results-data-now-showing-in-d-portal.html -> ../news/2016-03-02-Results-data-now-showing-in-d-portal
+00:08:31 REDIRECT news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> ../news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
+00:08:31 REDIRECT news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> ../news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
+00:08:31 COPY / -> cmn/
+00:08:31 COPY / -> fra/
+00:08:31 COPY / -> hin/
+00:08:31 COPY / -> jpn/
+00:08:31 COPY / -> spa/
+00:08:31 COPY news/ -> cmn/news/
+00:08:31 COPY news/ -> fra/news/
+00:08:31 COPY news/ -> hin/news/
+00:08:31 COPY news/ -> jpn/news/
+00:08:31 COPY news/ -> spa/news/
+00:08:31 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
+00:08:31 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
+00:08:31 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
+00:08:31 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
+00:08:31 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
+00:08:31 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
+00:08:31 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
+00:08:31 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
+00:08:31 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
+00:08:31 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
+00:08:31 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:08:31 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:08:31 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:08:31 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:08:31 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:08:31 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
 00:08:32 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
 00:08:32 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
 00:08:32 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
@@ -2374,73 +2373,73 @@ browserify
 00:08:32 COPY news/2019-01-14-New-year-new-features-and-additions/ -> jpn/news/2019-01-14-New-year-new-features-and-additions/
 00:08:32 COPY news/2019-01-14-New-year-new-features-and-additions/ -> spa/news/2019-01-14-New-year-new-features-and-additions/
 00:08:32 COPY news/author/ -> cmn/news/author/
-00:08:33 COPY news/author/ -> fra/news/author/
-00:08:33 COPY news/author/ -> hin/news/author/
-00:08:33 COPY news/author/ -> jpn/news/author/
-00:08:33 COPY news/author/ -> spa/news/author/
-00:08:33 FILE /about.^.html
-00:08:33 COPY about.html -> cmn/about.html
-00:08:33 COPY about.html -> fra/about.html
-00:08:33 COPY about.html -> hin/about.html
-00:08:33 COPY about.html -> jpn/about.html
-00:08:33 COPY about.html -> spa/about.html
-00:08:33 FILE /ctrack/art/Octocat.png
-00:08:33 FILE /ctrack/art/README.md
-00:08:33 FILE /ctrack/art/UNDG_logo.png
-00:08:33 FILE /ctrack/art/activities.xsl
-00:08:33 FILE /ctrack/art/alert_icon.png
-00:08:33 FILE /ctrack/art/back/af.jpg
-00:08:33 FILE /ctrack/art/back/ag.jpg
-00:08:33 FILE /ctrack/art/back/ai.jpg
-00:08:33 FILE /ctrack/art/back/al.jpg
-00:08:33 FILE /ctrack/art/back/am.jpg
-00:08:33 FILE /ctrack/art/back/ao.jpg
-00:08:33 FILE /ctrack/art/back/ar.jpg
-00:08:33 FILE /ctrack/art/back/az.jpg
-00:08:33 FILE /ctrack/art/back/ba.jpg
-00:08:33 FILE /ctrack/art/back/bd.jpg
-00:08:33 FILE /ctrack/art/back/bf.jpg
-00:08:33 FILE /ctrack/art/back/bi.jpg
-00:08:33 FILE /ctrack/art/back/bj.jpg
-00:08:33 FILE /ctrack/art/back/bo.jpg
-00:08:33 FILE /ctrack/art/back/br.jpg
-00:08:33 FILE /ctrack/art/back/bt.jpg
-00:08:33 FILE /ctrack/art/back/bw.jpg
-00:08:33 FILE /ctrack/art/back/by.jpg
-00:08:33 FILE /ctrack/art/back/bz.jpg
-00:08:33 FILE /ctrack/art/back/cd.jpg
-00:08:33 FILE /ctrack/art/back/cf.jpg
-00:08:33 FILE /ctrack/art/back/cg.jpg
-00:08:33 FILE /ctrack/art/back/ci.jpg
-00:08:33 FILE /ctrack/art/back/ck.jpg
-00:08:33 FILE /ctrack/art/back/cl.jpg
-00:08:33 FILE /ctrack/art/back/cm.jpg
-00:08:33 FILE /ctrack/art/back/cn.jpg
-00:08:33 FILE /ctrack/art/back/co.jpg
-00:08:33 FILE /ctrack/art/back/cr.jpg
-00:08:33 FILE /ctrack/art/back/cu.jpg
-00:08:33 FILE /ctrack/art/back/cv.jpg
-00:08:33 FILE /ctrack/art/back/dj.jpg
-00:08:33 FILE /ctrack/art/back/dm.jpg
-00:08:33 FILE /ctrack/art/back/do.jpg
-00:08:33 FILE /ctrack/art/back/dz.jpg
-00:08:33 FILE /ctrack/art/back/ec.jpg
-00:08:33 FILE /ctrack/art/back/eg.jpg
-00:08:33 FILE /ctrack/art/back/er.jpg
-00:08:33 FILE /ctrack/art/back/et.jpg
-00:08:33 FILE /ctrack/art/back/fj.jpg
-00:08:33 FILE /ctrack/art/back/fm.jpg
-00:08:33 FILE /ctrack/art/back/ga.jpg
-00:08:33 FILE /ctrack/art/back/gd.jpg
-00:08:33 FILE /ctrack/art/back/ge.jpg
-00:08:33 FILE /ctrack/art/back/gh.jpg
-00:08:33 FILE /ctrack/art/back/gm.jpg
-00:08:33 FILE /ctrack/art/back/gn.jpg
-00:08:33 FILE /ctrack/art/back/gq.jpg
-00:08:33 FILE /ctrack/art/back/gt.jpg
-00:08:33 FILE /ctrack/art/back/gw.jpg
-00:08:33 FILE /ctrack/art/back/gy.jpg
-00:08:33 FILE /ctrack/art/back/hn.jpg
+00:08:32 COPY news/author/ -> fra/news/author/
+00:08:32 COPY news/author/ -> hin/news/author/
+00:08:32 COPY news/author/ -> jpn/news/author/
+00:08:32 COPY news/author/ -> spa/news/author/
+00:08:32 FILE /about.^.html
+00:08:32 COPY about.html -> cmn/about.html
+00:08:32 COPY about.html -> fra/about.html
+00:08:32 COPY about.html -> hin/about.html
+00:08:32 COPY about.html -> jpn/about.html
+00:08:32 COPY about.html -> spa/about.html
+00:08:32 FILE /ctrack/art/Octocat.png
+00:08:32 FILE /ctrack/art/README.md
+00:08:32 FILE /ctrack/art/UNDG_logo.png
+00:08:32 FILE /ctrack/art/activities.xsl
+00:08:32 FILE /ctrack/art/alert_icon.png
+00:08:32 FILE /ctrack/art/back/af.jpg
+00:08:32 FILE /ctrack/art/back/ag.jpg
+00:08:32 FILE /ctrack/art/back/ai.jpg
+00:08:32 FILE /ctrack/art/back/al.jpg
+00:08:32 FILE /ctrack/art/back/am.jpg
+00:08:32 FILE /ctrack/art/back/ao.jpg
+00:08:32 FILE /ctrack/art/back/ar.jpg
+00:08:32 FILE /ctrack/art/back/az.jpg
+00:08:32 FILE /ctrack/art/back/ba.jpg
+00:08:32 FILE /ctrack/art/back/bd.jpg
+00:08:32 FILE /ctrack/art/back/bf.jpg
+00:08:32 FILE /ctrack/art/back/bi.jpg
+00:08:32 FILE /ctrack/art/back/bj.jpg
+00:08:32 FILE /ctrack/art/back/bo.jpg
+00:08:32 FILE /ctrack/art/back/br.jpg
+00:08:32 FILE /ctrack/art/back/bt.jpg
+00:08:32 FILE /ctrack/art/back/bw.jpg
+00:08:32 FILE /ctrack/art/back/by.jpg
+00:08:32 FILE /ctrack/art/back/bz.jpg
+00:08:32 FILE /ctrack/art/back/cd.jpg
+00:08:32 FILE /ctrack/art/back/cf.jpg
+00:08:32 FILE /ctrack/art/back/cg.jpg
+00:08:32 FILE /ctrack/art/back/ci.jpg
+00:08:32 FILE /ctrack/art/back/ck.jpg
+00:08:32 FILE /ctrack/art/back/cl.jpg
+00:08:32 FILE /ctrack/art/back/cm.jpg
+00:08:32 FILE /ctrack/art/back/cn.jpg
+00:08:32 FILE /ctrack/art/back/co.jpg
+00:08:32 FILE /ctrack/art/back/cr.jpg
+00:08:32 FILE /ctrack/art/back/cu.jpg
+00:08:32 FILE /ctrack/art/back/cv.jpg
+00:08:32 FILE /ctrack/art/back/dj.jpg
+00:08:32 FILE /ctrack/art/back/dm.jpg
+00:08:32 FILE /ctrack/art/back/do.jpg
+00:08:32 FILE /ctrack/art/back/dz.jpg
+00:08:32 FILE /ctrack/art/back/ec.jpg
+00:08:32 FILE /ctrack/art/back/eg.jpg
+00:08:32 FILE /ctrack/art/back/er.jpg
+00:08:32 FILE /ctrack/art/back/et.jpg
+00:08:32 FILE /ctrack/art/back/fj.jpg
+00:08:32 FILE /ctrack/art/back/fm.jpg
+00:08:32 FILE /ctrack/art/back/ga.jpg
+00:08:32 FILE /ctrack/art/back/gd.jpg
+00:08:32 FILE /ctrack/art/back/ge.jpg
+00:08:32 FILE /ctrack/art/back/gh.jpg
+00:08:32 FILE /ctrack/art/back/gm.jpg
+00:08:32 FILE /ctrack/art/back/gn.jpg
+00:08:32 FILE /ctrack/art/back/gq.jpg
+00:08:32 FILE /ctrack/art/back/gt.jpg
+00:08:32 FILE /ctrack/art/back/gw.jpg
+00:08:32 FILE /ctrack/art/back/gy.jpg
+00:08:32 FILE /ctrack/art/back/hn.jpg
 00:08:33 FILE /ctrack/art/back/ht.jpg
 00:08:33 FILE /ctrack/art/back/id.jpg
 00:08:33 FILE /ctrack/art/back/in.jpg
@@ -2520,7 +2519,7 @@ browserify
 00:08:33 FILE /ctrack/art/back/tn.jpg
 00:08:33 FILE /ctrack/art/back/to.jpg
 00:08:33 FILE /ctrack/art/back/tr.jpg
-00:08:34 FILE /ctrack/art/back/tv.jpg
+00:08:33 FILE /ctrack/art/back/tv.jpg
 00:08:34 FILE /ctrack/art/back/tz.jpg
 00:08:34 FILE /ctrack/art/back/ua.jpg
 00:08:34 FILE /ctrack/art/back/ug.jpg
@@ -2862,24 +2861,24 @@ browserify
 00:08:34 FILE /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/million.png
 00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/country_graph.png
 00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/human00.png
-00:08:35 FILE /news/2019-01-14-New-year-new-features-and-additions/human01.png
-00:08:35 FILE /news/2019-01-14-New-year-new-features-and-additions/org_type_ref.png
-00:08:35 FILE /news/2019-01-14-New-year-new-features-and-additions/ref.png
-00:08:35 FILE /news/2019-01-14-New-year-new-features-and-additions/sector_csv.png
-00:08:35 FILE /news/2019-01-14-New-year-new-features-and-additions/sector_graph.png
-00:08:35 FILE /news/2019-01-14-New-year-new-features-and-additions/trans_graph.png
-00:08:35 FILE /news/2019-01-14-New-year-new-features-and-additions/withdrawn00_andy.png
-00:08:35 FILE /news/2019-01-14-New-year-new-features-and-additions/withdrawn01.png
-00:08:35 FILE /news/author/icon_Kriss.jpg
-00:08:35 FILE /news/author/icon_Matt Bartlett.jpg
-00:08:35 FILE /news/author/icon_Shi.jpg
-00:08:35 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> cmn/news/2019-01-14-New-year-new-features-and-additions/index.html
-00:08:35 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> fra/news/2019-01-14-New-year-new-features-and-additions/index.html
-00:08:35 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> hin/news/2019-01-14-New-year-new-features-and-additions/index.html
-00:08:35 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> jpn/news/2019-01-14-New-year-new-features-and-additions/index.html
-00:08:35 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> spa/news/2019-01-14-New-year-new-features-and-additions/index.html
-00:08:35 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:08:35 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/human01.png
+00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/org_type_ref.png
+00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/ref.png
+00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/sector_csv.png
+00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/sector_graph.png
+00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/trans_graph.png
+00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/withdrawn00_andy.png
+00:08:34 FILE /news/2019-01-14-New-year-new-features-and-additions/withdrawn01.png
+00:08:34 FILE /news/author/icon_Kriss.jpg
+00:08:34 FILE /news/author/icon_Matt Bartlett.jpg
+00:08:34 FILE /news/author/icon_Shi.jpg
+00:08:34 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> cmn/news/2019-01-14-New-year-new-features-and-additions/index.html
+00:08:34 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> fra/news/2019-01-14-New-year-new-features-and-additions/index.html
+00:08:34 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> hin/news/2019-01-14-New-year-new-features-and-additions/index.html
+00:08:34 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> jpn/news/2019-01-14-New-year-new-features-and-additions/index.html
+00:08:34 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> spa/news/2019-01-14-New-year-new-features-and-additions/index.html
+00:08:34 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:08:34 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
 00:08:35 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
 00:08:35 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
 00:08:35 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
@@ -2974,15 +2973,15 @@ browserify
 00:08:35 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
 00:08:35 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
 00:08:35 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:08:36 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:08:36 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:08:36 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:08:36 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal.html
-00:08:36 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:08:36 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:08:36 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:08:36 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
-00:08:36 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:08:35 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> fra/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:08:35 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> hin/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:08:35 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> jpn/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:08:35 COPY news/2015-11-05-Adding-country-budgets-to-d-portal.html -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal.html
+00:08:35 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:08:35 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:08:35 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:08:35 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal.html
+00:08:35 COPY news/2016-03-02-Results-data-now-showing-in-d-portal.html -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal.html
 00:08:36 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
 00:08:36 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
 00:08:36 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html
@@ -3047,37 +3046,37 @@ browserify
 00:08:36 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
 00:08:36 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
 00:08:36 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:08:36 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:08:36 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:08:36 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
-00:08:36 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
-00:08:36 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:08:36 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
-00:08:36 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:08:36 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:08:36 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:08:36 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:08:36 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:08:36 COPY news/2019-01-14-New-year-new-features-and-additions/ -> cmn/news/2019-01-14-New-year-new-features-and-additions/
-00:08:36 COPY news/2019-01-14-New-year-new-features-and-additions/ -> fra/news/2019-01-14-New-year-new-features-and-additions/
-00:08:36 COPY news/2019-01-14-New-year-new-features-and-additions/ -> hin/news/2019-01-14-New-year-new-features-and-additions/
-00:08:36 COPY news/2019-01-14-New-year-new-features-and-additions/ -> jpn/news/2019-01-14-New-year-new-features-and-additions/
-00:08:36 COPY news/2019-01-14-New-year-new-features-and-additions/ -> spa/news/2019-01-14-New-year-new-features-and-additions/
-00:08:36 COPY news/author/ -> cmn/news/author/
-00:08:36 COPY news/author/ -> fra/news/author/
-00:08:36 COPY news/author/ -> hin/news/author/
-00:08:36 COPY news/author/ -> jpn/news/author/
-00:08:36 COPY news/author/ -> spa/news/author/
-00:08:36 COPY about.html -> cmn/about.html
-00:08:36 COPY about.html -> fra/about.html
-00:08:36 COPY about.html -> hin/about.html
-00:08:36 COPY about.html -> jpn/about.html
-00:08:36 COPY about.html -> spa/about.html
-00:08:36 COPY faq.html -> cmn/faq.html
-00:08:36 COPY faq.html -> fra/faq.html
-00:08:36 COPY faq.html -> hin/faq.html
-00:08:36 COPY faq.html -> jpn/faq.html
-00:08:36 COPY faq.html -> spa/faq.html
+00:08:37 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:08:37 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:08:37 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
+00:08:37 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
+00:08:37 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:08:37 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
+00:08:37 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:08:37 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:08:37 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:08:37 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:08:37 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:08:37 COPY news/2019-01-14-New-year-new-features-and-additions/ -> cmn/news/2019-01-14-New-year-new-features-and-additions/
+00:08:37 COPY news/2019-01-14-New-year-new-features-and-additions/ -> fra/news/2019-01-14-New-year-new-features-and-additions/
+00:08:37 COPY news/2019-01-14-New-year-new-features-and-additions/ -> hin/news/2019-01-14-New-year-new-features-and-additions/
+00:08:37 COPY news/2019-01-14-New-year-new-features-and-additions/ -> jpn/news/2019-01-14-New-year-new-features-and-additions/
+00:08:37 COPY news/2019-01-14-New-year-new-features-and-additions/ -> spa/news/2019-01-14-New-year-new-features-and-additions/
+00:08:37 COPY news/author/ -> cmn/news/author/
+00:08:37 COPY news/author/ -> fra/news/author/
+00:08:37 COPY news/author/ -> hin/news/author/
+00:08:37 COPY news/author/ -> jpn/news/author/
+00:08:37 COPY news/author/ -> spa/news/author/
+00:08:37 COPY about.html -> cmn/about.html
+00:08:37 COPY about.html -> fra/about.html
+00:08:37 COPY about.html -> hin/about.html
+00:08:37 COPY about.html -> jpn/about.html
+00:08:37 COPY about.html -> spa/about.html
+00:08:37 COPY faq.html -> cmn/faq.html
+00:08:37 COPY faq.html -> fra/faq.html
+00:08:37 COPY faq.html -> hin/faq.html
+00:08:37 COPY faq.html -> jpn/faq.html
+00:08:37 COPY faq.html -> spa/faq.html
 00:08:37 COPY feedback.html -> cmn/feedback.html
 00:08:37 COPY feedback.html -> fra/feedback.html
 00:08:37 COPY feedback.html -> hin/feedback.html
@@ -3085,14 +3084,14 @@ browserify
 00:08:37 COPY feedback.html -> spa/feedback.html
 Restarting /home/ctrack/D-Portal/dportal/js/serv.js
 [32minfo[39m:    Forever restarted process(es):
-[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m   [37mid[39m [35mlogfile[39m                                                       [33muptime[39m         
-[90mdata[39m:    [0] ymlW [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 31671   17072    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:3:56:9.793[39m   
-[90mdata[39m:    [1] sEKi [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 31701   31713    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:19:45:53.728[39m 
+[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m  [37mid[39m [35mlogfile[39m                                                       [33muptime[39m         
+[90mdata[39m:    [0] hf4M [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 9737    4813    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:15:26:50.52[39m  
+[90mdata[39m:    [1] vzwL [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 9767    9781    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:19:48:17.460[39m 
 Status /home/ctrack/D-Portal/dportal/js/serv.js
 [32minfo[39m:    Forever processes running
 [90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m  [37mid[39m [35mlogfile[39m                                                       [33muptime[39m      
-[90mdata[39m:    [0] ymlW [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 31671   3032    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:0:0:0.144[39m 
-[90mdata[39m:    [1] sEKi [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 31701   3030    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:0:0:0.147[39m 
+[90mdata[39m:    [0] hf4M [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 9737    9092    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:0:0:0.145[39m 
+[90mdata[39m:    [1] vzwL [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 9767    9091    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:0:0:0.147[39m 
  creating new dload database 
 CREATE EXTENSION
 ALTER DATABASE
@@ -3325,16 +3324,16 @@ CREATING INDEXS
  CREATE INDEX IF NOT EXISTS act_index_text_search ON act USING gin(to_tsvector('simple', coalesce(title,'') || ' ' || coalesce(description,'') )); 
  CREATE INDEX IF NOT EXISTS xson_index_text_search ON xson USING gin(to_tsvector('simple', xson->>'' )); 
 ANALYZE start
-ANALYSE done 0.077
+ANALYSE done 0.072
 GRANT
  filling dload database with data 
  setting database live 
  swapping dload database with dstore database 
 Shutting down /home/ctrack/D-Portal/dportal/js/serv.js
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m  [37mid[39m [35mlogfile[39m                                                       [33muptime[39m        
-[0] ymlW [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 31671   3032    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:4:11:36.961[39m 
-[1] sEKi [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 31701   3030    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:4:11:36.963[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                                   [37mforever[39m [37mpid[39m  [37mid[39m [35mlogfile[39m                                                       [33muptime[39m      
+[0] hf4M [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 9737    9092    [35m/home/ctrack/D-Portal/dportal/production/dportal.log[39m          [33m0:4:4:1.287[39m 
+[1] vzwL [90m/usr/bin/node[39m [90m/home/ctrack/D-Portal/dportal/js/serv.js[39m 9767    9091    [35m/home/ctrack/D-Portal/dportal/production/dportal-instance.log[39m [33m0:4:4:1.288[39m 
 Shutting down /home/ctrack/D-Portal/dportal/js/serv.js
 [31merror[39m:   Forever cannot find process with id: /home/ctrack/D-Portal/dportal/js/serv.js
 dropdb: database removal failed: ERROR:  database "dtmp" does not exist
@@ -3553,107 +3552,108 @@ dstore/cache/omidyarnetwork-activities.xml.curl.last.log:curl: (22) The requeste
 dstore/cache/omidyarnetwork-organization.xml.curl.last.log:curl: (22) The requested URL returned error: 404 
 dstore/cache/rainfoundation-a3.xml.curl.last.log:curl: (22) The requested URL returned error: 404 
 dstore/cache/shtrii_shakti-gec.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
-dstore/cache/sida-289.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-298.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-380.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-389.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-489.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-589.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-389.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-498.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-619.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-679.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-789.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-889.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-789.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-798.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-89.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
 dstore/cache/sida-998a.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-998b.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-998d.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-af.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-al.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-998c.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-998d.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-998e.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-al.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-am.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-ar.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
 dstore/cache/sida-az.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ba.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-ba.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-bd.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-bi.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-bf.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-bg.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-bj.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-bt.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-bw.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-cl.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-cn.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-bw.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-cg.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-cl.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-cm.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
 dstore/cache/sida-co.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
 dstore/cache/sida-cr.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-cu.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-cz.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-ee.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-cz.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-dj.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-dm.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-ec.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-eg.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-er.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
 dstore/cache/sida-et.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-fj.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-ga.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
 dstore/cache/sida-gd.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-ge.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-gh.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-gm.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-gw.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-gy.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-hk.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-hn.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-gn.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-gq.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-gt.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-gy.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-hn.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-hr.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-hum.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-hu.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-id.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-il.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-in.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-iq.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-iq.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-ir.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-jm.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-jo.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ke.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-kg.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-km.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-kp.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-kr.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-kz.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-la.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-lr.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-lk.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
 dstore/cache/sida-lt.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ly.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ma.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-me.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-mg.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-mn.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-lv.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-ma.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-md.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-me.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-mg.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-mh.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-mk.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-ml.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-mu.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-mw.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-mx.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-mz.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
-dstore/cache/sida-na.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-ne.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-ni.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-mv.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-my.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-mz.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-na.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-organisation.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-org.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-pe.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-pe.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-pg.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ph.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-ph.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-pk.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-pl.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-ps.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-py.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ro.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-rs.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ru.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-rw.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-ro.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-sb.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-sd.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-si.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-sk.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-sd.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-sk.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-sl.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-sn.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-so.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-so.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-sy.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-sz.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-td.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
 dstore/cache/sida-tg.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-tl.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-th.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-tj.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-tm.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-tn.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-tn.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
 dstore/cache/sida-tw.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-tz.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
-dstore/cache/sida-ua.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ug.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ve.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-tz.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-ug.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-uz.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-vn.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
+dstore/cache/sida-vu.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-ws.xml.curl.last.log:curl: (22) The requested URL returned error: 502 
-dstore/cache/sida-xk.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
-dstore/cache/sida-ye.xml.curl.last.log:curl: (22) The requested URL returned error: 504 
+dstore/cache/sida-za.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
+dstore/cache/sida-zm.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/sida-zw.xml.curl.last.log:curl: (22) The requested URL returned error: 503 
 dstore/cache/tripleline_crownagents-gpaf.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
 dstore/cache/uasd-77.xml.curl.last.log:curl: (22) The requested URL returned error: 404 Not Found
@@ -3699,9 +3699,6 @@ dstore/cache/dkt-001.xml.import.last.log:    at error (/home/ctrack/D-Portal/nod
 dstore/cache/dkt-001.xml.import.last.log:Error: Error: Unexpected close tag
 dstore/cache/dkt-001.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/dkt-001.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/ec-devco-998.xml.import.last.log:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222233333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333334444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888899999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999Error: Error: Invalid tagname in closing tag
-dstore/cache/ec-devco-998.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
-dstore/cache/ec-devco-998.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/ecuk-bd.xml.import.last.log:Error: Error: Attribute without value
 dstore/cache/ecuk-bd.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/ecuk-bd.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
@@ -3805,7 +3802,7 @@ dstore/cache/pri-yem.xml.import.last.log:    at error (/home/ctrack/D-Portal/nod
 dstore/cache/sci-myanmar.xml.import.last.log:Error: Error: Non-whitespace before first tag.
 dstore/cache/sci-myanmar.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sci-myanmar.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-289.xml.import.last.log:0000000000000000000000000000000000011111111111111111111111111111111111222222222222222222222222222222222223333333333333333333333333333333333344444444444444444444444444444444444555555555555555555555555555555555556666666666666666666666666666666666677777777777777777777777777777777777888888888888888888888888888888888889999999999999999999999999999999999Error: Error: Invalid character in tag name
+dstore/cache/sida-289.xml.import.last.log:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333344444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777788888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999Error: Error: Unexpected close tag
 dstore/cache/sida-289.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-289.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/sida-298.xml.import.last.log:000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222233333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444445555555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666666677777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999Error: Error: Invalid attribute name
@@ -3817,15 +3814,9 @@ dstore/cache/sida-380.xml.import.last.log:    at error (/home/ctrack/D-Portal/no
 dstore/cache/sida-389.xml.import.last.log:0000000000001111111111112222222222233333333333344444444444555555555555666666666666777777777778888888888889999999999Error: Error: Unexpected close tag
 dstore/cache/sida-389.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-389.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-489.xml.import.last.log:000000000011111111112222222222333333333344444444445555555555666666666677777777778888888888999999999Error: Error: Unexpected close tag
-dstore/cache/sida-489.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
-dstore/cache/sida-489.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/sida-798.xml.import.last.log:00011122233344455566677788899Error: Error: Unexpected close tag
 dstore/cache/sida-798.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-798.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-998b.xml.import.last.log:00000000000000000000000000000000000001111111111111111111111111111111111112222222222222222222222222222222222223333333333333333333333333333333333333444444444444444444444444444444444444555555555555555555555555555555555555666666666666666666666666666666666666677777777777777777777777777777777777788888888888888888888888888888888888899999999999999999999999999999999999Error: Error: Unexpected close tag
-dstore/cache/sida-998b.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
-dstore/cache/sida-998b.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/sida-998d.xml.import.last.log:000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444455555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888899999999999999999999999999999999999999999999999Error: Error: Invalid tagname in closing tag
 dstore/cache/sida-998d.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-998d.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
@@ -3835,12 +3826,9 @@ dstore/cache/sida-al.xml.import.last.log:    at error (/home/ctrack/D-Portal/nod
 dstore/cache/sida-ba.xml.import.last.log:0000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222222222222333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444445555555555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666666677777777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999Error: Error: Invalid character in tag name
 dstore/cache/sida-ba.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-ba.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-bo.xml.import.last.log:0000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222222222223333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888888899999999999999999999999999999999999999999999999999Error: Error: Invalid tagname in closing tag
+dstore/cache/sida-bo.xml.import.last.log:0000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222222222222222222222222222222222222222223333333333333333333333333333333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888888888888888888888888888888888888899999999999999999999999999999999999999999999999999999999999999999999999999999999Error: Error: Invalid attribute name
 dstore/cache/sida-bo.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-bo.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-cd.xml.import.last.log:00000000111111122222223333333444444455555555666666677777778888888999999Error: Error: Unexpected close tag
-dstore/cache/sida-cd.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
-dstore/cache/sida-cd.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/sida-co.xml.import.last.log:000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222222222222222222222222222222222222222333333333333333333333333333333333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444444444444444444444444444444444444455555555555555555555555555555555555555555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888888888888888888888888888888888888888899999999999999999999999999999999999999999999999999999999999999999999999999999999999Error: Error: Invalid attribute name
 dstore/cache/sida-co.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-co.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
@@ -3850,7 +3838,10 @@ dstore/cache/sida-eg.xml.import.last.log:    at error (/home/ctrack/D-Portal/nod
 dstore/cache/sida-et.xml.import.last.log:0000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222222222222222222222222222223333333333333333333333333333333333333333333333333333333333333333333333333334444444444444444444444444444444444444444444444444444444444444444444444444445555555555555555555555555555555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777777777777777777777777778888888888888888888888888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999999999999999999999999Error: Error: Invalid attribute name
 dstore/cache/sida-et.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-et.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-ke.xml.import.last.log:00000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111222222222222222222222222222222222222222222222222222222222222222222222222222223333333333333333333333333333333333333333333333333333333333333333333333333333344444444444444444444444444444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666666666666666666666666666666666677777777777777777777777777777777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999999999999999999999999999Error: Error: Unexpected close tag
+dstore/cache/sida-id.xml.import.last.log:000000000000000000000000011111111111111111111111112222222222222222222222222333333333333333333333333444444444444444444444444455555555555555555555555556666666666666666666666667777777777777777777777777888888888888888888888888899999999999999999999999Error: Error: Unexpected close tag
+dstore/cache/sida-id.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
+dstore/cache/sida-id.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
+dstore/cache/sida-ke.xml.import.last.log:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222223333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666677777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777788888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888899999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999Error: Error: Invalid character in tag name
 dstore/cache/sida-ke.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-ke.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/sida-lv.xml.import.last.log:000000000000000011111111111111122222222222222233333333333333344444444444444455555555555555566666666666666677777777777777788888888888888899999999999999Error: Error: Unexpected close tag
@@ -3865,12 +3856,9 @@ dstore/cache/sida-ml.xml.import.last.log:    at error (/home/ctrack/D-Portal/nod
 dstore/cache/sida-mz.xml.import.last.log:00000000000000011111111111111222222222222222333333333333334444444444444455555555555555566666666666666777777777777777888888888888889999999999999Error: Error: Unexpected close tag
 dstore/cache/sida-mz.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-mz.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-ng.xml.import.last.log:000000000000000000000000000011111111111111111111111111122222222222222222222222222223333333333333333333333333334444444444444444444444444445555555555555555555555555555666666666666666666666666666777777777777777777777777777788888888888888888888888888899999999999999999999999999Error: Error: Unexpected close tag
+dstore/cache/sida-ng.xml.import.last.log:000000000000111111111112222222222233333333333444444444445555555555556666666666677777777777888888888889999999999Error: Error: Unexpected close tag
 dstore/cache/sida-ng.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-ng.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-np.xml.import.last.log:0000000000000000000000000001111111111111111111111111122222222222222222222222222333333333333333333333333333444444444444444444444444445555555555555555555555555566666666666666666666666666677777777777777777777777777888888888888888888888888889999999999999999999999999Error: Error: Unexpected close tag
-dstore/cache/sida-np.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
-dstore/cache/sida-np.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/sida-pe.xml.import.last.log:000001111122222333334444455555666667777788888999Error: Error: Unexpected close tag
 dstore/cache/sida-pe.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-pe.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
@@ -3880,7 +3868,7 @@ dstore/cache/sida-ph.xml.import.last.log:    at error (/home/ctrack/D-Portal/nod
 dstore/cache/sida-ps.xml.import.last.log:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222223333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444455555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666677777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777778888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999Error: Error: Invalid tagname in closing tag.
 dstore/cache/sida-ps.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-ps.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-rs.xml.import.last.log:0000000000000000000000000000111111111111111111111111111122222222222222222222222222223333333333333333333333333333444444444444444444444444444555555555555555555555555555566666666666666666666666666667777777777777777777777777777888888888888888888888888888899999999999999999999999999Error: Error: Unexpected close tag
+dstore/cache/sida-rs.xml.import.last.log:000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111222222222222222222222222222222222222222222222222222222222222222333333333333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444444444444445555555555555555555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777777777777778888888888888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999999999999Error: Error: Unexpected close tag
 dstore/cache/sida-rs.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-rs.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/sida-sd.xml.import.last.log:00000000000000000000111111111111111111112222222222222222222233333333333333333333444444444444444444455555555555555555555666666666666666666667777777777777777777788888888888888888888999999999999999999Error: Error: Unexpected close tag
@@ -3889,12 +3877,12 @@ dstore/cache/sida-sd.xml.import.last.log:    at error (/home/ctrack/D-Portal/nod
 dstore/cache/sida-sn.xml.import.last.log:0000000000000001111111111111122222222222222333333333333333444444444444445555555555555566666666666666677777777777777888888888888889999999999999Error: Error: Unexpected close tag
 dstore/cache/sida-sn.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-sn.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
+dstore/cache/sida-ua.xml.import.last.log:00000001111112222223333333444444555555666666677777788888899999Error: Error: Invalid tagname in closing tag
+dstore/cache/sida-ua.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
+dstore/cache/sida-ua.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/sida-vn.xml.import.last.log:0000000000000000000011111111111111111112222222222222222222333333333333333333344444444444444444445555555555555555555666666666666666666677777777777777777778888888888888888888999999999999999999Error: Error: Unexpected close tag
 dstore/cache/sida-vn.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-vn.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/sida-ye.xml.import.last.log:000000000000000001111111111111111222222222222222233333333333333333444444444444444455555555555555556666666666666666677777777777777778888888888888888999999999999999Error: Error: Invalid character in tag name
-dstore/cache/sida-ye.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
-dstore/cache/sida-ye.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 dstore/cache/sida-za.xml.import.last.log:000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111222222222222222222222222222222222222222222222222222222222222222222222222222222233333333333333333333333333333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444444444444444444444444444444455555555555555555555555555555555555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666666666666666666666666666666666666677777777777777777777777777777777777777777777777777777777777777777777777777777778888888888888888888888888888888888888888888888888888888888888888888888888888888999999999999999999999999999999999999999999999999999999999999999999999999999999Error: Error: Invalid character in tag name
 dstore/cache/sida-za.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-za.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
@@ -3904,12 +3892,6 @@ dstore/cache/sida-zm.xml.import.last.log:    at error (/home/ctrack/D-Portal/nod
 dstore/cache/sida-zw.xml.import.last.log:0000000000000011111111111111222222222222223333333333333344444444444444555555555555556666666666666677777777777777888888888888889999999999999Error: Error: Invalid character in tag name
 dstore/cache/sida-zw.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
 dstore/cache/sida-zw.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/worldbank-89.xml.import.last.log:Error: Error: Unquoted attribute value
-dstore/cache/worldbank-89.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
-dstore/cache/worldbank-89.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
-dstore/cache/worldbank-mr.xml.import.last.log:Error: Error: Invalid attribute name
-dstore/cache/worldbank-mr.xml.import.last.log:    at SAXParser.parser.onerror (/home/ctrack/D-Portal/dflat/js/jml.js:68:30)
-dstore/cache/worldbank-mr.xml.import.last.log:    at error (/home/ctrack/D-Portal/node_modules/sax/lib/sax.js:653:5)
 
 Updating stats
 
