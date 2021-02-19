@@ -1,6 +1,7 @@
 <html>
   <head>
 	<title>D-Portal Xpath Stats</title>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 	<style>
 		*		{box-sizing:border-box;}
 		body	{margin:5em 0 auto; font-family:sans-serif; color:#111; position:relative;}
@@ -67,40 +68,21 @@
 			.right_nav span	{display:none;}
 		}
 		
-		.ct-chart-line	{ overflow:visible; }
+		/*	Chartist.js		*/
+		.ct-chart svg  			{margin:1px; vertical-align:text-bottom;}
+		.ct-series-a .ct-line,
+		.ct-series-a .ct-bar 	{stroke:#7583a8; stroke-width:1.5px; fill:transparent;}
+		.ct-chart-pie .ct-label {display:none;}
+		.ct-chart-line			{overflow:visible;}
+		.ct-line				{stroke-width:1.5px;}	/*	Chart Line	*/
+		.ct-series-a .ct-point	{stroke:#0058ff;}		/*	Chart Point	*/
+		.ct-point				{stroke-width:5px; stroke-linecap:square;}	/*	Chart Point	*/
+		.ct-area,
+		.ct-line 				{pointer-events:none;}
 
-.chartist-tooltip {
-  position: absolute;
-  display: inline-block;
-  opacity: 0;
-  min-width: 5em;
-  padding: .5em;
-  background: #F4C63D;
-  color: #453D3F;
-  font-family: Oxygen,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  text-align: center;
-  pointer-events: none;
-  z-index: 1;
-  -webkit-transition: opacity .2s linear;
-  -moz-transition: opacity .2s linear;
-  -o-transition: opacity .2s linear;
-  transition: opacity .2s linear; }
-  .chartist-tooltip:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    margin-left: -15px;
-    border: 15px solid transparent;
-    border-top-color: #F4C63D; }
-  .chartist-tooltip.tooltip-show {
-    opacity: 1; }
-
-.ct-area, .ct-line {
-  pointer-events: none; }
+		.chartist-tooltip		{position:absolute; display:inline-block; opacity:0; min-width:5em; padding:.5em; background:#ddd; color:#444; font-family:sans-serif; font-size:14px; font-weight:400; text-align:center; pointer-events:none; z-index:1; -webkit-transition:opacity .2s linear; -moz-transition:opacity .2s linear; -o-transition:opacity .2s linear; transition:opacity .2s linear;}
+		.chartist-tooltip:before		{content:""; position:absolute; top:100%; left:50%; width:0; height:0; margin-left:-15px; border:15px solid transparent; border-top-color:#ddd;}
+		.chartist-tooltip.tooltip-show	{opacity:1;}
 
 	</style>
 	<script
@@ -108,7 +90,6 @@
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="https:////cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.min.js"></script>
 	<script>

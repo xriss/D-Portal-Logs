@@ -1,6 +1,7 @@
 <html>
   <head>
 	<title>D-Portal Logs</title>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 	<style>
 		*		{box-sizing:border-box;}
 		body	{margin:5em 0 auto; font-family:sans-serif; color:#111; position:relative; overflow-wrap:break-word;}
@@ -69,16 +70,14 @@
 		/*	Chartist.js		*/
 		.ct-chart svg  			{margin:1px; vertical-align:text-bottom;}
 		.ct-series-a .ct-line,
-		.ct-series-a .ct-bar 	{stroke:red; stroke-width:1px; fill:transparent;}
+		.ct-series-a .ct-bar 	{stroke:#0058ff; stroke-width:1.5px; fill:transparent;}
 		.ct-chart-pie .ct-label {display:none;}
-		
-		  
+				  
 	</style>
 	<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="https:////cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 	<script>
 		var pids={}
