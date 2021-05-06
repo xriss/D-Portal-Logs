@@ -29,11 +29,14 @@
 		.wrap	{padding-bottom:3em;}
 		.graphs	{display:inline-block; vertical-align:top; box-sizing:border-box; width:100%; height:380px;}
 		.graphs	{padding:2em 0 0 0;}
-		.graphs h2	{color:#666; font-size:14px; text-transform:uppercase;}
+		.graphs h2		{color:#666; font-size:14px; text-transform:uppercase;}
+		.element_wrap	{padding:40px 0 30px 0;}
 		
-		a.element		{display:block; font-size:18px; margin-bottom:30px; color:#6188e2; text-decoration:none; font-weight:bold; font-family:monospace; position:sticky; top:40px; z-index:1; background-color:#eef5ff; padding:0px 0 20px 40px; margin-left:-20px; border-radius:20px;}
-		a.element::before {content:"See element on IATI Standard"; font-weight:normal; font-size:9px; display:block; padding:10px 20px 0 0; text-align:right; text-transform:uppercase; font-family:sans-serif;}
+		a.element		{display:block; font-size:18px; color:#6188e2; text-decoration:none; font-weight:bold; font-family:monospace; position:sticky; top:40px; z-index:1; background-color:#eef5ff; padding:20px 40px; margin-left:-20px; border-radius:20px;}
 		a.element:hover	{color:#004dff;}
+		a.element_iati	{font-size:10px; display:block; padding:10px 20px 0 0; text-align:right; text-transform:uppercase; font-family:sans-serif; font-weight:bold;}
+		a.element_iati:after	{content:"\279A"; margin-left:5px; font-size:14px;}
+
 		
 		.percent		{width:960px; margin:auto; margin-bottom:3em;}
 		.percent span	{display:block; font-size:24px; color:#666; padding-bottom:1em;}
@@ -174,7 +177,12 @@ var insert_page=function()
 			pathlink="http://reference.iatistandard.org/203/organisation-standard"+(path.split("@")[0])
 		}
 		
-		it.append(`<a class="element" target="_blank" id="${path}" href="${pathlink}">${path}</a>`)
+		it.append(`
+		<div class="element_wrap" id="${path}">
+			<a class="element" href="#${path}">${path}</a>
+			<a class="element_iati" target="_blank" href="${pathlink}">See this element on IATI Standard</a>
+		</div>
+		`)
 
 // check some data exists
 		let max_count=0
