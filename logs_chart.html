@@ -20,7 +20,7 @@
 		.wrap	{background:#fff;}
 		.log_wrap,
 		.log		{margin:0 auto; width:100%;}
-		.log		{padding:5em 0 3em 0; width:960px;}
+		.log		{padding:5em 0 3em 0; width:90%;}
 		.info_wrap	{padding:0 0 1.5em 0; font-size:14px;}
 
 		/*	Navigation bar and links	*/
@@ -107,54 +107,109 @@
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+	 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+	 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
  </head>
   <body>
 	<script>
-		$.getJSON("stats.json", function(json) {
-			// Snapshots
+		var addchart=function(data,opts){
+		 
+			var div=$('<div class="chart"><canvas></canvas></div>')
+			$("#charts").append(div)
+			var ctx=div.children(":first")[0].getContext("2d");
 
-			var div=$('<div class="stat_wrap stat_main"><div class="stat_head">Database</div></div>')
-			$("#tables_main").append(div)
-
-			for(var n in json.count)
-			{
-				var h=0;	// h = highest
-				
-				for(var q in json.count[n])
-				{
-					if (q > h)
-					{
-						h = q;
-					}
-				}
-				
-				var number = Number(json.count[n][h]);	
-				var div2=$('<div class="stat"><span>'+(number.toLocaleString())+'</span><span>'+n+'</span></div>')
-				div.append(div2)
+			var dl=[]
+			var dv=[]
+			var idx=0
+			for(var n in data){
+				dl[idx]=(new Date(Number(n)*8.64e7)).toLocaleDateString()
+				dv[idx]=data[n]
+				idx++
 			}
-
-			for(var n in json.distinct)
-			{
-				var div=$('<div class="stat_wrap"><div class="stat_head">'+n+'</div></div>')
-				$("#tables").append(div)
-				
-				for(var t in json.distinct[n])
-				{
-					var h=0;	// h = highest
-					
-					for(var q in json.distinct[n][t])
-					{
-						if (q > h)
-						{
-							h = q;
+			
+		var config = {
+			type: 'line',
+			data: {
+				labels: dl,
+				datasets: [{
+					label: opts.name || "Filled",
+					backgroundColor: opts.color || "#f44",
+					borderColor: opts.color || "#f44",
+					data: dv,
+					fill: true,
+				}]
+			},
+			options: {
+				responsive: true,
+				title:{
+					display:opts.title && true || false,
+					text:opts.title || 'Chart.js Line Chart',
+					fontSize:14
+				},
+				animation: {
+					duration: 0, // general animation time
+				},
+				responsiveAnimationDuration: 0, // animation duration after a resize
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					animationDuration: 0, // duration of animations when hovering an item
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Day'
 						}
-					}
-					
-					var number = Number(json.distinct[n][t][h]);	
-					var div2=$('<div class="stat"><span>'+(number.toLocaleString())+'</span><span>'+t+'</span></div>')
-					div.append(div2)
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Amount'
+						}
+					}]
 				}
 			}
+		};
+
+		   return new Chart(ctx, config);
+		};
+
+		$.getJSON("stats.json", function(json) {
+
+		// Charts
+
+		var div=$('<div class="chart_wrap"><div class="stat_head">Database</div></div>')
+		$("#charts").append(div)
+
+		for(var n in json.count)
+		{
+			window["chartjs_"+n]=
+				addchart(json.count[n],
+					{title:"Total "+n+" table entries recorded in the database",name:n,color:"#000"});
+		}
+
+
+		for(var n in json.distinct)
+		{
+			var div=$('<div class="chart_wrap"><div class="stat_head">'+n+' table</div></div>')
+			$("#charts").append(div)
+
+		   for(var t in json.distinct[n])
+			{
+				window["chartjs_"+n+"_"+t]=
+					addchart(json.distinct[n][t],
+						{title:"Distinct "+t+" values recorded in "+n+" ",name:n+"."+t,color:"#444"});
+			}
+
+		}
+
 		});
 	</script>
 	<div class="nav_wrap">
@@ -171,7 +226,7 @@
 			<div class="info_wrap">
 				The Database provides a snapshot of all data found in the live d-portal database. This is updated <b>nightly</b>.
 			</div>
-			<div id="tables_main"></div>
+			<div id="charts"></div>
 			<div class="info_wrap">
 				The following are tables with figures representing the number of <b>distinct</b> (unique) values in the column; ie. repeated values are not counted.
 			</div>

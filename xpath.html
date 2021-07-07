@@ -1,10 +1,22 @@
-<html>
-  <head>
+<html id="top" lang="en">
+ <head>
 	<title>D-Portal Xpath Stats</title>
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 	<style>
-		*		{box-sizing:border-box;}
-		body	{margin:5em 0 auto; font-family:sans-serif; color:#111; position:relative;}
+		/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,iframe,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
+
+		* 		{box-sizing:border-box;}
+		html	{scroll-behavior:smooth;}
+		html,
+		body	{-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; font-weight:normal; font-style:normal;}
+		body	{background:#f2f2f2; font-family:sans-serif; font-size:1rem; line-height:1.5; color:#444;}
+		body	{display:grid; height:100vh; grid-template-rows:auto 1fr auto;}
+		h1		{font-size:2.5em; line-height:1.25em; font-weight:normal;}
+		h2		{font-size:1.75em; font-weight:bold;}
+		h3		{font-size:1.3em; font-weight:normal;}
+		a		{text-decoration:none;}
+		p		{margin:0.5em 0;}
+		
 		table	{border-spacing:0; table-layout:fixed;}
 		th		{text-align:left; padding:0 20px 10px 20px; border-bottom:1px solid #ccc; color:#666; font-size:12px; text-transform:uppercase;}
 		th.rank	{width:5%;}
@@ -25,14 +37,17 @@
 		a:hover		{color:#004dff;}
 		a:active	{color:#6188e2;}
 		
-		.wrap, .pid_title_wrap	{position:relative; width:960px; margin:auto; padding-bottom:1em;}
-		.wrap	{padding-bottom:3em;}
+		#tables	{padding-top:5em;}
+		.wrap	{background:#fff;}
+		.ele_wrap, 
+		.pid_title_wrap	{position:relative; width:960px; margin:auto; padding-bottom:1em;}
+		.ele_wrap	{padding-bottom:3em;}
 		.graphs	{display:inline-block; vertical-align:top; box-sizing:border-box; width:100%; height:380px;}
 		.graphs	{padding:2em 0 0 0;}
 		.graphs h2		{color:#666; font-size:14px; text-transform:uppercase;}
 		.element_wrap	{padding:40px 0 30px 0;}
 		
-		a.element		{display:block; font-size:18px; color:#6188e2; text-decoration:none; font-weight:bold; font-family:monospace; position:sticky; top:40px; z-index:1; background-color:#eef5ff; padding:20px 40px; margin-left:-20px; border-radius:20px;}
+		a.element		{display:block; font-size:18px; color:#6188e2; text-decoration:none; font-weight:bold; font-family:monospace; position:sticky; top:40px; z-index:1; background-color:#fff; padding:20px 40px; margin-left:-20px; border-radius:20px;}
 		a.element:hover	{color:#004dff;}
 		a.element_iati	{font-size:10px; display:block; padding:10px 20px 0 0; text-align:right; text-transform:uppercase; font-family:sans-serif; font-weight:bold;}
 		a.element_iati:after	{content:"\279A"; margin-left:5px; font-size:14px;}
@@ -42,8 +57,8 @@
 		.percent span	{display:block; font-size:24px; color:#666; padding-bottom:1em;}
 		
 		/*	Navigation bar and links	*/
-		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#ddd; height:initial; min-height:40px;}
-		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#ddd; height:initial; min-height:40px; z-index:666;}
+		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#fff; height:initial; min-height:40px;}
+		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#fff; height:initial; min-height:40px; z-index:666;}
 		.left_nav,
 		.right_nav			{display:inline-block; width:50%; height:40px; vertical-align:top;}
 		.right_nav			{text-align:right;}
@@ -51,18 +66,26 @@
 		a.home_link,
 		a.log_link,
 		a.stat_link,
-		a.git_link,
 		a.about_link		{display:inline-block; padding:12px 20px 8px 20px; border-bottom:3px solid #ddd; color:#444; text-decoration:none; font-family:sans-serif; font-size:14px;}
 		a.home_link:hover,
 		a.log_link:hover,
 		a.stat_link:hover,
-		a.git_link:hover,
 		a.about_link:hover	{border-bottom:3px solid #6188e2; cursor:pointer;}
-		a.git_link 			{text-transform:uppercase; font-size:11px; line-height:16px;}
 		
 		/*	Back to top link	*/
-		a.top		{display:block; width:100%; padding:20px 0; text-align:center; font-size:16px; color:#444; text-decoration:none; position:absolute; bottom:-100px; left:0;}
-		a.top:hover	{background-color:#eee;}
+		a.top		{display:block; width:100%; padding:20px 0; text-align:center; font-size:12px; color:#444; cursor:pointer;}
+		a.top:hover	{background-color:#F8F8F8;}
+		
+		/*	Footer	*/
+		.foot_wrap		{max-width:1280px; padding:2em 4em; margin:0 auto;}
+		.foot_wrap		{font-size:14px;}
+		.foot_cont,
+		.foot_cont_right	{box-sizing:border-box; display:inline-block; padding-right:2em; width:70%; vertical-align:top;}
+		.foot_cont_right	{width:30%; padding-right:0;}
+		.foot_cont_right .foot_text 	{font-size:12px;}
+		.foot_small		{font-size:12px;}
+		.foot_bold		{font-weight:bold;}
+		.foot_bold p	{margin:1.5em 0;}
 		
 		/*	Mobile-Last		*/
 		@media screen and (max-width: 1024px) {
@@ -95,6 +118,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https:////cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
 	<script>
 
 // goto hash
@@ -134,8 +159,8 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 				queryed.pname = stats.xpath["/iati-activities/iati-activity/reporting-org/narrative"].top[0].value
 				}catch(e){}
 				
-				let it=$(`<div class='pid_title'><h1>${queryed.pid} : ${queryed.pname}</h1></>`)
-				$(".pid_title_wrap").append(it)
+				let it=$(`<div class="pid_title"><h1>${queryed.pid} : ${queryed.pname}</h1></div>`)
+				$("#tables").append(it)
 
 				$(()=>{
 					insert_page()
@@ -168,8 +193,8 @@ var insert_page=function()
 
 //		console.log(path)
 		
-		let it=$("<div class='wrap'/>")
-		$("body").append(it)
+		let it=$("<div class='ele_wrap'/>")
+		$("#tables").append(it)
 		
 		let pathlink="http://reference.iatistandard.org/203/activity-standard"+(path.split("@")[0])
 		if(path.startsWith("/iati-organisations")) // org files
@@ -200,7 +225,6 @@ var insert_page=function()
 		}
 		else
 		{
-
 			let tab=$(`<table style="width:100%"/>`)
 			it.append(tab)
 			
@@ -316,7 +340,7 @@ var insert_page=function()
 		idx++
 		
 		let it=$(`<div id='percentage${idx}' class='percent'/>`)
-		$("body").append(it)
+		$("#tables").append(it)
 
 		it.append(`<span>Percentage of ${group} that include  data for each valid xpath</span>`)
 
@@ -365,19 +389,47 @@ var insert_page=function()
 
 }
 
+$(document).ready(function() {
+    $(".wrap").delay(2000).fadeIn(500);
+});
 	</script>
  </head>
   <body>
-	<div class="nav_wrap" id="top">
+	<div class="nav_wrap">
 		<div class="nav">
 			<div class="left_nav">
 				<a class="home_link" href="./index.html">Home</a><a class="about_link" href="#percentage1">Percentage of elements used</a>
 			</div><div class="right_nav">
-				<span>Please be aware that these pages take awhile to load.</span><a class="log_link" href="./logs.html">Logs</a><a class="stat_link" href="./xpath.html">Xpath Stats</a><a class="git_link" href="https://github.com/xriss/D-Portal-Logs">Github</a>
+				<span>Please be aware that these pages take awhile to load.</span><a class="log_link" href="./logs.html">Logs</a><a class="stat_link" href="./xpath.html">Xpath Stats</a>
 			</div>
 		</div>
 	</div>
-	<div class="pid_title_wrap"></div>
-	<a href="#top" class="top">BACK TOP</a>
+	<div id="tables"></div>
+	<div class="wrap">
+		<div class="foot_wrap">
+			<div class="foot_cont">
+				<div class="foot_bold"><p>About</p></div>
+				<div class="foot_text">
+					<p>Statistics &amp; graphs of the logs and IATI elements in the D-Portal database.</p>
+				</div>
+				<div class="foot_text">
+					Figures in corresponding tables are daily logs of nightly imports.<br/>
+					The graphs show these figures over time; hover over the points for more information.
+				</div>
+				<div class="foot_bold">
+					<p>Project page, issues and feedback on <a href="https://github.com/xriss/D-Portal-Logs" target="_blank">Github</a>.</p>
+				</div>
+				<div class="foot_small">Project by Wetgenes, 2021-present</div>
+			</div><div class="foot_cont_right">
+				<div class="foot_bold"><p>Other tools</p></div>
+				<div class="foot_text"><a href="http://d-preview.codeforiati.org/">d-preview</a></div>
+				<div class="foot_text"><p><a href="https://notshi.github.io/IATIswitcheroo/">IATI Switcheroo</a></p></div>
+				<div class="foot_text"><a href="https://xriss.github.io/freechange-charts/">Freechange</a></div>
+				<div class="foot_text"><p><a href="https://notshi.github.io/cleanerr">Cleanerr</a></p></div>
+				<div class="foot_text"><a href="https://xriss.github.io/D-Portal-Logs/">d-portal logs</a></div>
+			</div>
+		</div>
+		<a href="#top" class="top">BACK TOP</a>
+	</div>
   </body>
 </html>
