@@ -110,7 +110,7 @@ table.tab_xpath	th.act	{width:25%; overflow-wrap:break-word;}
 table.tab_xpath	th.xpath{width:85%;}
 table.tab_xpath	th.pop	{width:15%;}
 table.tab_xpath	td		{padding:10px 20px; border-bottom:1px solid #ccc; vertical-align:top; font-size:14px; overflow-wrap:break-word;}
-table.tab_xpath	td:first-of-type	{color:#666;}
+table.tab_xpath	td:first-of-type	{color:#666; overflow-wrap:initial;}
 table.tab_xpath	td:nth-of-type(2)	{font-family:monospace; overflow-wrap:initial;}
 table.tab_xpath	td:last-of-type		{word-break:break-all;}
 
