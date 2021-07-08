@@ -18,9 +18,12 @@ var addchart=function(data,opts){
 		data: {
 			labels: dl,
 			datasets: [{
-				label: opts.name || "Filled",
-				backgroundColor: opts.color || "#f44",
+				//label: opts.name || "Filled",
+				//backgroundColor: opts.color || "#f44",
 				borderColor: opts.color || "#f44",
+				borderWidth: 1,
+				pointBorderWidth: 1,
+				pointRadius: 2,
 				data: dv,
 				fill: true,
 			}]
@@ -71,20 +74,20 @@ var addchart=function(data,opts){
 
 	// Charts
 
-	var div=$('<div class="chart_wrap"><div class="stat_head">Database</div></div>')
+	var div=$('<div class="chart_wrap"><div class="graph_head">Database</div></div>')
 	$("#charts").append(div)
 
 	for(var n in json.count)
 	{
 		window["chartjs_"+n]=
 			addchart(json.count[n],
-				{title:"Total "+n+" table entries recorded in the database",name:n,color:"#000"});
+				{title:"Total "+n+" table entries recorded in the database",name:n,color:"#444"});
 	}
 
 
 	for(var n in json.distinct)
 	{
-		var div=$('<div class="chart_wrap"><div class="stat_head">'+n+' table</div></div>')
+		var div=$('<div class="chart_wrap"><div class="graph_head">'+n+' table</div></div>')
 		$("#charts").append(div)
 
 	   for(var t in json.distinct[n])

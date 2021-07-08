@@ -23,7 +23,9 @@ img		{max-width:100%; height:auto;}
 .log		{margin:0 auto; width:100%;}
 .tab_wrap	{padding-bottom:3em; width:960px;}
 .info_wrap	{padding:0 0 1.5em 0; font-size:14px;}
+.log_wrap_chart	{width:90%; padding-bottom:3em;}
 .log		{padding:5em 0 3em 0; width:960px;}
+.log_chart	{padding-bottom:0; text-align:center;}
 
 a.log_butt,
 a.stat_butt	{width:49%; margin:0 auto; display:inline-block; vertical-align:top; text-decoration:none; font-size:32px; color:#444;}
@@ -125,6 +127,7 @@ a.element_iati:after	{content:"\279A"; margin-left:5px; font-size:14px;}
 .graph_wrap		{width:100%; height:380px; padding:2em 0 0 0;}
 .graph			{height:320px; position:relative;}
 .graph_head		{color:#666; font-size:14px; font-weight:bold; text-transform:uppercase; padding-bottom:1em;}
+.chart_wrap .graph_head	{padding-left:3em;}
 
 /*	Percentage section	*/
 .percent		{width:960px; margin:auto; margin-bottom:3em;}
