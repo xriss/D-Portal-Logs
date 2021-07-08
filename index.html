@@ -2,185 +2,17 @@
   <head>
 	<title>D-Portal Logs</title>
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-	<style>
-		/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,iframe,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
-
-		* 		{box-sizing:border-box;}
-		html	{scroll-behavior:smooth;}
-		html,
-		body	{-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; font-weight:normal; font-style:normal;}
-		body	{background:#f2f2f2; font-family:sans-serif; font-size:1rem; line-height:1.5; color:#444;}
-		body	{display:grid; height:100vh; grid-template-rows:auto 1fr auto;}
-		h1		{font-size:2.5em; line-height:1.25em; font-weight:normal;}
-		h2		{font-size:1.75em; font-weight:normal;}
-		h3		{font-size:1.3em; font-weight:normal;}
-		a		{text-decoration:none;}
-		p		{margin:0.5em 0;}
-		img		{max-width:100%; height:auto;}
-
-/*		body	{margin:5em 0 auto; font-family:sans-serif; color:#111; position:relative; overflow-wrap:break-word;}
-		h1		{color:#666; text-transform:uppercase; font-size:14px;}
-		p		{padding:10px 0;}
-		pre		{display:inline; margin:0; white-space:initial;}
-		b		{font-weight:bold;}
-*/
-		
-		.wrap,
-		.log_wrap	{background:#fff;}
-		.log_wrap,
-		.tab_wrap,
-		.log		{margin:0 auto; width:100%;}
-		.log_wrap a	{width:49%; margin:0 auto; display:inline-block; vertical-align:top;}
-		.tab_wrap	{padding-bottom:3em; width:960px;}
-		.log		{padding:5em 0 3em 0; width:960px;}
-
-		a.log_butt,
-		a.stat_butt	{text-decoration:none; font-size:32px; color:#444;}
-		a.stat_butt	{width:51%; padding-left:1em; border-left:2px solid #ccc;}
-		a:hover span{color:#6188e2;}
-		
-		span		{display:block;}
-		span.text	{font-size:16px; color:#666; padding-bottom:20px;}
-		a.log_butt	span.img {background:url('./data/screenshot_logs.png')no-repeat; background-size:cover; width:90%; height:400px;}
-		a.stat_butt	span.img {background:url('./data/screenshot_xpath.png')no-repeat; background-size:cover; width:90%; height:400px;}
-		
-		/*	Navigation bar and links	*/
-		.nav_wrap			{width:100%; position:absolute; top:-5em; left:0; background-color:#fff; height:initial; min-height:40px;}
-		.nav				{width:100%; position:fixed; top:0; left:0; background-color:#fff; height:initial; min-height:40px; z-index:666;}
-		.left_nav,
-		.right_nav			{display:inline-block; width:50%; height:40px; vertical-align:top;}
-		.right_nav			{text-align:right;}
-		.right_nav span		{display:inline; font-size:12px; font-weight:bold; padding-right:20px;}
-		a.home_link,
-		a.log_link,
-		a.stat_link,
-		a.about_link		{display:inline-block; padding:12px 20px 8px 20px; border-bottom:3px solid #fff; color:#444; text-decoration:none; font-family:sans-serif; font-size:14px;}
-		a.home_link:hover,
-		a.log_link:hover,
-		a.stat_link:hover,
-		a.about_link:hover	{border-bottom:3px solid #6188e2; cursor:pointer;}
-		
-		/*	Back to top link	*/
-		a.top		{display:block; width:100%; padding:20px 0; text-align:center; font-size:12px; color:#444; cursor:pointer;}
-		a.top:hover	{background-color:#F8F8F8;}
-		
-		/*	Footer	*/
-		.foot_wrap		{max-width:1280px; padding:2em 4em; margin:0 auto;}
-		.foot_wrap		{font-size:14px;}
-		.foot_cont,
-		.foot_cont_right	{box-sizing:border-box; display:inline-block; padding-right:2em; width:70%; vertical-align:top;}
-		.foot_cont_right	{width:30%; padding-right:0;}
-		.foot_cont_right .foot_text 	{font-size:12px;}
-		.foot_small		{font-size:12px;}
-		.foot_bold		{font-weight:bold;}
-		.foot_bold p	{margin:1.5em 0;}
-		
-		/*	Sparkline table		*/
-		table.spark_table			{width:100%; border-spacing:0; table-layout:fixed; margin:0 auto; font-size:14px; text-align:left; margin-top:50px; padding-bottom:5em;}
-		table.spark_table th		{text-align:left; padding:0 20px 10px 20px; border-bottom:1px solid #ccc; color:#666; font-size:12px; text-transform:uppercase;}
-		table.spark_table th:first-of-type	{width:300px;}
-		table.spark_table th:nth-of-type(2)	{width:160px;}
-		table.spark_table td		{padding:15px 20px; border-bottom:1px solid #ccc; vertical-align:top;}
-		
-		table.spark_table a			{color:#6188e2; text-decoration:none; display:initial;}
-		table.spark_table a:link	{color:#6188e2;}
-		table.spark_table a:visited	{color:#6188e2;}
-		table.spark_table a:hover	{color:#004dff;}
-		table.spark_table a:active	{color:#6188e2;}		  
-		  
-		/*	Mobile-Last		*/
-		@media screen and (max-width: 1024px) {
-			body	{margin:0 auto; width:100%; padding:4em 2em;}
-			.wrap	{width:initial;}
-			.right_nav span	{display:none;}
-			a.log_butt, a.stat_butt		{display:block; width:100%; height:initial; padding:0; padding-bottom:2em; border:0;}
-		}
-		
-		/*	Chartist.js		*/
-		.ct-chart svg  			{margin:1px; vertical-align:text-bottom;}
-		.ct-series-a .ct-line,
-		.ct-series-a .ct-bar 	{stroke:#0058ff; stroke-width:1.5px; fill:transparent;}
-		.ct-chart-pie .ct-label {display:none;}
-				  
-	</style>
+	<link rel="stylesheet" type="text/css" href="all.css">
 	<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
     <script src="https:////cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-	<script>
-		var pids={}
-		$.getJSON("pids.json", function(json) {
-			pids=json.pids
-			
-			
-			let tab=$(`<table class="spark_table"/>`)
-			$(".tab_wrap").append(tab)
-			
-			let thead=$("<tr/>")
-			tab.append(thead)
-			
-			thead.append("<th>History</th>")
-			thead.append("<th>Activity Count</th>")
-			thead.append("<th>Publisher ID</th>")
-			thead.append("<th>Publisher Name</th>")
-
-			let aa=[]
-			for(let pid in pids) { pids[pid].pid=pid ; aa.push(pids[pid]) }
-			aa.sort(function(a,b){return b.count-a.count})
-			
-			let sparkidx=0
-			for(let it of aa)
-			{
-				sparkidx++
-				let sparkname=`spark_${sparkidx}`
-
-				let trow=$("<tr/>")
-				tab.append(trow)
-
-				trow.append(`<td id='${sparkname}' class="spark"></td>`)
-				trow.append(`<td>${it.count}</td>`)
-				trow.append(`<td><a href="xpath.html?pid=${it.pid}">${it.pid}</a></td>`)
-				trow.append(`<td>${it.name}</td>`)
-				
-				$.getJSON(`pids/${it.pid}.json`,(dat,status)=>{
-					
-					dat=dat.xpath["/iati-activities/iati-activity/iati-identifier"].count
-					
-					let max=0;
-					let values=[]
-					for( let k of Object.keys(dat).sort() )
-					{
-						let v=dat[k]/1
-						if(v>max){max=v}
-						values.push( v )
-					}
-
-					var sparkOptions = {
-						high:max,
-						low:0,
-						height:'32px',
-						width:'256px',
-						showPoint: false,
-						fullWidth:true,
-						chartPadding: {top: 0,right: 0,bottom: 0,left: 0},
-						axisX: {showGrid: false, showLabel: false, offset: 0},
-						axisY: {showGrid: false, showLabel: false, offset: 0, type: Chartist.FixedScaleAxis }
-					}
-
-					new Chartist.Line(`#${sparkname}`, {series:[values]}, sparkOptions);
-
-				})
-
-				
-			}
-			
-		})
-	</script>
+    <script src="index.js"></script>
  </head>
   <body>
 	<div class="nav_wrap">
-		<div class="nav">
+		<div class="nav nav_fff">
 			<div class="left_nav">
 				<a class="home_link" href="./index.html">Home</a>
 			</div><div class="right_nav">
@@ -188,7 +20,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="log_wrap">
+	<div class="wrap log_wrap">
 		<div class="log">
 			<a class="log_butt" href="./logs.html">
 				<span class="title">Logs</span>
