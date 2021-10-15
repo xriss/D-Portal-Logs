@@ -1539,6 +1539,8 @@ Fetching publisher info for mukisa_foundation
 Fetching publisher info for mmh
 Fetching publisher info for fomin
 Fetching publisher info for mmr_admin2
+Fetching publisher info for musawah
+unpublished MY-SSM-1162174T
 Fetching publisher info for muslimaid
 Fetching publisher info for mvo_nederland
 Fetching publisher info for mwatana
@@ -1845,6 +1847,8 @@ Fetching publisher info for spuk
 Fetching publisher info for sama
 unpublished KE-RCO-AAA0FBC4
 Fetching publisher info for scss
+Fetching publisher info for satelliteapplicationscatapultltd
+unpublished GB-COH-07964746
 Fetching publisher info for savsign-org
 Fetching publisher info for bhimrao
 unpublished SAVE LIFE ON EARTH FOUNDATION (GLOBAL UNIVERSAL INTERNATIONAL) NGO NPO VSO
@@ -2625,8 +2629,8 @@ parsing Version.xml
 parsing UNSDG-Goals.xml
 parsing UNSDG-Targets.xml
 parsing codelist mapping.xml
-[master 4356df2f] auto json fetch in nightly cron
- 2 files changed, 1250 insertions(+), 622 deletions(-)
+[master 59cad8c5] auto json fetch in nightly cron
+ 4 files changed, 802 insertions(+), 707 deletions(-)
 Already up to date.
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
@@ -2735,38 +2739,38 @@ browserify
 00:15:19 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
 00:15:19 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
 00:15:19 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:15:19 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:19 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:19 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:19 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:19 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:19 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:19 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:19 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:19 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:19 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:19 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:15:19 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
-00:15:19 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
-00:15:19 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:15:19 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
-00:15:19 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:15:19 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:15:19 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:15:19 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:15:19 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
-00:15:19 COPY news/2019-01-14-New-year-new-features-and-additions/ -> cmn/news/2019-01-14-New-year-new-features-and-additions/
-00:15:19 COPY news/2019-01-14-New-year-new-features-and-additions/ -> fra/news/2019-01-14-New-year-new-features-and-additions/
-00:15:19 COPY news/2019-01-14-New-year-new-features-and-additions/ -> hin/news/2019-01-14-New-year-new-features-and-additions/
-00:15:19 COPY news/2019-01-14-New-year-new-features-and-additions/ -> jpn/news/2019-01-14-New-year-new-features-and-additions/
-00:15:19 COPY news/2019-01-14-New-year-new-features-and-additions/ -> spa/news/2019-01-14-New-year-new-features-and-additions/
-00:15:19 COPY news/author/ -> cmn/news/author/
-00:15:19 COPY news/author/ -> fra/news/author/
-00:15:19 COPY news/author/ -> hin/news/author/
-00:15:19 COPY news/author/ -> jpn/news/author/
-00:15:19 COPY news/author/ -> spa/news/author/
-00:15:19 FILE /about.^.html
-00:15:19 COPY about.html -> cmn/about.html
+00:15:20 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:20 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:20 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:20 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:20 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:20 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:20 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:20 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:20 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:20 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:20 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:20 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:20 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:20 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:20 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:20 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:15:20 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:15:20 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:15:20 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:15:20 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
+00:15:20 COPY news/2019-01-14-New-year-new-features-and-additions/ -> cmn/news/2019-01-14-New-year-new-features-and-additions/
+00:15:20 COPY news/2019-01-14-New-year-new-features-and-additions/ -> fra/news/2019-01-14-New-year-new-features-and-additions/
+00:15:20 COPY news/2019-01-14-New-year-new-features-and-additions/ -> hin/news/2019-01-14-New-year-new-features-and-additions/
+00:15:20 COPY news/2019-01-14-New-year-new-features-and-additions/ -> jpn/news/2019-01-14-New-year-new-features-and-additions/
+00:15:20 COPY news/2019-01-14-New-year-new-features-and-additions/ -> spa/news/2019-01-14-New-year-new-features-and-additions/
+00:15:20 COPY news/author/ -> cmn/news/author/
+00:15:20 COPY news/author/ -> fra/news/author/
+00:15:20 COPY news/author/ -> hin/news/author/
+00:15:20 COPY news/author/ -> jpn/news/author/
+00:15:20 COPY news/author/ -> spa/news/author/
+00:15:20 FILE /about.^.html
+00:15:20 COPY about.html -> cmn/about.html
 00:15:20 COPY about.html -> fra/about.html
 00:15:20 COPY about.html -> hin/about.html
 00:15:20 COPY about.html -> jpn/about.html
@@ -3315,20 +3319,20 @@ browserify
 00:15:20 COPY news/2014-05-28-Current-plans/index.html -> hin/news/2014-05-28-Current-plans/index.html
 00:15:20 COPY news/2014-05-28-Current-plans/index.html -> jpn/news/2014-05-28-Current-plans/index.html
 00:15:20 COPY news/2014-05-28-Current-plans/index.html -> spa/news/2014-05-28-Current-plans/index.html
-00:15:20 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> cmn/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:15:20 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> fra/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:15:20 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> hin/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:15:20 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> jpn/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:15:20 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> spa/news/2014-05-08-Development-Tracker-Architecture/index.html
-00:15:20 COPY news/index.html -> cmn/news/index.html
-00:15:20 COPY news/index.html -> fra/news/index.html
-00:15:20 COPY news/index.html -> hin/news/index.html
-00:15:20 COPY news/index.html -> jpn/news/index.html
-00:15:20 COPY news/index.html -> spa/news/index.html
-00:15:20 COPY news/page2.html -> cmn/news/page2.html
-00:15:20 COPY news/page2.html -> fra/news/page2.html
-00:15:20 COPY news/page2.html -> hin/news/page2.html
-00:15:20 COPY news/page2.html -> jpn/news/page2.html
+00:15:21 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> cmn/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:15:21 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> fra/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:15:21 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> hin/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:15:21 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> jpn/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:15:21 COPY news/2014-05-08-Development-Tracker-Architecture/index.html -> spa/news/2014-05-08-Development-Tracker-Architecture/index.html
+00:15:21 COPY news/index.html -> cmn/news/index.html
+00:15:21 COPY news/index.html -> fra/news/index.html
+00:15:21 COPY news/index.html -> hin/news/index.html
+00:15:21 COPY news/index.html -> jpn/news/index.html
+00:15:21 COPY news/index.html -> spa/news/index.html
+00:15:21 COPY news/page2.html -> cmn/news/page2.html
+00:15:21 COPY news/page2.html -> fra/news/page2.html
+00:15:21 COPY news/page2.html -> hin/news/page2.html
+00:15:21 COPY news/page2.html -> jpn/news/page2.html
 00:15:21 COPY news/page2.html -> spa/news/page2.html
 00:15:21 COPY news/page3.html -> cmn/news/page3.html
 00:15:21 COPY news/page3.html -> fra/news/page3.html
@@ -3417,29 +3421,29 @@ browserify
 00:15:21 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> spa/news/2015-11-05-Adding-country-budgets-to-d-portal/
 00:15:21 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> cmn/news/2016-03-02-Results-data-now-showing-in-d-portal/
 00:15:21 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> fra/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:15:21 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:15:21 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:15:21 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
-00:15:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:15:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:15:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:15:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:15:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-00:15:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-00:15:21 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:21 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:21 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:21 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:21 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-00:15:21 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:15:21 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
-00:15:21 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
-00:15:21 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
-00:15:21 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:22 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:15:22 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:15:22 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
+00:15:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:15:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:15:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:15:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:15:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+00:15:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+00:15:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+00:15:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
+00:15:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> spa/news/2018-03-20-Server-upgrade-and-other-updates/
 00:15:22 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
 00:15:22 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
 00:15:22 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/ -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/
@@ -3472,8 +3476,8 @@ browserify
 00:15:22 COPY feedback.html -> spa/feedback.html
 Shutting down /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                   
-[0] 7-z0 [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1782685 1790959    [35m/dportal/logs/dportal.log[39m [33m0:9:42:36.08899999999994[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
+[0] 6hRf [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2764792 2771967    [35m/dportal/logs/dportal.log[39m [33m0:9:41:45.245999999999185[39m 
 Status /dportal/dportal/js/serv.js
 [32minfo[39m:    No forever processes running
 Starting /dportal/dportal/js/serv.js
@@ -3483,7 +3487,7 @@ Starting /dportal/dportal/js/serv.js
 Status /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever processes running
 [90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m      
-[90mdata[39m:    [0] _xZZ [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1801228 1801249    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.043[39m 
+[90mdata[39m:    [0] WqpS [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2781402 2781423    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.034[39m 
  creating new dload database 
  creating new dload database 
 CREATE EXTENSION
@@ -3714,7 +3718,7 @@ CREATING INDEXS
  CREATE INDEX IF NOT EXISTS act_index_text_search ON act USING gin(to_tsvector('simple', coalesce(title,'') || ' ' || coalesce(description,'') )); 
  CREATE INDEX IF NOT EXISTS xson_index_text_search ON xson USING gin(to_tsvector('simple', xson->>'' )); 
 ANALYZE start
-ANALYSE done 0.059
+ANALYSE done 0.072
 GRANT
  filling dload database with data 
  setting database live 
@@ -3722,7 +3726,7 @@ GRANT
 Shutting down /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever stopped process:
 [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                   
-[0] _xZZ [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1801228 1801249    [35m/dportal/logs/dportal.log[39m [33m0:8:51:36.31399999999849[39m 
+[0] WqpS [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2781402 2781423    [35m/dportal/logs/dportal.log[39m [33m0:8:57:58.02300000000105[39m 
 sudo: /etc/init.d/dportal-instance: command not found
 dropdb: error: database removal failed: ERROR:  database "dtmp" does not exist
  pg_terminate_backend 
@@ -3732,24 +3736,7 @@ dropdb: error: database removal failed: ERROR:  database "dtmp" does not exist
  pg_terminate_backend 
 ----------------------
  t
- t
- t
- t
- t
- t
- t
- t
- t
- t
- t
- t
- t
- t
- t
- t
- t
- t
-(18 rows)
+(1 row)
 
 ALTER DATABASE
 ALTER DATABASE
@@ -9779,7 +9766,7 @@ dstore/cache/beis-gb-gov-13-ukri.xml.import.last.log:    at error (/home/ubuntu/
   adding: acf-89.xml (deflated 66%)
   adding: acf-998.xml (deflated 85%)
   adding: acf-af.xml (deflated 69%)
-  adding: acf-bd.xml (deflated 79%)
+  adding: acf-bd.xml (deflated 81%)
   adding: acf-cd.xml (deflated 85%)
   adding: acf-cf.xml (deflated 66%)
   adding: acf-fr-mm.xml (deflated 63%)
@@ -10055,61 +10042,61 @@ dstore/cache/beis-gb-gov-13-ukri.xml.import.last.log:    at error (/home/ubuntu/
   adding: afd-zm.xml (deflated 95%)
   adding: afd-zw.xml (deflated 84%)
   adding: afd-zz.xml (deflated 95%)
-  adding: afdb-algeria.xml (deflated 89%)
-  adding: afdb-angola.xml (deflated 89%)
-  adding: afdb-benin.xml (deflated 90%)
-  adding: afdb-botswana.xml (deflated 91%)
-  adding: afdb-burkinafaso.xml (deflated 90%)
-  adding: afdb-burundi.xml (deflated 90%)
-  adding: afdb-cameroon.xml (deflated 90%)
-  adding: afdb-capeverde.xml (deflated 91%)
-  adding: afdb-centralafricanrepublic.xml (deflated 89%)
-  adding: afdb-chad.xml (deflated 90%)
-  adding: afdb-ci.xml (deflated 90%)
-  adding: afdb-comoros.xml (deflated 89%)
-  adding: afdb-congo.xml (deflated 89%)
-  adding: afdb-djibouti.xml (deflated 90%)
-  adding: afdb-drc.xml (deflated 89%)
-  adding: afdb-egypt.xml (deflated 90%)
-  adding: afdb-equatorialguinea.xml (deflated 91%)
-  adding: afdb-eritrea.xml (deflated 89%)
-  adding: afdb-ethiopia.xml (deflated 91%)
-  adding: afdb-gabon.xml (deflated 90%)
+  adding: afdb-algeria.xml (deflated 90%)
+  adding: afdb-angola.xml (deflated 91%)
+  adding: afdb-benin.xml (deflated 92%)
+  adding: afdb-botswana.xml (deflated 93%)
+  adding: afdb-burkinafaso.xml (deflated 91%)
+  adding: afdb-burundi.xml (deflated 91%)
+  adding: afdb-cameroon.xml (deflated 92%)
+  adding: afdb-capeverde.xml (deflated 92%)
+  adding: afdb-centralafricanrepublic.xml (deflated 90%)
+  adding: afdb-chad.xml (deflated 91%)
+  adding: afdb-ci.xml (deflated 91%)
+  adding: afdb-comoros.xml (deflated 91%)
+  adding: afdb-congo.xml (deflated 91%)
+  adding: afdb-djibouti.xml (deflated 92%)
+  adding: afdb-drc.xml (deflated 90%)
+  adding: afdb-egypt.xml (deflated 91%)
+  adding: afdb-equatorialguinea.xml (deflated 92%)
+  adding: afdb-eritrea.xml (deflated 90%)
+  adding: afdb-ethiopia.xml (deflated 92%)
+  adding: afdb-gabon.xml (deflated 91%)
   adding: afdb-gambia.xml (deflated 90%)
-  adding: afdb-ghana.xml (deflated 90%)
-  adding: afdb-guinea.xml (deflated 90%)
-  adding: afdb-guineabissau.xml (deflated 91%)
-  adding: afdb-kenya.xml (deflated 90%)
-  adding: afdb-lesotho.xml (deflated 91%)
-  adding: afdb-liberia.xml (deflated 89%)
-  adding: afdb-madagascar.xml (deflated 90%)
-  adding: afdb-malawi.xml (deflated 90%)
-  adding: afdb-mali.xml (deflated 90%)
-  adding: afdb-mauritania.xml (deflated 90%)
-  adding: afdb-mauritius.xml (deflated 90%)
-  adding: afdb-morocco.xml (deflated 89%)
-  adding: afdb-mozambique.xml (deflated 89%)
+  adding: afdb-ghana.xml (deflated 91%)
+  adding: afdb-guinea.xml (deflated 91%)
+  adding: afdb-guineabissau.xml (deflated 92%)
+  adding: afdb-kenya.xml (deflated 92%)
+  adding: afdb-lesotho.xml (deflated 93%)
+  adding: afdb-liberia.xml (deflated 91%)
+  adding: afdb-madagascar.xml (deflated 91%)
+  adding: afdb-malawi.xml (deflated 91%)
+  adding: afdb-mali.xml (deflated 91%)
+  adding: afdb-mauritania.xml (deflated 91%)
+  adding: afdb-mauritius.xml (deflated 92%)
+  adding: afdb-morocco.xml (deflated 91%)
+  adding: afdb-mozambique.xml (deflated 91%)
   adding: afdb-multinational.xml (deflated 89%)
-  adding: afdb-namibia.xml (deflated 88%)
-  adding: afdb-niger.xml (deflated 89%)
-  adding: afdb-nigeria.xml (deflated 89%)
+  adding: afdb-namibia.xml (deflated 90%)
+  adding: afdb-niger.xml (deflated 91%)
+  adding: afdb-nigeria.xml (deflated 90%)
   adding: afdb-org.xml (deflated 93%)
-  adding: afdb-rwanda.xml (deflated 90%)
-  adding: afdb-saotome.xml (deflated 89%)
-  adding: afdb-senegal.xml (deflated 89%)
-  adding: afdb-seychelles.xml (deflated 90%)
-  adding: afdb-sierraleone.xml (deflated 90%)
-  adding: afdb-somalia.xml (deflated 90%)
-  adding: afdb-southafrica.xml (deflated 87%)
+  adding: afdb-rwanda.xml (deflated 91%)
+  adding: afdb-saotome.xml (deflated 90%)
+  adding: afdb-senegal.xml (deflated 91%)
+  adding: afdb-seychelles.xml (deflated 92%)
+  adding: afdb-sierraleone.xml (deflated 91%)
+  adding: afdb-somalia.xml (deflated 91%)
+  adding: afdb-southafrica.xml (deflated 88%)
   adding: afdb-southsudan.xml (deflated 88%)
-  adding: afdb-sudan.xml (deflated 89%)
-  adding: afdb-swaziland.xml (deflated 90%)
-  adding: afdb-tanzania.xml (deflated 90%)
-  adding: afdb-togo.xml (deflated 90%)
-  adding: afdb-tunisia.xml (deflated 90%)
-  adding: afdb-uganda.xml (deflated 90%)
-  adding: afdb-zambia.xml (deflated 90%)
-  adding: afdb-zimbabwe.xml (deflated 89%)
+  adding: afdb-sudan.xml (deflated 90%)
+  adding: afdb-swaziland.xml (deflated 92%)
+  adding: afdb-tanzania.xml (deflated 92%)
+  adding: afdb-togo.xml (deflated 91%)
+  adding: afdb-tunisia.xml (deflated 91%)
+  adding: afdb-uganda.xml (deflated 91%)
+  adding: afdb-zambia.xml (deflated 91%)
+  adding: afdb-zimbabwe.xml (deflated 90%)
   adding: afdi-fr-org.xml (deflated 54%)
   adding: afelt-activities.xml (deflated 87%)
   adding: afelt-org.xml (deflated 57%)
@@ -12491,7 +12478,7 @@ dstore/cache/beis-gb-gov-13-ukri.xml.import.last.log:    at error (/home/ubuntu/
   adding: france-sn.xml (deflated 89%)
   adding: france-td.xml (deflated 91%)
   adding: france-tgo.xml (deflated 92%)
-  adding: france-tk.xml (deflated 91%)
+  adding: france-tk.xml (deflated 90%)
   adding: france-tn.xml (deflated 87%)
   adding: france-tz.xml (deflated 86%)
   adding: france-ug.xml (deflated 89%)
@@ -19904,7 +19891,7 @@ dstore/cache/beis-gb-gov-13-ukri.xml.import.last.log:    at error (/home/ubuntu/
   adding: theglobalfund-qsa.xml (deflated 92%)
   adding: theglobalfund-qsd.xml (deflated 90%)
   adding: theglobalfund-qse.xml (deflated 93%)
-  adding: theglobalfund-qsf.xml (deflated 94%)
+  adding: theglobalfund-qsf.xml (deflated 93%)
   adding: theglobalfund-qtd.xml (deflated 84%)
   adding: theglobalfund-qua.xml (deflated 92%)
   adding: theglobalfund-rou.xml (deflated 92%)
@@ -22832,3 +22819,4 @@ dstore/cache/beis-gb-gov-13-ukri.xml.import.last.log:    at error (/home/ubuntu/
 Updating D-Portal-Logs stats
 
 Cloning into 'logs/D-Portal-Logs'...
+Warning: Permanently added the RSA host key for IP address '140.82.113.3' to the list of known hosts.
