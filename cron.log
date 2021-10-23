@@ -2640,8 +2640,8 @@ parsing Version.xml
 parsing UNSDG-Goals.xml
 parsing UNSDG-Targets.xml
 parsing codelist mapping.xml
-[master 544b1a45] auto json fetch in nightly cron
- 3 files changed, 715 insertions(+), 831 deletions(-)
+[master f140bdb0] auto json fetch in nightly cron
+ 2 files changed, 639 insertions(+), 639 deletions(-)
 Already up to date.
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
@@ -2874,31 +2874,31 @@ browserify
 00:15:38 FILE /ctrack/art/back/ml.jpg
 00:15:38 FILE /ctrack/art/back/mm.jpg
 00:15:38 FILE /ctrack/art/back/mn.jpg
-00:15:38 FILE /ctrack/art/back/mr.jpg
-00:15:38 FILE /ctrack/art/back/ms.jpg
-00:15:38 FILE /ctrack/art/back/mu.jpg
-00:15:38 FILE /ctrack/art/back/mv.jpg
-00:15:38 FILE /ctrack/art/back/mw.jpg
-00:15:38 FILE /ctrack/art/back/mx.jpg
-00:15:38 FILE /ctrack/art/back/my.jpg
-00:15:38 FILE /ctrack/art/back/mz.jpg
-00:15:38 FILE /ctrack/art/back/na.jpg
-00:15:38 FILE /ctrack/art/back/ne.jpg
-00:15:38 FILE /ctrack/art/back/ng.jpg
-00:15:38 FILE /ctrack/art/back/ni.jpg
-00:15:38 FILE /ctrack/art/back/np.jpg
-00:15:38 FILE /ctrack/art/back/nr.jpg
-00:15:38 FILE /ctrack/art/back/nu.jpg
-00:15:38 FILE /ctrack/art/back/pa.jpg
-00:15:38 FILE /ctrack/art/back/pe.jpg
-00:15:38 FILE /ctrack/art/back/pg.jpg
-00:15:38 FILE /ctrack/art/back/ph.jpg
-00:15:38 FILE /ctrack/art/back/pk.jpg
-00:15:38 FILE /ctrack/art/back/ps.jpg
-00:15:38 FILE /ctrack/art/back/pw.jpg
-00:15:38 FILE /ctrack/art/back/py.jpg
-00:15:38 FILE /ctrack/art/back/rs.jpg
-00:15:38 FILE /ctrack/art/back/rw.jpg
+00:15:39 FILE /ctrack/art/back/mr.jpg
+00:15:39 FILE /ctrack/art/back/ms.jpg
+00:15:39 FILE /ctrack/art/back/mu.jpg
+00:15:39 FILE /ctrack/art/back/mv.jpg
+00:15:39 FILE /ctrack/art/back/mw.jpg
+00:15:39 FILE /ctrack/art/back/mx.jpg
+00:15:39 FILE /ctrack/art/back/my.jpg
+00:15:39 FILE /ctrack/art/back/mz.jpg
+00:15:39 FILE /ctrack/art/back/na.jpg
+00:15:39 FILE /ctrack/art/back/ne.jpg
+00:15:39 FILE /ctrack/art/back/ng.jpg
+00:15:39 FILE /ctrack/art/back/ni.jpg
+00:15:39 FILE /ctrack/art/back/np.jpg
+00:15:39 FILE /ctrack/art/back/nr.jpg
+00:15:39 FILE /ctrack/art/back/nu.jpg
+00:15:39 FILE /ctrack/art/back/pa.jpg
+00:15:39 FILE /ctrack/art/back/pe.jpg
+00:15:39 FILE /ctrack/art/back/pg.jpg
+00:15:39 FILE /ctrack/art/back/ph.jpg
+00:15:39 FILE /ctrack/art/back/pk.jpg
+00:15:39 FILE /ctrack/art/back/ps.jpg
+00:15:39 FILE /ctrack/art/back/pw.jpg
+00:15:39 FILE /ctrack/art/back/py.jpg
+00:15:39 FILE /ctrack/art/back/rs.jpg
+00:15:39 FILE /ctrack/art/back/rw.jpg
 00:15:39 FILE /ctrack/art/back/sb.jpg
 00:15:39 FILE /ctrack/art/back/sc.jpg
 00:15:39 FILE /ctrack/art/back/sd.jpg
@@ -3362,9 +3362,9 @@ browserify
 00:15:39 COPY news/2014-05-08-Development-Tracker-Architecture.html -> spa/news/2014-05-08-Development-Tracker-Architecture.html
 00:15:39 COPY news/2014-05-28-Current-plans.html -> cmn/news/2014-05-28-Current-plans.html
 00:15:39 COPY news/2014-05-28-Current-plans.html -> fra/news/2014-05-28-Current-plans.html
-00:15:39 COPY news/2014-05-28-Current-plans.html -> hin/news/2014-05-28-Current-plans.html
-00:15:39 COPY news/2014-05-28-Current-plans.html -> jpn/news/2014-05-28-Current-plans.html
-00:15:39 COPY news/2014-05-28-Current-plans.html -> spa/news/2014-05-28-Current-plans.html
+00:15:40 COPY news/2014-05-28-Current-plans.html -> hin/news/2014-05-28-Current-plans.html
+00:15:40 COPY news/2014-05-28-Current-plans.html -> jpn/news/2014-05-28-Current-plans.html
+00:15:40 COPY news/2014-05-28-Current-plans.html -> spa/news/2014-05-28-Current-plans.html
 00:15:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
 00:15:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
 00:15:40 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
@@ -3483,12 +3483,12 @@ browserify
 00:15:40 COPY feedback.html -> cmn/feedback.html
 00:15:40 COPY feedback.html -> fra/feedback.html
 00:15:40 COPY feedback.html -> hin/feedback.html
-00:15:40 COPY feedback.html -> jpn/feedback.html
-00:15:40 COPY feedback.html -> spa/feedback.html
+00:15:41 COPY feedback.html -> jpn/feedback.html
+00:15:41 COPY feedback.html -> spa/feedback.html
 Shutting down /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
-[0] SsBX [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1309695 1316444    [35m/dportal/logs/dportal.log[39m [33m0:9:30:29.449000000000524[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                     
+[0] YECk [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2296288 2303415    [35m/dportal/logs/dportal.log[39m [33m0:9:29:0.21499999999650754[39m 
 Status /dportal/dportal/js/serv.js
 [32minfo[39m:    No forever processes running
 Starting /dportal/dportal/js/serv.js
@@ -3497,8 +3497,8 @@ Starting /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever processing file: [90m/dportal/dportal/js/serv.js[39m
 Status /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever processes running
-[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m     
-[90mdata[39m:    [0] _ldd [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1328865 1328886    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.04[39m 
+[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m      
+[90mdata[39m:    [0] f8FQ [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2312999 2313020    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.039[39m 
  creating new dload database 
  creating new dload database 
 CREATE EXTENSION
@@ -3729,15 +3729,15 @@ CREATING INDEXS
  CREATE INDEX IF NOT EXISTS act_index_text_search ON act USING gin(to_tsvector('simple', coalesce(title,'') || ' ' || coalesce(description,'') )); 
  CREATE INDEX IF NOT EXISTS xson_index_text_search ON xson USING gin(to_tsvector('simple', xson->>'' )); 
 ANALYZE start
-ANALYSE done 0.082
+ANALYSE done 0.073
 GRANT
  filling dload database with data 
  setting database live 
  swapping dload database with dstore database 
 Shutting down /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                   
-[0] _ldd [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1328865 1328886    [35m/dportal/logs/dportal.log[39m [33m0:8:52:59.03700000000026[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                  
+[0] f8FQ [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2312999 2313020    [35m/dportal/logs/dportal.log[39m [33m0:9:3:53.84100000000035[39m 
 sudo: /etc/init.d/dportal-instance: command not found
 dropdb: error: database removal failed: ERROR:  database "dtmp" does not exist
  pg_terminate_backend 
@@ -3746,17 +3746,7 @@ dropdb: error: database removal failed: ERROR:  database "dtmp" does not exist
 
  pg_terminate_backend 
 ----------------------
- t
- t
- t
- t
- t
- t
- t
- t
- t
- t
-(10 rows)
+(0 rows)
 
 ALTER DATABASE
 ALTER DATABASE
@@ -4248,11 +4238,11 @@ Searching logs for import ERRORS
   adding: aics-bi.xml (deflated 88%)
   adding: aics-bo.xml (deflated 94%)
   adding: aics-br.xml (deflated 88%)
-  adding: aics-cd.xml (deflated 92%)
+  adding: aics-cd.xml (deflated 90%)
   adding: aics-cf.xml (deflated 91%)
   adding: aics-cg.xml (deflated 79%)
   adding: aics-ci.xml (deflated 90%)
-  adding: aics-cm.xml (deflated 94%)
+  adding: aics-cm.xml (deflated 92%)
   adding: aics-cn.xml (deflated 74%)
   adding: aics-co.xml (deflated 91%)
   adding: aics-cu.xml (deflated 90%)
@@ -4279,25 +4269,25 @@ Searching logs for import ERRORS
   adding: aics-lb.xml (deflated 92%)
   adding: aics-lk.xml (deflated 92%)
   adding: aics-lr.xml (deflated 91%)
-  adding: aics-ly.xml (deflated 94%)
+  adding: aics-ly.xml (deflated 91%)
   adding: aics-ma.xml (deflated 94%)
   adding: aics-me.xml (deflated 79%)
   adding: aics-mg.xml (deflated 90%)
-  adding: aics-mk.xml (deflated 90%)
-  adding: aics-ml.xml (deflated 89%)
+  adding: aics-mk.xml (deflated 91%)
+  adding: aics-ml.xml (deflated 90%)
   adding: aics-mm.xml (deflated 92%)
   adding: aics-mr.xml (deflated 93%)
   adding: aics-mw.xml (deflated 86%)
   adding: aics-mz.xml (deflated 93%)
-  adding: aics-ne.xml (deflated 90%)
-  adding: aics-ng.xml (deflated 88%)
+  adding: aics-ne.xml (deflated 91%)
+  adding: aics-ng.xml (deflated 89%)
   adding: aics-ni.xml (deflated 83%)
   adding: aics-np.xml (deflated 89%)
   adding: aics-org.xml (deflated 90%)
   adding: aics-pe.xml (deflated 94%)
   adding: aics-ph.xml (deflated 94%)
   adding: aics-pk.xml (deflated 93%)
-  adding: aics-ps.xml (deflated 95%)
+  adding: aics-ps.xml (deflated 70%)
   adding: aics-rs.xml (deflated 91%)
   adding: aics-rw.xml (deflated 80%)
   adding: aics-sc.xml (deflated 80%)
@@ -4307,16 +4297,16 @@ Searching logs for import ERRORS
   adding: aics-so.xml (deflated 91%)
   adding: aics-ss.xml (deflated 84%)
   adding: aics-sv.xml (deflated 92%)
-  adding: aics-sy.xml (deflated 94%)
+  adding: aics-sy.xml (deflated 66%)
   adding: aics-tl.xml (deflated 82%)
   adding: aics-tn.xml (deflated 93%)
-  adding: aics-tz.xml (deflated 93%)
+  adding: aics-tz.xml (deflated 91%)
   adding: aics-ua.xml (deflated 86%)
   adding: aics-ug.xml (deflated 93%)
   adding: aics-uy.xml (deflated 90%)
   adding: aics-vn.xml (deflated 92%)
-  adding: aics-xk.xml (deflated 91%)
-  adding: aics-ye.xml (deflated 93%)
+  adding: aics-xk.xml (stored 0%)
+  adding: aics-ye.xml (stored 0%)
   adding: aics-za.xml (deflated 89%)
   adding: aics-zw.xml (deflated 82%)
   adding: aiddata-afghanistanaims.xml (deflated 96%)
@@ -6608,7 +6598,7 @@ Searching logs for import ERRORS
   adding: fyf-zw.xml (deflated 86%)
   adding: g3w-m3m_admin-activities.xml (deflated 92%)
   adding: g3w-m3m_admin-org.xml (deflated 79%)
-  adding: gac-amc-act_2_3.xml (deflated 88%)
+  adding: gac-amc-act_2_3.xml (deflated 89%)
   adding: gac-amc-act_4.xml (deflated 89%)
   adding: gac-amc-org.xml (deflated 93%)
   adding: gadp-activities.xml (deflated 82%)
