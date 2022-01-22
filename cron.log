@@ -1,5 +1,5 @@
 
-Thu Jan 20 11:10:01 PM UTC 2022
+Fri Jan 21 11:10:01 PM UTC 2022
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -13,10 +13,10 @@ The following certificates are not due for renewal yet:
 No renewals were attempted.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Thu Jan 20 11:10:02 PM UTC 2022
+Fri Jan 21 11:10:02 PM UTC 2022
 
 
-Thu Jan 20 11:10:02 PM UTC 2022
+Fri Jan 21 11:10:02 PM UTC 2022
 
 
  Rebuilding javascript with latest data 
@@ -1133,7 +1133,6 @@ Fetching publisher info for geopolicity
 unpublished AE-DMCC-JLT-65609
 Fetching publisher info for fo_germany
 Fetching publisher info for giz
-unpublished XM-DAC-5-52
 Fetching publisher info for bmz
 Fetching publisher info for gecfundmanagerpwc
 Fetching publisher info for girlsnotbrides
@@ -1375,6 +1374,8 @@ Fetching publisher info for theunion
 unpublished FR-INSEE-78467060600036
 Fetching publisher info for iucn
 Fetching publisher info for iwda
+Fetching publisher info for iwrawasiapacific
+unpublished MY-SSM-199601006465
 Fetching publisher info for iyafp
 Fetching publisher info for ieu
 Fetching publisher info for interpeace
@@ -2739,13 +2740,13 @@ parsing Version.xml
 parsing UNSDG-Goals.xml
 parsing UNSDG-Targets.xml
 parsing codelist mapping.xml
-[master 3541fc5b] auto json fetch in nightly cron
- 3 files changed, 527 insertions(+), 603 deletions(-)
+[master 1f49d0be] auto json fetch in nightly cron
+ 4 files changed, 1446 insertions(+), 862 deletions(-)
 From github.com:devinit/D-Portal
  * branch              master     -> FETCH_HEAD
 Already up to date.
 To github.com:devinit/D-Portal.git
-   a57f6f63..3541fc5b  master -> master
+   3541fc5b..1f49d0be  master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 Rebuilding ctrack with new json
@@ -2804,25 +2805,25 @@ browserify
 23:15:13 REDIRECT news/2014-05-28-Current-plans.html -> ../news/2014-05-28-Current-plans
 23:15:13 REDIRECT news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> ../news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
 23:15:13 REDIRECT news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> ../news/2014-11-30-Interactive-IATI-data-d-portal-generator
-23:15:14 REDIRECT news/2015-11-05-Adding-country-budgets-to-d-portal.html -> ../news/2015-11-05-Adding-country-budgets-to-d-portal
-23:15:14 REDIRECT news/2016-03-02-Results-data-now-showing-in-d-portal.html -> ../news/2016-03-02-Results-data-now-showing-in-d-portal
-23:15:14 REDIRECT news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> ../news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
-23:15:14 REDIRECT news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> ../news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
-23:15:14 COPY / -> cmn/
-23:15:14 COPY / -> fra/
-23:15:14 COPY / -> hin/
-23:15:14 COPY / -> jpn/
-23:15:14 COPY / -> spa/
-23:15:14 COPY news/ -> cmn/news/
-23:15:14 COPY news/ -> fra/news/
-23:15:14 COPY news/ -> hin/news/
-23:15:14 COPY news/ -> jpn/news/
-23:15:14 COPY news/ -> spa/news/
-23:15:14 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
-23:15:14 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
-23:15:14 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
-23:15:14 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
-23:15:14 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
+23:15:13 REDIRECT news/2015-11-05-Adding-country-budgets-to-d-portal.html -> ../news/2015-11-05-Adding-country-budgets-to-d-portal
+23:15:13 REDIRECT news/2016-03-02-Results-data-now-showing-in-d-portal.html -> ../news/2016-03-02-Results-data-now-showing-in-d-portal
+23:15:13 REDIRECT news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> ../news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
+23:15:13 REDIRECT news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> ../news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
+23:15:13 COPY / -> cmn/
+23:15:13 COPY / -> fra/
+23:15:13 COPY / -> hin/
+23:15:13 COPY / -> jpn/
+23:15:13 COPY / -> spa/
+23:15:13 COPY news/ -> cmn/news/
+23:15:13 COPY news/ -> fra/news/
+23:15:13 COPY news/ -> hin/news/
+23:15:13 COPY news/ -> jpn/news/
+23:15:13 COPY news/ -> spa/news/
+23:15:13 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
+23:15:13 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
+23:15:13 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
+23:15:13 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
+23:15:13 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
 23:15:14 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
 23:15:14 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
 23:15:14 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
@@ -2888,297 +2889,297 @@ browserify
 23:15:14 COPY about.html -> fra/about.html
 23:15:14 COPY about.html -> hin/about.html
 23:15:14 COPY about.html -> jpn/about.html
-23:15:15 COPY about.html -> spa/about.html
-23:15:15 FILE /ctrack/art/Octocat.png
-23:15:15 FILE /ctrack/art/README.md
-23:15:15 FILE /ctrack/art/UNDG_logo.png
-23:15:15 FILE /ctrack/art/activities.xsl
-23:15:15 FILE /ctrack/art/alert_icon.png
-23:15:15 FILE /ctrack/art/back/af.jpg
-23:15:15 FILE /ctrack/art/back/ag.jpg
-23:15:15 FILE /ctrack/art/back/ai.jpg
-23:15:15 FILE /ctrack/art/back/al.jpg
-23:15:15 FILE /ctrack/art/back/am.jpg
-23:15:15 FILE /ctrack/art/back/ao.jpg
-23:15:15 FILE /ctrack/art/back/ar.jpg
-23:15:15 FILE /ctrack/art/back/az.jpg
-23:15:15 FILE /ctrack/art/back/ba.jpg
-23:15:15 FILE /ctrack/art/back/bd.jpg
-23:15:15 FILE /ctrack/art/back/bf.jpg
-23:15:15 FILE /ctrack/art/back/bi.jpg
-23:15:15 FILE /ctrack/art/back/bj.jpg
-23:15:15 FILE /ctrack/art/back/bo.jpg
-23:15:15 FILE /ctrack/art/back/br.jpg
-23:15:15 FILE /ctrack/art/back/bt.jpg
-23:15:15 FILE /ctrack/art/back/bw.jpg
-23:15:15 FILE /ctrack/art/back/by.jpg
-23:15:15 FILE /ctrack/art/back/bz.jpg
-23:15:15 FILE /ctrack/art/back/cd.jpg
-23:15:15 FILE /ctrack/art/back/cf.jpg
-23:15:15 FILE /ctrack/art/back/cg.jpg
-23:15:15 FILE /ctrack/art/back/ci.jpg
-23:15:15 FILE /ctrack/art/back/ck.jpg
-23:15:15 FILE /ctrack/art/back/cl.jpg
-23:15:15 FILE /ctrack/art/back/cm.jpg
-23:15:15 FILE /ctrack/art/back/cn.jpg
-23:15:15 FILE /ctrack/art/back/co.jpg
-23:15:15 FILE /ctrack/art/back/cr.jpg
-23:15:15 FILE /ctrack/art/back/cu.jpg
-23:15:15 FILE /ctrack/art/back/cv.jpg
-23:15:15 FILE /ctrack/art/back/dj.jpg
-23:15:15 FILE /ctrack/art/back/dm.jpg
-23:15:15 FILE /ctrack/art/back/do.jpg
-23:15:15 FILE /ctrack/art/back/dz.jpg
-23:15:15 FILE /ctrack/art/back/ec.jpg
-23:15:15 FILE /ctrack/art/back/eg.jpg
-23:15:15 FILE /ctrack/art/back/er.jpg
-23:15:15 FILE /ctrack/art/back/et.jpg
-23:15:15 FILE /ctrack/art/back/fj.jpg
-23:15:15 FILE /ctrack/art/back/fm.jpg
-23:15:15 FILE /ctrack/art/back/ga.jpg
-23:15:15 FILE /ctrack/art/back/gd.jpg
-23:15:15 FILE /ctrack/art/back/ge.jpg
-23:15:15 FILE /ctrack/art/back/gh.jpg
-23:15:15 FILE /ctrack/art/back/gm.jpg
-23:15:15 FILE /ctrack/art/back/gn.jpg
-23:15:15 FILE /ctrack/art/back/gq.jpg
-23:15:15 FILE /ctrack/art/back/gt.jpg
-23:15:15 FILE /ctrack/art/back/gw.jpg
-23:15:15 FILE /ctrack/art/back/gy.jpg
-23:15:15 FILE /ctrack/art/back/hn.jpg
-23:15:15 FILE /ctrack/art/back/ht.jpg
-23:15:15 FILE /ctrack/art/back/id.jpg
-23:15:15 FILE /ctrack/art/back/in.jpg
-23:15:15 FILE /ctrack/art/back/iq.jpg
-23:15:15 FILE /ctrack/art/back/ir.jpg
-23:15:15 FILE /ctrack/art/back/jm.jpg
-23:15:15 FILE /ctrack/art/back/jo.jpg
-23:15:15 FILE /ctrack/art/back/ke.jpg
-23:15:15 FILE /ctrack/art/back/kg.jpg
-23:15:15 FILE /ctrack/art/back/kh.jpg
-23:15:15 FILE /ctrack/art/back/ki.jpg
-23:15:15 FILE /ctrack/art/back/km.jpg
-23:15:15 FILE /ctrack/art/back/kn.jpg
-23:15:15 FILE /ctrack/art/back/kp.jpg
-23:15:15 FILE /ctrack/art/back/kz.jpg
-23:15:15 FILE /ctrack/art/back/la.jpg
-23:15:15 FILE /ctrack/art/back/lb.jpg
-23:15:15 FILE /ctrack/art/back/lc.jpg
-23:15:15 FILE /ctrack/art/back/lk.jpg
-23:15:15 FILE /ctrack/art/back/lr.jpg
-23:15:15 FILE /ctrack/art/back/ls.jpg
-23:15:15 FILE /ctrack/art/back/ly.jpg
-23:15:15 FILE /ctrack/art/back/ma.jpg
-23:15:15 FILE /ctrack/art/back/md.jpg
-23:15:15 FILE /ctrack/art/back/me.jpg
-23:15:15 FILE /ctrack/art/back/mg.jpg
-23:15:15 FILE /ctrack/art/back/mh.jpg
-23:15:15 FILE /ctrack/art/back/mk.jpg
-23:15:15 FILE /ctrack/art/back/ml.jpg
-23:15:15 FILE /ctrack/art/back/mm.jpg
-23:15:15 FILE /ctrack/art/back/mn.jpg
-23:15:15 FILE /ctrack/art/back/mr.jpg
-23:15:15 FILE /ctrack/art/back/ms.jpg
-23:15:15 FILE /ctrack/art/back/mu.jpg
-23:15:15 FILE /ctrack/art/back/mv.jpg
-23:15:15 FILE /ctrack/art/back/mw.jpg
-23:15:15 FILE /ctrack/art/back/mx.jpg
-23:15:15 FILE /ctrack/art/back/my.jpg
-23:15:15 FILE /ctrack/art/back/mz.jpg
-23:15:15 FILE /ctrack/art/back/na.jpg
-23:15:15 FILE /ctrack/art/back/ne.jpg
-23:15:15 FILE /ctrack/art/back/ng.jpg
-23:15:15 FILE /ctrack/art/back/ni.jpg
-23:15:15 FILE /ctrack/art/back/np.jpg
-23:15:15 FILE /ctrack/art/back/nr.jpg
-23:15:15 FILE /ctrack/art/back/nu.jpg
-23:15:15 FILE /ctrack/art/back/pa.jpg
-23:15:15 FILE /ctrack/art/back/pe.jpg
-23:15:15 FILE /ctrack/art/back/pg.jpg
-23:15:15 FILE /ctrack/art/back/ph.jpg
-23:15:15 FILE /ctrack/art/back/pk.jpg
-23:15:15 FILE /ctrack/art/back/ps.jpg
-23:15:15 FILE /ctrack/art/back/pw.jpg
-23:15:15 FILE /ctrack/art/back/py.jpg
-23:15:15 FILE /ctrack/art/back/rs.jpg
-23:15:15 FILE /ctrack/art/back/rw.jpg
-23:15:15 FILE /ctrack/art/back/sb.jpg
-23:15:15 FILE /ctrack/art/back/sc.jpg
-23:15:15 FILE /ctrack/art/back/sd.jpg
-23:15:15 FILE /ctrack/art/back/sh.jpg
-23:15:15 FILE /ctrack/art/back/sl.jpg
-23:15:15 FILE /ctrack/art/back/sn.jpg
-23:15:15 FILE /ctrack/art/back/so.jpg
-23:15:15 FILE /ctrack/art/back/sr.jpg
-23:15:15 FILE /ctrack/art/back/ss.jpg
-23:15:15 FILE /ctrack/art/back/st.jpg
-23:15:15 FILE /ctrack/art/back/sv.jpg
-23:15:15 FILE /ctrack/art/back/sy.jpg
-23:15:15 FILE /ctrack/art/back/sz.jpg
-23:15:15 FILE /ctrack/art/back/td.jpg
-23:15:15 FILE /ctrack/art/back/tg.jpg
-23:15:15 FILE /ctrack/art/back/th.jpg
-23:15:15 FILE /ctrack/art/back/tj.jpg
-23:15:15 FILE /ctrack/art/back/tk.jpg
-23:15:15 FILE /ctrack/art/back/tl.jpg
-23:15:15 FILE /ctrack/art/back/tm.jpg
-23:15:15 FILE /ctrack/art/back/tn.jpg
-23:15:15 FILE /ctrack/art/back/to.jpg
-23:15:15 FILE /ctrack/art/back/tr.jpg
-23:15:15 FILE /ctrack/art/back/tv.jpg
-23:15:15 FILE /ctrack/art/back/tz.jpg
-23:15:15 FILE /ctrack/art/back/ua.jpg
-23:15:15 FILE /ctrack/art/back/ug.jpg
-23:15:15 FILE /ctrack/art/back/uy.jpg
-23:15:15 FILE /ctrack/art/back/uz.jpg
-23:15:15 FILE /ctrack/art/back/vc.jpg
-23:15:15 FILE /ctrack/art/back/ve.jpg
-23:15:15 FILE /ctrack/art/back/vn.jpg
-23:15:15 FILE /ctrack/art/back/vu.jpg
-23:15:15 FILE /ctrack/art/back/wf.jpg
-23:15:15 FILE /ctrack/art/back/ws.jpg
-23:15:15 FILE /ctrack/art/back/xk.jpg
-23:15:15 FILE /ctrack/art/back/ye.jpg
-23:15:15 FILE /ctrack/art/back/za.jpg
-23:15:15 FILE /ctrack/art/back/zm.jpg
-23:15:15 FILE /ctrack/art/back/zw.jpg
-23:15:15 FILE /ctrack/art/backgroundimage.jpg
-23:15:15 FILE /ctrack/art/chartist.min.css
-23:15:15 FILE /ctrack/art/chosen-sprite.png
-23:15:15 FILE /ctrack/art/chosen-sprite@2x.png
-23:15:15 FILE /ctrack/art/chosen.css
-23:15:15 FILE /ctrack/art/chosen.min.css
-23:15:15 FILE /ctrack/art/dash.png
-23:15:15 FILE /ctrack/art/dash_logo.png
-23:15:15 FILE /ctrack/art/discover.jpg
-23:15:15 FILE /ctrack/art/dlogs.png
-23:15:15 FILE /ctrack/art/dp_git_logo.460.png
-23:15:15 FILE /ctrack/art/dp_logo.400.png
-23:15:15 FILE /ctrack/art/dp_logo.index.png
-23:15:15 FILE /ctrack/art/dquery.png
-23:15:15 FILE /ctrack/art/dslogo.400.png
-23:15:15 FILE /ctrack/art/faq.png
-23:15:15 FILE /ctrack/art/flag/af.png
-23:15:15 FILE /ctrack/art/flag/ag.png
-23:15:15 FILE /ctrack/art/flag/ai.png
-23:15:15 FILE /ctrack/art/flag/al.png
-23:15:15 FILE /ctrack/art/flag/am.png
-23:15:15 FILE /ctrack/art/flag/ao.png
-23:15:15 FILE /ctrack/art/flag/ar.png
-23:15:15 FILE /ctrack/art/flag/az.png
-23:15:15 FILE /ctrack/art/flag/ba.png
-23:15:15 FILE /ctrack/art/flag/bd.png
-23:15:15 FILE /ctrack/art/flag/bf.png
-23:15:15 FILE /ctrack/art/flag/bi.png
-23:15:15 FILE /ctrack/art/flag/bj.png
-23:15:15 FILE /ctrack/art/flag/bo.png
-23:15:15 FILE /ctrack/art/flag/br.png
-23:15:15 FILE /ctrack/art/flag/bt.png
-23:15:15 FILE /ctrack/art/flag/bw.png
-23:15:15 FILE /ctrack/art/flag/by.png
-23:15:15 FILE /ctrack/art/flag/bz.png
-23:15:15 FILE /ctrack/art/flag/cd.png
-23:15:15 FILE /ctrack/art/flag/cf.png
-23:15:15 FILE /ctrack/art/flag/cg.png
-23:15:15 FILE /ctrack/art/flag/ci.png
-23:15:15 FILE /ctrack/art/flag/ck.png
-23:15:15 FILE /ctrack/art/flag/cl.png
-23:15:15 FILE /ctrack/art/flag/cm.png
-23:15:15 FILE /ctrack/art/flag/cn.png
-23:15:15 FILE /ctrack/art/flag/co.png
-23:15:15 FILE /ctrack/art/flag/cr.png
-23:15:15 FILE /ctrack/art/flag/cu.png
-23:15:15 FILE /ctrack/art/flag/cv.png
-23:15:15 FILE /ctrack/art/flag/dj.png
-23:15:15 FILE /ctrack/art/flag/dm.png
-23:15:15 FILE /ctrack/art/flag/do.png
-23:15:15 FILE /ctrack/art/flag/dz.png
-23:15:15 FILE /ctrack/art/flag/ec.png
-23:15:15 FILE /ctrack/art/flag/eg.png
-23:15:15 FILE /ctrack/art/flag/empty_flag.png
-23:15:15 FILE /ctrack/art/flag/er.png
-23:15:15 FILE /ctrack/art/flag/et.png
-23:15:15 FILE /ctrack/art/flag/fj.png
-23:15:15 FILE /ctrack/art/flag/fm.png
-23:15:15 FILE /ctrack/art/flag/ga.png
-23:15:15 FILE /ctrack/art/flag/gd.png
-23:15:15 FILE /ctrack/art/flag/ge.png
-23:15:15 FILE /ctrack/art/flag/gh.png
-23:15:15 FILE /ctrack/art/flag/gm.png
-23:15:15 FILE /ctrack/art/flag/gn.png
-23:15:15 FILE /ctrack/art/flag/gq.png
-23:15:15 FILE /ctrack/art/flag/gt.png
-23:15:15 FILE /ctrack/art/flag/gw.png
-23:15:15 FILE /ctrack/art/flag/gy.png
-23:15:15 FILE /ctrack/art/flag/hn.png
-23:15:15 FILE /ctrack/art/flag/ht.png
-23:15:15 FILE /ctrack/art/flag/id.png
-23:15:15 FILE /ctrack/art/flag/in.png
-23:15:15 FILE /ctrack/art/flag/iq.png
-23:15:15 FILE /ctrack/art/flag/ir.png
-23:15:15 FILE /ctrack/art/flag/jm.png
-23:15:15 FILE /ctrack/art/flag/jo.png
-23:15:15 FILE /ctrack/art/flag/ke.png
-23:15:15 FILE /ctrack/art/flag/kg.png
-23:15:15 FILE /ctrack/art/flag/kh.png
-23:15:15 FILE /ctrack/art/flag/ki.png
-23:15:15 FILE /ctrack/art/flag/km.png
-23:15:15 FILE /ctrack/art/flag/kn.png
-23:15:15 FILE /ctrack/art/flag/kp.png
-23:15:15 FILE /ctrack/art/flag/kz.png
-23:15:15 FILE /ctrack/art/flag/la.png
-23:15:15 FILE /ctrack/art/flag/lb.png
-23:15:15 FILE /ctrack/art/flag/lc.png
-23:15:15 FILE /ctrack/art/flag/lk.png
-23:15:15 FILE /ctrack/art/flag/lr.png
-23:15:15 FILE /ctrack/art/flag/ls.png
-23:15:15 FILE /ctrack/art/flag/ly.png
-23:15:15 FILE /ctrack/art/flag/ma.png
-23:15:15 FILE /ctrack/art/flag/md.png
-23:15:15 FILE /ctrack/art/flag/me.png
-23:15:15 FILE /ctrack/art/flag/mg.png
-23:15:15 FILE /ctrack/art/flag/mh.png
-23:15:15 FILE /ctrack/art/flag/mk.png
-23:15:15 FILE /ctrack/art/flag/ml.png
-23:15:15 FILE /ctrack/art/flag/mm.png
-23:15:15 FILE /ctrack/art/flag/mn.png
-23:15:15 FILE /ctrack/art/flag/mr.png
-23:15:15 FILE /ctrack/art/flag/ms.png
-23:15:15 FILE /ctrack/art/flag/mu.png
-23:15:15 FILE /ctrack/art/flag/mv.png
-23:15:15 FILE /ctrack/art/flag/mw.png
-23:15:15 FILE /ctrack/art/flag/mx.png
-23:15:15 FILE /ctrack/art/flag/my.png
-23:15:15 FILE /ctrack/art/flag/mz.png
-23:15:15 FILE /ctrack/art/flag/na.png
-23:15:15 FILE /ctrack/art/flag/ne.png
-23:15:15 FILE /ctrack/art/flag/ng.png
-23:15:15 FILE /ctrack/art/flag/ni.png
-23:15:15 FILE /ctrack/art/flag/np.png
-23:15:15 FILE /ctrack/art/flag/nr.png
-23:15:15 FILE /ctrack/art/flag/nu.png
-23:15:15 FILE /ctrack/art/flag/pa.png
-23:15:15 FILE /ctrack/art/flag/pe.png
-23:15:15 FILE /ctrack/art/flag/pg.png
-23:15:15 FILE /ctrack/art/flag/ph.png
-23:15:15 FILE /ctrack/art/flag/pk.png
-23:15:15 FILE /ctrack/art/flag/ps.png
-23:15:15 FILE /ctrack/art/flag/pw.png
-23:15:15 FILE /ctrack/art/flag/py.png
-23:15:15 FILE /ctrack/art/flag/rs.png
-23:15:15 FILE /ctrack/art/flag/rw.png
-23:15:15 FILE /ctrack/art/flag/sb.png
-23:15:15 FILE /ctrack/art/flag/sc.png
-23:15:15 FILE /ctrack/art/flag/sd.png
-23:15:15 FILE /ctrack/art/flag/sh.png
-23:15:15 FILE /ctrack/art/flag/sl.png
-23:15:15 FILE /ctrack/art/flag/sn.png
-23:15:15 FILE /ctrack/art/flag/so.png
-23:15:15 FILE /ctrack/art/flag/sr.png
-23:15:15 FILE /ctrack/art/flag/ss.png
-23:15:15 FILE /ctrack/art/flag/st.png
-23:15:15 FILE /ctrack/art/flag/sv.png
-23:15:15 FILE /ctrack/art/flag/sy.png
+23:15:14 COPY about.html -> spa/about.html
+23:15:14 FILE /ctrack/art/Octocat.png
+23:15:14 FILE /ctrack/art/README.md
+23:15:14 FILE /ctrack/art/UNDG_logo.png
+23:15:14 FILE /ctrack/art/activities.xsl
+23:15:14 FILE /ctrack/art/alert_icon.png
+23:15:14 FILE /ctrack/art/back/af.jpg
+23:15:14 FILE /ctrack/art/back/ag.jpg
+23:15:14 FILE /ctrack/art/back/ai.jpg
+23:15:14 FILE /ctrack/art/back/al.jpg
+23:15:14 FILE /ctrack/art/back/am.jpg
+23:15:14 FILE /ctrack/art/back/ao.jpg
+23:15:14 FILE /ctrack/art/back/ar.jpg
+23:15:14 FILE /ctrack/art/back/az.jpg
+23:15:14 FILE /ctrack/art/back/ba.jpg
+23:15:14 FILE /ctrack/art/back/bd.jpg
+23:15:14 FILE /ctrack/art/back/bf.jpg
+23:15:14 FILE /ctrack/art/back/bi.jpg
+23:15:14 FILE /ctrack/art/back/bj.jpg
+23:15:14 FILE /ctrack/art/back/bo.jpg
+23:15:14 FILE /ctrack/art/back/br.jpg
+23:15:14 FILE /ctrack/art/back/bt.jpg
+23:15:14 FILE /ctrack/art/back/bw.jpg
+23:15:14 FILE /ctrack/art/back/by.jpg
+23:15:14 FILE /ctrack/art/back/bz.jpg
+23:15:14 FILE /ctrack/art/back/cd.jpg
+23:15:14 FILE /ctrack/art/back/cf.jpg
+23:15:14 FILE /ctrack/art/back/cg.jpg
+23:15:14 FILE /ctrack/art/back/ci.jpg
+23:15:14 FILE /ctrack/art/back/ck.jpg
+23:15:14 FILE /ctrack/art/back/cl.jpg
+23:15:14 FILE /ctrack/art/back/cm.jpg
+23:15:14 FILE /ctrack/art/back/cn.jpg
+23:15:14 FILE /ctrack/art/back/co.jpg
+23:15:14 FILE /ctrack/art/back/cr.jpg
+23:15:14 FILE /ctrack/art/back/cu.jpg
+23:15:14 FILE /ctrack/art/back/cv.jpg
+23:15:14 FILE /ctrack/art/back/dj.jpg
+23:15:14 FILE /ctrack/art/back/dm.jpg
+23:15:14 FILE /ctrack/art/back/do.jpg
+23:15:14 FILE /ctrack/art/back/dz.jpg
+23:15:14 FILE /ctrack/art/back/ec.jpg
+23:15:14 FILE /ctrack/art/back/eg.jpg
+23:15:14 FILE /ctrack/art/back/er.jpg
+23:15:14 FILE /ctrack/art/back/et.jpg
+23:15:14 FILE /ctrack/art/back/fj.jpg
+23:15:14 FILE /ctrack/art/back/fm.jpg
+23:15:14 FILE /ctrack/art/back/ga.jpg
+23:15:14 FILE /ctrack/art/back/gd.jpg
+23:15:14 FILE /ctrack/art/back/ge.jpg
+23:15:14 FILE /ctrack/art/back/gh.jpg
+23:15:14 FILE /ctrack/art/back/gm.jpg
+23:15:14 FILE /ctrack/art/back/gn.jpg
+23:15:14 FILE /ctrack/art/back/gq.jpg
+23:15:14 FILE /ctrack/art/back/gt.jpg
+23:15:14 FILE /ctrack/art/back/gw.jpg
+23:15:14 FILE /ctrack/art/back/gy.jpg
+23:15:14 FILE /ctrack/art/back/hn.jpg
+23:15:14 FILE /ctrack/art/back/ht.jpg
+23:15:14 FILE /ctrack/art/back/id.jpg
+23:15:14 FILE /ctrack/art/back/in.jpg
+23:15:14 FILE /ctrack/art/back/iq.jpg
+23:15:14 FILE /ctrack/art/back/ir.jpg
+23:15:14 FILE /ctrack/art/back/jm.jpg
+23:15:14 FILE /ctrack/art/back/jo.jpg
+23:15:14 FILE /ctrack/art/back/ke.jpg
+23:15:14 FILE /ctrack/art/back/kg.jpg
+23:15:14 FILE /ctrack/art/back/kh.jpg
+23:15:14 FILE /ctrack/art/back/ki.jpg
+23:15:14 FILE /ctrack/art/back/km.jpg
+23:15:14 FILE /ctrack/art/back/kn.jpg
+23:15:14 FILE /ctrack/art/back/kp.jpg
+23:15:14 FILE /ctrack/art/back/kz.jpg
+23:15:14 FILE /ctrack/art/back/la.jpg
+23:15:14 FILE /ctrack/art/back/lb.jpg
+23:15:14 FILE /ctrack/art/back/lc.jpg
+23:15:14 FILE /ctrack/art/back/lk.jpg
+23:15:14 FILE /ctrack/art/back/lr.jpg
+23:15:14 FILE /ctrack/art/back/ls.jpg
+23:15:14 FILE /ctrack/art/back/ly.jpg
+23:15:14 FILE /ctrack/art/back/ma.jpg
+23:15:14 FILE /ctrack/art/back/md.jpg
+23:15:14 FILE /ctrack/art/back/me.jpg
+23:15:14 FILE /ctrack/art/back/mg.jpg
+23:15:14 FILE /ctrack/art/back/mh.jpg
+23:15:14 FILE /ctrack/art/back/mk.jpg
+23:15:14 FILE /ctrack/art/back/ml.jpg
+23:15:14 FILE /ctrack/art/back/mm.jpg
+23:15:14 FILE /ctrack/art/back/mn.jpg
+23:15:14 FILE /ctrack/art/back/mr.jpg
+23:15:14 FILE /ctrack/art/back/ms.jpg
+23:15:14 FILE /ctrack/art/back/mu.jpg
+23:15:14 FILE /ctrack/art/back/mv.jpg
+23:15:14 FILE /ctrack/art/back/mw.jpg
+23:15:14 FILE /ctrack/art/back/mx.jpg
+23:15:14 FILE /ctrack/art/back/my.jpg
+23:15:14 FILE /ctrack/art/back/mz.jpg
+23:15:14 FILE /ctrack/art/back/na.jpg
+23:15:14 FILE /ctrack/art/back/ne.jpg
+23:15:14 FILE /ctrack/art/back/ng.jpg
+23:15:14 FILE /ctrack/art/back/ni.jpg
+23:15:14 FILE /ctrack/art/back/np.jpg
+23:15:14 FILE /ctrack/art/back/nr.jpg
+23:15:14 FILE /ctrack/art/back/nu.jpg
+23:15:14 FILE /ctrack/art/back/pa.jpg
+23:15:14 FILE /ctrack/art/back/pe.jpg
+23:15:14 FILE /ctrack/art/back/pg.jpg
+23:15:14 FILE /ctrack/art/back/ph.jpg
+23:15:14 FILE /ctrack/art/back/pk.jpg
+23:15:14 FILE /ctrack/art/back/ps.jpg
+23:15:14 FILE /ctrack/art/back/pw.jpg
+23:15:14 FILE /ctrack/art/back/py.jpg
+23:15:14 FILE /ctrack/art/back/rs.jpg
+23:15:14 FILE /ctrack/art/back/rw.jpg
+23:15:14 FILE /ctrack/art/back/sb.jpg
+23:15:14 FILE /ctrack/art/back/sc.jpg
+23:15:14 FILE /ctrack/art/back/sd.jpg
+23:15:14 FILE /ctrack/art/back/sh.jpg
+23:15:14 FILE /ctrack/art/back/sl.jpg
+23:15:14 FILE /ctrack/art/back/sn.jpg
+23:15:14 FILE /ctrack/art/back/so.jpg
+23:15:14 FILE /ctrack/art/back/sr.jpg
+23:15:14 FILE /ctrack/art/back/ss.jpg
+23:15:14 FILE /ctrack/art/back/st.jpg
+23:15:14 FILE /ctrack/art/back/sv.jpg
+23:15:14 FILE /ctrack/art/back/sy.jpg
+23:15:14 FILE /ctrack/art/back/sz.jpg
+23:15:14 FILE /ctrack/art/back/td.jpg
+23:15:14 FILE /ctrack/art/back/tg.jpg
+23:15:14 FILE /ctrack/art/back/th.jpg
+23:15:14 FILE /ctrack/art/back/tj.jpg
+23:15:14 FILE /ctrack/art/back/tk.jpg
+23:15:14 FILE /ctrack/art/back/tl.jpg
+23:15:14 FILE /ctrack/art/back/tm.jpg
+23:15:14 FILE /ctrack/art/back/tn.jpg
+23:15:14 FILE /ctrack/art/back/to.jpg
+23:15:14 FILE /ctrack/art/back/tr.jpg
+23:15:14 FILE /ctrack/art/back/tv.jpg
+23:15:14 FILE /ctrack/art/back/tz.jpg
+23:15:14 FILE /ctrack/art/back/ua.jpg
+23:15:14 FILE /ctrack/art/back/ug.jpg
+23:15:14 FILE /ctrack/art/back/uy.jpg
+23:15:14 FILE /ctrack/art/back/uz.jpg
+23:15:14 FILE /ctrack/art/back/vc.jpg
+23:15:14 FILE /ctrack/art/back/ve.jpg
+23:15:14 FILE /ctrack/art/back/vn.jpg
+23:15:14 FILE /ctrack/art/back/vu.jpg
+23:15:14 FILE /ctrack/art/back/wf.jpg
+23:15:14 FILE /ctrack/art/back/ws.jpg
+23:15:14 FILE /ctrack/art/back/xk.jpg
+23:15:14 FILE /ctrack/art/back/ye.jpg
+23:15:14 FILE /ctrack/art/back/za.jpg
+23:15:14 FILE /ctrack/art/back/zm.jpg
+23:15:14 FILE /ctrack/art/back/zw.jpg
+23:15:14 FILE /ctrack/art/backgroundimage.jpg
+23:15:14 FILE /ctrack/art/chartist.min.css
+23:15:14 FILE /ctrack/art/chosen-sprite.png
+23:15:14 FILE /ctrack/art/chosen-sprite@2x.png
+23:15:14 FILE /ctrack/art/chosen.css
+23:15:14 FILE /ctrack/art/chosen.min.css
+23:15:14 FILE /ctrack/art/dash.png
+23:15:14 FILE /ctrack/art/dash_logo.png
+23:15:14 FILE /ctrack/art/discover.jpg
+23:15:14 FILE /ctrack/art/dlogs.png
+23:15:14 FILE /ctrack/art/dp_git_logo.460.png
+23:15:14 FILE /ctrack/art/dp_logo.400.png
+23:15:14 FILE /ctrack/art/dp_logo.index.png
+23:15:14 FILE /ctrack/art/dquery.png
+23:15:14 FILE /ctrack/art/dslogo.400.png
+23:15:14 FILE /ctrack/art/faq.png
+23:15:14 FILE /ctrack/art/flag/af.png
+23:15:14 FILE /ctrack/art/flag/ag.png
+23:15:14 FILE /ctrack/art/flag/ai.png
+23:15:14 FILE /ctrack/art/flag/al.png
+23:15:14 FILE /ctrack/art/flag/am.png
+23:15:14 FILE /ctrack/art/flag/ao.png
+23:15:14 FILE /ctrack/art/flag/ar.png
+23:15:14 FILE /ctrack/art/flag/az.png
+23:15:14 FILE /ctrack/art/flag/ba.png
+23:15:14 FILE /ctrack/art/flag/bd.png
+23:15:14 FILE /ctrack/art/flag/bf.png
+23:15:14 FILE /ctrack/art/flag/bi.png
+23:15:14 FILE /ctrack/art/flag/bj.png
+23:15:14 FILE /ctrack/art/flag/bo.png
+23:15:14 FILE /ctrack/art/flag/br.png
+23:15:14 FILE /ctrack/art/flag/bt.png
+23:15:14 FILE /ctrack/art/flag/bw.png
+23:15:14 FILE /ctrack/art/flag/by.png
+23:15:14 FILE /ctrack/art/flag/bz.png
+23:15:14 FILE /ctrack/art/flag/cd.png
+23:15:14 FILE /ctrack/art/flag/cf.png
+23:15:14 FILE /ctrack/art/flag/cg.png
+23:15:14 FILE /ctrack/art/flag/ci.png
+23:15:14 FILE /ctrack/art/flag/ck.png
+23:15:14 FILE /ctrack/art/flag/cl.png
+23:15:14 FILE /ctrack/art/flag/cm.png
+23:15:14 FILE /ctrack/art/flag/cn.png
+23:15:14 FILE /ctrack/art/flag/co.png
+23:15:14 FILE /ctrack/art/flag/cr.png
+23:15:14 FILE /ctrack/art/flag/cu.png
+23:15:14 FILE /ctrack/art/flag/cv.png
+23:15:14 FILE /ctrack/art/flag/dj.png
+23:15:14 FILE /ctrack/art/flag/dm.png
+23:15:14 FILE /ctrack/art/flag/do.png
+23:15:14 FILE /ctrack/art/flag/dz.png
+23:15:14 FILE /ctrack/art/flag/ec.png
+23:15:14 FILE /ctrack/art/flag/eg.png
+23:15:14 FILE /ctrack/art/flag/empty_flag.png
+23:15:14 FILE /ctrack/art/flag/er.png
+23:15:14 FILE /ctrack/art/flag/et.png
+23:15:14 FILE /ctrack/art/flag/fj.png
+23:15:14 FILE /ctrack/art/flag/fm.png
+23:15:14 FILE /ctrack/art/flag/ga.png
+23:15:14 FILE /ctrack/art/flag/gd.png
+23:15:14 FILE /ctrack/art/flag/ge.png
+23:15:14 FILE /ctrack/art/flag/gh.png
+23:15:14 FILE /ctrack/art/flag/gm.png
+23:15:14 FILE /ctrack/art/flag/gn.png
+23:15:14 FILE /ctrack/art/flag/gq.png
+23:15:14 FILE /ctrack/art/flag/gt.png
+23:15:14 FILE /ctrack/art/flag/gw.png
+23:15:14 FILE /ctrack/art/flag/gy.png
+23:15:14 FILE /ctrack/art/flag/hn.png
+23:15:14 FILE /ctrack/art/flag/ht.png
+23:15:14 FILE /ctrack/art/flag/id.png
+23:15:14 FILE /ctrack/art/flag/in.png
+23:15:14 FILE /ctrack/art/flag/iq.png
+23:15:14 FILE /ctrack/art/flag/ir.png
+23:15:14 FILE /ctrack/art/flag/jm.png
+23:15:14 FILE /ctrack/art/flag/jo.png
+23:15:14 FILE /ctrack/art/flag/ke.png
+23:15:14 FILE /ctrack/art/flag/kg.png
+23:15:14 FILE /ctrack/art/flag/kh.png
+23:15:14 FILE /ctrack/art/flag/ki.png
+23:15:14 FILE /ctrack/art/flag/km.png
+23:15:14 FILE /ctrack/art/flag/kn.png
+23:15:14 FILE /ctrack/art/flag/kp.png
+23:15:14 FILE /ctrack/art/flag/kz.png
+23:15:14 FILE /ctrack/art/flag/la.png
+23:15:14 FILE /ctrack/art/flag/lb.png
+23:15:14 FILE /ctrack/art/flag/lc.png
+23:15:14 FILE /ctrack/art/flag/lk.png
+23:15:14 FILE /ctrack/art/flag/lr.png
+23:15:14 FILE /ctrack/art/flag/ls.png
+23:15:14 FILE /ctrack/art/flag/ly.png
+23:15:14 FILE /ctrack/art/flag/ma.png
+23:15:14 FILE /ctrack/art/flag/md.png
+23:15:14 FILE /ctrack/art/flag/me.png
+23:15:14 FILE /ctrack/art/flag/mg.png
+23:15:14 FILE /ctrack/art/flag/mh.png
+23:15:14 FILE /ctrack/art/flag/mk.png
+23:15:14 FILE /ctrack/art/flag/ml.png
+23:15:14 FILE /ctrack/art/flag/mm.png
+23:15:14 FILE /ctrack/art/flag/mn.png
+23:15:14 FILE /ctrack/art/flag/mr.png
+23:15:14 FILE /ctrack/art/flag/ms.png
+23:15:14 FILE /ctrack/art/flag/mu.png
+23:15:14 FILE /ctrack/art/flag/mv.png
+23:15:14 FILE /ctrack/art/flag/mw.png
+23:15:14 FILE /ctrack/art/flag/mx.png
+23:15:14 FILE /ctrack/art/flag/my.png
+23:15:14 FILE /ctrack/art/flag/mz.png
+23:15:14 FILE /ctrack/art/flag/na.png
+23:15:14 FILE /ctrack/art/flag/ne.png
+23:15:14 FILE /ctrack/art/flag/ng.png
+23:15:14 FILE /ctrack/art/flag/ni.png
+23:15:14 FILE /ctrack/art/flag/np.png
+23:15:14 FILE /ctrack/art/flag/nr.png
+23:15:14 FILE /ctrack/art/flag/nu.png
+23:15:14 FILE /ctrack/art/flag/pa.png
+23:15:14 FILE /ctrack/art/flag/pe.png
+23:15:14 FILE /ctrack/art/flag/pg.png
+23:15:14 FILE /ctrack/art/flag/ph.png
+23:15:14 FILE /ctrack/art/flag/pk.png
+23:15:14 FILE /ctrack/art/flag/ps.png
+23:15:14 FILE /ctrack/art/flag/pw.png
+23:15:14 FILE /ctrack/art/flag/py.png
+23:15:14 FILE /ctrack/art/flag/rs.png
+23:15:14 FILE /ctrack/art/flag/rw.png
+23:15:14 FILE /ctrack/art/flag/sb.png
+23:15:14 FILE /ctrack/art/flag/sc.png
+23:15:14 FILE /ctrack/art/flag/sd.png
+23:15:14 FILE /ctrack/art/flag/sh.png
+23:15:14 FILE /ctrack/art/flag/sl.png
+23:15:14 FILE /ctrack/art/flag/sn.png
+23:15:14 FILE /ctrack/art/flag/so.png
+23:15:14 FILE /ctrack/art/flag/sr.png
+23:15:14 FILE /ctrack/art/flag/ss.png
+23:15:14 FILE /ctrack/art/flag/st.png
+23:15:14 FILE /ctrack/art/flag/sv.png
+23:15:14 FILE /ctrack/art/flag/sy.png
 23:15:15 FILE /ctrack/art/flag/sz.png
 23:15:15 FILE /ctrack/art/flag/td.png
 23:15:15 FILE /ctrack/art/flag/tg.png
@@ -3442,7 +3443,7 @@ browserify
 23:15:15 COPY news/index.html -> fra/news/index.html
 23:15:15 COPY news/index.html -> hin/news/index.html
 23:15:15 COPY news/index.html -> jpn/news/index.html
-23:15:16 COPY news/index.html -> spa/news/index.html
+23:15:15 COPY news/index.html -> spa/news/index.html
 23:15:16 COPY news/page2.html -> cmn/news/page2.html
 23:15:16 COPY news/page2.html -> fra/news/page2.html
 23:15:16 COPY news/page2.html -> hin/news/page2.html
@@ -3516,8 +3517,8 @@ browserify
 23:15:16 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
 23:15:16 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
 23:15:16 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
-23:15:16 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
-23:15:16 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
+23:15:17 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
+23:15:17 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
 23:15:17 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
 23:15:17 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
 23:15:17 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
@@ -3589,40 +3590,40 @@ browserify
 23:15:17 COPY feedback.html -> jpn/feedback.html
 23:15:17 COPY feedback.html -> spa/feedback.html
 Shutting down /dportal/dportal/js/serv.js
-(node:1676036) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614133) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:1676036) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:1676036) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614133) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614133) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m       
-[0] n2qt [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1660101 1660115    [35m/dportal/logs/dportal.log[39m [33m0:20:40:37.5[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
+[0] f-79 [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2597968 2597982    [35m/dportal/logs/dportal.log[39m [33m0:20:33:20.50100000000384[39m 
 Status /dportal/dportal/js/serv.js
-(node:1676050) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614147) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:1676050) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:1676050) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614147) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614147) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    No forever processes running
 Starting /dportal/dportal/js/serv.js
 [33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
 [33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
 [32minfo[39m:    Forever processing file: [90m/dportal/dportal/js/serv.js[39m
-(node:1676066) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614163) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:1676066) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:1676066) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614163) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614163) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 Status /dportal/dportal/js/serv.js
-(node:1676087) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614183) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:1676087) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:1676087) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614183) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2614183) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever processes running
 [90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m      
-[90mdata[39m:    [0] HxRS [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1676077 1676094    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.055[39m 
+[90mdata[39m:    [0] IFf4 [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2614174 2614191    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.027[39m 
 
-Thu Jan 20 11:15:19 PM UTC 2022
+Fri Jan 21 11:15:19 PM UTC 2022
 
 
-Fri Jan 21 12:10:04 AM UTC 2022
+Sat Jan 22 12:18:29 AM UTC 2022
 
  creating new dload database 
  creating new dload database 
@@ -3854,19 +3855,19 @@ CREATING INDEXS
  CREATE INDEX IF NOT EXISTS act_index_text_search ON act USING gin(to_tsvector('simple', coalesce(title,'') || ' ' || coalesce(description,'') )); 
  CREATE INDEX IF NOT EXISTS xson_index_text_search ON xson USING gin(to_tsvector('simple', xson->>'' )); 
 ANALYZE start
-ANALYSE done 0.069
+ANALYSE done 0.093
 GRANT
  filling dload database with data 
  setting database live 
  swapping dload database with dstore database 
 Shutting down /dportal/dportal/js/serv.js
-(node:2597889) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3537082) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2597889) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:2597889) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3537082) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3537082) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                   
-[0] HxRS [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1676077 1676094    [35m/dportal/logs/dportal.log[39m [33m0:3:26:32.70299999999952[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
+[0] IFf4 [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2614174 2614191    [35m/dportal/logs/dportal.log[39m [33m0:3:38:1.2399999999997817[39m 
 sudo: /etc/init.d/dportal-instance: command not found
 dropdb: error: database removal failed: ERROR:  database "dtmp" does not exist
  pg_terminate_backend 
@@ -3884,13 +3885,13 @@ Starting /dportal/dportal/js/serv.js
 [33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
 [33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
 [32minfo[39m:    Forever processing file: [90m/dportal/dportal/js/serv.js[39m
-(node:2597957) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3537148) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2597957) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:2597957) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3537148) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3537148) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 sudo: /etc/init.d/dportal-instance: command not found
 
-Fri Jan 21 02:41:57 AM UTC 2022
+Sat Jan 22 02:53:26 AM UTC 2022
 
 
  searching logs for errors 
@@ -3904,7 +3905,7 @@ grep: dstore/cache/*.curl.last.log: No such file or directory
 Searching logs for import ERRORS
 
 
-Fri Jan 21 02:41:58 AM UTC 2022
+Sat Jan 22 02:53:26 AM UTC 2022
 
 
  Updating sql and xml data dumps 
@@ -6703,7 +6704,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: france-sn.xml (deflated 89%)
   adding: france-td.xml (deflated 91%)
   adding: france-tgo.xml (deflated 92%)
-  adding: france-tk.xml (deflated 91%)
+  adding: france-tk.xml (deflated 90%)
   adding: france-tn.xml (deflated 87%)
   adding: france-tz.xml (deflated 86%)
   adding: france-ug.xml (deflated 89%)
@@ -6760,6 +6761,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: gan-gec.xml (deflated 80%)
   adding: gardp-activities.xml (deflated 95%)
   adding: gavi-country-activities.xml (deflated 91%)
+  adding: gavi-covax.xml (deflated 96%)
   adding: gavi-organisation.xml (deflated 96%)
   adding: gavi-vaccine-activities.xml (deflated 93%)
   adding: gb-chc-220949-activities-old.xml (deflated 91%)
@@ -11326,6 +11328,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: gef-bw.xml (deflated 95%)
   adding: gef-by.xml (deflated 95%)
   adding: gef-bz.xml (deflated 95%)
+  adding: gef-cd.xml (deflated 94%)
   adding: gef-cf.xml (deflated 93%)
   adding: gef-cg.xml (deflated 94%)
   adding: gef-ci.xml (deflated 94%)
@@ -11419,8 +11422,10 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: gef-ph.xml (deflated 96%)
   adding: gef-pk.xml (deflated 96%)
   adding: gef-pl.xml (deflated 95%)
+  adding: gef-pw.xml (deflated 93%)
   adding: gef-py.xml (deflated 94%)
   adding: gef-ro.xml (deflated 95%)
+  adding: gef-rs.xml (deflated 95%)
   adding: gef-ru.xml (deflated 96%)
   adding: gef-rw.xml (deflated 94%)
   adding: gef-sa.xml (deflated 81%)
@@ -11442,6 +11447,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: gef-tg.xml (deflated 93%)
   adding: gef-th.xml (deflated 95%)
   adding: gef-tj.xml (deflated 95%)
+  adding: gef-tl.xml (deflated 96%)
   adding: gef-tm.xml (deflated 94%)
   adding: gef-tn.xml (deflated 95%)
   adding: gef-to.xml (deflated 92%)
@@ -11490,6 +11496,8 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: givedirectly-org.xml (deflated 85%)
   adding: givedirectly-ug.xml (deflated 85%)
   adding: giz-998.xml (stored 0%)
+  adding: giz-act.xml (deflated 96%)
+  adding: giz-org.xml (deflated 93%)
   adding: gl-activities.xml (deflated 70%)
   adding: globalcanopy-activities.xml (deflated 90%)
   adding: globalcanopy-org.xml (deflated 67%)
@@ -11910,7 +11918,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: ifad-activitity-ht.xml (deflated 95%)
   adding: ifad-activitity-id.xml (deflated 96%)
   adding: ifad-activitity-in.xml (deflated 95%)
-  adding: ifad-activitity-iq.xml (deflated 82%)
+  adding: ifad-activitity-iq.xml (deflated 83%)
   adding: ifad-activitity-jm.xml (deflated 94%)
   adding: ifad-activitity-jo.xml (deflated 95%)
   adding: ifad-activitity-ke.xml (deflated 95%)
@@ -12286,7 +12294,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: international-alert-activities.xml (deflated 90%)
   adding: interpeace-activity.xml (deflated 92%)
   adding: interpeace-org.xml (deflated 87%)
-  adding: intersos_main-589.xml (deflated 76%)
+  adding: intersos_main-589.xml (deflated 78%)
   adding: intersos_main-998.xml (deflated 78%)
   adding: intrac-activities.xml (deflated 90%)
   adding: intrahealth-activities.xml (deflated 82%)
@@ -14045,7 +14053,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: sida-zw.xml (deflated 92%)
   adding: signal-activities.xml (deflated 88%)
   adding: signal-org.xml (deflated 60%)
-  adding: siharegional-activities.xml (deflated 78%)
+  adding: siharegional-activities.xml (deflated 90%)
   adding: silsab1-_-activities.xml (deflated 54%)
   adding: simavi-201801.xml (deflated 93%)
   adding: simavi-org.xml (deflated 68%)
@@ -15205,12 +15213,12 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-889.xml (deflated 92%)
   adding: unitedstates-89.xml (deflated 98%)
   adding: unitedstates-998-part-10.xml (deflated 97%)
-  adding: unitedstates-998-part-11.xml (deflated 97%)
-  adding: unitedstates-998-part-12.xml (deflated 97%)
+  adding: unitedstates-998-part-11.xml (deflated 96%)
+  adding: unitedstates-998-part-12.xml (deflated 96%)
   adding: unitedstates-998-part-13.xml (deflated 97%)
-  adding: unitedstates-998-part-14.xml (deflated 97%)
+  adding: unitedstates-998-part-14.xml (deflated 96%)
   adding: unitedstates-998-part-15.xml (deflated 97%)
-  adding: unitedstates-998-part-16.xml (deflated 96%)
+  adding: unitedstates-998-part-16.xml (deflated 97%)
   adding: unitedstates-998-part-17.xml (deflated 97%)
   adding: unitedstates-998-part-18.xml (deflated 97%)
   adding: unitedstates-998-part-19.xml (deflated 97%)
@@ -15229,8 +15237,8 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-998-part-9.xml (deflated 97%)
   adding: unitedstates-adf.xml (deflated 93%)
   adding: unitedstates-ae.xml (deflated 97%)
-  adding: unitedstates-af-part-1.xml (deflated 98%)
-  adding: unitedstates-af-part-2.xml (deflated 98%)
+  adding: unitedstates-af-part-1.xml (deflated 97%)
+  adding: unitedstates-af-part-2.xml (deflated 97%)
   adding: unitedstates-af-part-3.xml (deflated 97%)
   adding: unitedstates-ag.xml (deflated 94%)
   adding: unitedstates-ai.xml (deflated 74%)
@@ -15251,7 +15259,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-bh.xml (deflated 96%)
   adding: unitedstates-bi.xml (deflated 96%)
   adding: unitedstates-bj.xml (deflated 97%)
-  adding: unitedstates-bl.xml (deflated 73%)
+  adding: unitedstates-bl.xml (deflated 71%)
   adding: unitedstates-bn.xml (deflated 90%)
   adding: unitedstates-bo.xml (deflated 95%)
   adding: unitedstates-br.xml (deflated 96%)
@@ -15260,7 +15268,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-bw.xml (deflated 97%)
   adding: unitedstates-by.xml (deflated 98%)
   adding: unitedstates-bz.xml (deflated 96%)
-  adding: unitedstates-ca.xml (deflated 95%)
+  adding: unitedstates-ca.xml (deflated 94%)
   adding: unitedstates-cd.xml (deflated 97%)
   adding: unitedstates-cf.xml (deflated 97%)
   adding: unitedstates-cg.xml (deflated 96%)
@@ -15304,14 +15312,14 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-fi.xml (deflated 89%)
   adding: unitedstates-fj.xml (deflated 96%)
   adding: unitedstates-fm.xml (deflated 98%)
-  adding: unitedstates-fr.xml (deflated 95%)
+  adding: unitedstates-fr.xml (deflated 94%)
   adding: unitedstates-ga.xml (deflated 96%)
   adding: unitedstates-gb.xml (deflated 94%)
   adding: unitedstates-gd.xml (deflated 95%)
   adding: unitedstates-ge.xml (stored 0%)
   adding: unitedstates-gh.xml (deflated 97%)
   adding: unitedstates-gi.xml (deflated 84%)
-  adding: unitedstates-gl.xml (deflated 84%)
+  adding: unitedstates-gl.xml (deflated 83%)
   adding: unitedstates-gm.xml (deflated 96%)
   adding: unitedstates-gn.xml (deflated 97%)
   adding: unitedstates-gq.xml (deflated 96%)
@@ -15340,15 +15348,15 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-iq.xml (deflated 97%)
   adding: unitedstates-is.xml (deflated 87%)
   adding: unitedstates-it.xml (deflated 95%)
-  adding: unitedstates-je.xml (deflated 73%)
+  adding: unitedstates-je.xml (deflated 71%)
   adding: unitedstates-jm.xml (deflated 96%)
   adding: unitedstates-jo.xml (deflated 97%)
-  adding: unitedstates-jp.xml (deflated 93%)
+  adding: unitedstates-jp.xml (deflated 92%)
   adding: unitedstates-ke.xml (deflated 97%)
   adding: unitedstates-kg.xml (deflated 96%)
   adding: unitedstates-kh.xml (deflated 97%)
   adding: unitedstates-ki.xml (deflated 91%)
-  adding: unitedstates-km.xml (deflated 97%)
+  adding: unitedstates-km.xml (deflated 96%)
   adding: unitedstates-kn.xml (deflated 96%)
   adding: unitedstates-kr.xml (deflated 93%)
   adding: unitedstates-kw.xml (deflated 98%)
@@ -15362,7 +15370,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-lt.xml (deflated 96%)
   adding: unitedstates-lu.xml (deflated 71%)
   adding: unitedstates-lv.xml (deflated 96%)
-  adding: unitedstates-ly.xml (deflated 97%)
+  adding: unitedstates-ly.xml (deflated 96%)
   adding: unitedstates-ma.xml (deflated 97%)
   adding: unitedstates-mc.xml (deflated 92%)
   adding: unitedstates-md.xml (deflated 97%)
@@ -15387,12 +15395,12 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-my.xml (deflated 97%)
   adding: unitedstates-mz.xml (deflated 97%)
   adding: unitedstates-na.xml (deflated 97%)
-  adding: unitedstates-nc.xml (deflated 93%)
+  adding: unitedstates-nc.xml (deflated 92%)
   adding: unitedstates-ne.xml (deflated 97%)
   adding: unitedstates-ng.xml (deflated 97%)
   adding: unitedstates-ni.xml (deflated 96%)
   adding: unitedstates-nl.xml (deflated 96%)
-  adding: unitedstates-no.xml (deflated 89%)
+  adding: unitedstates-no.xml (deflated 88%)
   adding: unitedstates-np.xml (deflated 96%)
   adding: unitedstates-nr.xml (deflated 88%)
   adding: unitedstates-nu.xml (deflated 81%)
@@ -15414,7 +15422,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-pt.xml (deflated 94%)
   adding: unitedstates-pw.xml (deflated 96%)
   adding: unitedstates-py.xml (deflated 97%)
-  adding: unitedstates-qa.xml (deflated 96%)
+  adding: unitedstates-qa.xml (deflated 95%)
   adding: unitedstates-ro.xml (deflated 96%)
   adding: unitedstates-rs.xml (deflated 98%)
   adding: unitedstates-ru.xml (deflated 98%)
@@ -15438,7 +15446,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-sv-part-3.xml (deflated 96%)
   adding: unitedstates-sy.xml (deflated 97%)
   adding: unitedstates-sz.xml (deflated 97%)
-  adding: unitedstates-tc.xml (deflated 83%)
+  adding: unitedstates-tc.xml (deflated 82%)
   adding: unitedstates-td.xml (deflated 97%)
   adding: unitedstates-tg.xml (deflated 96%)
   adding: unitedstates-th.xml (stored 0%)
@@ -15462,7 +15470,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unitedstates-uz.xml (deflated 97%)
   adding: unitedstates-va.xml (deflated 90%)
   adding: unitedstates-vc.xml (deflated 97%)
-  adding: unitedstates-ve.xml (deflated 94%)
+  adding: unitedstates-ve.xml (deflated 93%)
   adding: unitedstates-vn.xml (deflated 97%)
   adding: unitedstates-vu.xml (deflated 95%)
   adding: unitedstates-ws.xml (deflated 96%)
@@ -15665,7 +15673,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: unocha-cbpf-myanmar-contribution-2019.xml (deflated 95%)
   adding: unocha-cbpf-myanmar-contribution-2020.xml (deflated 95%)
   adding: unocha-cbpf-myanmar-contribution-2021.xml (deflated 96%)
-  adding: unocha-cbpf-myanmar-contribution-2022.xml (deflated 82%)
+  adding: unocha-cbpf-myanmar-contribution-2022.xml (deflated 84%)
   adding: unocha-cbpf-nigeria-2017.xml (deflated 65%)
   adding: unocha-cbpf-nigeria-2018.xml (deflated 65%)
   adding: unocha-cbpf-nigeria-2019.xml (deflated 65%)
@@ -17238,7 +17246,7 @@ Fri Jan 21 02:41:58 AM UTC 2022
   adding: zsl-activities.xml (deflated 95%)
   adding: zsl-org.xml (deflated 55%)
 
-Fri Jan 21 02:59:53 AM UTC 2022
+Sat Jan 22 03:11:10 AM UTC 2022
 
 
 Updating D-Portal-Logs stats
