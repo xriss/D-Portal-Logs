@@ -1,5 +1,5 @@
 
-Thu Mar 24 11:10:01 PM UTC 2022
+Fri Mar 25 11:10:01 PM UTC 2022
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -13,10 +13,10 @@ The following certificates are not due for renewal yet:
 No renewals were attempted.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Thu Mar 24 11:10:02 PM UTC 2022
+Fri Mar 25 11:10:02 PM UTC 2022
 
 
-Thu Mar 24 11:10:02 PM UTC 2022
+Fri Mar 25 11:10:02 PM UTC 2022
 
 
  Rebuilding javascript with latest data 
@@ -26,12 +26,7 @@ Get new json data
 
 From github.com:devinit/D-Portal
  * branch              master     -> FETCH_HEAD
-   b4891421..5812e306  master     -> origin/master
-Updating b4891421..5812e306
-Fast-forward
- ctrack/changes.txt | 2 ++
- dflat/js/savi.css  | 6 +++---
- 2 files changed, 5 insertions(+), 3 deletions(-)
+Already up to date.
 /home/ubuntu/dportal/dstore/js/iati_codes.js:704
 \		let jjs=await https_getbody("https://iatiregistry.org/api/3/action/group_show?show_historical_publisher_names=true&id="+v);
 ^
@@ -213,37 +208,37 @@ Rebuilding ctrack with new json
 
 browserify
 browserify
-23:11:21 DIR  /
-23:11:21 DIR  /cmn
-23:11:21 DIR  /ctrack
-23:11:21 DIR  /ctrack/art
-23:11:21 DIR  /ctrack/art/back
-23:11:21 DIR  /ctrack/art/flag
-23:11:21 DIR  /ctrack/art/generator
-23:11:21 DIR  /ctrack/art/high
-23:11:21 DIR  /ctrack/art/original
-23:11:21 DIR  /ctrack/art/rgba
-23:11:21 DIR  /ctrack/jslib
-23:11:21 DIR  /ctrack/jslib/markercluster
-23:11:21 DIR  /fra
-23:11:21 DIR  /hin
-23:11:21 DIR  /jpn
-23:11:21 DIR  /jslib
-23:11:21 DIR  /news
-23:11:21 DIR  /news/2014-05-08-Development-Tracker-Architecture
-23:11:21 DIR  /news/2014-05-28-Current-plans
-23:11:21 DIR  /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
-23:11:21 DIR  /news/2014-11-30-Interactive-IATI-data-d-portal-generator
-23:11:21 DIR  /news/2015-11-05-Adding-country-budgets-to-d-portal
-23:11:21 DIR  /news/2016-03-02-Results-data-now-showing-in-d-portal
-23:11:21 DIR  /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
-23:11:21 DIR  /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
-23:11:21 DIR  /news/2017-09-06-New-d-portal-search-features-to-improve-data-use
-23:11:21 DIR  /news/2018-03-20-Server-upgrade-and-other-updates
-23:11:21 DIR  /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download
-23:11:21 DIR  /news/2019-01-14-New-year-new-features-and-additions
-23:11:21 DIR  /news/author
-23:11:21 DIR  /spa
+23:11:20 DIR  /
+23:11:20 DIR  /cmn
+23:11:20 DIR  /ctrack
+23:11:20 DIR  /ctrack/art
+23:11:20 DIR  /ctrack/art/back
+23:11:20 DIR  /ctrack/art/flag
+23:11:20 DIR  /ctrack/art/generator
+23:11:20 DIR  /ctrack/art/high
+23:11:20 DIR  /ctrack/art/original
+23:11:20 DIR  /ctrack/art/rgba
+23:11:20 DIR  /ctrack/jslib
+23:11:20 DIR  /ctrack/jslib/markercluster
+23:11:20 DIR  /fra
+23:11:20 DIR  /hin
+23:11:20 DIR  /jpn
+23:11:20 DIR  /jslib
+23:11:20 DIR  /news
+23:11:20 DIR  /news/2014-05-08-Development-Tracker-Architecture
+23:11:20 DIR  /news/2014-05-28-Current-plans
+23:11:20 DIR  /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
+23:11:20 DIR  /news/2014-11-30-Interactive-IATI-data-d-portal-generator
+23:11:20 DIR  /news/2015-11-05-Adding-country-budgets-to-d-portal
+23:11:20 DIR  /news/2016-03-02-Results-data-now-showing-in-d-portal
+23:11:20 DIR  /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
+23:11:20 DIR  /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
+23:11:20 DIR  /news/2017-09-06-New-d-portal-search-features-to-improve-data-use
+23:11:20 DIR  /news/2018-03-20-Server-upgrade-and-other-updates
+23:11:20 DIR  /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download
+23:11:20 DIR  /news/2019-01-14-New-year-new-features-and-additions
+23:11:20 DIR  /news/author
+23:11:20 DIR  /spa
 23:11:21 BLOGPOST news/2019-01-14-New-year-new-features-and-additions/index.html
 23:11:21 BLOGPOST news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
 23:11:21 BLOGPOST news/2018-03-20-Server-upgrade-and-other-updates/index.html
@@ -309,18 +304,18 @@ browserify
 23:11:21 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> hin/news/2016-03-02-Results-data-now-showing-in-d-portal/
 23:11:21 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> jpn/news/2016-03-02-Results-data-now-showing-in-d-portal/
 23:11:21 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
-23:11:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-23:11:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-23:11:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-23:11:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-23:11:22 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-23:11:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+23:11:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+23:11:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+23:11:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+23:11:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+23:11:21 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+23:11:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:21 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:21 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+23:11:21 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
 23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
 23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
 23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
@@ -845,23 +840,23 @@ browserify
 23:11:22 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> jpn/news/2019-01-14-New-year-new-features-and-additions/index.html
 23:11:22 COPY news/2019-01-14-New-year-new-features-and-additions/index.html -> spa/news/2019-01-14-New-year-new-features-and-additions/index.html
 23:11:22 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> cmn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-23:11:23 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-23:11:23 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-23:11:23 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-23:11:23 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-23:11:23 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-23:11:23 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> fra/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-23:11:23 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> hin/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-23:11:23 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-23:11:23 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> spa/news/2018-03-20-Server-upgrade-and-other-updates/index.html
-23:11:23 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-23:11:23 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-23:11:23 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-23:11:23 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-23:11:23 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-23:11:23 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-23:11:23 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-23:11:23 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+23:11:22 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> fra/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+23:11:22 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> hin/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+23:11:22 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> jpn/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+23:11:22 COPY news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html -> spa/news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+23:11:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+23:11:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> fra/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+23:11:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> hin/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+23:11:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+23:11:22 COPY news/2018-03-20-Server-upgrade-and-other-updates/index.html -> spa/news/2018-03-20-Server-upgrade-and-other-updates/index.html
+23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+23:11:22 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+23:11:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+23:11:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+23:11:22 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
 23:11:23 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
 23:11:23 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
 23:11:23 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
@@ -919,23 +914,23 @@ browserify
 23:11:23 COPY news/posts.html -> hin/news/posts.html
 23:11:23 COPY news/posts.html -> jpn/news/posts.html
 23:11:23 COPY news/posts.html -> spa/news/posts.html
-23:11:24 COPY news/2014-05-08-Development-Tracker-Architecture.html -> cmn/news/2014-05-08-Development-Tracker-Architecture.html
-23:11:24 COPY news/2014-05-08-Development-Tracker-Architecture.html -> fra/news/2014-05-08-Development-Tracker-Architecture.html
-23:11:24 COPY news/2014-05-08-Development-Tracker-Architecture.html -> hin/news/2014-05-08-Development-Tracker-Architecture.html
-23:11:24 COPY news/2014-05-08-Development-Tracker-Architecture.html -> jpn/news/2014-05-08-Development-Tracker-Architecture.html
-23:11:24 COPY news/2014-05-08-Development-Tracker-Architecture.html -> spa/news/2014-05-08-Development-Tracker-Architecture.html
-23:11:24 COPY news/2014-05-28-Current-plans.html -> cmn/news/2014-05-28-Current-plans.html
-23:11:24 COPY news/2014-05-28-Current-plans.html -> fra/news/2014-05-28-Current-plans.html
-23:11:24 COPY news/2014-05-28-Current-plans.html -> hin/news/2014-05-28-Current-plans.html
-23:11:24 COPY news/2014-05-28-Current-plans.html -> jpn/news/2014-05-28-Current-plans.html
-23:11:24 COPY news/2014-05-28-Current-plans.html -> spa/news/2014-05-28-Current-plans.html
-23:11:24 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-23:11:24 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-23:11:24 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-23:11:24 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-23:11:24 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
-23:11:24 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
-23:11:24 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
+23:11:23 COPY news/2014-05-08-Development-Tracker-Architecture.html -> cmn/news/2014-05-08-Development-Tracker-Architecture.html
+23:11:23 COPY news/2014-05-08-Development-Tracker-Architecture.html -> fra/news/2014-05-08-Development-Tracker-Architecture.html
+23:11:23 COPY news/2014-05-08-Development-Tracker-Architecture.html -> hin/news/2014-05-08-Development-Tracker-Architecture.html
+23:11:23 COPY news/2014-05-08-Development-Tracker-Architecture.html -> jpn/news/2014-05-08-Development-Tracker-Architecture.html
+23:11:23 COPY news/2014-05-08-Development-Tracker-Architecture.html -> spa/news/2014-05-08-Development-Tracker-Architecture.html
+23:11:23 COPY news/2014-05-28-Current-plans.html -> cmn/news/2014-05-28-Current-plans.html
+23:11:23 COPY news/2014-05-28-Current-plans.html -> fra/news/2014-05-28-Current-plans.html
+23:11:23 COPY news/2014-05-28-Current-plans.html -> hin/news/2014-05-28-Current-plans.html
+23:11:23 COPY news/2014-05-28-Current-plans.html -> jpn/news/2014-05-28-Current-plans.html
+23:11:23 COPY news/2014-05-28-Current-plans.html -> spa/news/2014-05-28-Current-plans.html
+23:11:23 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+23:11:23 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+23:11:23 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+23:11:23 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+23:11:23 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html
+23:11:23 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
+23:11:23 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
 23:11:24 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
 23:11:24 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
 23:11:24 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator.html
@@ -1001,20 +996,20 @@ browserify
 23:11:24 COPY news/2016-03-02-Results-data-now-showing-in-d-portal/ -> spa/news/2016-03-02-Results-data-now-showing-in-d-portal/
 23:11:24 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> cmn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
 23:11:24 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> fra/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-23:11:25 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-23:11:25 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-23:11:25 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
-23:11:25 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:25 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:25 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:25 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:25 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
-23:11:25 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-23:11:25 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-23:11:25 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-23:11:25 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-23:11:25 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
-23:11:25 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
+23:11:24 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> hin/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+23:11:24 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> jpn/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+23:11:24 COPY news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/ -> spa/news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/
+23:11:24 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> cmn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:24 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> fra/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:24 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> hin/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:24 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> jpn/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:24 COPY news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/ -> spa/news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/
+23:11:24 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> cmn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+23:11:24 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> fra/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+23:11:24 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> hin/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+23:11:24 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> jpn/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+23:11:24 COPY news/2017-09-06-New-d-portal-search-features-to-improve-data-use/ -> spa/news/2017-09-06-New-d-portal-search-features-to-improve-data-use/
+23:11:24 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> cmn/news/2018-03-20-Server-upgrade-and-other-updates/
 23:11:25 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> fra/news/2018-03-20-Server-upgrade-and-other-updates/
 23:11:25 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> hin/news/2018-03-20-Server-upgrade-and-other-updates/
 23:11:25 COPY news/2018-03-20-Server-upgrade-and-other-updates/ -> jpn/news/2018-03-20-Server-upgrade-and-other-updates/
@@ -1050,40 +1045,40 @@ browserify
 23:11:25 COPY feedback.html -> jpn/feedback.html
 23:11:25 COPY feedback.html -> spa/feedback.html
 Shutting down /dportal/dportal/js/serv.js
-(node:3684757) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469337) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:3684757) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:3684757) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469337) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469337) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
-[0] 6sKi [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 3641908 3641923    [35m/dportal/logs/dportal.log[39m [33m0:20:21:38.19100000000617[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m    [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
+[0] mipa [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 444494  444508    [35m/dportal/logs/dportal.log[39m [33m0:20:14:35.15099999999802[39m 
 Status /dportal/dportal/js/serv.js
-(node:3684771) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469353) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:3684771) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:3684771) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469353) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469353) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    No forever processes running
 Starting /dportal/dportal/js/serv.js
 [33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
 [33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
 [32minfo[39m:    Forever processing file: [90m/dportal/dportal/js/serv.js[39m
-(node:3684787) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469369) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:3684787) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:3684787) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469369) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469369) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 Status /dportal/dportal/js/serv.js
-(node:3684808) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469390) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:3684808) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:3684808) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469390) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:469390) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever processes running
-[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m      
-[90mdata[39m:    [0] 5ehb [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 3684798 3684815    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.069[39m 
+[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m    [37mid[39m [35mlogfile[39m                   [33muptime[39m      
+[90mdata[39m:    [0] aukP [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 469380  469397    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.065[39m 
 
-Thu Mar 24 11:11:26 PM UTC 2022
+Fri Mar 25 11:11:26 PM UTC 2022
 
 
-Fri Mar 25 12:11:06 AM UTC 2022
+Sat Mar 26 12:11:39 AM UTC 2022
 
  creating new dload database 
  creating new dload database 
@@ -1315,19 +1310,19 @@ CREATING INDEXS
  CREATE INDEX IF NOT EXISTS act_index_text_search ON act USING gin(to_tsvector('simple', coalesce(title,'') || ' ' || coalesce(description,'') )); 
  CREATE INDEX IF NOT EXISTS xson_index_text_search ON xson USING gin(to_tsvector('simple', xson->>'' )); 
 ANALYZE start
-ANALYSE done 0.088
+ANALYSE done 0.082
 GRANT
  filling dload database with data 
  setting database live 
  swapping dload database with dstore database 
 Shutting down /dportal/dportal/js/serv.js
-(node:444414) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1419249) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:444414) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:444414) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1419249) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1419249) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                   
-[0] 5ehb [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 3684798 3684815    [35m/dportal/logs/dportal.log[39m [33m0:3:45:17.79399999999987[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m    [37mid[39m [35mlogfile[39m                   [33muptime[39m                   
+[0] aukP [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 469380  469397    [35m/dportal/logs/dportal.log[39m [33m0:3:45:47.36800000000039[39m 
 sudo: /etc/init.d/dportal-instance: command not found
 dropdb: error: database removal failed: ERROR:  database "dtmp" does not exist
  pg_terminate_backend 
@@ -1345,13 +1340,13 @@ Starting /dportal/dportal/js/serv.js
 [33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
 [33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
 [32minfo[39m:    Forever processing file: [90m/dportal/dportal/js/serv.js[39m
-(node:444483) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1419316) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:444483) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-(node:444483) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1419316) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1419316) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 sudo: /etc/init.d/dportal-instance: command not found
 
-Fri Mar 25 02:56:50 AM UTC 2022
+Sat Mar 26 02:57:19 AM UTC 2022
 
 
  searching logs for errors 
@@ -1365,7 +1360,7 @@ grep: dstore/cache/*.curl.last.log: No such file or directory
 Searching logs for import ERRORS
 
 
-Fri Mar 25 02:56:51 AM UTC 2022
+Sat Mar 26 02:57:20 AM UTC 2022
 
 
  Updating sql and xml data dumps 
@@ -1694,16 +1689,16 @@ Fri Mar 25 02:56:51 AM UTC 2022
   adding: afdb-senegal.xml (deflated 91%)
   adding: afdb-seychelles.xml (deflated 91%)
   adding: afdb-sierraleone.xml (deflated 91%)
-  adding: afdb-somalia.xml (deflated 91%)
+  adding: afdb-somalia.xml (deflated 90%)
   adding: afdb-southafrica.xml (deflated 89%)
   adding: afdb-southsudan.xml (deflated 88%)
   adding: afdb-sudan.xml (deflated 90%)
   adding: afdb-swaziland.xml (deflated 91%)
   adding: afdb-tanzania.xml (deflated 91%)
-  adding: afdb-togo.xml (deflated 91%)
+  adding: afdb-togo.xml (deflated 90%)
   adding: afdb-tunisia.xml (deflated 91%)
   adding: afdb-uganda.xml (deflated 91%)
-  adding: afdb-zambia.xml (deflated 92%)
+  adding: afdb-zambia.xml (deflated 91%)
   adding: afdb-zimbabwe.xml (deflated 90%)
   adding: afd-cd.xml (deflated 95%)
   adding: afd-cf.xml (deflated 95%)
@@ -3320,7 +3315,7 @@ Fri Mar 25 02:56:51 AM UTC 2022
   adding: ec-fpi-kh.xml (deflated 90%)
   adding: ec-fpi-km.xml (deflated 83%)
   adding: ec-fpi-kr.xml (deflated 93%)
-  adding: ec-fpi-kz.xml (deflated 76%)
+  adding: ec-fpi-kz.xml (deflated 77%)
   adding: ec-fpi-lb.xml (deflated 94%)
   adding: ec-fpi-lk.xml (deflated 94%)
   adding: ec-fpi-lr.xml (deflated 92%)
@@ -3366,7 +3361,7 @@ Fri Mar 25 02:56:51 AM UTC 2022
   adding: ec-fpi-st.xml (deflated 77%)
   adding: ec-fpi-sv.xml (deflated 93%)
   adding: ec-fpi-sy.xml (deflated 94%)
-  adding: ec-fpi-td.xml (deflated 94%)
+  adding: ec-fpi-td.xml (deflated 93%)
   adding: ec-fpi-tg.xml (deflated 92%)
   adding: ec-fpi-th.xml (deflated 93%)
   adding: ec-fpi-tj.xml (deflated 91%)
@@ -3375,7 +3370,7 @@ Fri Mar 25 02:56:51 AM UTC 2022
   adding: ec-fpi-tr.xml (deflated 93%)
   adding: ec-fpi-tw.xml (deflated 75%)
   adding: ec-fpi-tz.xml (deflated 93%)
-  adding: ec-fpi-ua.xml (deflated 95%)
+  adding: ec-fpi-ua.xml (deflated 94%)
   adding: ec-fpi-ug.xml (deflated 93%)
   adding: ec-fpi-us.xml (deflated 94%)
   adding: ec-fpi-uy.xml (deflated 75%)
@@ -3727,7 +3722,7 @@ Fri Mar 25 02:56:51 AM UTC 2022
   adding: eveowd-activities.xml (deflated 79%)
   adding: ewb_canada-activities.xml (deflated 90%)
   adding: ewb_canada-org.xml (deflated 57%)
-  adding: ewdna2025-activities.xml (deflated 73%)
+  adding: ewdna2025-activities.xml (deflated 84%)
   adding: ewf-activities.xml (deflated 76%)
   adding: ewf-org.xml (deflated 66%)
   adding: ewla-activities.xml (deflated 62%)
@@ -3750,6 +3745,7 @@ Fri Mar 25 02:56:51 AM UTC 2022
   adding: fao-activity.xml (deflated 94%)
   adding: fao-org.xml (deflated 81%)
   adding: fa-org.xml (deflated 79%)
+  adding: fawe-rs-activities.xml (deflated 63%)
   adding: fca-activities.xml (deflated 81%)
   adding: fcam-activities.xml (deflated 91%)
   adding: fcam-org.xml (deflated 54%)
@@ -13593,7 +13589,7 @@ Fri Mar 25 02:56:51 AM UTC 2022
   adding: unocha-cbpf-yemen-contribution-2019.xml (deflated 96%)
   adding: unocha-cbpf-yemen-contribution-2020.xml (stored 0%)
   adding: unocha-cbpf-yemen-contribution-2021.xml (deflated 96%)
-  adding: unocha-cbpf-yemen-contribution-2022.xml (deflated 94%)
+  adding: unocha-cbpf-yemen-contribution-2022.xml (deflated 95%)
   adding: unocha-cbpf-yemen-contribution-2023.xml (deflated 82%)
   adding: unocha-cbpf-yemen-contribution-2024.xml (stored 0%)
   adding: unocha-central-costs.xml (deflated 89%)
@@ -14776,7 +14772,7 @@ Fri Mar 25 02:56:51 AM UTC 2022
   adding: worldbank-ng.xml (deflated 93%)
   adding: worldbank-ni.xml (deflated 93%)
   adding: worldbank-np.xml (deflated 93%)
-  adding: worldbank-org.xml (deflated 93%)
+  adding: worldbank-org.xml (deflated 94%)
   adding: worldbank-pa.xml (deflated 93%)
   adding: worldbank-pe.xml (deflated 92%)
   adding: worldbank-pg.xml (deflated 93%)
@@ -14973,7 +14969,7 @@ Fri Mar 25 02:56:51 AM UTC 2022
   adding: zsl-activities.xml (deflated 94%)
   adding: zsl-org.xml (deflated 55%)
 
-Fri Mar 25 03:15:26 AM UTC 2022
+Sat Mar 26 03:15:49 AM UTC 2022
 
 
 Updating D-Portal-Logs stats
