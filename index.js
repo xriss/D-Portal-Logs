@@ -30,7 +30,7 @@ $.getJSON("pids.json", function(json) {
 
 		trow.append(`<td id='${sparkname}' class="spark"></td>`)
 		trow.append(`<td>${it.count}</td>`)
-		trow.append(`<td><a href="xpath.html?pid=${it.pid}">${it.pid}</a></td>`)
+		trow.append(`<td><a href="xpath_act.html?pid=${it.pid}">${it.pid}</a></td>`)
 		trow.append(`<td>${it.name}</td>`)
 		
 		$.getJSON(`pids/${it.pid}.json`,(dat,status)=>{
