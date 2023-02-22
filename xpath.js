@@ -191,7 +191,7 @@ var insert_page=function()
 		let it=$(`<div id='percentage${idx}' class='percent'/>`)
 		$("#tables").append(it)
 
-		it.append(`<div>Percentage of <span class="span_element">${group}</span> that include data for each valid xpath</div>`)
+		it.append(`<div class="percent_head">Percentage of <span class="span_element">${group}</span> that include data for each valid xpath</div>`)
 
 		let tab=$(`<table class="tab_xpath"/>`)
 		it.append(tab)
