@@ -34,7 +34,7 @@ a.stat_butt	{width:49%; margin:0 auto; display:inline-block; vertical-align:top;
 a.stat_butt	{width:51%; padding-left:1em; border-left:2px solid #ccc;}
 a:hover span{color:#6188e2;}
 
-a.log_chart_link		{background:#444; border-radius:6px; color:#fff; display:block; text-align:center; padding:0.8em;}
+a.log_chart_link		{background:#444; border-radius:6px; color:#fff; display:block; text-align:center; padding:0.8em 1em;}
 a.log_chart_link:hover	{background:#555;}
 
 .log_butt span,
@@ -150,8 +150,10 @@ a.element_iati:after	{content:"\279A"; margin-left:5px; font-size:14px;}
 .percent div	{font-size:20px; color:#666; padding-bottom:1em; padding-top:4em;}
 .percent_head	{font-size:20px; color:#666; padding:1em 0;}
 .percent_xpath	{width:48%; margin:auto; margin-top:1.5em; margin-bottom:3em; display:inline-block; background:#fff; border-radius:6px; padding:0 2%;}
-#percent2		{margin-left:2%; padding-left:2%;}
+#percent1		{margin-right:1%; padding-right:2%;}
+#percent2		{margin-left:1%; padding-left:2%;}
 .span_element	{font-size:18px; font-family:monospace;}
+.link_wrap		{display:flex; justify-content:space-around; margin-top:1.5em;}
   
 /*	Mobile-Last		*/
 @media screen and (max-width: 1024px) {

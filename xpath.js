@@ -1,18 +1,3 @@
-// goto hash
-var goto_hash=function()
-{
-	if( window.location.hash=="" || window.location.hash=="#" ) // default
-	{
-		window.location.hash="#/iati-activities/iati-activity/iati-identifier"
-	}
-	
-	let s=window.location.hash
-	
-	document.getElementById( s.substring(1) ).scrollIntoView(true)
-//	window.scrollBy(0,-50)
-}
-
-
 // parrams
 var queryed = {};
 if (location.search) location.search.substr(1).split("&").forEach(function(item) {
@@ -23,34 +8,11 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 })
 
 		var stats
-		
-		if(queryed.pid)
-		{
-			$.getJSON("pids/"+queryed.pid+".json", function(json) {
-				stats=json
-				
-				//convert pid to name from data
-				queryed.pname = "Unknown"
-				try{
-				queryed.pname = stats.xpath["/iati-activities/iati-activity/reporting-org/narrative"].top[0].value
-				}catch(e){}
-				
-				let it=$(`<div class="pid_title"><div class="stat_head">${queryed.pid} : ${queryed.pname}</div></div>`)
-				$("#tables").append(it)
-
-				$(()=>{
-					insert_page()
-					goto_hash()
-				})
-			})
-		}
-		else
 		{
 			$.getJSON("stats.json", function(json) {
 				stats=json
 				$(()=>{
 					insert_page()
-					goto_hash()
 				})
 			})
 		}
@@ -69,7 +31,7 @@ var insert_page=function()
 
 //		console.log(path)
 		
-		let it=$("<div class='element_xpath_wrap'/>")
+/*		let it=$("<div class='element_xpath_wrap'/>")
 		$("#tables").append(it)
 		
 		let pathlink="http://reference.iatistandard.org/203/activity-standard"+(path.split("@")[0])
@@ -84,6 +46,7 @@ var insert_page=function()
 			<a class="element_iati" target="_blank" href="${pathlink}">See this element on IATI Standard</a>
 		</div>
 		`)
+*/
 
 // check some data exists
 		let max_count=0
@@ -97,11 +60,11 @@ var insert_page=function()
 		}
 		if( max_count == 0 )
 		{
-			it.append(`<div>No data published.</div>`)
+			//it.append(`<div>No data published.</div>`)
 		}
 		else
 		{
-			let tab=$(`<table class="tab_xpath"/>`)
+			/*let tab=$(`<table class="tab_xpath"/>`)
 			it.append(tab)
 			
 			let thead=$("<tr/>")
@@ -148,7 +111,7 @@ var insert_page=function()
 				{
 					trow.append(`<td></td>`)
 				}
-			}
+			}*/
 	   
 			let cnames=["count","activities","publishers","distinct"]
 
@@ -176,7 +139,7 @@ var insert_page=function()
 					<div class="cval">${cval}</div>
 				</div>
 				`)
-				it.append(cdiv)
+				//it.append(cdiv)
 			}
 		}
 	}
@@ -188,8 +151,8 @@ var insert_page=function()
 	{
 		idx++
 		
-		let it=$(`<div id='percentage${idx}' class='percent'/>`)
-		$("#tables").append(it)
+		let it=$(`<div id='percent${idx}' class='percent_xpath'/>`)
+		$("#tables_percent").append(it)
 
 		if(group=="/iati-organisations/iati-organisation")
 		{
@@ -218,12 +181,15 @@ var insert_page=function()
 			{
 				let p=stats.xpath[path]
 				let count=parseInt(p.activities[latest])
+				let short_path=path.substring(group.length)
+				let base_page="xpath_act.html#"
 				if(path.startsWith("/iati-organisations")) // org files
 				{
 					count=parseInt(p.publishers[latest])
+					base_page="xpath_org.html#"
 				}
 				if(atotal<count){atotal=count} // highest
-				a.push({path:path,count:count})
+				a.push({ short_path:short_path , url:base_page+path , count:count })
 			}
 		}
 		for(let v of a) // convert to 00.00 pct
@@ -237,7 +203,7 @@ var insert_page=function()
 			let trow=$("<tr/>")
 			tab.append(trow)
 
-			trow.append(`<td><a href="#${t.path}">${t.path}</a></td>`)
+			trow.append(`<td><a href="${t.url}">${t.short_path}</a></td>`)
 			trow.append(`<td>${t.pct}%</td>`)
 		}
 		
