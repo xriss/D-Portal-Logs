@@ -151,7 +151,7 @@ var insert_page=function()
 	{
 		idx++
 		
-		let it=$(`<div id='percentage${idx}' class='percent_xpath'/>`)
+		let it=$(`<div id='percent${idx}' class='percent_xpath'/>`)
 		$("#tables_percent").append(it)
 
 		if(group=="/iati-organisations/iati-organisation")
@@ -181,12 +181,15 @@ var insert_page=function()
 			{
 				let p=stats.xpath[path]
 				let count=parseInt(p.activities[latest])
+				let short_path=path.substring(group.length)
+				let base_page="xpath_act.html#"
 				if(path.startsWith("/iati-organisations")) // org files
 				{
 					count=parseInt(p.publishers[latest])
+					base_page="xpath_org.html#"
 				}
 				if(atotal<count){atotal=count} // highest
-				a.push({path:path,count:count})
+				a.push({ short_path:short_path , url:base_page+path , count:count })
 			}
 		}
 		for(let v of a) // convert to 00.00 pct
@@ -200,7 +203,7 @@ var insert_page=function()
 			let trow=$("<tr/>")
 			tab.append(trow)
 
-			trow.append(`<td><a href="#${t.path}">${t.path}</a></td>`)
+			trow.append(`<td><a href="${t.url}">${t.short_path}</a></td>`)
 			trow.append(`<td>${t.pct}%</td>`)
 		}
 		

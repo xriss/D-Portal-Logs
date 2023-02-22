@@ -1,3 +1,17 @@
+// goto hash
+var goto_hash=function()
+{
+	if( window.location.hash=="" || window.location.hash=="#" ) // default
+	{
+		window.location.hash="#/iati-activities/iati-activity/iati-identifier"
+	}
+	
+	let s=window.location.hash
+	
+	document.getElementById( s.substring(1) ).scrollIntoView(true)
+//	window.scrollBy(0,-50)
+}
+
 // parrams
 var queryed = {};
 if (location.search) location.search.substr(1).split("&").forEach(function(item) {
@@ -13,6 +27,8 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 				stats=json
 				$(()=>{
 					insert_page()
+					goto_hash()
+					console.log("loaded")
 				})
 			})
 		}
@@ -170,7 +186,7 @@ var insert_page=function()
 				  ]
 				}
 
-				let chart=new Chartist.Line( "#chart"+chartidx, datas , confs );
+				//let chart=new Chartist.Line( "#chart"+chartidx, datas , confs );
 
 			}
 		}
@@ -186,7 +202,7 @@ var insert_page=function()
 		let it=$(`<div id='percentage${idx}' class='percent'/>`)
 		$("#tables").append(it)
 
-		it.append(`<div>Percentage of <span class="span_element">${group}</span> that include data for each valid xpath</div>`)
+		it.append(`<div class="percent_head">Percentage of <span class="span_element">Activity</span> elements</div>`)
 
 		let tab=$(`<table class="tab_xpath"/>`)
 		it.append(tab)

@@ -1,5 +1,5 @@
 // goto hash
-/*var goto_hash=function()
+var goto_hash=function()
 {
 	if( window.location.hash=="" || window.location.hash=="#" ) // default
 	{
@@ -11,7 +11,6 @@
 	document.getElementById( s.substring(1) ).scrollIntoView(true)
 //	window.scrollBy(0,-50)
 }
-*/
 
 // parrams
 var queryed = {};
@@ -50,7 +49,7 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 				stats=json
 				$(()=>{
 					insert_page()
-					//goto_hash()
+					goto_hash()
 				})
 			})
 		}
@@ -238,7 +237,7 @@ var insert_page=function()
 		let it=$(`<div id='percentage${idx}' class='percent'/>`)
 		$("#tables").append(it)
 
-		it.append(`<div>Percentage of <span class="span_element">${group}</span> that include data for each valid xpath</div>`)
+		it.append(`<div class="percent_head">Percentage of <span class="span_element">Organisation</span> elements</div>`)
 
 		let tab=$(`<table class="tab_xpath"/>`)
 		it.append(tab)

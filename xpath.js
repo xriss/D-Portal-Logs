@@ -191,7 +191,14 @@ var insert_page=function()
 		let it=$(`<div id='percentage${idx}' class='percent'/>`)
 		$("#tables").append(it)
 
-		it.append(`<div class="percent_head">Percentage of <span class="span_element">${group}</span> that include data for each valid xpath</div>`)
+		if(group=="/iati-organisations/iati-organisation")
+		{
+			it.append(`<div class="percent_head">Percentage of <span class="span_element">Organisation</span> elements</div>`)
+		}
+		else
+		{
+			it.append(`<div class="percent_head">Percentage of <span class="span_element">Activity</span> elements</div>`)
+		}
 
 		let tab=$(`<table class="tab_xpath"/>`)
 		it.append(tab)
