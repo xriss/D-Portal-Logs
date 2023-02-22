@@ -1,18 +1,3 @@
-// goto hash
-var goto_hash=function()
-{
-	if( window.location.hash=="" || window.location.hash=="#" ) // default
-	{
-		window.location.hash="#/iati-activities/iati-activity/iati-identifier"
-	}
-	
-	let s=window.location.hash
-	
-	document.getElementById( s.substring(1) ).scrollIntoView(true)
-//	window.scrollBy(0,-50)
-}
-
-
 // parrams
 var queryed = {};
 if (location.search) location.search.substr(1).split("&").forEach(function(item) {
@@ -22,35 +7,12 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 	queryed[k]=v
 })
 
-		var stats
-		
-		if(queryed.pid)
-		{
-			$.getJSON("pids/"+queryed.pid+".json", function(json) {
-				stats=json
-				
-				//convert pid to name from data
-				queryed.pname = "Unknown"
-				try{
-				queryed.pname = stats.xpath["/iati-activities/iati-activity/reporting-org/narrative"].top[0].value
-				}catch(e){}
-				
-				let it=$(`<div class="pid_title"><div class="stat_head">${queryed.pid} : ${queryed.pname}</div></div>`)
-				$("#tables").append(it)
-
-				$(()=>{
-					insert_page()
-					goto_hash()
-				})
-			})
-		}
-		else
+		var stats		
 		{
 			$.getJSON("stats.json", function(json) {
 				stats=json
 				$(()=>{
 					insert_page()
-					goto_hash()
 				})
 			})
 		}
@@ -66,22 +28,25 @@ var insert_page=function()
 	for(let path of Object.keys(stats.xpath).sort() )
 	{
 		let pdat=stats.xpath[path]
+		
+		if(path.startsWith("/iati-organisations"))
+		{
+			continue
+		}
 
 //		console.log(path)
 		
-		let it=$("<div class='element_xpath_wrap'/>")
+		let it=$("<div class='element_wrap'/>")
 		$("#tables").append(it)
 		
 		let pathlink="http://reference.iatistandard.org/203/activity-standard"+(path.split("@")[0])
-		if(path.startsWith("/iati-organisations")) // org files
-		{
-			pathlink="http://reference.iatistandard.org/203/organisation-standard"+(path.split("@")[0])
-		}
 		
 		it.append(`
-		<div class="element_link_wrap" id="${path}">
-			<a class="element" href="#${path}">${path}</a>
-			<a class="element_iati" target="_blank" href="${pathlink}">See this element on IATI Standard</a>
+		<div class="element_data_wrap">
+			<div class="element_link_wrap" id="${path}">
+				<a class="element" href="#${path}">${path}</a>
+				<a class="element_iati" target="_blank" href="${pathlink}">See this element on IATI Standard</a>
+			</div>
 		</div>
 		`)
 
@@ -101,8 +66,11 @@ var insert_page=function()
 		}
 		else
 		{
+			let wap=$(`<div class="element_data_wrap"/>`)
+			it.append(wap)
+			
 			let tab=$(`<table class="tab_xpath"/>`)
-			it.append(tab)
+			wap.append(tab)
 			
 			let thead=$("<tr/>")
 			tab.append(thead)
@@ -125,7 +93,7 @@ var insert_page=function()
 				trow.append("<td>"+(idx+1)+"</td>")
 				trow.append("<td>"+v.count+"</td>")
 				trow.append("<td>"+v.value+"</td>")
-
+				
 				if(!queryed.pid)
 				{
 					if(v.pid)
@@ -158,25 +126,52 @@ var insert_page=function()
 
 				chartidx++
 
+				let data=[]
+				
 				let clast
 				for(let n of Object.keys(pdat[cname]).sort() )
 				{
 					let v=pdat[cname][n]
 					let d=parseInt(n)
 					if(d>latest){latest=d} // remember latest date we have seen
+					data.push( {x: new Date(d*8.64e+7), y: v} )
 					clast=v
 				}
 
-				let cval=(clast/1).toLocaleString("en", { useGrouping: true })
-				//let cdiv=$(`<div class="graph_head">${cname} = ${cval}</div>`)
-				
-				let cdiv=$(`
-				<div class="graph_xpath_head">
-					<div class="cname">${cname}</div>
-					<div class="cval">${cval}</div>
-				</div>
-				`)
+				let cdiv=$(`<div class="graph_wrap"/>`)
 				it.append(cdiv)
+				let cval=(clast/1).toLocaleString("en", { useGrouping: true })
+				cdiv.append(`<div class="graph_head">${cname} = ${cval}</div>`)
+				cdiv.append(`<div id="chart${chartidx}" class="graph"/>`)
+
+				let confs={
+					axisX: {
+					type: Chartist.FixedScaleAxis,
+					divisor: 5,
+					labelInterpolationFnc: function(value) {
+						return moment(value).format('YYYY MMM D');
+						}
+					},
+					plugins: [
+						Chartist.plugins.tooltip({
+							transformTooltipTextFnc:(it)=>{
+								let aa=it.split(",")
+								return moment(aa[0]/1).format('YYYY MMM D')+" : "+
+								(aa[1]/1).toLocaleString("en", { useGrouping: true })
+							}
+						})
+					],
+  				}
+				let datas={
+				  series: [
+					{
+						data:data
+					}
+				  ]
+				}
+
+				let chart=new Chartist.Line( "#chart"+chartidx, datas , confs );
+
 			}
 		}
 	}
@@ -184,7 +179,7 @@ var insert_page=function()
 
 	
 	let idx=0
-	for( let group of ["/iati-organisations/iati-organisation","/iati-activities/iati-activity"] )
+	for( let group of ["/iati-activities/iati-activity"] )
 	{
 		idx++
 		

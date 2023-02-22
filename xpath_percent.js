@@ -1,18 +1,3 @@
-// goto hash
-var goto_hash=function()
-{
-	if( window.location.hash=="" || window.location.hash=="#" ) // default
-	{
-		window.location.hash="#/iati-activities/iati-activity/iati-identifier"
-	}
-	
-	let s=window.location.hash
-	
-	document.getElementById( s.substring(1) ).scrollIntoView(true)
-//	window.scrollBy(0,-50)
-}
-
-
 // parrams
 var queryed = {};
 if (location.search) location.search.substr(1).split("&").forEach(function(item) {
@@ -23,34 +8,11 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 })
 
 		var stats
-		
-		if(queryed.pid)
-		{
-			$.getJSON("pids/"+queryed.pid+".json", function(json) {
-				stats=json
-				
-				//convert pid to name from data
-				queryed.pname = "Unknown"
-				try{
-				queryed.pname = stats.xpath["/iati-activities/iati-activity/reporting-org/narrative"].top[0].value
-				}catch(e){}
-				
-				let it=$(`<div class="pid_title"><div class="stat_head">${queryed.pid} : ${queryed.pname}</div></div>`)
-				$("#tables").append(it)
-
-				$(()=>{
-					insert_page()
-					goto_hash()
-				})
-			})
-		}
-		else
 		{
 			$.getJSON("stats.json", function(json) {
 				stats=json
 				$(()=>{
 					insert_page()
-					goto_hash()
 				})
 			})
 		}
@@ -69,7 +31,7 @@ var insert_page=function()
 
 //		console.log(path)
 		
-		let it=$("<div class='element_xpath_wrap'/>")
+/*		let it=$("<div class='element_xpath_wrap'/>")
 		$("#tables").append(it)
 		
 		let pathlink="http://reference.iatistandard.org/203/activity-standard"+(path.split("@")[0])
@@ -84,6 +46,7 @@ var insert_page=function()
 			<a class="element_iati" target="_blank" href="${pathlink}">See this element on IATI Standard</a>
 		</div>
 		`)
+*/
 
 // check some data exists
 		let max_count=0
@@ -97,11 +60,11 @@ var insert_page=function()
 		}
 		if( max_count == 0 )
 		{
-			it.append(`<div>No data published.</div>`)
+			//it.append(`<div>No data published.</div>`)
 		}
 		else
 		{
-			let tab=$(`<table class="tab_xpath"/>`)
+			/*let tab=$(`<table class="tab_xpath"/>`)
 			it.append(tab)
 			
 			let thead=$("<tr/>")
@@ -148,7 +111,7 @@ var insert_page=function()
 				{
 					trow.append(`<td></td>`)
 				}
-			}
+			}*/
 	   
 			let cnames=["count","activities","publishers","distinct"]
 
@@ -176,7 +139,7 @@ var insert_page=function()
 					<div class="cval">${cval}</div>
 				</div>
 				`)
-				it.append(cdiv)
+				//it.append(cdiv)
 			}
 		}
 	}
@@ -188,10 +151,10 @@ var insert_page=function()
 	{
 		idx++
 		
-		let it=$(`<div id='percentage${idx}' class='percent'/>`)
-		$("#tables").append(it)
+		let it=$(`<div id='percentage${idx}' class='percent_xpath'/>`)
+		$("#tables_percent").append(it)
 
-		it.append(`<div>Percentage of <span class="span_element">${group}</span> that include data for each valid xpath</div>`)
+		it.append(`<div class="percent_head">Percentage of <span class="span_element">${group}</span></div>`)
 
 		let tab=$(`<table class="tab_xpath"/>`)
 		it.append(tab)

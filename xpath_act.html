@@ -1,46 +1,28 @@
 <html id="top" lang="en">
-  <head>
-	<title>D-Portal Logs</title>
+ <head>
+	<title>D-Portal Xpath Stats</title>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 	<link rel="stylesheet" type="text/css" href="all.css">
 	<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
-	 <script src="logs.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https:////cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.min.js"></script>
+	<script src="xpath_act.js"></script>
  </head>
   <body>
 	<div class="nav_wrap">
 		<div class="nav">
 			<div class="left_nav">
-				<a class="home_link" href="./index.html">Home</a>
+				<a class="home_link" href="./index.html">Home</a><a class="about_link" href="#percentage1">Percentage of elements used</a>
 			</div><div class="right_nav">
 				<span>Please be aware that these pages take awhile to load.</span><a class="log_link" href="./logs.html">Logs</a><a class="stat_link" href="./xpath.html">Xpath Stats</a>
 			</div>
 		</div>
 	</div>
-	<div class="log_wrap">
-		<div class="log">
-			<div class="info_wrap">
-				The Database provides a snapshot of all data found in the live d-portal database. This is updated <b>nightly</b>.
-			</div>
-			<div id="tables_main"></div>
-			<div class="info_wrap">
-				The following are tables with figures representing the number of <b>distinct</b> (unique) values in the column; ie. repeated values are not counted.
-			</div>
-			<div class="info_wrap">
-				Certain parts of IATI data have been indexed into tables specifically to be displayed in d-portal.
-				<p>The <b>Act</b> table (<i>created in 2014</i>) forms the base of the website but has been used as a stable API for external tools like the <a href="https://data.humdata.org/organization/iati">Humanitarian Data Exchange</a> for many years, despite being an internal tool.</p>
-				<p>We create a lot of indexes because, as a public facing site, we need the database queries to run as fast as possible.</p>
-			</div>
-			<div class="info_wrap">
-				The <b>Xson</b> table (<i>created in 2020</i>) accommodates more complex data needs and searches as it includes all activity and organisation elements according to the IATI Standard, as well as non-standard attributes and extensions that can be found in published data.
-				<p>As such, for uses beyond the d-portal user interface, you can now explore <a href="http://d-portal.org/dquery/">dQuery</a> by using SQL in the browser.</p>
-			</div>
-			<a class="log_chart_link" href="./logs_chart.html">View log charts of these tables (<i>take awhile to load</i>).</a>
-			<div id="tables"></div>
-		</div>
-	</div>
+	<div id="tables"></div>
 	<div class="wrap">
 		<div class="foot_wrap">
 			<div class="foot_cont">

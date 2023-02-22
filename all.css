@@ -20,17 +20,22 @@ img		{max-width:100%; height:auto;}
 .wrap		{background:#fff;}
 .log_wrap,
 .tab_wrap,
+.percent_wrap,
 .log		{margin:0 auto; width:100%;}
 .tab_wrap	{padding-bottom:3em; width:960px;}
 .info_wrap	{padding:0 0 1.5em 0; font-size:14px;}
 .log_wrap_chart	{width:90%; padding-bottom:3em;}
 .log		{padding:5em 0 3em 0; width:960px;}
+.percent_wrap{padding:5em 0 0 0; width:960px;}
 .log_chart	{padding-bottom:0; text-align:center;}
 
 a.log_butt,
 a.stat_butt	{width:49%; margin:0 auto; display:inline-block; vertical-align:top; text-decoration:none; font-size:32px; color:#444;}
 a.stat_butt	{width:51%; padding-left:1em; border-left:2px solid #ccc;}
 a:hover span{color:#6188e2;}
+
+a.log_chart_link		{background:#444; border-radius:6px; color:#fff; display:block; text-align:center; padding:0.8em;}
+a.log_chart_link:hover	{background:#555;}
 
 .log_butt span,
 .stat_butt span		{display:block;}
@@ -100,7 +105,10 @@ table.spark_table a:active	{color:#6188e2;}
 
 /*	Table Styles	*/
 #tables			{padding-top:2em;}
-table.tab_xpath	{border-spacing:0; table-layout:fixed; width:100%;}
+#tables_percent	{width:960px; margin:0 auto;}
+.percent_xpath table.tab_xpath,
+table.tab_xpath	{border-spacing:0; table-layout:fixed; width:100%; margin-bottom:1em;}
+.percent_xpath table.tab_xpath	{table-layout:initial;}
 table.tab_xpath	th		{text-align:left; padding:0 20px 10px 20px; border-bottom:1px solid #ccc; color:#666; font-size:12px; text-transform:uppercase;}
 table.tab_xpath	th.rank	{width:5%;}
 table.tab_xpath	th.count{width:10%;}
@@ -115,23 +123,34 @@ table.tab_xpath	td:nth-of-type(2)	{font-family:monospace; overflow-wrap:initial;
 table.tab_xpath	td:last-of-type		{word-break:break-all;}
 
 /*	Element section	*/
-.element_wrap, 
-.pid_title_wrap	{position:relative; width:960px; margin:auto; padding-bottom:1em;}
-.element_wrap	{padding-bottom:3em;}
+.element_xpath_wrap,
+.element_data_wrap,
+.pid_title_wrap	{position:relative; width:960px; margin:auto;}
+.element_wrap	{width:100%; margin:0 auto; padding-bottom:2em;}
 .element_link_wrap			{padding:40px 0 30px 0;}
 .element_link_wrap a		{display:block; color:#6188e2;}
 .element_link_wrap a:hover	{color:#004dff;}
 a.element		{font-size:18px; font-weight:bold; font-family:monospace; position:sticky; top:40px; z-index:1; background-color:#ececec; padding:20px 40px; margin-left:-20px; border-radius:20px;}
 a.element_iati	{font-size:10px; padding:10px 20px 0 0; text-align:right; text-transform:uppercase;}
 a.element_iati:after	{content:"\279A"; margin-left:5px; font-size:14px;}
-.graph_wrap		{width:100%; height:380px; padding:2em 0 0 0;}
-.graph			{height:320px; position:relative;}
-.graph_head		{color:#666; font-size:14px; font-weight:bold; text-transform:uppercase; padding-bottom:1em;}
+
+/*	Charts height options	*/
+.graph_wrap		{width:90%; height:480px; margin:0 auto; padding:2em 0 0 0;}
+.graph			{height:440px; position:relative;}
+.graph.big		{height:540px;}
+.graph_wrap.big	{height:620px;}
+.graph_xpath_head,
+.graph_head		{color:#666; font-size:14px; font-weight:bold; text-transform:uppercase; width:960px; margin:0 auto;}
+.graph_xpath_head{display:inline-block; vertical-align:top; width:47%; text-align:center; margin:1em 1em 0 1em; padding:1em 0; border-radius:6px; background:#fdfdfd;}
+.cval			{font-weight:normal; font-size:20px;}
 .chart_wrap .graph_head	{padding-left:3em;}
 
 /*	Percentage section	*/
 .percent		{width:960px; margin:auto; margin-bottom:3em;}
 .percent div	{font-size:20px; color:#666; padding-bottom:1em; padding-top:4em;}
+.percent_head	{font-size:20px; color:#666; padding:1em 0;}
+.percent_xpath	{width:48%; margin:auto; margin-top:1.5em; margin-bottom:3em; display:inline-block; background:#fff; border-radius:6px; padding:0 2%;}
+#percentage2	{margin-left:2%; padding-left:2%;}
 .span_element	{font-size:18px; font-family:monospace;}
   
 /*	Mobile-Last		*/
