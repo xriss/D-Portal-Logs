@@ -1,6 +1,6 @@
 <html id="top" lang="en">
  <head>
-	<title>D-Portal Xpath Stats</title>
+	<title>D-Portal Xpath Percentage</title>
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 	<link rel="stylesheet" type="text/css" href="all.css">
 	<script
@@ -10,19 +10,36 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https:////cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.min.js"></script>
-	<script src="xpath.js"></script>
+	<script src="xpath_all.js"></script>
  </head>
   <body>
 	<div class="nav_wrap">
 		<div class="nav">
 			<div class="left_nav">
-				<a class="home_link" href="./index.html">Home</a><a class="about_link" href="#percentage1">Percentage of elements used</a>
+				<a class="home_link" href="./index.html">Home</a>
 			</div><div class="right_nav">
-				<span>Please be aware that these pages take awhile to load.</span><a class="log_link" href="./logs.html">Logs</a><a class="stat_link" href="./xpath.html">Xpath Stats</a>
+				<span>Please be aware that these pages take awhile to load.</span><a class="log_link" href="./logs.html">Logs</a><a class="stat_link" href="./xpath_all.html">Xpath Stats</a>
 			</div>
 		</div>
 	</div>
-	<div id="tables"></div>
+	<div class="log_wrap">
+		<div class="percent_wrap">
+			<div class="info_wrap">
+				The percentages show how much a certain element is used in activity or organisation data.
+				<p>It is useful to see how popular which elements are so we know what data is being published and used by publishers when reporting them.</p>
+				<p>To get the percentages, we calculate the number of activities that use the element and divide it by the total number of activities.</p>
+			</div>
+			<div class="info_wrap">
+				For a historical timeline of all IATI elements used, you may want to visit the views with graphs below. Visit snapshots for a simpler view.
+			</div>
+			<a class="log_chart_link" href="./xpath.html">Snapshot of all IATI elements use with example activities</a>
+			<div class="link_wrap">
+				<a class="log_chart_link" href="./xpath_act.html">View historical Activity elements use (with graphs)</a>
+				<a class="log_chart_link" href="./xpath_org.html">View historical Organisation elements use (with graphs)</a>
+			</div>
+		</div>
+	</div>
+	<div id="tables_percent"></div>
 	<div class="wrap">
 		<div class="foot_wrap">
 			<div class="foot_cont">
