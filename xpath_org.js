@@ -8,7 +8,8 @@ var goto_hash=function()
 	
 	let s=window.location.hash
 	
-	document.getElementById( s.substring(1) ).scrollIntoView(true)
+	let e=document.getElementById( s.substring(1) )
+	if(e){ e.scrollIntoView(true) }
 //	window.scrollBy(0,-50)
 }
 
@@ -50,9 +51,26 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
 				$(()=>{
 					insert_page()
 					goto_hash()
+					lazy_load()
 				})
 			})
 		}
+
+window.lazyFunctions={}
+var lazy_load=function()
+{
+	function executeLazyFunction(element) {
+	  var lazyFunctionName = element.getAttribute("data-lazy-function");
+	  var lazyFunction = window.lazyFunctions[lazyFunctionName];
+	  if (!lazyFunction) return;
+	  lazyFunction(element);
+	}
+
+	var ll = new LazyLoad({
+	  unobserve_entered: true, // <- Avoid executing the function multiple times
+	  callback_enter: executeLazyFunction // Assigning the function defined above
+	});
+}
 
 var insert_page=function()
 {
@@ -191,7 +209,7 @@ var insert_page=function()
 				
 				let cval=(clast/1).toLocaleString("en", { useGrouping: true })
 				cdiv.append(`<div class="graph_head">${cname} = ${cval}</div>`)
-				cdiv.append(`<div id="chart${chartidx}" class="graph"/>`)
+				cdiv.append(`<div id="chart${chartidx}" class="graph lazy" data-lazy-function="${chartidx}" />`)
 
 				let confs={
 					axisX: {
@@ -221,7 +239,12 @@ var insert_page=function()
 				
 				
 
-				let chart=new Chartist.Line( "#chart"+chartidx, datas , confs );
+				let lazyidx=chartidx
+				window.lazyFunctions[lazyidx]=function()
+				{
+//					console.log("Lazy loaded #chart"+lazyidx)
+					let chart=new Chartist.Line( "#chart"+lazyidx, datas , confs );
+				}
 
 			}
 		}
