@@ -158,8 +158,13 @@ a.element_iati:after	{content:"\279A"; margin-left:5px; font-size:14px;}
 /*	Mobile-Last		*/
 @media screen and (max-width: 1024px) {
 body	{margin:0 auto; width:100%; padding:2em 0;}
+.element_xpath_wrap, .element_data_wrap,
+.pid_title_wrap, .percent_wrap, .graph_head,
 .wrap	{width:initial;}
 .log	{padding:2em 3em 0 2em; margin:2em 0;}
+.element_xpath_wrap, .element_data_wrap,
+.pid_title_wrap	{padding:0 2em;}
+.percent_wrap	{padding:5em 2em 0 2em;}
 .left_nav, .right_nav		{height:80px;}
 .left_nav a, .right_nav a, a.top	{font-size:2em; border:0;}
 a.log_butt, a.stat_butt		{display:block; width:100%; height:initial; padding:0; border:0;}
@@ -167,9 +172,16 @@ a.log_butt	{padding-bottom:2em;}
 a.log_butt span, a.stat_butt span,
 .log_butt span.text, .stat_butt span.text,
 table.spark_table th,
-table.spark_table,
+table.tab_xpath th,
 .info_wrap, .stat,
-.foot_wrap	{font-size:1em;}
+a.element_iati::after,
+.graph_xpath_head, .graph_head,
+a.log_chart_link, .percent_head,
+.foot_cont_right .foot_text,
+.foot_small, .foot_wrap	{font-size:1em;}
+table.spark_table,
+table.tab_xpath td {font-size:1.2em; word-break:break-word;}
+.graph_xpath_head	{width:46%;}
 .foot_cont	{width:80%;}
 .foot_cont_right	{width:20%;}
 
