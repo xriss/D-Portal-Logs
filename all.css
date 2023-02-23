@@ -157,10 +157,22 @@ a.element_iati:after	{content:"\279A"; margin-left:5px; font-size:14px;}
   
 /*	Mobile-Last		*/
 @media screen and (max-width: 1024px) {
-	body	{margin:0 auto; width:100%; padding:4em 2em;}
-	.wrap	{width:initial;}
-	.right_nav span	{display:none;}
-	a.log_butt, a.stat_butt		{display:block; width:100%; height:initial; padding:0; padding-bottom:2em; border:0;}
+body	{margin:0 auto; width:100%; padding:2em 0;}
+.wrap	{width:initial;}
+.log	{padding:2em 3em 0 2em; margin:2em 0;}
+.left_nav, .right_nav		{height:80px;}
+.left_nav a, .right_nav a, a.top	{font-size:2em; border:0;}
+a.log_butt, a.stat_butt		{display:block; width:100%; height:initial; padding:0; border:0;}
+a.log_butt	{padding-bottom:2em;}
+a.log_butt span, a.stat_butt span,
+.log_butt span.text, .stat_butt span.text,
+table.spark_table th,
+table.spark_table,
+.info_wrap, .stat,
+.foot_wrap	{font-size:1em;}
+.foot_cont	{width:80%;}
+.foot_cont_right	{width:20%;}
+
 }
 
 /*	Chartist.js		*/
