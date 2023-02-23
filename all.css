@@ -181,10 +181,14 @@ a.log_chart_link, .percent_head,
 .foot_small, .foot_wrap	{font-size:1em;}
 table.spark_table,
 table.tab_xpath td {font-size:1.2em; word-break:break-word;}
+.percent_xpath table.tab_xpath,
+table.tab_xpath		{table-layout:auto;}
+table.tab_xpath th.rank	{width:6%;}
+table.tab_xpath th.count{width:13%;}
+table.tab_xpath th.pub	{width:22%;}
 .graph_xpath_head	{width:46%;}
 .foot_cont	{width:80%;}
 .foot_cont_right	{width:20%;}
-
 }
 
 /*	Chartist.js		*/
