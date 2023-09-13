@@ -3,15 +3,15 @@
   "/iati-activities/iati-activity/activity-date/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -19,15 +19,15 @@
   "/iati-activities/iati-activity/activity-date/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -35,15 +35,17 @@
   "/iati-activities/iati-activity/activity-date@iso-date": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "192",
-    "19612": "192"
+    "19612": "192",
+    "19613": "198"
    },
    "distinct": {
     "19543": "21",
-    "19612": "21"
+    "19613": "21"
    },
    "top": [
     {
@@ -77,6 +79,11 @@
      "value": "2019-01-01"
     },
     {
+     "aid": "DK-CVR-29439915-HX022021",
+     "count": "9",
+     "value": "2022-01-01"
+    },
+    {
      "aid": "DK-CVR-29439915-2022-25HUMNE",
      "count": "6",
      "value": "2025-12-31"
@@ -90,37 +97,34 @@
      "aid": "DK-CVR-29439915-HX022017",
      "count": "3",
      "value": "2018-12-31"
-    },
-    {
-     "aid": "DK-CVR-29439915-HX022021",
-     "count": "3",
-     "value": "2022-01-01"
     }
    ]
   },
   "/iati-activities/iati-activity/activity-date@type": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "192",
-    "19612": "192"
+    "19612": "192",
+    "19613": "198"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
+    {
+     "aid": "DK-CVR-29439915-HX022021",
+     "count": "88",
+     "value": "2"
+    },
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
      "count": "88",
      "value": "3"
-    },
-    {
-     "aid": "DK-CVR-29439915-HX022021",
-     "count": "82",
-     "value": "2"
     },
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
@@ -132,20 +136,22 @@
   "/iati-activities/iati-activity/activity-scope@code": {
    "activities": {
     "19543": "91",
-    "19612": "91"
+    "19612": "91",
+    "19613": "97"
    },
    "count": {
     "19543": "91",
-    "19612": "91"
+    "19612": "91",
+    "19613": "97"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-HX022021",
-     "count": "69",
+     "count": "75",
      "value": "1"
     },
     {
@@ -163,20 +169,22 @@
   "/iati-activities/iati-activity/activity-status@code": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-HX022021",
-     "count": "83",
+     "count": "89",
      "value": "2"
     },
     {
@@ -199,15 +207,17 @@
   "/iati-activities/iati-activity/budget/period-end@iso-date": {
    "activities": {
     "19543": "92",
-    "19612": "92"
+    "19612": "92",
+    "19613": "98"
    },
    "count": {
     "19543": "185",
-    "19612": "185"
+    "19612": "185",
+    "19613": "191"
    },
    "distinct": {
     "19543": "8",
-    "19612": "8"
+    "19613": "8"
    },
    "top": [
     {
@@ -231,14 +241,14 @@
      "value": "2021-12-31"
     },
     {
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
+     "count": "19",
+     "value": "2022-12-31"
+    },
+    {
      "aid": "DK-CVR-29439915-RAM2017ZI",
      "count": "14",
      "value": "2017-12-31"
-    },
-    {
-     "aid": "DK-CVR-29439915-2022-25HUMUGCU",
-     "count": "13",
-     "value": "2022-12-31"
     },
     {
      "aid": "DK-CVR-29439915-2022-25HUMRO",
@@ -255,15 +265,18 @@
   "/iati-activities/iati-activity/budget/period-start@iso-date": {
    "activities": {
     "19543": "92",
-    "19612": "92"
+    "19612": "92",
+    "19613": "98"
    },
    "count": {
     "19543": "185",
-    "19612": "185"
+    "19612": "185",
+    "19613": "191"
    },
    "distinct": {
     "19543": "10",
-    "19612": "10"
+    "19612": "10",
+    "19613": "11"
    },
    "top": [
     {
@@ -297,6 +310,11 @@
      "value": "2022-03-01"
     },
     {
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
+     "count": "6",
+     "value": "2022-01-01"
+    },
+    {
      "aid": "DK-CVR-29439915-HX012017",
      "count": "1",
      "value": "2017-08-01"
@@ -310,26 +328,24 @@
      "aid": "DK-CVR-29439915-2022-25HUMRO",
      "count": "1",
      "value": "2022-04-01"
-    },
-    {
-     "aid": "DK-CVR-29439915-2022-25HUMPK",
-     "count": "1",
-     "value": "2022-08-01"
     }
    ]
   },
   "/iati-activities/iati-activity/budget/value": {
    "activities": {
     "19543": "92",
-    "19612": "92"
+    "19612": "92",
+    "19613": "98"
    },
    "count": {
     "19543": "185",
-    "19612": "185"
+    "19612": "185",
+    "19613": "191"
    },
    "distinct": {
     "19543": "135",
-    "19612": "135"
+    "19612": "135",
+    "19613": "140"
    },
    "top": [
     {
@@ -387,20 +403,22 @@
   "/iati-activities/iati-activity/budget/value@currency": {
    "activities": {
     "19543": "92",
-    "19612": "92"
+    "19612": "92",
+    "19613": "98"
    },
    "count": {
     "19543": "185",
-    "19612": "185"
+    "19612": "185",
+    "19613": "191"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "185",
+     "count": "191",
      "value": "DKK"
     }
    ]
@@ -408,15 +426,18 @@
   "/iati-activities/iati-activity/budget/value@value-date": {
    "activities": {
     "19543": "92",
-    "19612": "92"
+    "19612": "92",
+    "19613": "98"
    },
    "count": {
     "19543": "185",
-    "19612": "185"
+    "19612": "185",
+    "19613": "191"
    },
    "distinct": {
     "19543": "13",
-    "19612": "13"
+    "19612": "13",
+    "19613": "14"
    },
    "top": [
     {
@@ -450,9 +471,9 @@
      "value": "2022-03-01"
     },
     {
-     "aid": "DK-CVR-29439915-2018/21-CIVIN-UE-02-2018-Tezpur_Social_Service_Society_(TSSS)",
-     "count": "1",
-     "value": "2018-12-31"
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
+     "count": "6",
+     "value": "2022-01-01"
     },
     {
      "aid": "DK-CVR-29439915-HX012017",
@@ -474,20 +495,22 @@
   "/iati-activities/iati-activity/budget@status": {
    "activities": {
     "19543": "92",
-    "19612": "92"
+    "19612": "92",
+    "19613": "98"
    },
    "count": {
     "19543": "185",
-    "19612": "185"
+    "19612": "185",
+    "19613": "191"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-HX-02-2020",
-     "count": "115",
+     "count": "121",
      "value": "2"
     },
     {
@@ -500,20 +523,22 @@
   "/iati-activities/iati-activity/budget@type": {
    "activities": {
     "19543": "91",
-    "19612": "91"
+    "19612": "91",
+    "19613": "97"
    },
    "count": {
     "19543": "184",
-    "19612": "184"
+    "19612": "184",
+    "19613": "190"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "183",
+     "count": "189",
      "value": "1"
     },
     {
@@ -526,15 +551,15 @@
   "/iati-activities/iati-activity/capital-spend@percentage": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -542,20 +567,22 @@
   "/iati-activities/iati-activity/collaboration-type@code": {
    "activities": {
     "19543": "103",
-    "19612": "103"
+    "19612": "103",
+    "19613": "109"
    },
    "count": {
     "19543": "103",
-    "19612": "103"
+    "19612": "103",
+    "19613": "109"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "103",
+     "count": "109",
      "value": "1"
     }
    ]
@@ -563,15 +590,15 @@
   "/iati-activities/iati-activity/conditions/condition/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -579,15 +606,15 @@
   "/iati-activities/iati-activity/conditions/condition/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -595,15 +622,15 @@
   "/iati-activities/iati-activity/conditions/condition@type": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -611,15 +638,15 @@
   "/iati-activities/iati-activity/conditions@attached": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -627,15 +654,15 @@
   "/iati-activities/iati-activity/contact-info/department/narrative": {
    "activities": {
     "19543": "80",
-    "19612": "80"
+    "19613": "80"
    },
    "count": {
     "19543": "80",
-    "19612": "80"
+    "19613": "80"
    },
    "distinct": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "top": [
     {
@@ -663,15 +690,15 @@
   "/iati-activities/iati-activity/contact-info/department/narrative@xml:lang": {
    "activities": {
     "19543": "80",
-    "19612": "80"
+    "19613": "80"
    },
    "count": {
     "19543": "80",
-    "19612": "80"
+    "19613": "80"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -684,15 +711,15 @@
   "/iati-activities/iati-activity/contact-info/email": {
    "activities": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "count": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -710,15 +737,15 @@
   "/iati-activities/iati-activity/contact-info/job-title/narrative": {
    "activities": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "count": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
@@ -741,15 +768,15 @@
   "/iati-activities/iati-activity/contact-info/job-title/narrative@xml:lang": {
    "activities": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "count": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -762,15 +789,15 @@
   "/iati-activities/iati-activity/contact-info/mailing-address/narrative": {
    "activities": {
     "19543": "62",
-    "19612": "62"
+    "19613": "62"
    },
    "count": {
     "19543": "62",
-    "19612": "62"
+    "19613": "62"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
@@ -793,15 +820,15 @@
   "/iati-activities/iati-activity/contact-info/mailing-address/narrative@xml:lang": {
    "activities": {
     "19543": "62",
-    "19612": "62"
+    "19613": "62"
    },
    "count": {
     "19543": "62",
-    "19612": "62"
+    "19613": "62"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -814,15 +841,15 @@
   "/iati-activities/iati-activity/contact-info/organisation/narrative": {
    "activities": {
     "19543": "81",
-    "19612": "81"
+    "19613": "81"
    },
    "count": {
     "19543": "81",
-    "19612": "81"
+    "19613": "81"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -840,15 +867,15 @@
   "/iati-activities/iati-activity/contact-info/organisation/narrative@xml:lang": {
    "activities": {
     "19543": "81",
-    "19612": "81"
+    "19613": "81"
    },
    "count": {
     "19543": "81",
-    "19612": "81"
+    "19613": "81"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -861,15 +888,15 @@
   "/iati-activities/iati-activity/contact-info/person-name/narrative": {
    "activities": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "count": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -887,15 +914,15 @@
   "/iati-activities/iati-activity/contact-info/person-name/narrative@xml:lang": {
    "activities": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "count": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -908,15 +935,15 @@
   "/iati-activities/iati-activity/contact-info/telephone": {
    "activities": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "count": {
     "19543": "83",
-    "19612": "83"
+    "19613": "83"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
@@ -939,15 +966,15 @@
   "/iati-activities/iati-activity/contact-info/website": {
    "activities": {
     "19543": "79",
-    "19612": "79"
+    "19613": "79"
    },
    "count": {
     "19543": "79",
-    "19612": "79"
+    "19613": "79"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -965,15 +992,15 @@
   "/iati-activities/iati-activity/contact-info@type": {
    "activities": {
     "19543": "65",
-    "19612": "65"
+    "19613": "65"
    },
    "count": {
     "19543": "65",
-    "19612": "65"
+    "19613": "65"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -991,15 +1018,15 @@
   "/iati-activities/iati-activity/country-budget-items/budget-item/description/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1007,15 +1034,15 @@
   "/iati-activities/iati-activity/country-budget-items/budget-item/description/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1023,15 +1050,15 @@
   "/iati-activities/iati-activity/country-budget-items/budget-item@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1039,15 +1066,15 @@
   "/iati-activities/iati-activity/country-budget-items/budget-item@percentage": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1055,15 +1082,15 @@
   "/iati-activities/iati-activity/country-budget-items@vocabulary": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1071,15 +1098,15 @@
   "/iati-activities/iati-activity/crs-add/channel-code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1087,15 +1114,15 @@
   "/iati-activities/iati-activity/crs-add/loan-status/interest-arrears": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1103,15 +1130,15 @@
   "/iati-activities/iati-activity/crs-add/loan-status/interest-received": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1119,15 +1146,15 @@
   "/iati-activities/iati-activity/crs-add/loan-status/principal-arrears": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1135,15 +1162,15 @@
   "/iati-activities/iati-activity/crs-add/loan-status/principal-outstanding": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1151,15 +1178,15 @@
   "/iati-activities/iati-activity/crs-add/loan-status@currency": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1167,15 +1194,15 @@
   "/iati-activities/iati-activity/crs-add/loan-status@value-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1183,15 +1210,15 @@
   "/iati-activities/iati-activity/crs-add/loan-status@year": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1199,15 +1226,15 @@
   "/iati-activities/iati-activity/crs-add/loan-terms/commitment-date@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1215,15 +1242,15 @@
   "/iati-activities/iati-activity/crs-add/loan-terms/repayment-final-date@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1231,15 +1258,15 @@
   "/iati-activities/iati-activity/crs-add/loan-terms/repayment-first-date@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1247,15 +1274,15 @@
   "/iati-activities/iati-activity/crs-add/loan-terms/repayment-plan@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1263,15 +1290,15 @@
   "/iati-activities/iati-activity/crs-add/loan-terms/repayment-type@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1279,15 +1306,15 @@
   "/iati-activities/iati-activity/crs-add/loan-terms@rate-1": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1295,15 +1322,15 @@
   "/iati-activities/iati-activity/crs-add/loan-terms@rate-2": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1311,15 +1338,15 @@
   "/iati-activities/iati-activity/crs-add/other-flags@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1327,15 +1354,15 @@
   "/iati-activities/iati-activity/crs-add/other-flags@significance": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1343,20 +1370,22 @@
   "/iati-activities/iati-activity/default-aid-type@code": {
    "activities": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-HX022021",
-     "count": "81",
+     "count": "87",
      "value": "C01"
     },
     {
@@ -1374,20 +1403,22 @@
   "/iati-activities/iati-activity/default-aid-type@vocabulary": {
    "activities": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "102",
+     "count": "108",
      "value": "1"
     }
    ]
@@ -1395,20 +1426,22 @@
   "/iati-activities/iati-activity/default-finance-type@code": {
    "activities": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "102",
+     "count": "108",
      "value": "110"
     }
    ]
@@ -1416,20 +1449,22 @@
   "/iati-activities/iati-activity/default-flow-type@code": {
    "activities": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-DK-CVR-29439915-2018/21-CIVNI-Management_Cost",
-     "count": "79",
+     "count": "85",
      "value": "30"
     },
     {
@@ -1442,20 +1477,22 @@
   "/iati-activities/iati-activity/default-tied-status@code": {
    "activities": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "102",
+     "count": "108",
      "value": "5"
     }
    ]
@@ -1463,15 +1500,18 @@
   "/iati-activities/iati-activity/description/narrative": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "117",
-    "19612": "117"
+    "19612": "117",
+    "19613": "123"
    },
    "distinct": {
     "19543": "67",
-    "19612": "67"
+    "19612": "67",
+    "19613": "70"
    },
    "top": [
     {
@@ -1495,14 +1535,14 @@
      "value": "Caritas Denmark’s support to India is geographically focused to the isolated region of North East India, bordering Myanmar, China, Bhutan and Bangladesh. Caritas Denmark has worked with five partners in this region since 1999. The programme has been one of Caritas Denmark’s most successful, where in 2015 the target groups managed to fundraise more funds locally than those received from Caritas Denmark. An exit strategy for the end of 2018 has therefore been underway over the past three years. The programme will be consolidated with a 2018 budget of DKK 1.8 million. The programme has demonstrated positive impact in improving the livelihoods of the rural farmers in North East India and the programme is assessed to be sustainable. Funds for the on-going activities are secured by tapping into Indian government development funds. The focus of the exit phase is to consolidate the already-made changes, especially those of the federations, which are key to support self-help groups in gaining sustainability. These self-help groups have been supported to start up community loan groups and strengthen the marketing of their agricultural produce. This is done through value-chain activities and the establishment of a marketing association, serving farmers in the region. At the same time, the farmers have received training in business development to allow them to access both the national market as well as the international market."
     },
     {
-     "aid": "DK-CVR-29439915-2022-25DEVUGEADEN",
-     "count": "4",
-     "value": "Overall objective of the country programme 2022-25:\nStrengthen the resilience, social cohesion and living conditions of the populations in Uganda \nconfronted with the effects of the multifaceted crisis by enhancing sustainable food production, \nincreased income, and their capacity to act as change agents of own and community welfare.\n\nThe long-term changes (outcomes) of the country engagement 2022-2025:\n1. Farmer cooperatives, local partners and national advocacy platforms are voicing interests of \nsmall-scale farmers, refugees, and youths on issues of relevance to them, including climate \nchange adaptation, land rights and access of women and refugees, youth employment and \neasy market certification of value-added produce\n2. Small-scale farmers have increased sustainable production and sale of produce through \norganised farming and climate smart techniques\n3. Increased access and use of innovative green technology solutions reducing deforestation and \nwood fuel dependence among refugee, host, and vulnerable households\n4. Youth and women are empowered and have gained increased influence through leadership \npositions, school peace clubs, the national youth-led advocacy platform (NYAP) and \npromotion of gender equity\n5. All direct local partners (incl. at diocesan level) comply with CIMS and /or CHS\n6. Local partners take lead and have increased influence at the international sphere"
-    },
-    {
      "aid": "DK-CVR-29439915-2018/21-CIVMM-UE-02-2016-Management_Cost",
      "count": "4",
      "value": "In Myanmar, Caritas Denmark works with the local partner Karuna Mission Social Solidarity (KMSS – Caritas Myanmar) to promote sustainable agricultural development, strengthening of civil society at the community level, through organisation and training of community groups alongside advocacy promoting the rights of poor agricultural communities. During 2018-2021 Caritas Denmark will continue to work in seven areas where programme activities have been implemented since 2005, with a four-year budget of DKK 20 million. The focus during 2018-21 is to strengthen the human rights-based approach in the programme. The aim is to address issues that are affecting the rural poor farmers and their livelihood. Furthermore, Caritas Denmark will take a nexus approach in programme planning and implementation to address climate change via disaster risk reduction and climate change adaptation measures as most farmers’ livelihoods are affected by changes in seasonal weather patterns and natural disasters. Caritas Denmark will work together with CAFOD in Myanmar in a strategic partnership to enhance locally led humanitarian response capacity."
+    },
+    {
+     "aid": "DK-CVR-29439915-2022-25DEVUGEADEN",
+     "count": "4",
+     "value": "Overall objective of the country programme 2022-25:\nStrengthen the resilience, social cohesion and living conditions of the populations in Uganda \nconfronted with the effects of the multifaceted crisis by enhancing sustainable food production, \nincreased income, and their capacity to act as change agents of own and community welfare.\n\nThe long-term changes (outcomes) of the country engagement 2022-2025:\n1. Farmer cooperatives, local partners and national advocacy platforms are voicing interests of \nsmall-scale farmers, refugees, and youths on issues of relevance to them, including climate \nchange adaptation, land rights and access of women and refugees, youth employment and \neasy market certification of value-added produce\n2. Small-scale farmers have increased sustainable production and sale of produce through \norganised farming and climate smart techniques\n3. Increased access and use of innovative green technology solutions reducing deforestation and \nwood fuel dependence among refugee, host, and vulnerable households\n4. Youth and women are empowered and have gained increased influence through leadership \npositions, school peace clubs, the national youth-led advocacy platform (NYAP) and \npromotion of gender equity\n5. All direct local partners (incl. at diocesan level) comply with CIMS and /or CHS\n6. Local partners take lead and have increased influence at the international sphere"
     },
     {
      "aid": "DK-CVR-29439915-2018/21-HUMJO-Management_Cost",
@@ -1515,34 +1555,36 @@
      "value": "The overall objective for the Lot HUM partnership engagement is: Save lives and alleviate suffering through effective and timely needs-based assistance and accompaniment to local response initiatives in support of vulnerable persons, households and communities impacted by conflict or natural disaster. Interventions build on and strengthen beneficiary and partner capacities to address vulnerabilities, enhance self-reliance and strengthen resilience to future shocks."
     },
     {
-     "aid": "DK-CVR-29439915-2022-25HUMSEA",
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
      "count": "2",
-     "value": "Overall objective of the country engagement:\nThe farming households of rural communities are food secure, have sustainable livelihoods and \nare represented by strong CBOs that play an active part in the economic and social development \nof their communities"
+     "value": "A.3.a. - Programme support cost (HQ)"
     },
     {
-     "aid": "DK-CVR-29439915-2018/21-HUMUG-Management_Cost",
+     "aid": "DK-CVR-29439915-2022-25SPADEVA1a",
      "count": "2",
-     "value": "Caritas Denmark will during 2018-2021 scale-up its support amounting to DKK 9 million to Caritas Uganda for the provision of humanitarian response to the regional South Sudan displacement crises, which has seen more than 1 million refugees taking refuge in the Northern parts of Uganda. Caritas Denmark has worked for over 15 years with Caritas Uganda within its development portfolio. In 2017, the cooperation was expanded to include humanitarian activities within the agricultural sector in Northern Uganda with the grant of DKK 3.5 million from the MFA Call for Proposal for the South Sudan crisis. With ongoing conflict and increasing displacement from South Sudan into Uganda, Caritas Denmark will continue to provide livelihood support for vulnerable refugees and host populations. At the same time strengthening the capacity of Caritas Uganda and relevant implementing dioceses to be at the forefront of the humanitarian response in Northern Uganda. The aim of this is to enable an effective and efficient humanitarian response, which recognises and allows for a prominent role for local and national actors. Caritas Denmark will promote durable solutions for the South Sudanese refugees to ensure their dignity and ability to cater for their families. Caritas Uganda will in close collaboration with the Government of Uganda, the UN and NGOs provide agricultural tools and training for the newly arrived refugees. To prevent conflict over scarce resources in the region, host communities will also be included in the project activities."
+     "value": "A.1.a. - Direct activity cost (HQ)"
     }
    ]
   },
   "/iati-activities/iati-activity/description/narrative@xml:lang": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "117",
-    "19612": "117"
+    "19612": "117",
+    "19613": "123"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "117",
+     "count": "123",
      "value": "EN"
     }
    ]
@@ -1550,20 +1592,22 @@
   "/iati-activities/iati-activity/description@type": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "117",
-    "19612": "117"
+    "19612": "117",
+    "19613": "123"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "98",
+     "count": "104",
      "value": "1"
     },
     {
@@ -1576,15 +1620,15 @@
   "/iati-activities/iati-activity/document-link/category@code": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -1597,15 +1641,15 @@
   "/iati-activities/iati-activity/document-link/description/narrative": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "top": [
     {
@@ -1638,15 +1682,15 @@
   "/iati-activities/iati-activity/document-link/description/narrative@xml:lang": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -1659,15 +1703,15 @@
   "/iati-activities/iati-activity/document-link/document-date@iso-date": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -1680,15 +1724,15 @@
   "/iati-activities/iati-activity/document-link/language@code": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -1701,15 +1745,15 @@
   "/iati-activities/iati-activity/document-link/title/narrative": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
@@ -1732,15 +1776,15 @@
   "/iati-activities/iati-activity/document-link/title/narrative@xml:lang": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -1753,15 +1797,15 @@
   "/iati-activities/iati-activity/document-link@format": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -1774,15 +1818,15 @@
   "/iati-activities/iati-activity/document-link@url": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -1795,15 +1839,15 @@
   "/iati-activities/iati-activity/fss/forecast": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1811,15 +1855,15 @@
   "/iati-activities/iati-activity/fss/forecast@currency": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1827,15 +1871,15 @@
   "/iati-activities/iati-activity/fss/forecast@value-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1843,15 +1887,15 @@
   "/iati-activities/iati-activity/fss/forecast@year": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1859,15 +1903,15 @@
   "/iati-activities/iati-activity/fss@extraction-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1875,15 +1919,15 @@
   "/iati-activities/iati-activity/fss@phaseout-year": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1891,15 +1935,15 @@
   "/iati-activities/iati-activity/fss@priority": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1907,15 +1951,15 @@
   "/iati-activities/iati-activity/humanitarian-scope/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1923,15 +1967,15 @@
   "/iati-activities/iati-activity/humanitarian-scope/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1939,15 +1983,15 @@
   "/iati-activities/iati-activity/humanitarian-scope@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1955,15 +1999,15 @@
   "/iati-activities/iati-activity/humanitarian-scope@type": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1971,15 +2015,15 @@
   "/iati-activities/iati-activity/humanitarian-scope@vocabulary": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -1987,15 +2031,15 @@
   "/iati-activities/iati-activity/humanitarian-scope@vocabulary-uri": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2003,15 +2047,18 @@
   "/iati-activities/iati-activity/iati-identifier": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "top": [
     {
@@ -2069,15 +2116,15 @@
   "/iati-activities/iati-activity/legacy-data@iati-equivalent": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2085,15 +2132,15 @@
   "/iati-activities/iati-activity/legacy-data@name": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2101,15 +2148,15 @@
   "/iati-activities/iati-activity/legacy-data@value": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2117,15 +2164,15 @@
   "/iati-activities/iati-activity/location/activity-description/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2133,15 +2180,15 @@
   "/iati-activities/iati-activity/location/activity-description/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2149,15 +2196,15 @@
   "/iati-activities/iati-activity/location/administrative@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2165,15 +2212,15 @@
   "/iati-activities/iati-activity/location/administrative@level": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2181,15 +2228,15 @@
   "/iati-activities/iati-activity/location/administrative@vocabulary": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2197,15 +2244,15 @@
   "/iati-activities/iati-activity/location/description/narrative": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "top": [
     {
@@ -2238,15 +2285,15 @@
   "/iati-activities/iati-activity/location/description/narrative@xml:lang": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -2259,15 +2306,15 @@
   "/iati-activities/iati-activity/location/exactness@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2275,15 +2322,15 @@
   "/iati-activities/iati-activity/location/feature-designation@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2291,15 +2338,15 @@
   "/iati-activities/iati-activity/location/location-class@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2307,15 +2354,15 @@
   "/iati-activities/iati-activity/location/location-id@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2323,15 +2370,15 @@
   "/iati-activities/iati-activity/location/location-id@vocabulary": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2339,15 +2386,15 @@
   "/iati-activities/iati-activity/location/location-reach@code": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -2360,15 +2407,15 @@
   "/iati-activities/iati-activity/location/name/narrative": {
    "activities": {
     "19543": "8",
-    "19612": "8"
+    "19613": "8"
    },
    "count": {
     "19543": "8",
-    "19612": "8"
+    "19613": "8"
    },
    "distinct": {
     "19543": "6",
-    "19612": "6"
+    "19613": "6"
    },
    "top": [
     {
@@ -2406,15 +2453,15 @@
   "/iati-activities/iati-activity/location/name/narrative@xml:lang": {
    "activities": {
     "19543": "8",
-    "19612": "8"
+    "19613": "8"
    },
    "count": {
     "19543": "8",
-    "19612": "8"
+    "19613": "8"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -2427,15 +2474,15 @@
   "/iati-activities/iati-activity/location/point/pos": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -2448,15 +2495,15 @@
   "/iati-activities/iati-activity/location/point@srsName": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -2469,15 +2516,15 @@
   "/iati-activities/iati-activity/location@ref": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2485,15 +2532,15 @@
   "/iati-activities/iati-activity/other-identifier/owner-org/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2501,15 +2548,15 @@
   "/iati-activities/iati-activity/other-identifier/owner-org/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2517,15 +2564,15 @@
   "/iati-activities/iati-activity/other-identifier/owner-org@ref": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2533,15 +2580,15 @@
   "/iati-activities/iati-activity/other-identifier@ref": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2549,15 +2596,15 @@
   "/iati-activities/iati-activity/other-identifier@type": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2565,20 +2612,22 @@
   "/iati-activities/iati-activity/participating-org/narrative": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "314",
-    "19612": "314"
+    "19612": "314",
+    "19613": "332"
    },
    "distinct": {
     "19543": "40",
-    "19612": "40"
+    "19613": "40"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "126",
+     "count": "138",
      "value": "Caritas Denmark"
     },
     {
@@ -2588,7 +2637,7 @@
     },
     {
      "aid": "DK-CVR-29439915-HX022021",
-     "count": "16",
+     "count": "22",
      "value": "Denmark - Ministry of Foreign Affairs, Danida"
     },
     {
@@ -2631,20 +2680,22 @@
   "/iati-activities/iati-activity/participating-org/narrative@xml:lang": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "314",
-    "19612": "314"
+    "19612": "314",
+    "19613": "332"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "314",
+     "count": "332",
      "value": "EN"
     }
    ]
@@ -2652,15 +2703,18 @@
   "/iati-activities/iati-activity/participating-org@activity-id": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "236",
-    "19612": "236"
+    "19612": "236",
+    "19613": "254"
    },
    "distinct": {
     "19543": "46",
-    "19612": "46"
+    "19612": "46",
+    "19613": "47"
    },
    "top": [
     {
@@ -2674,6 +2728,16 @@
      "value": "XM-DAC-3-1-271167-32254"
     },
     {
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
+     "count": "19",
+     "value": "XM-DAC-3-1-286693-35493"
+    },
+    {
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
+     "count": "18",
+     "value": "DK-CVR-29439915-2022/25SPAHUM"
+    },
+    {
      "aid": "DK-CVR-29439915-2018/21 Strategic Partnerships Agreement LOT HUM",
      "count": "17",
      "value": "XM-DAC-3-1-271172-32555"
@@ -2684,29 +2748,19 @@
      "value": "DK-CVR-29439915-2018/21-HUM"
     },
     {
-     "aid": "DK-CVR-29439915-2022/25SPAHUM",
-     "count": "13",
-     "value": "XM-DAC-3-1-286693-35493"
-    },
-    {
      "aid": "DK-CVR-29439915-RAM2017ZI",
      "count": "13",
      "value": "DK-CVR-29439915-201411867-2017"
     },
     {
-     "aid": "DK-CVR-29439915-2022-25HUMUGCU",
-     "count": "12",
-     "value": "DK-CVR-29439915-2022/25SPAHUM"
+     "aid": "DK-CVR-29439915-HX022021",
+     "count": "9",
+     "value": "XM-DAC-3-1-286693-35492"
     },
     {
      "aid": "DK-CVR-29439915-HPA2017NI",
      "count": "9",
      "value": "DK-CVR-29439915-201642659-2017"
-    },
-    {
-     "aid": "DK-CVR-29439915-HX022021",
-     "count": "9",
-     "value": "XM-DAC-3-1-286693-35492"
     },
     {
      "aid": "DK-CVR-29439915-2022/25SPADEV",
@@ -2718,15 +2772,15 @@
   "/iati-activities/iati-activity/participating-org@crs-channel-code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2734,25 +2788,27 @@
   "/iati-activities/iati-activity/participating-org@ref": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "221",
-    "19612": "221"
+    "19612": "221",
+    "19613": "239"
    },
    "distinct": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "126",
+     "count": "138",
      "value": "DK-CVR-29439915"
     },
     {
      "aid": "DK-CVR-29439915-HX022021",
-     "count": "88",
+     "count": "94",
      "value": "XM-DAC-3-1"
     },
     {
@@ -2770,30 +2826,32 @@
   "/iati-activities/iati-activity/participating-org@role": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "314",
-    "19612": "314"
+    "19612": "314",
+    "19613": "332"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "106",
+     "count": "112",
      "value": "4"
     },
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "1"
     },
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "2"
     }
    ]
@@ -2801,25 +2859,27 @@
   "/iati-activities/iati-activity/participating-org@type": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "314",
-    "19612": "314"
+    "19612": "314",
+    "19613": "332"
    },
    "distinct": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "191",
+     "count": "197",
      "value": "22"
     },
     {
      "aid": "DK-CVR-29439915-RAM2017DK",
-     "count": "98",
+     "count": "110",
      "value": "10"
     },
     {
@@ -2842,15 +2902,15 @@
   "/iati-activities/iati-activity/planned-disbursement/period-end@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2858,15 +2918,15 @@
   "/iati-activities/iati-activity/planned-disbursement/period-start@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2874,15 +2934,15 @@
   "/iati-activities/iati-activity/planned-disbursement/provider-org/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2890,15 +2950,15 @@
   "/iati-activities/iati-activity/planned-disbursement/provider-org/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2906,15 +2966,15 @@
   "/iati-activities/iati-activity/planned-disbursement/provider-org@provider-activity-id": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2922,15 +2982,15 @@
   "/iati-activities/iati-activity/planned-disbursement/provider-org@ref": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2938,15 +2998,15 @@
   "/iati-activities/iati-activity/planned-disbursement/provider-org@type": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2954,15 +3014,15 @@
   "/iati-activities/iati-activity/planned-disbursement/receiver-org/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2970,15 +3030,15 @@
   "/iati-activities/iati-activity/planned-disbursement/receiver-org/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -2986,15 +3046,15 @@
   "/iati-activities/iati-activity/planned-disbursement/receiver-org@receiver-activity-id": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3002,15 +3062,15 @@
   "/iati-activities/iati-activity/planned-disbursement/receiver-org@ref": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3018,15 +3078,15 @@
   "/iati-activities/iati-activity/planned-disbursement/receiver-org@type": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3034,15 +3094,15 @@
   "/iati-activities/iati-activity/planned-disbursement/value": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3050,15 +3110,15 @@
   "/iati-activities/iati-activity/planned-disbursement/value@currency": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3066,15 +3126,15 @@
   "/iati-activities/iati-activity/planned-disbursement/value@value-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3082,15 +3142,15 @@
   "/iati-activities/iati-activity/planned-disbursement@type": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3098,15 +3158,15 @@
   "/iati-activities/iati-activity/policy-marker/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3114,15 +3174,15 @@
   "/iati-activities/iati-activity/policy-marker/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3130,15 +3190,15 @@
   "/iati-activities/iati-activity/policy-marker@code": {
    "activities": {
     "19543": "82",
-    "19612": "82"
+    "19613": "82"
    },
    "count": {
     "19543": "302",
-    "19612": "302"
+    "19613": "302"
    },
    "distinct": {
     "19543": "10",
-    "19612": "10"
+    "19613": "10"
    },
    "top": [
     {
@@ -3196,15 +3256,15 @@
   "/iati-activities/iati-activity/policy-marker@significance": {
    "activities": {
     "19543": "82",
-    "19612": "82"
+    "19613": "82"
    },
    "count": {
     "19543": "302",
-    "19612": "302"
+    "19613": "302"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
@@ -3227,15 +3287,15 @@
   "/iati-activities/iati-activity/policy-marker@vocabulary": {
    "activities": {
     "19543": "82",
-    "19612": "82"
+    "19613": "82"
    },
    "count": {
     "19543": "302",
-    "19612": "302"
+    "19613": "302"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -3248,15 +3308,15 @@
   "/iati-activities/iati-activity/policy-marker@vocabulary-uri": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3264,26 +3324,28 @@
   "/iati-activities/iati-activity/recipient-country/narrative": {
    "activities": {
     "19543": "23",
-    "19612": "23"
+    "19612": "23",
+    "19613": "29"
    },
    "count": {
     "19543": "23",
-    "19612": "23"
+    "19612": "23",
+    "19613": "29"
    },
    "distinct": {
     "19543": "13",
-    "19612": "13"
+    "19613": "13"
    },
    "top": [
+    {
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
+     "count": "11",
+     "value": "x"
+    },
     {
      "aid": "DK-CVR-29439915-HX022016",
      "count": "5",
      "value": "Including contingency reserve"
-    },
-    {
-     "aid": "DK-CVR-29439915-2022-25HUMUGCU",
-     "count": "5",
-     "value": "x"
     },
     {
      "aid": "DK-CVR-29439915-2022-25HUMRO",
@@ -3330,20 +3392,22 @@
   "/iati-activities/iati-activity/recipient-country/narrative@xml:lang": {
    "activities": {
     "19543": "23",
-    "19612": "23"
+    "19612": "23",
+    "19613": "29"
    },
    "count": {
     "19543": "23",
-    "19612": "23"
+    "19612": "23",
+    "19613": "29"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017DK",
-     "count": "23",
+     "count": "29",
      "value": "EN"
     }
    ]
@@ -3351,26 +3415,28 @@
   "/iati-activities/iati-activity/recipient-country@code": {
    "activities": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "135",
-    "19612": "135"
+    "19612": "135",
+    "19613": "141"
    },
    "distinct": {
     "19543": "21",
-    "19612": "21"
+    "19613": "21"
    },
    "top": [
+    {
+     "aid": "DK-CVR-29439915-RAM2017DK",
+     "count": "33",
+     "value": "DK"
+    },
     {
      "aid": "DK-CVR-29439915-RAM2017UG",
      "count": "31",
      "value": "UG"
-    },
-    {
-     "aid": "DK-CVR-29439915-RAM2017DK",
-     "count": "27",
-     "value": "DK"
     },
     {
      "aid": "DK-CVR-29439915-HX-02-2020",
@@ -3417,20 +3483,22 @@
   "/iati-activities/iati-activity/recipient-country@percentage": {
    "activities": {
     "19543": "102",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "135",
-    "19612": "135"
+    "19612": "135",
+    "19613": "141"
    },
    "distinct": {
     "19543": "29",
-    "19612": "29"
+    "19613": "29"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "87",
+     "count": "93",
      "value": "100"
     },
     {
@@ -3483,15 +3551,15 @@
   "/iati-activities/iati-activity/recipient-region/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3499,15 +3567,15 @@
   "/iati-activities/iati-activity/recipient-region/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3515,15 +3583,15 @@
   "/iati-activities/iati-activity/recipient-region@code": {
    "activities": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "count": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
@@ -3546,15 +3614,15 @@
   "/iati-activities/iati-activity/recipient-region@percentage": {
    "activities": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "count": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -3572,15 +3640,15 @@
   "/iati-activities/iati-activity/recipient-region@vocabulary": {
    "activities": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "count": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -3593,15 +3661,15 @@
   "/iati-activities/iati-activity/recipient-region@vocabulary-uri": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3609,15 +3677,17 @@
   "/iati-activities/iati-activity/related-activity@ref": {
    "activities": {
     "19543": "71",
-    "19612": "71"
+    "19612": "71",
+    "19613": "77"
    },
    "count": {
     "19543": "77",
-    "19612": "77"
+    "19612": "77",
+    "19613": "83"
    },
    "distinct": {
     "19543": "18",
-    "19612": "18"
+    "19613": "18"
    },
    "top": [
     {
@@ -3631,13 +3701,13 @@
      "value": "2018/21 STRATEGIC PARTNERSHIPS AGREEMENT LOT HUM"
     },
     {
-     "aid": "DK-CVR-29439915-2022-25HUMUGCU",
-     "count": "12",
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
+     "count": "15",
      "value": "DK-CVR-29439915-2022/25SPAHUM"
     },
     {
-     "aid": "DK-CVR-29439915-2022-25DEVUGEADEN",
-     "count": "7",
+     "aid": "DK-CVR-29439915-2022-25SPADEVA3a",
+     "count": "10",
      "value": "DK-CVR-29439915-2022/25SPADEV"
     },
     {
@@ -3675,15 +3745,17 @@
   "/iati-activities/iati-activity/related-activity@type": {
    "activities": {
     "19543": "71",
-    "19612": "71"
+    "19612": "71",
+    "19613": "77"
    },
    "count": {
     "19543": "77",
-    "19612": "77"
+    "19612": "77",
+    "19613": "83"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -3693,7 +3765,7 @@
     },
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "33",
+     "count": "39",
      "value": "1"
     }
    ]
@@ -3701,20 +3773,22 @@
   "/iati-activities/iati-activity/reporting-org/narrative": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "Caritas Denmark"
     }
    ]
@@ -3722,20 +3796,22 @@
   "/iati-activities/iati-activity/reporting-org/narrative@xml:lang": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "EN"
     }
    ]
@@ -3743,20 +3819,22 @@
   "/iati-activities/iati-activity/reporting-org@ref": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "DK-CVR-29439915"
     }
    ]
@@ -3764,20 +3842,22 @@
   "/iati-activities/iati-activity/reporting-org@secondary-reporter": {
    "activities": {
     "19543": "22",
-    "19612": "22"
+    "19612": "22",
+    "19613": "28"
    },
    "count": {
     "19543": "22",
-    "19612": "22"
+    "19612": "22",
+    "19613": "28"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-HX022021",
-     "count": "22",
+     "count": "28",
      "value": "1"
     }
    ]
@@ -3785,20 +3865,22 @@
   "/iati-activities/iati-activity/reporting-org@type": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "22"
     }
    ]
@@ -3806,15 +3888,15 @@
   "/iati-activities/iati-activity/result/description/narrative": {
    "activities": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "count": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
@@ -3837,15 +3919,15 @@
   "/iati-activities/iati-activity/result/description/narrative@xml:lang": {
    "activities": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "count": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -3858,15 +3940,15 @@
   "/iati-activities/iati-activity/result/document-link/category@code": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -3879,15 +3961,15 @@
   "/iati-activities/iati-activity/result/document-link/description/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3895,15 +3977,15 @@
   "/iati-activities/iati-activity/result/document-link/description/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -3911,15 +3993,15 @@
   "/iati-activities/iati-activity/result/document-link/document-date@iso-date": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -3932,15 +4014,15 @@
   "/iati-activities/iati-activity/result/document-link/language@code": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -3953,15 +4035,15 @@
   "/iati-activities/iati-activity/result/document-link/title/narrative": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -3979,15 +4061,15 @@
   "/iati-activities/iati-activity/result/document-link/title/narrative@xml:lang": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -4000,15 +4082,15 @@
   "/iati-activities/iati-activity/result/document-link@format": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -4021,15 +4103,15 @@
   "/iati-activities/iati-activity/result/document-link@url": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -4042,15 +4124,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/comment/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4058,15 +4140,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/comment/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4074,15 +4156,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/dimension@name": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4090,15 +4172,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/dimension@value": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4106,15 +4188,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/document-link/category@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4122,15 +4204,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/document-link/description/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4138,15 +4220,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/document-link/description/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4154,15 +4236,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/document-link/document-date@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4170,15 +4252,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/document-link/language@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4186,15 +4268,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/document-link/title/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4202,15 +4284,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/document-link/title/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4218,15 +4300,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/document-link@format": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4234,15 +4316,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/document-link@url": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4250,15 +4332,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline/location@ref": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4266,15 +4348,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4282,15 +4364,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline@value": {
    "activities": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "count": {
     "19543": "7",
-    "19612": "7"
+    "19613": "7"
    },
    "distinct": {
     "19543": "7",
-    "19612": "7"
+    "19613": "7"
    },
    "top": [
     {
@@ -4333,15 +4415,15 @@
   "/iati-activities/iati-activity/result/indicator/baseline@year": {
    "activities": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "count": {
     "19543": "7",
-    "19612": "7"
+    "19613": "7"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -4354,15 +4436,15 @@
   "/iati-activities/iati-activity/result/indicator/description/narrative": {
    "activities": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "count": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "distinct": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "top": [
     {
@@ -4390,15 +4472,15 @@
   "/iati-activities/iati-activity/result/indicator/description/narrative@xml:lang": {
    "activities": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "count": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -4411,15 +4493,15 @@
   "/iati-activities/iati-activity/result/indicator/document-link/category@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4427,15 +4509,15 @@
   "/iati-activities/iati-activity/result/indicator/document-link/description/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4443,15 +4525,15 @@
   "/iati-activities/iati-activity/result/indicator/document-link/description/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4459,15 +4541,15 @@
   "/iati-activities/iati-activity/result/indicator/document-link/document-date@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4475,15 +4557,15 @@
   "/iati-activities/iati-activity/result/indicator/document-link/language@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4491,15 +4573,15 @@
   "/iati-activities/iati-activity/result/indicator/document-link/title/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4507,15 +4589,15 @@
   "/iati-activities/iati-activity/result/indicator/document-link/title/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4523,15 +4605,15 @@
   "/iati-activities/iati-activity/result/indicator/document-link@format": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4539,15 +4621,15 @@
   "/iati-activities/iati-activity/result/indicator/document-link@url": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4555,15 +4637,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/comment/narrative": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "6",
-    "19612": "6"
+    "19613": "6"
    },
    "distinct": {
     "19543": "6",
-    "19612": "6"
+    "19613": "6"
    },
    "top": [
     {
@@ -4601,15 +4683,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/comment/narrative@xml:lang": {
    "activities": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "count": {
     "19543": "6",
-    "19612": "6"
+    "19613": "6"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -4622,15 +4704,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/dimension@name": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4638,15 +4720,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/dimension@value": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4654,15 +4736,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/document-link/category@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4670,15 +4752,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/document-link/description/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4686,15 +4768,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/document-link/description/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4702,15 +4784,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/document-link/document-date@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4718,15 +4800,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/document-link/language@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4734,15 +4816,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/document-link/title/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4750,15 +4832,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/document-link/title/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4766,15 +4848,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/document-link@format": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4782,15 +4864,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/document-link@url": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -4798,15 +4880,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual/location@ref": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -4819,15 +4901,15 @@
   "/iati-activities/iati-activity/result/indicator/period/actual@value": {
    "activities": {
     "19543": "10",
-    "19612": "10"
+    "19613": "10"
    },
    "count": {
     "19543": "69",
-    "19612": "69"
+    "19613": "69"
    },
    "distinct": {
     "19543": "50",
-    "19612": "50"
+    "19613": "50"
    },
    "top": [
     {
@@ -4885,15 +4967,15 @@
   "/iati-activities/iati-activity/result/indicator/period/period-end@iso-date": {
    "activities": {
     "19543": "15",
-    "19612": "15"
+    "19613": "15"
    },
    "count": {
     "19543": "113",
-    "19612": "113"
+    "19613": "113"
    },
    "distinct": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "top": [
     {
@@ -4921,15 +5003,15 @@
   "/iati-activities/iati-activity/result/indicator/period/period-start@iso-date": {
    "activities": {
     "19543": "15",
-    "19612": "15"
+    "19613": "15"
    },
    "count": {
     "19543": "113",
-    "19612": "113"
+    "19613": "113"
    },
    "distinct": {
     "19543": "6",
-    "19612": "6"
+    "19613": "6"
    },
    "top": [
     {
@@ -4967,15 +5049,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/comment/narrative": {
    "activities": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -4993,15 +5075,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/comment/narrative@xml:lang": {
    "activities": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -5014,15 +5096,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/dimension@name": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5030,15 +5112,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/dimension@value": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5046,15 +5128,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/document-link/category@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5062,15 +5144,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/document-link/description/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5078,15 +5160,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/document-link/description/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5094,15 +5176,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/document-link/document-date@iso-date": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5110,15 +5192,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/document-link/language@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5126,15 +5208,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/document-link/title/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5142,15 +5224,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/document-link/title/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5158,15 +5240,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/document-link@format": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5174,15 +5256,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/document-link@url": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5190,15 +5272,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target/location@ref": {
    "activities": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -5216,15 +5298,15 @@
   "/iati-activities/iati-activity/result/indicator/period/target@value": {
    "activities": {
     "19543": "10",
-    "19612": "10"
+    "19613": "10"
    },
    "count": {
     "19543": "74",
-    "19612": "74"
+    "19613": "74"
    },
    "distinct": {
     "19543": "37",
-    "19612": "37"
+    "19613": "37"
    },
    "top": [
     {
@@ -5282,15 +5364,15 @@
   "/iati-activities/iati-activity/result/indicator/reference@code": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -5303,15 +5385,15 @@
   "/iati-activities/iati-activity/result/indicator/reference@indicator-uri": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -5324,15 +5406,15 @@
   "/iati-activities/iati-activity/result/indicator/reference@vocabulary": {
    "activities": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "count": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -5345,15 +5427,15 @@
   "/iati-activities/iati-activity/result/indicator/title/narrative": {
    "activities": {
     "19543": "15",
-    "19612": "15"
+    "19613": "15"
    },
    "count": {
     "19543": "120",
-    "19612": "120"
+    "19613": "120"
    },
    "distinct": {
     "19543": "120",
-    "19612": "120"
+    "19613": "120"
    },
    "top": [
     {
@@ -5411,15 +5493,15 @@
   "/iati-activities/iati-activity/result/indicator/title/narrative@xml:lang": {
    "activities": {
     "19543": "15",
-    "19612": "15"
+    "19613": "15"
    },
    "count": {
     "19543": "120",
-    "19612": "120"
+    "19613": "120"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -5432,15 +5514,15 @@
   "/iati-activities/iati-activity/result/indicator@aggregation-status": {
    "activities": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "count": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -5453,15 +5535,15 @@
   "/iati-activities/iati-activity/result/indicator@ascending": {
    "activities": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "count": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -5474,15 +5556,15 @@
   "/iati-activities/iati-activity/result/indicator@measure": {
    "activities": {
     "19543": "15",
-    "19612": "15"
+    "19613": "15"
    },
    "count": {
     "19543": "120",
-    "19612": "120"
+    "19613": "120"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -5500,15 +5582,15 @@
   "/iati-activities/iati-activity/result/reference@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5516,15 +5598,15 @@
   "/iati-activities/iati-activity/result/reference@vocabulary": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5532,15 +5614,15 @@
   "/iati-activities/iati-activity/result/reference@vocabulary-uri": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5548,15 +5630,15 @@
   "/iati-activities/iati-activity/result/title/narrative": {
    "activities": {
     "19543": "15",
-    "19612": "15"
+    "19613": "15"
    },
    "count": {
     "19543": "51",
-    "19612": "51"
+    "19613": "51"
    },
    "distinct": {
     "19543": "42",
-    "19612": "42"
+    "19613": "42"
    },
    "top": [
     {
@@ -5614,15 +5696,15 @@
   "/iati-activities/iati-activity/result/title/narrative@xml:lang": {
    "activities": {
     "19543": "15",
-    "19612": "15"
+    "19613": "15"
    },
    "count": {
     "19543": "51",
-    "19612": "51"
+    "19613": "51"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
@@ -5635,15 +5717,15 @@
   "/iati-activities/iati-activity/result@aggregation-status": {
    "activities": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "count": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -5661,15 +5743,15 @@
   "/iati-activities/iati-activity/result@type": {
    "activities": {
     "19543": "15",
-    "19612": "15"
+    "19613": "15"
    },
    "count": {
     "19543": "51",
-    "19612": "51"
+    "19613": "51"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
@@ -5687,15 +5769,15 @@
   "/iati-activities/iati-activity/sector/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5703,15 +5785,15 @@
   "/iati-activities/iati-activity/sector/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5719,20 +5801,22 @@
   "/iati-activities/iati-activity/sector@code": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "105",
-    "19612": "105"
+    "19612": "105",
+    "19613": "111"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "60",
+     "count": "63",
      "value": "15150"
     },
     {
@@ -5742,7 +5826,7 @@
     },
     {
      "aid": "DK-CVR-29439915-HX022021",
-     "count": "2",
+     "count": "5",
      "value": "15160"
     }
    ]
@@ -5750,20 +5834,22 @@
   "/iati-activities/iati-activity/sector@percentage": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "105",
-    "19612": "105"
+    "19612": "105",
+    "19613": "111"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "103",
+     "count": "109",
      "value": "100"
     },
     {
@@ -5776,20 +5862,22 @@
   "/iati-activities/iati-activity/sector@vocabulary": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "105",
-    "19612": "105"
+    "19612": "105",
+    "19613": "111"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "105",
+     "count": "111",
      "value": "1"
     }
    ]
@@ -5797,15 +5885,15 @@
   "/iati-activities/iati-activity/sector@vocabulary-uri": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5813,15 +5901,15 @@
   "/iati-activities/iati-activity/tag/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5829,15 +5917,15 @@
   "/iati-activities/iati-activity/tag/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5845,15 +5933,15 @@
   "/iati-activities/iati-activity/tag@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5861,15 +5949,15 @@
   "/iati-activities/iati-activity/tag@vocabulary": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5877,15 +5965,15 @@
   "/iati-activities/iati-activity/tag@vocabulary-uri": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -5893,15 +5981,18 @@
   "/iati-activities/iati-activity/title/narrative": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "top": [
     {
@@ -5959,20 +6050,22 @@
   "/iati-activities/iati-activity/title/narrative@xml:lang": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "EN"
     }
    ]
@@ -5986,7 +6079,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "751",
@@ -5998,16 +6092,17 @@
     "19608": "770",
     "19609": "798",
     "19611": "798",
-    "19612": "807"
+    "19612": "807",
+    "19613": "813"
    },
    "distinct": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "621",
+     "count": "627",
      "value": "C01"
     },
     {
@@ -6036,7 +6131,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "751",
@@ -6048,16 +6144,17 @@
     "19608": "770",
     "19609": "798",
     "19611": "798",
-    "19612": "807"
+    "19612": "807",
+    "19613": "813"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "807",
+     "count": "813",
      "value": "1"
     }
    ]
@@ -6069,7 +6166,8 @@
     "19608": "87",
     "19609": "97",
     "19611": "97",
-    "19612": "101"
+    "19612": "101",
+    "19613": "107"
    },
    "count": {
     "19543": "750",
@@ -6079,7 +6177,8 @@
     "19608": "766",
     "19609": "794",
     "19611": "794",
-    "19612": "803"
+    "19612": "803",
+    "19613": "809"
    },
    "distinct": {
     "19543": "682",
@@ -6089,7 +6188,8 @@
     "19608": "698",
     "19609": "726",
     "19611": "726",
-    "19612": "735"
+    "19612": "735",
+    "19613": "739"
    },
    "top": [
     {
@@ -6108,9 +6208,9 @@
      "value": "2019 HUMJO Caritas Jordan Original outgoing"
     },
     {
-     "aid": "DK-CVR-29439915-HPA2017JO",
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
      "count": "3",
-     "value": "Caritas Denmark commissioned consultancies, reviews, and evaluations"
+     "value": "2022/25 Strategic Partnership Agreement HUM A.1.a. - Direct activity cost (HQ) - Expenditure 2022"
     },
     {
      "aid": "DK-CVR-29439915-2018/21-CIVMM-Karuna_Mission_Social_Solidarity_(KMSS)",
@@ -6151,7 +6251,8 @@
     "19608": "87",
     "19609": "97",
     "19611": "97",
-    "19612": "101"
+    "19612": "101",
+    "19613": "107"
    },
    "count": {
     "19543": "750",
@@ -6161,16 +6262,17 @@
     "19608": "766",
     "19609": "794",
     "19611": "794",
-    "19612": "803"
+    "19612": "803",
+    "19613": "809"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "799",
+     "count": "805",
      "value": "EN"
     },
     {
@@ -6189,7 +6291,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "692",
@@ -6201,16 +6304,17 @@
     "19608": "711",
     "19609": "739",
     "19611": "739",
-    "19612": "748"
+    "19612": "748",
+    "19613": "754"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "747",
+     "count": "753",
      "value": "2"
     },
     {
@@ -6229,7 +6333,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "751",
@@ -6241,16 +6346,17 @@
     "19608": "770",
     "19609": "798",
     "19611": "798",
-    "19612": "807"
+    "19612": "807",
+    "19613": "813"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "807",
+     "count": "813",
      "value": "110"
     }
    ]
@@ -6264,7 +6370,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "751",
@@ -6276,16 +6383,17 @@
     "19608": "770",
     "19609": "798",
     "19611": "798",
-    "19612": "807"
+    "19612": "807",
+    "19613": "813"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "726",
+     "count": "732",
      "value": "30"
     },
     {
@@ -6304,7 +6412,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "754",
@@ -6316,16 +6425,17 @@
     "19608": "770",
     "19609": "798",
     "19611": "798",
-    "19612": "807"
+    "19612": "807",
+    "19613": "813"
    },
    "distinct": {
     "19543": "10",
-    "19612": "10"
+    "19613": "10"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "727",
+     "count": "733",
      "value": "Caritas Denmark"
     },
     {
@@ -6384,7 +6494,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "754",
@@ -6396,16 +6507,17 @@
     "19608": "772",
     "19609": "800",
     "19611": "800",
-    "19612": "809"
+    "19612": "809",
+    "19613": "815"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "809",
+     "count": "815",
      "value": "EN"
     }
    ]
@@ -6419,7 +6531,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "741",
@@ -6431,7 +6544,8 @@
     "19608": "760",
     "19609": "788",
     "19611": "788",
-    "19612": "797"
+    "19612": "797",
+    "19613": "803"
    },
    "distinct": {
     "19543": "47",
@@ -6441,7 +6555,8 @@
     "19608": "52",
     "19609": "62",
     "19611": "62",
-    "19612": "66"
+    "19612": "66",
+    "19613": "70"
    },
    "top": [
     {
@@ -6505,7 +6620,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "756",
@@ -6517,16 +6633,17 @@
     "19608": "775",
     "19609": "803",
     "19611": "803",
-    "19612": "812"
+    "19612": "812",
+    "19613": "818"
    },
    "distinct": {
     "19543": "8",
-    "19612": "8"
+    "19613": "8"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "720",
+     "count": "726",
      "value": "DK-CVR-29439915"
     },
     {
@@ -6575,7 +6692,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "753",
@@ -6587,16 +6705,17 @@
     "19608": "772",
     "19609": "800",
     "19611": "800",
-    "19612": "809"
+    "19612": "809",
+    "19613": "815"
    },
    "distinct": {
     "19543": "3",
-    "19612": "3"
+    "19613": "3"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "728",
+     "count": "734",
      "value": "22"
     },
     {
@@ -6620,7 +6739,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "756",
@@ -6632,7 +6752,8 @@
     "19608": "775",
     "19609": "803",
     "19611": "803",
-    "19612": "812"
+    "19612": "812",
+    "19613": "818"
    },
    "distinct": {
     "19543": "70",
@@ -6640,12 +6761,13 @@
     "19608": "71",
     "19609": "73",
     "19611": "73",
-    "19612": "76"
+    "19612": "76",
+    "19613": "76"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "293",
+     "count": "299",
      "value": "Caritas Denmark"
     },
     {
@@ -6704,7 +6826,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "756",
@@ -6716,16 +6839,17 @@
     "19608": "775",
     "19609": "803",
     "19611": "803",
-    "19612": "812"
+    "19612": "812",
+    "19613": "818"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "812",
+     "count": "818",
      "value": "EN"
     }
    ]
@@ -6733,17 +6857,20 @@
   "/iati-activities/iati-activity/transaction/receiver-org@receiver-activity-id": {
    "activities": {
     "19543": "75",
-    "19612": "75"
+    "19612": "75",
+    "19613": "81"
    },
    "count": {
     "19543": "362",
     "19601": "362",
     "19602": "364",
-    "19612": "364"
+    "19612": "364",
+    "19613": "370"
    },
    "distinct": {
     "19543": "44",
-    "19612": "44"
+    "19612": "44",
+    "19613": "48"
    },
    "top": [
     {
@@ -6801,17 +6928,17 @@
   "/iati-activities/iati-activity/transaction/receiver-org@ref": {
    "activities": {
     "19543": "53",
-    "19612": "53"
+    "19613": "53"
    },
    "count": {
     "19543": "292",
     "19601": "292",
     "19602": "294",
-    "19612": "294"
+    "19613": "294"
    },
    "distinct": {
     "19543": "7",
-    "19612": "7"
+    "19613": "7"
    },
    "top": [
     {
@@ -6860,7 +6987,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "715",
@@ -6872,16 +7000,17 @@
     "19608": "734",
     "19609": "762",
     "19611": "762",
-    "19612": "771"
+    "19612": "771",
+    "19613": "777"
    },
    "distinct": {
     "19543": "4",
-    "19612": "4"
+    "19613": "4"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "687",
+     "count": "693",
      "value": "22"
     },
     {
@@ -6904,15 +7033,15 @@
   "/iati-activities/iati-activity/transaction/recipient-country/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -6920,15 +7049,15 @@
   "/iati-activities/iati-activity/transaction/recipient-country/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -6936,15 +7065,15 @@
   "/iati-activities/iati-activity/transaction/recipient-country@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -6952,15 +7081,15 @@
   "/iati-activities/iati-activity/transaction/recipient-region/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -6968,15 +7097,15 @@
   "/iati-activities/iati-activity/transaction/recipient-region/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -6984,15 +7113,15 @@
   "/iati-activities/iati-activity/transaction/recipient-region@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7000,15 +7129,15 @@
   "/iati-activities/iati-activity/transaction/recipient-region@vocabulary": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7016,15 +7145,15 @@
   "/iati-activities/iati-activity/transaction/recipient-region@vocabulary-uri": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7032,15 +7161,15 @@
   "/iati-activities/iati-activity/transaction/sector/narrative": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7048,15 +7177,15 @@
   "/iati-activities/iati-activity/transaction/sector/narrative@xml:lang": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7064,15 +7193,15 @@
   "/iati-activities/iati-activity/transaction/sector@code": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7080,15 +7209,15 @@
   "/iati-activities/iati-activity/transaction/sector@vocabulary": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7096,15 +7225,15 @@
   "/iati-activities/iati-activity/transaction/sector@vocabulary-uri": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7118,7 +7247,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "750",
@@ -7130,16 +7260,17 @@
     "19608": "769",
     "19609": "797",
     "19611": "797",
-    "19612": "806"
+    "19612": "806",
+    "19613": "812"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "806",
+     "count": "812",
      "value": "5"
     }
    ]
@@ -7153,7 +7284,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "756",
@@ -7165,7 +7297,8 @@
     "19608": "775",
     "19609": "803",
     "19611": "803",
-    "19612": "812"
+    "19612": "812",
+    "19613": "818"
    },
    "distinct": {
     "19543": "159",
@@ -7177,7 +7310,8 @@
     "19608": "175",
     "19609": "184",
     "19611": "184",
-    "19612": "189"
+    "19612": "189",
+    "19613": "190"
    },
    "top": [
     {
@@ -7241,7 +7375,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "756",
@@ -7253,11 +7388,12 @@
     "19608": "775",
     "19609": "803",
     "19611": "803",
-    "19612": "812"
+    "19612": "812",
+    "19613": "818"
    },
    "distinct": {
     "19543": "7",
-    "19612": "7"
+    "19613": "7"
    },
    "top": [
     {
@@ -7272,7 +7408,7 @@
     },
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "156",
+     "count": "162",
      "value": "4"
     },
     {
@@ -7306,7 +7442,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "756",
@@ -7318,7 +7455,8 @@
     "19608": "775",
     "19609": "803",
     "19611": "803",
-    "19612": "812"
+    "19612": "812",
+    "19613": "818"
    },
    "distinct": {
     "19543": "653",
@@ -7330,7 +7468,8 @@
     "19608": "671",
     "19609": "699",
     "19611": "699",
-    "19612": "703"
+    "19612": "703",
+    "19613": "708"
    },
    "top": [
     {
@@ -7339,8 +7478,8 @@
      "value": "1000000"
     },
     {
-     "aid": "DK-CVR-29439915-2018/21-HUM-Flexible_Funds",
-     "count": "8",
+     "aid": "DK-CVR-29439915-2022-25SPADEVA3a",
+     "count": "9",
      "value": "500000"
     },
     {
@@ -7394,7 +7533,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "756",
@@ -7406,16 +7546,17 @@
     "19608": "775",
     "19609": "803",
     "19611": "803",
-    "19612": "812"
+    "19612": "812",
+    "19613": "818"
    },
    "distinct": {
     "19543": "5",
-    "19612": "5"
+    "19613": "5"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "788",
+     "count": "794",
      "value": "DKK"
     },
     {
@@ -7449,7 +7590,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "756",
@@ -7461,7 +7603,8 @@
     "19608": "775",
     "19609": "803",
     "19611": "803",
-    "19612": "812"
+    "19612": "812",
+    "19613": "818"
    },
    "distinct": {
     "19543": "146",
@@ -7473,7 +7616,8 @@
     "19608": "162",
     "19609": "170",
     "19611": "170",
-    "19612": "175"
+    "19612": "175",
+    "19613": "176"
    },
    "top": [
     {
@@ -7537,7 +7681,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "743",
@@ -7549,21 +7694,22 @@
     "19608": "762",
     "19609": "790",
     "19611": "790",
-    "19612": "799"
+    "19612": "799",
+    "19613": "805"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "435",
+     "count": "438",
      "value": "0"
     },
     {
      "aid": "DK-CVR-29439915-HX022021",
-     "count": "364",
+     "count": "367",
      "value": "1"
     }
    ]
@@ -7577,7 +7723,8 @@
     "19608": "88",
     "19609": "98",
     "19611": "98",
-    "19612": "102"
+    "19612": "102",
+    "19613": "108"
    },
    "count": {
     "19543": "750",
@@ -7589,7 +7736,8 @@
     "19608": "769",
     "19609": "797",
     "19611": "797",
-    "19612": "806"
+    "19612": "806",
+    "19613": "812"
    },
    "distinct": {
     "19543": "743",
@@ -7601,13 +7749,29 @@
     "19608": "762",
     "19609": "790",
     "19611": "790",
-    "19612": "799"
+    "19612": "799",
+    "19613": "803"
    },
    "top": [
+    {
+     "aid": "DK-CVR-29439915-2022-25SPAHUMA3a",
+     "count": "3",
+     "value": "2022/25 Strategic Partnership Agreement HUM A.1.a. - Direct activity cost (HQ) - Expenditure 2022"
+    },
     {
      "aid": "DK-CVR-29439915-HX022017",
      "count": "3",
      "value": "MoFA commitment"
+    },
+    {
+     "aid": "DK-CVR-29439915-201642659-2017",
+     "count": "2",
+     "value": "Unspent funds 2017 transfer to 2018"
+    },
+    {
+     "aid": "DK-CVR-29439915-HX022016",
+     "count": "2",
+     "value": "Caritas Jordan 4th QTR 2017"
     },
     {
      "aid": "DK-CVR-29439915-HX022017",
@@ -7618,16 +7782,6 @@
      "aid": "DK-CVR-29439915-HPA2017JO",
      "count": "2",
      "value": "Caritas Denmark commissioned consultancies, reviews, and evaluations in Jordan"
-    },
-    {
-     "aid": "DK-CVR-29439915-HX022016",
-     "count": "2",
-     "value": "Caritas Jordan 4th QTR 2017"
-    },
-    {
-     "aid": "DK-CVR-29439915-201642659-2017",
-     "count": "2",
-     "value": "Unspent funds 2017 transfer to 2018"
     },
     {
      "aid": "DK-CVR-29439915-HX022017",
@@ -7648,26 +7802,21 @@
      "aid": "DK-CVR-29439915-HX012016",
      "count": "1",
      "value": "1st + 2nd QTr 2018 technical programme consultancy"
-    },
-    {
-     "aid": "DK-CVR-29439915-RAM2017DK",
-     "count": "1",
-     "value": "1st QTR administration expenditures in Denmark"
     }
    ]
   },
   "/iati-activities/iati-activity@budget-not-provided": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7675,20 +7824,22 @@
   "/iati-activities/iati-activity@default-currency": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "DKK"
     }
    ]
@@ -7696,20 +7847,22 @@
   "/iati-activities/iati-activity@hierarchy": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "1"
     }
    ]
@@ -7717,25 +7870,27 @@
   "/iati-activities/iati-activity@humanitarian": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "2",
-    "19612": "2"
+    "19613": "2"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-HX-02-2020",
-     "count": "70",
+     "count": "73",
      "value": "0"
     },
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "34",
+     "count": "37",
      "value": "1"
     }
    ]
@@ -7743,15 +7898,15 @@
   "/iati-activities/iati-activity@iati-activities:generated-datetime": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7759,15 +7914,15 @@
   "/iati-activities/iati-activity@iati-activities:linked-data-default": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7777,24 +7932,26 @@
     "19543": "0",
     "19551": "0",
     "19552": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "0",
     "19551": "0",
     "19552": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "0",
     "19551": "0",
     "19552": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "2.03"
     }
    ]
@@ -7802,15 +7959,15 @@
   "/iati-activities/iati-activity@last-updated-datetime": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7818,15 +7975,15 @@
   "/iati-activities/iati-activity@linked-data-uri": {
    "activities": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "count": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "distinct": {
     "19543": "0",
-    "19612": "0"
+    "19613": "0"
    },
    "top": [
    ]
@@ -7834,20 +7991,22 @@
   "/iati-activities/iati-activity@xml:lang": {
    "activities": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "count": {
     "19543": "104",
-    "19612": "104"
+    "19612": "104",
+    "19613": "110"
    },
    "distinct": {
     "19543": "1",
-    "19612": "1"
+    "19613": "1"
    },
    "top": [
     {
      "aid": "DK-CVR-29439915-RAM2017ZI",
-     "count": "104",
+     "count": "110",
      "value": "EN"
     }
    ]
