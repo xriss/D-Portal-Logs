@@ -1,5 +1,5 @@
 
-Fri Oct 11 12:10:01 AM UTC 2024
+Sat Oct 12 12:10:01 AM UTC 2024
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -13,10 +13,10 @@ The following certificates are not due for renewal yet:
 No renewals were attempted.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Fri Oct 11 12:10:01 AM UTC 2024
+Sat Oct 12 12:10:01 AM UTC 2024
 
 
-Fri Oct 11 12:10:01 AM UTC 2024
+Sat Oct 12 12:10:01 AM UTC 2024
 
 
  Rebuilding javascript with latest data 
@@ -1835,7 +1835,6 @@ Fetching publisher info for npm
 Fetching publisher info for nuffic20171017
 Fetching publisher info for nutritionintl
 Fetching publisher info for obodo_ng
-unpublished NG-CAC-6896199
 Fetching publisher info for orraa_inc
 Fetching publisher info for unocha-cbpf
 Fetching publisher info for ospl_2016
@@ -3121,19 +3120,19 @@ parsing UNSDG-Goals.xml
 parsing UNSDG-Targets.xml
 parsing UNSDG-Indicators.xml
 parsing codelist mapping.xml
-[master faf487fc] auto json fetch in nightly cron
- 5 files changed, 227 insertions(+), 80 deletions(-)
+[master fd1100c3] auto json fetch in nightly cron
+ 5 files changed, 257 insertions(+), 55 deletions(-)
 From github.com:IATI/D-Portal
  * branch              master     -> FETCH_HEAD
 Already up to date.
 To github.com:IATI/D-Portal.git
-   e5d725ea..faf487fc  master -> master
+   faf487fc..fd1100c3  master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 Rebuilding ctrack with new json
 
 
-up to date, audited 692 packages in 3s
+up to date, audited 692 packages in 2s
 
 105 packages are looking for funding
   run `npm fund` for details
@@ -3144,7 +3143,7 @@ To address all issues, run:
   npm audit fix
 
 Run `npm audit` for details.
-VERSION == 24.77871
+VERSION == 24.78144
 asset ctrack.js 5.98 MiB [emitted] [minimized] [big] (name: main) 1 related asset
 runtime modules 432 bytes 3 modules
 modules by path ../ 6.71 MiB
@@ -3159,8 +3158,8 @@ modules by path ./ 692 KiB
     modules by path ./text/*.html 219 KiB 39 modules
     modules by path ./text/*.txt 261 KiB 6 modules
 + 7 modules
-webpack 5.91.0 compiled successfully in 4564 ms
-VERSION == 24.77871
+webpack 5.91.0 compiled successfully in 4574 ms
+VERSION == 24.78144
 asset dquery.js 1.01 MiB [compared for emit] [minimized] [big] (name: main) 1 related asset
 runtime modules 316 bytes 2 modules
 modules by path ../node_modules/ 1.59 MiB 105 modules
@@ -3176,8 +3175,8 @@ modules by path ./js/ 564 KiB
 fs (ignored) 15 bytes [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
-webpack 5.91.0 compiled successfully in 4282 ms
-VERSION == 24.77871
+webpack 5.91.0 compiled successfully in 4308 ms
+VERSION == 24.78144
 asset savi.js 5.07 MiB [emitted] [minimized] [big] (name: main) 1 related asset
 runtime modules 432 bytes 3 modules
 modules by path ../node_modules/ 4.23 MiB
@@ -3186,7 +3185,7 @@ modules by path ../node_modules/ 4.23 MiB
 modules by path ./ 1.37 MiB
   javascript modules 207 KiB 7 modules
   json modules 1.17 MiB 4 modules
-modules by path ../dstore/json/*.json 809 KiB
+modules by path ../dstore/json/*.json 810 KiB
   ../dstore/json/validhash.json 622 KiB [built] [code generated]
   ../dstore/json/iati_codes.json 187 KiB [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
@@ -3194,93 +3193,93 @@ fs (ignored) 15 bytes [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
 util (ignored) 15 bytes [built] [code generated]
 util (ignored) 15 bytes [built] [code generated]
-webpack 5.91.0 compiled successfully in 3721 ms
-00:14:50 DIR  /
-00:14:50 DIR  /cmn
-00:14:50 DIR  /ctrack
-00:14:50 DIR  /ctrack/art
-00:14:50 DIR  /ctrack/art/back
-00:14:50 DIR  /ctrack/art/branding
-00:14:50 DIR  /ctrack/art/flag
-00:14:50 DIR  /ctrack/art/generator
-00:14:50 DIR  /ctrack/art/high
-00:14:50 DIR  /ctrack/art/original
-00:14:50 DIR  /ctrack/art/rgba
-00:14:50 DIR  /ctrack/art/sdg
-00:14:50 DIR  /ctrack/jslib
-00:14:50 DIR  /ctrack/jslib/markercluster
-00:14:50 DIR  /fra
-00:14:50 DIR  /hin
-00:14:50 DIR  /jpn
-00:14:50 DIR  /jslib
-00:14:50 DIR  /news
-00:14:50 DIR  /news/2014-05-08-Development-Tracker-Architecture
-00:14:50 DIR  /news/2014-05-28-Current-plans
-00:14:50 DIR  /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
-00:14:50 DIR  /news/2014-11-30-Interactive-IATI-data-d-portal-generator
-00:14:50 DIR  /news/2015-11-05-Adding-country-budgets-to-d-portal
-00:14:50 DIR  /news/2016-03-02-Results-data-now-showing-in-d-portal
-00:14:50 DIR  /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
-00:14:50 DIR  /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
-00:14:50 DIR  /news/2017-09-06-New-d-portal-search-features-to-improve-data-use
-00:14:50 DIR  /news/2018-03-20-Server-upgrade-and-other-updates
-00:14:50 DIR  /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download
-00:14:50 DIR  /news/2019-01-14-New-year-new-features-and-additions
-00:14:50 DIR  /news/author
-00:14:50 DIR  /spa
-00:14:50 BLOGPOST news/2019-01-14-New-year-new-features-and-additions/index.html
-00:14:50 BLOGPOST news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
-00:14:50 BLOGPOST news/2018-03-20-Server-upgrade-and-other-updates/index.html
-00:14:50 BLOGPOST news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-00:14:50 BLOGPOST news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-00:14:50 BLOGPOST news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:14:50 BLOGPOST news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:14:50 BLOGPOST news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:14:50 BLOGPOST news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
-00:14:50 BLOGPOST news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
-00:14:50 BLOGPOST news/2014-05-28-Current-plans/index.html
-00:14:50 BLOGPOST news/2014-05-08-Development-Tracker-Architecture/index.html
-00:14:50 BLOG news/index.html
-00:14:50 BLOG news/page2.html
-00:14:50 BLOG news/page3.html
-00:14:50 BLOGFEED news/feed.json
-00:14:50 REDIRECT news/posts.html -> ../news/index.html
-00:14:50 REDIRECT news/2014-05-08-Development-Tracker-Architecture.html -> ../news/2014-05-08-Development-Tracker-Architecture
-00:14:50 REDIRECT news/2014-05-28-Current-plans.html -> ../news/2014-05-28-Current-plans
-00:14:50 REDIRECT news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> ../news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
-00:14:50 REDIRECT news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> ../news/2014-11-30-Interactive-IATI-data-d-portal-generator
-00:14:50 REDIRECT news/2015-11-05-Adding-country-budgets-to-d-portal.html -> ../news/2015-11-05-Adding-country-budgets-to-d-portal
-00:14:50 REDIRECT news/2016-03-02-Results-data-now-showing-in-d-portal.html -> ../news/2016-03-02-Results-data-now-showing-in-d-portal
-00:14:50 REDIRECT news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> ../news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
-00:14:50 REDIRECT news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> ../news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
-00:14:50 COPY / -> cmn/
-00:14:50 COPY / -> fra/
-00:14:50 COPY / -> hin/
-00:14:50 COPY / -> jpn/
-00:14:50 COPY / -> spa/
-00:14:50 COPY news/ -> cmn/news/
-00:14:50 COPY news/ -> fra/news/
-00:14:50 COPY news/ -> hin/news/
-00:14:50 COPY news/ -> jpn/news/
-00:14:50 COPY news/ -> spa/news/
-00:14:50 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
-00:14:50 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
-00:14:50 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
-00:14:50 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
-00:14:50 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
-00:14:50 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
-00:14:50 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
-00:14:50 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
-00:14:50 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
-00:14:50 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
-00:14:50 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:14:50 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:14:50 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:14:50 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:14:50 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
-00:14:50 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:14:50 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
-00:14:50 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+webpack 5.91.0 compiled successfully in 3725 ms
+00:14:49 DIR  /
+00:14:49 DIR  /cmn
+00:14:49 DIR  /ctrack
+00:14:49 DIR  /ctrack/art
+00:14:49 DIR  /ctrack/art/back
+00:14:49 DIR  /ctrack/art/branding
+00:14:49 DIR  /ctrack/art/flag
+00:14:49 DIR  /ctrack/art/generator
+00:14:49 DIR  /ctrack/art/high
+00:14:49 DIR  /ctrack/art/original
+00:14:49 DIR  /ctrack/art/rgba
+00:14:49 DIR  /ctrack/art/sdg
+00:14:49 DIR  /ctrack/jslib
+00:14:49 DIR  /ctrack/jslib/markercluster
+00:14:49 DIR  /fra
+00:14:49 DIR  /hin
+00:14:49 DIR  /jpn
+00:14:49 DIR  /jslib
+00:14:49 DIR  /news
+00:14:49 DIR  /news/2014-05-08-Development-Tracker-Architecture
+00:14:49 DIR  /news/2014-05-28-Current-plans
+00:14:49 DIR  /news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
+00:14:49 DIR  /news/2014-11-30-Interactive-IATI-data-d-portal-generator
+00:14:49 DIR  /news/2015-11-05-Adding-country-budgets-to-d-portal
+00:14:49 DIR  /news/2016-03-02-Results-data-now-showing-in-d-portal
+00:14:49 DIR  /news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
+00:14:49 DIR  /news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
+00:14:49 DIR  /news/2017-09-06-New-d-portal-search-features-to-improve-data-use
+00:14:49 DIR  /news/2018-03-20-Server-upgrade-and-other-updates
+00:14:49 DIR  /news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download
+00:14:49 DIR  /news/2019-01-14-New-year-new-features-and-additions
+00:14:49 DIR  /news/author
+00:14:49 DIR  /spa
+00:14:49 BLOGPOST news/2019-01-14-New-year-new-features-and-additions/index.html
+00:14:49 BLOGPOST news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
+00:14:49 BLOGPOST news/2018-03-20-Server-upgrade-and-other-updates/index.html
+00:14:49 BLOGPOST news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+00:14:49 BLOGPOST news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+00:14:49 BLOGPOST news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
+00:14:49 BLOGPOST news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:14:49 BLOGPOST news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:14:49 BLOGPOST news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:14:49 BLOGPOST news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
+00:14:49 BLOGPOST news/2014-05-28-Current-plans/index.html
+00:14:49 BLOGPOST news/2014-05-08-Development-Tracker-Architecture/index.html
+00:14:49 BLOG news/index.html
+00:14:49 BLOG news/page2.html
+00:14:49 BLOG news/page3.html
+00:14:49 BLOGFEED news/feed.json
+00:14:49 REDIRECT news/posts.html -> ../news/index.html
+00:14:49 REDIRECT news/2014-05-08-Development-Tracker-Architecture.html -> ../news/2014-05-08-Development-Tracker-Architecture
+00:14:49 REDIRECT news/2014-05-28-Current-plans.html -> ../news/2014-05-28-Current-plans
+00:14:49 REDIRECT news/2014-11-28-Bringing-IATI-data-life-d-portal-generator.html -> ../news/2014-11-28-Bringing-IATI-data-life-d-portal-generator
+00:14:49 REDIRECT news/2014-11-30-Interactive-IATI-data-d-portal-generator.html -> ../news/2014-11-30-Interactive-IATI-data-d-portal-generator
+00:14:49 REDIRECT news/2015-11-05-Adding-country-budgets-to-d-portal.html -> ../news/2015-11-05-Adding-country-budgets-to-d-portal
+00:14:49 REDIRECT news/2016-03-02-Results-data-now-showing-in-d-portal.html -> ../news/2016-03-02-Results-data-now-showing-in-d-portal
+00:14:49 REDIRECT news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website.html -> ../news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website
+00:14:49 REDIRECT news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter.html -> ../news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter
+00:14:49 COPY / -> cmn/
+00:14:49 COPY / -> fra/
+00:14:49 COPY / -> hin/
+00:14:49 COPY / -> jpn/
+00:14:49 COPY / -> spa/
+00:14:49 COPY news/ -> cmn/news/
+00:14:49 COPY news/ -> fra/news/
+00:14:49 COPY news/ -> hin/news/
+00:14:49 COPY news/ -> jpn/news/
+00:14:49 COPY news/ -> spa/news/
+00:14:49 COPY news/2014-05-08-Development-Tracker-Architecture/ -> cmn/news/2014-05-08-Development-Tracker-Architecture/
+00:14:49 COPY news/2014-05-08-Development-Tracker-Architecture/ -> fra/news/2014-05-08-Development-Tracker-Architecture/
+00:14:49 COPY news/2014-05-08-Development-Tracker-Architecture/ -> hin/news/2014-05-08-Development-Tracker-Architecture/
+00:14:49 COPY news/2014-05-08-Development-Tracker-Architecture/ -> jpn/news/2014-05-08-Development-Tracker-Architecture/
+00:14:49 COPY news/2014-05-08-Development-Tracker-Architecture/ -> spa/news/2014-05-08-Development-Tracker-Architecture/
+00:14:49 COPY news/2014-05-28-Current-plans/ -> cmn/news/2014-05-28-Current-plans/
+00:14:49 COPY news/2014-05-28-Current-plans/ -> fra/news/2014-05-28-Current-plans/
+00:14:49 COPY news/2014-05-28-Current-plans/ -> hin/news/2014-05-28-Current-plans/
+00:14:49 COPY news/2014-05-28-Current-plans/ -> jpn/news/2014-05-28-Current-plans/
+00:14:49 COPY news/2014-05-28-Current-plans/ -> spa/news/2014-05-28-Current-plans/
+00:14:49 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> cmn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:14:49 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> fra/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:14:49 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> hin/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:14:49 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> jpn/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:14:49 COPY news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/ -> spa/news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/
+00:14:49 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> cmn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:14:49 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> fra/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
+00:14:49 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> hin/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
 00:14:50 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> jpn/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
 00:14:50 COPY news/2014-11-30-Interactive-IATI-data-d-portal-generator/ -> spa/news/2014-11-30-Interactive-IATI-data-d-portal-generator/
 00:14:50 COPY news/2015-11-05-Adding-country-budgets-to-d-portal/ -> cmn/news/2015-11-05-Adding-country-budgets-to-d-portal/
@@ -4064,34 +4063,34 @@ webpack 5.91.0 compiled successfully in 3721 ms
 00:14:50 COPY feedback.html -> jpn/feedback.html
 00:14:50 COPY feedback.html -> spa/feedback.html
 Shutting down /dportal/dportal/js/serv.js
-(node:1564431) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2582862) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:1564431) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2582862) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever stopped process:
 [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
-[0] T0MF [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1544329 1544343    [35m/dportal/logs/dportal.log[39m [33m0:20:26:58.16599999999744[39m 
+[0] 3_v4 [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2565908 2565926    [35m/dportal/logs/dportal.log[39m [33m0:20:25:53.24899999999616[39m 
 Status /dportal/dportal/js/serv.js
-(node:1564445) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2582876) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:1564445) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2582876) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    No forever processes running
 Starting /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever processing file: [90m/dportal/dportal/js/serv.js[39m
-(node:1564461) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2582894) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:1564461) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2582894) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 Status /dportal/dportal/js/serv.js
-(node:1564482) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2582915) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:1564482) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:2582915) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever processes running
 [90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m      
-[90mdata[39m:    [0] oOql [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1564472 1564489    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.014[39m 
+[90mdata[39m:    [0] H-4C [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2582905 2582922    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.013[39m 
 
-Fri Oct 11 12:14:51 AM UTC 2024
+Sat Oct 12 12:14:51 AM UTC 2024
 
 
-Fri Oct 11 12:57:27 AM UTC 2024
+Sat Oct 12 12:56:47 AM UTC 2024
 
  creating new dload database 
  creating new dload database 
@@ -4336,19 +4335,19 @@ CREATING INDEXS
  CREATE INDEX IF NOT EXISTS act_index_text_search ON act USING gin(to_tsvector('simple', coalesce(title,'') || ' ' || coalesce(description,'') )); 
  CREATE INDEX IF NOT EXISTS xson_index_text_search ON xson USING gin(to_tsvector('simple', xson->>'' )); 
 ANALYZE start
-ANALYSE done 0.052
+ANALYSE done 0.071
 could not change directory to "/home/ctrack/dportal": Permission denied
 GRANT
  filling dload database with data 
  setting database live 
  swapping dload database with dstore database 
 Shutting down /dportal/dportal/js/serv.js
-(node:2565865) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3584500) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2565865) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3584500) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                     
-[0] oOql [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 1564472 1564489    [35m/dportal/logs/dportal.log[39m [33m0:3:34:0.49400000000059663[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
+[0] H-4C [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 2582905 2582922    [35m/dportal/logs/dportal.log[39m [33m0:3:33:29.554000000000087[39m 
 could not change directory to "/home/ctrack/dportal": Permission denied
 dropdb: error: database removal failed: ERROR:  database "dtmp" does not exist
 could not change directory to "/home/ctrack/dportal": Permission denied
@@ -4369,11 +4368,11 @@ could not change directory to "/home/ctrack/dportal": Permission denied
 ALTER DATABASE
 Starting /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever processing file: [90m/dportal/dportal/js/serv.js[39m
-(node:2565897) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3584529) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2565897) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:3584529) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 
-Fri Oct 11 03:48:57 AM UTC 2024
+Sat Oct 12 03:48:26 AM UTC 2024
 
 
  searching logs for errors 
@@ -4390,13 +4389,13 @@ dstore/cache/wep-activities.xml.import.last.log:00112234455677889ERROR: index ro
 dstore/cache/wep-activities.xml.import.last.log:error: index row requires 8696 bytes, maximum size is 8191
 dstore/cache/wep-activities.xml.import.last.log:    at Parser.parseErrorMessage (/home/ctrack/dportal/node_modules/pg-protocol/dist/parser.js:283:98)
 
-Fri Oct 11 03:48:57 AM UTC 2024
+Sat Oct 12 03:48:26 AM UTC 2024
 
 
  Updating sql and xml data dumps 
 
 
-Fri Oct 11 03:57:00 AM UTC 2024
+Sat Oct 12 03:56:29 AM UTC 2024
 
 
 Updating D-Portal-Logs stats
