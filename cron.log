@@ -1,5 +1,5 @@
 
-Thu Dec  5 12:10:01 AM UTC 2024
+Fri Dec  6 12:10:01 AM UTC 2024
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -13,10 +13,10 @@ The following certificates are not due for renewal yet:
 No renewals were attempted.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Thu Dec  5 12:10:01 AM UTC 2024
+Fri Dec  6 12:10:01 AM UTC 2024
 
 
-Thu Dec  5 12:10:01 AM UTC 2024
+Fri Dec  6 12:10:01 AM UTC 2024
 
 
  Rebuilding javascript with latest data 
@@ -510,6 +510,8 @@ Fetching publisher info for caf
 Fetching publisher info for ucles
 unpublished GB-COH-05264098
 Fetching publisher info for cisl
+Fetching publisher info for camco
+unpublished GB-COH-09902551
 Fetching publisher info for camfed
 Fetching publisher info for finance_canada
 Fetching publisher info for gac-amc
@@ -2344,6 +2346,8 @@ Fetching publisher info for si
 Fetching publisher info for stromme_ug
 Fetching publisher info for semc-yemen
 Fetching publisher info for sg
+Fetching publisher info for ssap
+unpublished GB-CHC-1159990
 Fetching publisher info for stad
 Fetching publisher info for sspmalawi
 unpublished MW-CNM-C1128-2017
@@ -3143,13 +3147,13 @@ parsing UNSDG-Goals.xml
 parsing UNSDG-Targets.xml
 parsing UNSDG-Indicators.xml
 parsing codelist mapping.xml
-[master 58d465fe] auto json fetch in nightly cron
- 3 files changed, 140 insertions(+), 79 deletions(-)
+[master bd6f1349] auto json fetch in nightly cron
+ 4 files changed, 379 insertions(+), 94 deletions(-)
 From github.com:IATI/D-Portal
  * branch              master     -> FETCH_HEAD
 Already up to date.
 To github.com:IATI/D-Portal.git
-   9e855350..58d465fe  master -> master
+   58d465fe..bd6f1349  master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 Rebuilding ctrack with new json
@@ -3166,8 +3170,8 @@ To address all issues, run:
   npm audit fix
 
 Run `npm audit` for details.
-VERSION == 24.92899
-asset ctrack.js 5.98 MiB [compared for emit] [minimized] [big] (name: main) 1 related asset
+VERSION == 24.93172
+asset ctrack.js 5.98 MiB [emitted] [minimized] [big] (name: main) 1 related asset
 runtime modules 432 bytes 3 modules
 modules by path ../ 6.71 MiB
   modules by path ../node_modules/ 4.4 MiB 280 modules
@@ -3181,8 +3185,8 @@ modules by path ./ 692 KiB
     modules by path ./text/*.html 219 KiB 39 modules
     modules by path ./text/*.txt 261 KiB 6 modules
 + 7 modules
-webpack 5.91.0 compiled successfully in 4528 ms
-VERSION == 24.92899
+webpack 5.91.0 compiled successfully in 4580 ms
+VERSION == 24.93172
 asset dquery.js 1.01 MiB [compared for emit] [minimized] [big] (name: main) 1 related asset
 runtime modules 316 bytes 2 modules
 modules by path ../node_modules/ 1.59 MiB 105 modules
@@ -3198,9 +3202,9 @@ modules by path ./js/ 564 KiB
 fs (ignored) 15 bytes [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
-webpack 5.91.0 compiled successfully in 4321 ms
-VERSION == 24.92899
-asset savi.js 5.07 MiB [compared for emit] [minimized] [big] (name: main) 1 related asset
+webpack 5.91.0 compiled successfully in 4343 ms
+VERSION == 24.93172
+asset savi.js 5.07 MiB [emitted] [minimized] [big] (name: main) 1 related asset
 runtime modules 432 bytes 3 modules
 modules by path ../node_modules/ 4.23 MiB
   javascript modules 1.98 MiB 273 modules
@@ -3216,7 +3220,7 @@ fs (ignored) 15 bytes [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
 util (ignored) 15 bytes [built] [code generated]
 util (ignored) 15 bytes [built] [code generated]
-webpack 5.91.0 compiled successfully in 3708 ms
+webpack 5.91.0 compiled successfully in 3760 ms
 00:15:23 DIR  /
 00:15:23 DIR  /cmn
 00:15:23 DIR  /ctrack
@@ -3253,12 +3257,12 @@ webpack 5.91.0 compiled successfully in 3708 ms
 00:15:23 BLOGPOST news/2019-01-14-New-year-new-features-and-additions/index.html
 00:15:23 BLOGPOST news/2018-03-21-Reaching-over-1-million-activities-and-CSV-map-download/index.html
 00:15:23 BLOGPOST news/2018-03-20-Server-upgrade-and-other-updates/index.html
-00:15:23 BLOGPOST news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
-00:15:23 BLOGPOST news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
-00:15:23 BLOGPOST news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
-00:15:23 BLOGPOST news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
-00:15:23 BLOGPOST news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
-00:15:23 BLOGPOST news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
+00:15:24 BLOGPOST news/2017-09-06-New-d-portal-search-features-to-improve-data-use/index.html
+00:15:24 BLOGPOST news/2017-06-12-Finding-context-in-Results-data-and-new-query-parameter/index.html
+00:15:24 BLOGPOST news/2016-06-17-The-Generator-how-to-get-live-d-portal-content-on-your-website/index.html
+00:15:24 BLOGPOST news/2016-03-02-Results-data-now-showing-in-d-portal/index.html
+00:15:24 BLOGPOST news/2015-11-05-Adding-country-budgets-to-d-portal/index.html
+00:15:24 BLOGPOST news/2014-11-30-Interactive-IATI-data-d-portal-generator/index.html
 00:15:24 BLOGPOST news/2014-11-28-Bringing-IATI-data-life-d-portal-generator/index.html
 00:15:24 BLOGPOST news/2014-05-28-Current-plans/index.html
 00:15:24 BLOGPOST news/2014-05-08-Development-Tracker-Architecture/index.html
@@ -4086,34 +4090,34 @@ webpack 5.91.0 compiled successfully in 3708 ms
 00:15:24 COPY feedback.html -> jpn/feedback.html
 00:15:24 COPY feedback.html -> spa/feedback.html
 Shutting down /dportal/dportal/js/serv.js
-(node:3637281) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:467672) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:3637281) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:467672) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
-[0] EH1c [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 3613118 3613131    [35m/dportal/logs/dportal.log[39m [33m0:20:10:38.15600000000268[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m    [37mid[39m [35mlogfile[39m                   [33muptime[39m                   
+[0] lb8I [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 445342  445358    [35m/dportal/logs/dportal.log[39m [33m0:20:9:50.00999999999476[39m 
 Status /dportal/dportal/js/serv.js
-(node:3637295) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:467687) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:3637295) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:467687) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    No forever processes running
 Starting /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever processing file: [90m/dportal/dportal/js/serv.js[39m
-(node:3637311) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:467703) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:3637311) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:467703) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 Status /dportal/dportal/js/serv.js
-(node:3637332) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:467724) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:3637332) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:467724) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever processes running
-[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m      
-[90mdata[39m:    [0] j1cC [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 3637322 3637339    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.016[39m 
+[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m    [37mid[39m [35mlogfile[39m                   [33muptime[39m      
+[90mdata[39m:    [0] j79f [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 467714  467731    [35m/dportal/logs/dportal.log[39m [33m0:0:0:0.013[39m 
 
-Thu Dec  5 12:15:25 AM UTC 2024
+Fri Dec  6 12:15:25 AM UTC 2024
 
 
-Thu Dec  5 01:04:09 AM UTC 2024
+Fri Dec  6 01:04:26 AM UTC 2024
 
  creating new dload database 
  creating new dload database 
@@ -4358,19 +4362,19 @@ CREATING INDEXS
  CREATE INDEX IF NOT EXISTS act_index_text_search ON act USING gin(to_tsvector('simple', coalesce(title,'') || ' ' || coalesce(description,'') )); 
  CREATE INDEX IF NOT EXISTS xson_index_text_search ON xson USING gin(to_tsvector('simple', xson->>'' )); 
 ANALYZE start
-ANALYSE done 0.048
+ANALYSE done 0.049
 could not change directory to "/home/ctrack/dportal": Permission denied
 GRANT
  filling dload database with data 
  setting database live 
  swapping dload database with dstore database 
 Shutting down /dportal/dportal/js/serv.js
-(node:445302) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1470808) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:445302) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1470808) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [32minfo[39m:    Forever stopped process:
-[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m     [37mid[39m [35mlogfile[39m                   [33muptime[39m                    
-[0] j1cC [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 3637322 3637339    [35m/dportal/logs/dportal.log[39m [33m0:3:50:3.9729999999999563[39m 
+[37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m                      [37mforever[39m [37mpid[39m    [37mid[39m [35mlogfile[39m                   [33muptime[39m                   
+[0] j79f [90m/usr/bin/node[39m [90m/dportal/dportal/js/serv.js[39m 467714  467731    [35m/dportal/logs/dportal.log[39m [33m0:3:54:18.54399999999987[39m 
 could not change directory to "/home/ctrack/dportal": Permission denied
 dropdb: error: database removal failed: ERROR:  database "dtmp" does not exist
 could not change directory to "/home/ctrack/dportal": Permission denied
@@ -4391,11 +4395,11 @@ could not change directory to "/home/ctrack/dportal": Permission denied
 ALTER DATABASE
 Starting /dportal/dportal/js/serv.js
 [32minfo[39m:    Forever processing file: [90m/dportal/dportal/js/serv.js[39m
-(node:445331) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1470839) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:445331) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(node:1470839) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 
-Thu Dec  5 04:05:34 AM UTC 2024
+Fri Dec  6 04:09:49 AM UTC 2024
 
 
  searching logs for errors 
@@ -4412,13 +4416,13 @@ dstore/cache/wep-activities.xml.import.last.log:00112234455677889ERROR: index ro
 dstore/cache/wep-activities.xml.import.last.log:error: index row requires 8696 bytes, maximum size is 8191
 dstore/cache/wep-activities.xml.import.last.log:    at Parser.parseErrorMessage (/home/ctrack/dportal/node_modules/pg-protocol/dist/parser.js:283:98)
 
-Thu Dec  5 04:05:35 AM UTC 2024
+Fri Dec  6 04:09:49 AM UTC 2024
 
 
  Updating sql and xml data dumps 
 
 
-Thu Dec  5 04:14:21 AM UTC 2024
+Fri Dec  6 04:18:38 AM UTC 2024
 
 
 Updating D-Portal-Logs stats
