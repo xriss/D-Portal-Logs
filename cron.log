@@ -2,7 +2,7 @@
 Now using node v24.9.0 (npm v11.6.0)
 /dportal
 
-Tue Jun 30 01:10:02 AM UTC 2026
+Wed Jul  1 01:10:02 AM UTC 2026
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -34,10 +34,10 @@ The following certificates are not due for renewal yet:
 No renewals were attempted.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Tue Jun 30 01:10:03 AM UTC 2026
+Wed Jul  1 01:10:02 AM UTC 2026
 
 
-Tue Jun 30 01:10:03 AM UTC 2026
+Wed Jul  1 01:10:02 AM UTC 2026
 
 
  Rebuilding javascript with latest data 
@@ -2400,17 +2400,17 @@ parsing UNSDG-Goals.xml
 parsing UNSDG-Targets.xml
 parsing UNSDG-Indicators.xml
 parsing codelist mapping.xml
-[master 67ab56a25] auto json fetch in nightly cron
- 5 files changed, 434 insertions(+), 74 deletions(-)
+[master 8c7f3b84a] auto json fetch in nightly cron
+ 5 files changed, 390 insertions(+), 82 deletions(-)
 From github.com:IATI/D-Portal
  * branch                master     -> FETCH_HEAD
 Already up to date.
 remote: 
-remote: GitHub found 24 vulnerabilities on IATI/D-Portal's default branch (1 critical, 12 high, 7 moderate, 4 low). To find out more, visit:        
+remote: GitHub found 26 vulnerabilities on IATI/D-Portal's default branch (1 critical, 12 high, 9 moderate, 4 low). To find out more, visit:        
 remote:      https://github.com/IATI/D-Portal/security/dependabot        
 remote: 
 To github.com:IATI/D-Portal.git
-   7b0101d29..67ab56a25  master -> master
+   1099a636a..8c7f3b84a  master -> master
 branch 'master' set up to track 'origin/master'.
 
 Rebuilding ctrack with new json
@@ -2454,7 +2454,7 @@ fs (ignored) 15 bytes [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
 util (ignored) 15 bytes [built] [code generated]
 util (ignored) 15 bytes [built] [code generated]
-webpack 5.106.1 compiled successfully in 4153 ms
+webpack 5.106.1 compiled successfully in 4145 ms
 VERSION == 1.251119.7
 assets by chunk 716 KiB (id hint: vendors)
   asset 820.dquery.js 359 KiB [compared for emit] [minimized] (id hint: vendors)
@@ -2475,7 +2475,7 @@ modules by path ./js/ 18.8 KiB
   ./js/dquery.sql 4.91 KiB [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
-webpack 5.106.1 compiled successfully in 2205 ms
+webpack 5.106.1 compiled successfully in 2189 ms
 VERSION == 1.251119.7
 asset savi.js 4.71 MiB [emitted] [minimized] [big] (name: main) 1 related asset
 asset 408.savi.js 3.49 KiB [compared for emit] [minimized]
@@ -2495,7 +2495,7 @@ fs (ignored) 15 bytes [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
 util (ignored) 15 bytes [built] [code generated]
 util (ignored) 15 bytes [built] [code generated]
-webpack 5.106.1 compiled successfully in 2640 ms
+webpack 5.106.1 compiled successfully in 2635 ms
 01:14:29 DIR  /
 01:14:29 DIR  /cmn
 01:14:29 DIR  /ctrack
@@ -3379,19 +3379,19 @@ webpack 5.106.1 compiled successfully in 2640 ms
 01:14:29 COPY about.html -> spa/about.html
 01:14:29 COPY faq.html -> cmn/faq.html
 01:14:29 COPY faq.html -> fra/faq.html
-01:14:30 COPY faq.html -> hin/faq.html
-01:14:30 COPY faq.html -> jpn/faq.html
-01:14:30 COPY faq.html -> spa/faq.html
-01:14:30 COPY feedback.html -> cmn/feedback.html
-01:14:30 COPY feedback.html -> fra/feedback.html
-01:14:30 COPY feedback.html -> hin/feedback.html
-01:14:30 COPY feedback.html -> jpn/feedback.html
-01:14:30 COPY feedback.html -> spa/feedback.html
-01:14:30 COPY index.html -> cmn/index.html
-01:14:30 COPY index.html -> fra/index.html
-01:14:30 COPY index.html -> hin/index.html
-01:14:30 COPY index.html -> jpn/index.html
-01:14:30 COPY index.html -> spa/index.html
+01:14:29 COPY faq.html -> hin/faq.html
+01:14:29 COPY faq.html -> jpn/faq.html
+01:14:29 COPY faq.html -> spa/faq.html
+01:14:29 COPY feedback.html -> cmn/feedback.html
+01:14:29 COPY feedback.html -> fra/feedback.html
+01:14:29 COPY feedback.html -> hin/feedback.html
+01:14:29 COPY feedback.html -> jpn/feedback.html
+01:14:29 COPY feedback.html -> spa/feedback.html
+01:14:29 COPY index.html -> cmn/index.html
+01:14:29 COPY index.html -> fra/index.html
+01:14:29 COPY index.html -> hin/index.html
+01:14:29 COPY index.html -> jpn/index.html
+01:14:29 COPY index.html -> spa/index.html
 Shutting down /dportal/dportal/js/serv.wrap.js
 /etc/init.d /dportal
 Now using node v24.9.0 (npm v11.6.0)
@@ -3401,7 +3401,7 @@ Now using node v24.9.0 (npm v11.6.0)
 ┌────┬──────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id │ name         │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
 ├────┼──────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 0        │ 0      │ 2    │ stopped   │ 0%       │ 0b       │ ctrack   │ disabled │
+│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 0        │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ctrack   │ disabled │
 └────┴──────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
 Status /dportal/dportal/js/serv.wrap.js
 /etc/init.d /dportal
@@ -3410,7 +3410,7 @@ Now using node v24.9.0 (npm v11.6.0)
 ┌────┬──────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id │ name         │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
 ├────┼──────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 0        │ 0      │ 2    │ stopped   │ 0%       │ 0b       │ ctrack   │ disabled │
+│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 0        │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ctrack   │ disabled │
 └────┴──────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
 Starting /dportal/dportal/js/serv.wrap.js
 /etc/init.d /dportal
@@ -3428,7 +3428,7 @@ Be sure to have the latest version by doing `npm install pm2@latest -g` before d
 ┌────┬──────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id │ name         │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
 ├────┼──────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ N/A      │ 0      │ 2    │ stopped   │ 0%       │ 0b       │ ctrack   │ disabled │
+│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ N/A      │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ctrack   │ disabled │
 └────┴──────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
 [PM2] Applying action restartProcessId on app [serv.wrap](ids: [ 0 ])
 [PM2] [serv.wrap](0) ✓
@@ -3436,7 +3436,7 @@ Be sure to have the latest version by doing `npm install pm2@latest -g` before d
 ┌────┬──────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id │ name         │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
 ├────┼──────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 1048025  │ 0s     │ 2    │ online    │ 0%       │ 33.8mb   │ ctrack   │ disabled │
+│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 2360494  │ 0s     │ 1    │ online    │ 0%       │ 50.0mb   │ ctrack   │ disabled │
 └────┴──────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
 Status /dportal/dportal/js/serv.wrap.js
 /etc/init.d /dportal
@@ -3445,13 +3445,13 @@ Now using node v24.9.0 (npm v11.6.0)
 ┌────┬──────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id │ name         │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
 ├────┼──────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 1048025  │ 0s     │ 2    │ online    │ 0%       │ 160.8mb  │ ctrack   │ disabled │
+│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 2360494  │ 0s     │ 1    │ online    │ 0%       │ 160.6mb  │ ctrack   │ disabled │
 └────┴──────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
 
-Tue Jun 30 01:14:35 AM UTC 2026
+Wed Jul  1 01:14:34 AM UTC 2026
 
 
-Tue Jun 30 02:59:45 AM UTC 2026
+Wed Jul  1 03:01:38 AM UTC 2026
 
  creating new dload database 
  creating new dload database 
@@ -3699,7 +3699,7 @@ CREATING INDEXS
  CREATE INDEX IF NOT EXISTS act_index_text_search ON act USING gin(to_tsvector('simple', coalesce(title,'') || ' ' || coalesce(description,'') )); 
  CREATE INDEX IF NOT EXISTS xson_index_text_search ON xson USING gin(to_tsvector('simple', xson->>'' )); 
 ANALYZE start
-ANALYSE done 0.058
+ANALYSE done 0.064
 GRANT
  filling dload database with data 
  setting database live 
@@ -3751,10 +3751,10 @@ Be sure to have the latest version by doing `npm install pm2@latest -g` before d
 ┌────┬──────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id │ name         │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
 ├────┼──────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 2335160  │ 0s     │ 1    │ online    │ 0%       │ 50.0mb   │ ctrack   │ disabled │
+│ 0  │ serv.wrap    │ default     │ 1.2511… │ fork    │ 3645654  │ 0s     │ 1    │ online    │ 0%       │ 48.0mb   │ ctrack   │ disabled │
 └────┴──────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
 
-Tue Jun 30 08:56:31 AM UTC 2026
+Wed Jul  1 09:02:14 AM UTC 2026
 
 
  searching logs for errors 
@@ -3772,13 +3772,13 @@ dstore/cache/wep-activities.xml.import.last.log:0112234455677889ERROR: index row
 dstore/cache/wep-activities.xml.import.last.log:error: index row requires 8696 bytes, maximum size is 8191
 dstore/cache/wep-activities.xml.import.last.log:    at parseErrorMessage (/home/ctrack/dportal/node_modules/pg-protocol/dist/parser.js:305:11)
 
-Tue Jun 30 08:56:32 AM UTC 2026
+Wed Jul  1 09:02:15 AM UTC 2026
 
 
  Updating sql and xml data dumps 
 
 
-Tue Jun 30 09:08:00 AM UTC 2026
+Wed Jul  1 09:13:53 AM UTC 2026
 
 
 Updating D-Portal-Logs stats
